@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import VimeoPlayer from './Videoplayer'
 
 const Header = () => {
   return (
@@ -7,9 +8,7 @@ const Header = () => {
         <div className="home-header">
             <div className="introduction-video">
                 <div className="video-wrapper absolute">
-                <video autoPlay muted loop id="myVideo">
-                    <source src="chas.mp4" type="video/mp4" />
-                 </video>
+                    <VimeoPlayer videoId="920299291" autoplay={true} loop={true} title={false} byline={false} portrait={false} />
                 </div>
                 <div className="header-text relative z-10 h-full flex flex-col justify-center items-center">
                     <div className='flex flex-col gap-6 items-center w-2/3 text-center'>

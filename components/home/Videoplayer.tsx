@@ -5,6 +5,7 @@ import React from 'react';
 interface VimeoPlayerProps {
   videoId: string;
   autoplay?: boolean;
+  muted?: boolean;
   loop?: boolean;
   title?: boolean;
   byline?: boolean;
@@ -14,12 +15,13 @@ interface VimeoPlayerProps {
 const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
   videoId,
   autoplay = true,
+  muted = true,
   loop = true,
   title = false,
   byline = false,
   portrait = false,
 }) => {
-    const src = `https://player.vimeo.com/video/${videoId}?autoplay=${autoplay ? '1' : '0'}&loop=${loop ? '1' : '0'}&title=${title ? '1' : '0'}&byline=${byline ? '1' : '0'}&portrait=${portrait ? '1' : '0'}&controls=0`;
+    const src = `https://player.vimeo.com/video/${videoId}?autoplay=${autoplay ? '1' : '0'}&loop=${loop ? '1' : '0'}&title=${title ? '1' : '0'}&byline=${byline ? '1' : '0'}&portrait=${portrait ? '1' : '0'}&muted=${muted ? '1' : '0'}&controls=0`;
 
   return (
     <div id="myVideo" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>

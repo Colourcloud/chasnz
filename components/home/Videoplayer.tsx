@@ -22,7 +22,7 @@ const VimeoPlayer: React.FC<VimeoPlayerProps> = ({
     const src = `https://player.vimeo.com/video/${videoId}?autoplay=${autoplay ? '1' : '0'}&loop=${loop ? '1' : '0'}&title=${title ? '1' : '0'}&byline=${byline ? '1' : '0'}&portrait=${portrait ? '1' : '0'}&controls=0`;
 
   return (
-    <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+    <div id="myVideo" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
       <iframe
         src={src}
         style={{

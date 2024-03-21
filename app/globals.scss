@@ -33,6 +33,9 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+
+    --primary-colour: #7ABC25;
+    --text-colour: #2b2b2b;
   }
  
   .dark {
@@ -75,9 +78,47 @@
   }
 }
 
+body {
+  font-size: 16px;
+  background-color: white;
+}
+p {
+  line-height: 2rem;
+  font-size: 16px;
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
+}
+
 .site-wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0px 16px;
+  @media screen and (min-width: 768px) {
+    padding: 0px 64px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0px 0px;
+  }
+}
+.content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 16px;
+  @media screen and (min-width: 768px) {
+    padding: 0px 64px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0px 0px;
+  }
+}
+
+.programmes-header {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
 }
 
 .home-header {
@@ -96,7 +137,7 @@
     width: 100%;
     z-index: 1;
     //background: rgba(122, 188, 37, 1);
-    background: #0122008c;
+    background: rgb(37, 62, 4);
     mix-blend-mode: multiply;
   }
 }
@@ -125,3 +166,66 @@
 .header-text {
   width: 100%;
 } /* Center the text inside the div */
+
+.dropdown-menu {
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  height: auto;
+  visibility: hidden;
+  overflow: hidden;
+  line-height: 1.5;
+  opacity: 0;
+  top: 80px;
+}
+
+.navigation-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 19;
+  transition: 150ms ease;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#navigation-programmes:hover {
+  .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#navigation-resources:hover {
+  .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#navigation-about:hover {
+  .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.navigation-right .navigation-toggle{
+  padding: 24px 32px;
+}
+
+.logo-hover {
+  g,
+  path {
+    fill:var(--primary-colour);
+  }
+}

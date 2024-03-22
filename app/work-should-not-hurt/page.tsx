@@ -7,6 +7,7 @@ import Header from '@/components/programmes/work-should-not-hurt/Header'
 import Introduction from '@/components/programmes/work-should-not-hurt/Introduction'
 import Trades from '@/components/programmes/work-should-not-hurt/Trades'
 import Resources from '@/components/programmes/work-should-not-hurt/Resources'
+import Subscribe from '@/components/common/Subscribe'
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ const page = () => {
         <Introduction />
         <Trades />
         <Resources />
+        <Subscribe />
     </main>
   )
 }

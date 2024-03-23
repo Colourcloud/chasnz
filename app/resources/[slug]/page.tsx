@@ -44,20 +44,4 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
   );
 };
 
-export async function getStaticPaths() {
-  const res = await fetch(`${reqUrl}posts`);
-  const posts: Post[] | undefined = await res.json();
-
-  if (!Array.isArray(posts)) {
-    console.error('Expected an array of posts but got:', posts);
-    return { paths: [], fallback: true };
-  }
-
-  const paths: PostParams[] = posts.map((post) => ({
-    params: { slug: post.slug },
-  }));
-
-  return { paths, fallback: true };
-}
-
 export default BlogPost;

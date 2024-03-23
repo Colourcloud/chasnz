@@ -1,19 +1,69 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { BsArrowRight } from "react-icons/bs";
+'use client'
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { BsArrowRight } from 'react-icons/bs';
+
+// Define a type for the post
+type Post = {
+  id: number;
+  title: {
+    rendered: string;
+  };
+  excerpt: {
+    rendered: string;
+  };
+  slug: string;
+  date: string;
+  _embedded: {
+    'wp:featuredmedia': Array<{
+      source_url: string;
+    }>;
+  };
+};
 
 const Resources = () => {
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) {
+      return text;
+    }
+    return text.slice(0, maxLength) + '...';
+  };
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch(
+          'https://chasnz.org/wp-json/wp/v2/posts?_embed&categories=168&per_page=5'
+        );
+        if (!response.ok) {
+          throw new Error('Failed to fetch posts');
+        }
+        const data: Post[] = await response.json();
+        setPosts(data);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
   return (
-   <section className="resource-section pb-20 lg:pb-32 bg-white">
-    <div className="content-wrapper">
+    <section className="resource-section pb-20 lg:pb-32 bg-white">
+      <div className="content-wrapper">
         <div className="resource-container">
-            <div className="resource-heading">
-                <h4 className='text-2xl font-semibold'>Browse “Work Should Not Hurt” resources to get you site-ready</h4>
-            </div>
+          <div className="resource-heading">
+            <h4 className="text-2xl font-semibold">
+              Browse “Work Should Not Hurt” resources to get you site-ready
+            </h4>
+          </div>
         </div>
-    </div>
-    <div className="resourcec-filters py-8 bg-gray-100 w-full mt-10 overflow-x-scroll">
+      </div>
+      <div className="resourcec-filters py-8 bg-gray-100 w-full mt-10 overflow-x-scroll">
         <div className="content-wrapper flex items-center flex-row gap-6 lg:gap-16">
             <p className='font-medium text-sm text-gray-500 whitespace-nowrap'>Filter by type:</p>
             <ul className='flex flex-row gap-6 lg:gap-16 text-gray-600 items-center'>
@@ -26,99 +76,58 @@ const Resources = () => {
         </div>
     </div>
 
-    <div className="resource-layout mt-10">
-            <div className="content-wrapper">
-                <div className="resource-grid">
-                <div className="resource-card flex flex-row items-center justify-between pr-0 lg:pr-6">
-                        <div className='flex flex-row gap-3 items-center'>
-                        <div className="resource-image">
-                            <Image src="/programmes/wsnh/trade-images/resources/1.webp" alt="building image" width='300' height='300'></Image>
-                        </div>
-                        <div className="resource-card_information flex flex-col gap-2 p-6">
-                            <div>
-                                <h4 className='text-lg md:text-xl font-medium'>Guide to site access requirements</h4>
-                                <p className='text-sm font-light hidden md:block'>To address inconsistency of people entering and working on our construction sites, CHASNZ worked...</p>
-                            </div>
-                            <span className='text-sm font-light'>August 24, 2023</span>
-                        </div>
-                        </div>
-                        <div className="card-cta hidden lg:block">
-                            <span className='text-2xl'><BsArrowRight /></span>
-                        </div>
+      <div className="resource-layout mt-10">
+        <div className="content-wrapper">
+          <div className="resource-grid">
+            {posts.map((post) => (
+              <Link href={`/resources/${post.slug}`} key={post.id}>
+                <div className="resource-card flex flex-row items-center justify-between py-4 pr-0 lg:pr-6">
+                  <div className="flex flex-row gap-3 items-center">
+                    <div className="resource-image">
+                      <Image
+                        src={
+                          post._embedded['wp:featuredmedia'][0]?.source_url ||
+                          '/placeholder.jpg'
+                        }
+                        alt="Post Image"
+                        width={300}
+                        height={300}
+                      />
                     </div>
-                    <div className="resource-card flex flex-row items-center justify-between pr-0 lg:pr-6">
-                        <div className='flex flex-row gap-3 items-center'>
-                        <div className="resource-image">
-                            <Image src="/programmes/wsnh/trade-images/resources/2.webp" alt="building image" width='300' height='300'></Image>
-                        </div>
-                        <div className="resource-card_information flex flex-col gap-2 p-6">
-                            <div>
-                                <h4 className='text-lg md:text-xl font-medium'>Guide to site access requirements</h4>
-                                <p className='text-sm font-light hidden md:block'>To address inconsistency of people entering and working on our construction sites, CHASNZ worked...</p>
-                            </div>
-                            <span className='text-sm font-light'>August 24, 2023</span>
-                        </div>
-                        </div>
-                        <div className="card-cta hidden lg:block">
-                            <span className='text-2xl'><BsArrowRight /></span>
-                        </div>
+                    <div className="resource-card_information flex flex-col gap-2 p-6">
+                      <div>
+                        <h4 className="text-lg md:text-lg font-medium">
+                          {post.title.rendered}
+                        </h4>
+                        <p
+                            className="text-sm font-light hidden md:block"
+                            dangerouslySetInnerHTML={{
+                                __html: `<span style="font-size: 0.875rem">${truncateText(post.excerpt.rendered, 100)}</span>`, // Adjust 100 to your desired maximum length
+                            }}
+                            />
+                      </div>
+                      <span className="text-sm font-light">
+                        {new Date(post.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                        })}
+                      </span>
                     </div>
-                    <div className="resource-card flex flex-row items-center justify-between pr-0 lg:pr-6">
-                        <div className='flex flex-row gap-3 items-center'>
-                        <div className="resource-image">
-                            <Image src="/programmes/wsnh/trade-images/resources/3.webp" alt="building image" width='300' height='300'></Image>
-                        </div>
-                        <div className="resource-card_information flex flex-col gap-2 p-6">
-                            <div>
-                                <h4 className='text-lg md:text-xl font-medium'>Guide to site access requirements</h4>
-                                <p className='text-sm font-light hidden md:block'>To address inconsistency of people entering and working on our construction sites, CHASNZ worked...</p>
-                            </div>
-                            <span className='text-sm font-light'>August 24, 2023</span>
-                        </div>
-                        </div>
-                        <div className="card-cta hidden lg:block">
-                            <span className='text-2xl'><BsArrowRight /></span>
-                        </div>
-                    </div>
-                    <div className="resource-card flex flex-row items-center justify-between pr-0 lg:pr-6">
-                        <div className='flex flex-row gap-3 items-center'>
-                        <div className="resource-image">
-                            <Image src="/programmes/wsnh/trade-images/resources/4.webp" alt="building image" width='300' height='300'></Image>
-                        </div>
-                        <div className="resource-card_information flex flex-col gap-2 p-6">
-                            <div>
-                                <h4 className='text-lg md:text-xl font-medium'>Guide to site access requirements</h4>
-                                <p className='text-sm font-light hidden md:block'>To address inconsistency of people entering and working on our construction sites, CHASNZ worked...</p>
-                            </div>
-                            <span className='text-sm font-light'>August 24, 2023</span>
-                        </div>
-                        </div>
-                        <div className="card-cta hidden lg:block">
-                            <span className='text-2xl'><BsArrowRight /></span>
-                        </div>
-                    </div>
-                    <div className="resource-card flex flex-row items-center justify-between pr-0 lg:pr-6">
-                        <div className='flex flex-row gap-3 items-center'>
-                        <div className="resource-image">
-                            <Image src="/programmes/wsnh/trade-images/resources/5.webp" alt="building image" width='300' height='300'></Image>
-                        </div>
-                        <div className="resource-card_information flex flex-col gap-2 p-6">
-                            <div>
-                                <h4 className='text-lg md:text-xl font-medium'>Guide to site access requirements</h4>
-                                <p className='text-sm font-light hidden md:block'>To address inconsistency of people entering and working on our construction sites, CHASNZ worked...</p>
-                            </div>
-                            <span className='text-sm font-light'>August 24, 2023</span>
-                        </div>
-                        </div>
-                        <div className="card-cta hidden lg:block">
-                            <span className='text-2xl'><BsArrowRight /></span>
-                        </div>
-                    </div>
+                  </div>
+                  <div className="card-cta hidden lg:block">
+                    <span className="text-2xl">
+                      <BsArrowRight />
+                    </span>
+                  </div>
                 </div>
-            </div>
+              </Link>
+            ))}
+          </div>
         </div>
-   </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Resources
+export default Resources;

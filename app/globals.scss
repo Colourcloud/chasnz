@@ -77,6 +77,27 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar width */
+  height: 0; /* Remove scrollbar height */
+  display: none; /* Hide scrollbar */
+}
+
+/* For Firefox */
+/* Note: This will not work in WebKit-based browsers */
+/* You can use the scrollbar-width property in Firefox but it's not widely supported */
+/* This is a workaround */
+html {
+  scrollbar-width: none; /* Remove scrollbar width */
+}
+
+body::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar width */
+  height: 0; /* Remove scrollbar height */
+  display: none; /* Hide scrollbar */
+}
+
 body,
 html {
   scroll-behavior: smooth;

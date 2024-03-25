@@ -17,7 +17,7 @@ type Post = {
   slug: string;
   date: string;
   _embedded: {
-    'wp:featuredmedia': Array<{
+    'wp:featuredmedia'?: Array<{
       source_url: string;
     }>;
   };
@@ -86,10 +86,9 @@ const Resources = () => {
                 <div className="resource-card flex flex-row items-center justify-between py-4 pr-0 lg:pr-6">
                   <div className="flex flex-row gap-3 items-center">
                     <div className="resource-image">
-                      <Image
+                    <Image
                         src={
-                          post._embedded['wp:featuredmedia'][0]?.source_url ||
-                          '/placeholder.jpg'
+                          post._embedded['wp:featuredmedia']?.[0]?.source_url || '/placeholder.jpg'
                         }
                         alt="Post Image"
                         width={300}

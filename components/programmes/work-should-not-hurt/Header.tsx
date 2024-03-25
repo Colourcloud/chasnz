@@ -1,17 +1,19 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Header = () => {
   return (
     <div>
         <div className="programmes-header relative" id="work-should-not-hurt-header">
-            <div className="content-wrapper">
-              <div className="programmes-header_container">
-                <div className="header-block-box absolute bottom-0 right-0 bg-white pt-12 lg:pt-16 px-4 md:px-16 lg:px-32">
-                  <div className='flex flex-col gap-6 w-full border-b-2 border-gray-200 pb-12'>
-                    <h2 className='text-black text-4xl lg:text-6xl font-semibold'>Work Should Not Hurt</h2>
-                    <p className='text-[--text-colour] font-base'>The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury.</p>
-                  </div>
-               </div>
+            <div className="content-wrapper relative h-full">
+              <div className="header-container flex flex-col h-full items-center justify-center gap-10">
+                <div className="programme-logo">
+                    <Image src="/programmes/logos/wsnh.svg" alt="work should not hurt logo" width='200' height='300'></Image>
+                </div>
+                <div className="header-text-block flex flex-col gap-6 text-center w-full lg:w-3/4">
+                  <h2 className='font-bold text-4xl lg:text-8xl '>Work Should Not Hurt</h2>
+                  <p className='text-xl font-light'>The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury.</p>
+                </div>
               </div>
             </div>
         </div>

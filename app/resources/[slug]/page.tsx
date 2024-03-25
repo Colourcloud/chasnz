@@ -1,6 +1,16 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+
+export async function generateStaticParams() {
+
+  const res = await fetch(`https://chasnz.org/wp-json/wp/v2/posts`)
+  const data = await res.json()
+
+  return data.map((resource: any) => ({
+    slug: resource.slug
+  }))
+}
 
 // Define TypeScript interfaces for the expected API response shapes
 interface Post {

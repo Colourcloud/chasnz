@@ -18,11 +18,17 @@ const About = () => {
                             </div>
                             <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>About us</h6>
+                                    <h6 className='text-black font-semibold text-xl'>About us</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About Chasnz</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</Link></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About Chasnz</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</a></li>
+                                    </ul>
+                                </div>
+                                <div className="mega-menu_right_list_items">
+                                    <h6 className='text-black font-semibold text-xl'>Contact us</h6>
+                                    <ul className='text-base flex flex-col gap-4 mt-4'>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contact us</a></li>
                                     </ul>
                                 </div>
                             </div>

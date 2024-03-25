@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import a from 'next/link'
 import Image from 'next/image'
 
 const Resources = () => {
@@ -18,37 +18,37 @@ const Resources = () => {
                             </div>
                             <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>Trade Resources</h6>
+                                    <h6 className='text-black font-semibold text-xl'>Trade Resources</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Building</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Roofing</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Plumbing, gasfitting & drainlaying</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Brick & Blocklaying</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Painting</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Glazing</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Electricians</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Flooring</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Concrete Services</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Management & Support</Link></li>
+                                        <li><a href="/work-should-not-hurt/trades/building#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Building</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Roofing</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Plumbing, gasfitting & drainlaying</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Brick & Blocklaying</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Painting</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Glazing</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Electricians</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Flooring</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Concrete Services</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Management & Support</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>General Resources</h6>
+                                    <h6 className='text-black font-semibold text-xl'>General Resources</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>General Resources</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Work Should Not Hurt</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</Link></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>General Resources</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Work Should Not Hurt</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>Data Tools & Insights</h6>
+                                    <h6 className='text-black font-semibold text-xl'>Data Tools & Insights</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Whakatipu</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Harm & Injury Interactive Dashboard</Link></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Whakatipu</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Harm & Injury Interactive Dashboard</a></li>
                                     </ul>
                                 </div>
                             </div>

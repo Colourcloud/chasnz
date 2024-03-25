@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-        <div className="programmes-header relative" id="work-should-not-hurt-header">
+        <div className="programmes-header relative" id="trades-building-header">
             <div className="content-wrapper">
               <div className="programmes-header_container">
                 <div className="header-block-box absolute bottom-0 right-0 bg-white pt-12 lg:pt-16 px-4 md:px-16 lg:px-32">

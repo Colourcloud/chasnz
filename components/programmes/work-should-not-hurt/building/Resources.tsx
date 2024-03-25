@@ -53,12 +53,12 @@ const Resources = () => {
   }, []);
 
   return (
-    <section className="resource-section pb-20 lg:pb-32 bg-white">
+    <section className="resource-section py-20 lg:py-32 bg-white" id="resources">
       <div className="content-wrapper">
         <div className="resource-container">
           <div className="resource-heading">
             <h4 className="text-2xl font-semibold">
-              Browse “Work Should Not Hurt” resources to get you site-ready
+              Browse “Building” resources to get you site-ready
             </h4>
           </div>
         </div>

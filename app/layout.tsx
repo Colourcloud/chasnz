@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.scss";
 import "./styles/programmes.scss";
 import NextTopLoader from 'nextjs-toploader';
+import Navigation from "@/components/common/Navigation";
 
 const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <NextTopLoader color="#7ABC25" showSpinner={false}/>
+        <Navigation />
         {children}
         </body>
     </html>

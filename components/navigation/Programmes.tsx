@@ -18,40 +18,43 @@ const Programmes = () => {
                             </div>
                             <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>Work should not hurt</h6>
+                                    <a href="/work-should-not-hurt"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Work should not hurt</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/work-should-not-hurt" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>What is “Work should not hurt”</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Trade specific information</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</Link></li>
+                                        <li><a href="/work-should-not-hurt#trades" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Trade specific information</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>Tōtika</h6>
+                                <a href="#"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Tōtika</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Introduction to Tōtika</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contractors and suppliers</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register for the Tōtika scheme</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Tōtika scheme resources</Link></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contractors and suppliers</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register for the Tōtika scheme</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Tōtika scheme resources</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>Lead On.</h6>
+                                    <a href="#"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Lead On.</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Learn About Lead On.</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Managment</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register your Frontline Leader</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Supervisors</Link></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Managment</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register your Frontline Leader</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Supervisors</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl underline'>ConstructSafe</h6>
+                                    <a href="#"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>ConstructSafe</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Learn About ConstructSafe</Link></li>
-                                        <li><Link href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Book an assessment</Link></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Book an assessment</a></li>
+                                    </ul>
+                                </div>
+
+                                <div className="mega-menu_right_list_items">
+                                    <h6 className='text-black font-semibold text-xl'>Initatives</h6>
+                                    <ul className='text-base flex flex-col gap-4 mt-4'>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Wheel</a></li>
                                     </ul>
                                 </div>
 

@@ -7,6 +7,15 @@
     }
 }
 
+#trades-building-header {
+    background-image: url('../../public/programmes/wsnh/building-background-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/building-background.jpg');
+    }
+}
+
 .header-block-box {
     width: 100%;
     @media screen and (min-width: 1024px) {

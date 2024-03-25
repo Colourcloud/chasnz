@@ -90,7 +90,9 @@
 /* This is a workaround */
 html {
   scrollbar-width: none; /* Remove scrollbar width */
+  scroll-behavior: smooth;
 }
+
 
 body::-webkit-scrollbar {
   width: 0;  /* Remove scrollbar width */
@@ -100,7 +102,6 @@ body::-webkit-scrollbar {
 
 body,
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -128,7 +129,7 @@ p {
   }
 }
 .content-wrapper {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0px 16px;
   @media screen and (min-width: 768px) {
@@ -209,7 +210,6 @@ p {
 .navigation-backdrop {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -217,11 +217,14 @@ p {
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   z-index: 19;
-  transition: 150ms ease;
   &.active {
     opacity: 1;
     visibility: visible;
   }
+}
+
+.mega-menu_right_list_items {
+  min-width: 250px;
 }
 
 #navigation-programmes:hover {
@@ -260,4 +263,21 @@ p {
   background-image: url('../public/subscribe-background.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.no-hover-effect .dropdown-menu {
+  opacity: 0 !important; /* Force opacity to 0 */
+  visibility: hidden !important; /* Force visibility to hidden */
+}
+
+.scroll-bar::-webkit-scrollbar {
+  display: none;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.scroll-bar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

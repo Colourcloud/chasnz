@@ -51,11 +51,21 @@ const Navigation = () => {
       toggle.addEventListener('mouseout', handleHoverOut);
     });
 
+    // Check that backdrop is not null before adding the event listener
+    if (backdrop) {
+      backdrop.addEventListener('mouseover', handleHoverOut);
+    }
+
     return () => {
       navigationToggles.forEach(toggle => {
         toggle.removeEventListener('mouseover', handleHover);
         toggle.removeEventListener('mouseout', handleHoverOut);
       });
+
+      // Also check that backdrop is not null before removing the event listener
+      if (backdrop) {
+        backdrop.removeEventListener('mouseover', handleHoverOut);
+      }
     };
   }, []);
 
@@ -67,7 +77,7 @@ const Navigation = () => {
         <div className="site-wrapper">
             <div className="navigation-container h-28 w-full flex items-center flex-row justify-between">
                 <div className="navigation-left">
-                    <Link href="/" className='nav-logo'><Logo /></Link>
+                  <Link href="/" className='nav-logo'><Logo /></Link>
                 </div>
                 <div className="navigation-right">
                     <ul className='flex flex-row text-white font-medium items-center'>
@@ -89,8 +99,8 @@ const Navigation = () => {
                                 <Resources />
                             </div>
                         </li>
-                        <li className='text-lg navigation-toggle' id="navigation-connect">Connect</li>
-                        <li className='text-lg navigation-toggle' id="navigation-initatives">Initiatives</li>
+                        <li className='text-lg navigation-toggle' id="navigation-connect">Events</li>
+                        <li className='text-lg navigation-toggle'>Contact</li>
                     </ul>
                 </div>
             </div>

@@ -4,12 +4,26 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
+import buildingImage from '../../../public/programmes/wsnh/trade-images/building.jpg';
+import scaffoldingImage from '../../../public/programmes/wsnh/trade-images/scaffolding.jpg';
+import roofingImage from '../../../public/programmes/wsnh/trade-images/roofing.jpg';
+import paintingImage from '../../../public/programmes/wsnh/trade-images/painting.jpg';
+import plumbingImage from '../../../public/programmes/wsnh/trade-images/plumbing.jpg';
+import glazingImage from '../../../public/programmes/wsnh/trade-images/glazing.jpg';
+import electricalImage from '../../../public/programmes/wsnh/trade-images/electricians.jpg';
+import flooringImage from '../../../public/programmes/wsnh/trade-images/flooring.jpg';
+import concreteImage from '../../../public/programmes/wsnh/trade-images/concrete.jpg';
+import managementImage from '../../../public/programmes/wsnh/trade-images/management.jpg';
+import brickImage from '../../../public/programmes/wsnh/trade-images/brick.jpg';
+import { link } from 'fs';
+
 
 interface TradeData {
   [key: string]: {
     title: string;
-    imageSrc: string;
+    imageSrc: any;
     description: string;
+    link: string;
   };
 }
 
@@ -29,67 +43,78 @@ const Trades: React.FC = () => {
   const tradeData: TradeData = {
     building: {
       title: 'Building',
-      imageSrc: '/programmes/wsnh/trade-images/building.jpg',
+      link: '/work-should-not-hurt/trades/building',
+      imageSrc: buildingImage,
       description:
         "We have worked onsite alongside Builders to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
     },
     scaffolding: {
       title: 'Scaffolding',
-      imageSrc: '/programmes/wsnh/trade-images/scaffolding.jpg',
+      link: '/work-should-not-hurt/trades/scaffolding',
+      imageSrc: scaffoldingImage,
       description:
         "We have worked onsite alongside Scaffolders to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
     },
     roofing: {
       title: 'Roofing',
-      imageSrc: '/programmes/wsnh/trade-images/roofing.jpg',
+      link: '/work-should-not-hurt/trades/roofing',
+      imageSrc: roofingImage,
       description:
           "We have worked onsite alongside roofers to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
     },
     plumbing: {
         title: 'Plumbing, gasfitting & drainlaying',
-        imageSrc: '/programmes/wsnh/trade-images/plumbing.jpg',
+        link: '/work-should-not-hurt/trades/plumbing',
+        imageSrc: plumbingImage,
         description:
             "We have worked onsite alongside plumbers, gasfitters & drain layers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       brick: {
         title: 'Brick & blocklaying',
-        imageSrc: '/programmes/wsnh/trade-images/brick.jpg',
+        link: '/work-should-not-hurt/trades/bricklaying',
+        imageSrc: brickImage,
         description:
             "We have worked onsite alongside Bricklayers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       painting: {
         title: 'Painting',
-        imageSrc: '/programmes/wsnh/trade-images/painting.jpg',
+        link: '/work-should-not-hurt/trades/painting',
+        imageSrc: paintingImage,
         description:
             "We have worked onsite alongside Painters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       glazing: {
         title: 'Glazing',
-        imageSrc: '/programmes/wsnh/trade-images/glazing.jpg',
+        link: '/work-should-not-hurt/trades/glazing',
+        imageSrc: glazingImage,
         description:
             "We have worked onsite alongside Glazers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       electricians: {
         title: 'Electricians',
-        imageSrc: '/programmes/wsnh/trade-images/electricians.jpg',
+        link: '/work-should-not-hurt/trades/electricians',
+        imageSrc: electricalImage,
         description:
             "We have worked onsite alongside Electricians to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       flooring: {
         title: 'Flooring',
-        imageSrc: '/programmes/wsnh/trade-images/flooring.jpg',
+        link: '/work-should-not-hurt/trades/flooring',
+        imageSrc: flooringImage,
         description:
             "We have worked onsite alongside Floorers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       concrete: {
         title: 'Concrete Services',
-        imageSrc: '/programmes/wsnh/trade-images/concrete.jpg',
+        link: '/work-should-not-hurt/trades/concrete',
+        imageSrc: concreteImage,
         description:
             "We have worked onsite alongside Concreters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       management: {
         title: 'Management & Support',
-        imageSrc: '/programmes/wsnh/trade-images/management.jpg',
+        link: '/work-should-not-hurt/trades/management-support',
+        imageSrc: managementImage,
         description:
             "We have worked onsite alongside management & support workers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
@@ -99,7 +124,7 @@ const Trades: React.FC = () => {
   const selectedTrade = hoveredTrade || lastHoveredTrade;
 
   return (
-    <section className="trades-section py-20 lg:py-32 bg-white">
+    <section className="trades-section py-20 lg:py-32 bg-white" id="trades">
       <div className="content-wrapper">
         <div className="trades-text w-full lg:w-3/4 flex flex-col gap-6">
           <h4 className="text-3xl lg:text-4xl font-semibold">
@@ -111,6 +136,7 @@ const Trades: React.FC = () => {
           <div className="trades-list w-full lg:w-[35%]">
             <ul className="flex flex-col text-xl font-semibold">
               {Object.keys(tradeData).map((trade) => (
+                <Link href={tradeData[trade].link} key={trade} passHref>
                 <li
                   key={trade}
                   onMouseEnter={() => handleTradeHover(trade)}
@@ -123,6 +149,7 @@ const Trades: React.FC = () => {
                     <BsArrowRight />
                   </span>
                 </li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -134,6 +161,7 @@ const Trades: React.FC = () => {
                 width="800"
                 height="800"
                 priority={true}
+                className='w-full'
               />
             </div>
             <div className="trade-information flex flex-col gap-4">

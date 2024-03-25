@@ -142,10 +142,13 @@ p {
 
 .programmes-header {
   width: 100%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 1rem);
   position: relative;
   overflow: hidden;
   color: #fff;
+  @media screen and (min-width: 1024px) {
+    height: calc(100vh - 8rem);
+  }
 }
 
 .home-header {

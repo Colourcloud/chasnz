@@ -207,7 +207,7 @@ p {
   overflow: hidden;
   line-height: 1.5;
   opacity: 0;
-  top: 80px;
+  top: 85px;
 }
 
 .navigation-backdrop {
@@ -255,12 +255,15 @@ p {
   padding: 24px 32px;
 }
 
-.logo-hover {
-  g,
-  path {
-    fill:var(--primary-colour);
-  }
-}
+// .logo-hover {
+//   svg,
+//   g,
+//   path {
+//     fill: black;
+//     color: black;
+//     fill-opacity: 1;
+//   }
+// }
 
 .subscribe {
   background-image: url('../public/subscribe-background.jpg');
@@ -283,4 +286,12 @@ p {
 .scroll-bar {
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+.search-bar {
+  background: white;
+}
+
+.navigation-toggle:hover ~ .navigation-search .search-bar {
+  background: rgb(243, 243, 243)!important;
 }

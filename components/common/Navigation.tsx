@@ -1,14 +1,17 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Programmes from '../navigation/Programmes';
 import Resources from '../navigation/Resources';
 import About from '../navigation/About';
 import Logo from '../common/Logo';
+import { IoIosSearch } from "react-icons/io";
 
 const Navigation = () => {
+
+  const [logoSrc, setLogoSrc] = useState("/logo.svg");
 
   useEffect(() => {
     const navigationToggles = document.querySelectorAll('.navigation-toggle');
@@ -17,6 +20,7 @@ const Navigation = () => {
     const backdrop = document.querySelector('.navigation-backdrop');
 
     const handleHover = () => {
+      setLogoSrc("/logo-green.svg"); // Change logo to green version
       navigationToggles.forEach(toggle => {
         toggle.classList.add('text-black');
       });
@@ -32,6 +36,7 @@ const Navigation = () => {
     };
 
     const handleHoverOut = () => {
+      setLogoSrc("/logo.svg"); // Revert logo to original
       navigationToggles.forEach(toggle => {
         toggle.classList.remove('text-black');
       });
@@ -77,7 +82,7 @@ const Navigation = () => {
         <div className="site-wrapper">
             <div className="navigation-container h-28 w-full flex items-center flex-row justify-between">
                 <div className="navigation-left">
-                  <Link href="/" className='nav-logo'><Logo /></Link>
+                  <Link href="/" className='nav-logo'><Image src={logoSrc} height="50" width="175" alt="chas logo"></Image></Link>
                 </div>
                 <div className="navigation-right">
                     <ul className='flex flex-row text-white font-medium items-center'>
@@ -101,6 +106,12 @@ const Navigation = () => {
                         </li>
                         <li className='text-lg navigation-toggle' id="navigation-connect">Events</li>
                         <li className='text-lg navigation-toggle'>Contact</li>
+                        <div className="navigation-search pl-8">
+                          <button className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[225px] search-bar'>
+                            <IoIosSearch className='text-gray-400 text-xl' />
+                            <span className='text-sm text-gray-400 font-light'>Search our website</span>
+                          </button>
+                        </div>
                     </ul>
                 </div>
             </div>

@@ -10,7 +10,7 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold'>Other Trade Industries:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="/work-should-not-hurt/trades/scaffolding">Scaffolding</Link></li>
+                        <li><Link href="/work-should-not-hurt/trades/building">Building</Link></li>
                         <li><Link href="#">Roofing</Link></li>
                         <li><Link href="#">Plumbing, gasfitting & drainlaying</Link></li>
                         <li><Link href="#">Brick & Blocklaying</Link></li>
@@ -21,7 +21,7 @@ const Introduction = () => {
                 </div>
                 <div className="programme-text flex flex-col gap-12 w-full lg:w-[70%] ml-0 lg:ml-[11rem]">
                     <div className='flex flex-col gap-6'>
-                        <h4 className='font-semibold text-5xl lg:text-6xl'>Building</h4>
+                        <h4 className='font-semibold text-5xl lg:text-6xl'>Scaffolding</h4>
                         <p className='text-[--text-colour]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc, vel sollicitudin nibh felis euismod turpis. Ut ultrices sagittis lectus, in maximus dui. Mauris mattis sem nisi</p>
                     </div>
                     <div className='flex flex-col gap-6'>

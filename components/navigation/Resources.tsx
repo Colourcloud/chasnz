@@ -21,7 +21,7 @@ const Resources = () => {
                                     <h6 className='text-black font-semibold text-xl'>Trade Resources</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/work-should-not-hurt/trades/building#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Building</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</a></li>
+                                        <li><a href="/work-should-not-hurt/trades/scaffolding#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Roofing</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Plumbing, gasfitting & drainlaying</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Brick & Blocklaying</a></li>
@@ -38,7 +38,7 @@ const Resources = () => {
                                     <h6 className='text-black font-semibold text-xl'>General Resources</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>General Resources</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Work Should Not Hurt</a></li>
+                                        <li><a href="/work-should-not-hurt#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Work Should Not Hurt</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
                                     </ul>
                                 </div>

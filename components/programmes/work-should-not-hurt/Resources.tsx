@@ -36,9 +36,9 @@ const Resources = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(
-          'https://chasnz.org/wp-json/wp/v2/posts?_embed&categories=168&per_page=5'
-        );
+        const response = await fetch('https://chasnz.org/wp-json/wp/v2/posts?_embed&categories=168&per_page=5', { 
+          next: { revalidate: 3600 } 
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch posts');
         }
@@ -80,7 +80,7 @@ const Resources = () => {
 
       <div className="resource-layout mt-10">
         <div className="content-wrapper">
-          <div className="resource-grid">
+          <div className="resource-grid" id="resources">
             {posts.map((post) => (
               <Link href={`/resources/${post.slug}`} key={post.id}>
                 <div className="resource-card flex flex-row items-center justify-between py-4 pr-0 lg:pr-6">

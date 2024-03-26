@@ -2,17 +2,36 @@
     background-image: url('../../public/programmes/wsnh/header-background-mobile.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     @media screen and (min-width: 1024px) {
         background-image: url('../../public/programmes/wsnh/header-background.jpg');
     }
 }
 
+
 #trades-building-header {
     background-image: url('../../public/programmes/wsnh/building-background-mobile.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     @media screen and (min-width: 1024px) {
         background-image: url('../../public/programmes/wsnh/building-background.jpg');
+    }
+}
+
+
+#trades-scaffolding-header {
+    background-image: url('../../public/programmes/wsnh/scaffolding-background-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/scaffolding-background.jpg');
     }
 }
 
@@ -43,14 +62,15 @@
 }
 
 .resource-grid {
+    &:nth-last-child(1) {
+        border-bottom: 1px solid #EBEBEB;
+    }
     .resource-card {
         position: relative;
         border-top: 1px solid #EBEBEB;
         border-right: 1px solid #EBEBEB;
         border-left: 1px solid #EBEBEB;
-        // &:last-child {
-        //     border-bottom: 1px solid #EBEBEB;
-        // }
+        
         .resource-image {
             width: 150px;
             height: 100px;

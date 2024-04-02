@@ -9,6 +9,17 @@
     }
 }
 
+#totika-header {
+    background-image: url('../../public/programmes/totika/header-image-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/totika/header-image.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
 
 #trades-building-header {
     background-image: url('../../public/programmes/wsnh/building-background-mobile.jpg');

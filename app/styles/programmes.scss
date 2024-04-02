@@ -1,11 +1,11 @@
 #work-should-not-hurt-header {
     background-image: url('../../public/programmes/wsnh/header-background-mobile.jpg');
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     @media screen and (min-width: 1024px) {
         background-image: url('../../public/programmes/wsnh/header-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
     }
 }
 
@@ -13,12 +13,11 @@
 #trades-building-header {
     background-image: url('../../public/programmes/wsnh/building-background-mobile.jpg');
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-
     @media screen and (min-width: 1024px) {
         background-image: url('../../public/programmes/wsnh/building-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
     }
 }
 
@@ -26,12 +25,11 @@
 #trades-scaffolding-header {
     background-image: url('../../public/programmes/wsnh/scaffolding-background-mobile.jpg');
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-
     @media screen and (min-width: 1024px) {
         background-image: url('../../public/programmes/wsnh/scaffolding-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
     }
 }
 

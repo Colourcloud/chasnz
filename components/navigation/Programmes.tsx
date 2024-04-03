@@ -30,6 +30,7 @@ const Programmes = () => {
                                 <a href="/totika"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Tōtika</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contractors and suppliers</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Case Studies</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register for the Tōtika scheme</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Tōtika scheme resources</a></li>
                                     </ul>

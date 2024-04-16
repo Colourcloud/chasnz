@@ -12,8 +12,8 @@ const Introduction = () => {
                     <ul className='flex flex-col gap-6 underline text-[--totika-blue] mt-6 text-lg'>
                         <li><Link href="#">Info for contractors and suppliers</Link></li>
                         <li><Link href="#">Case studies</Link></li>
-                        <li><Link href="#" className='flex flex-row items-center gap-2'>Register for the Tōtika scheme <FiExternalLink /></Link></li>
-                        <li><Link href="#" className='flex flex-row items-center gap-2'>Tōtika scheme resources <FiExternalLink /></Link></li>
+                        <li><Link href="https://www.totika.org/totika/signup" target='_blank' className='flex flex-row items-center gap-2'>Register for the Tōtika scheme <FiExternalLink /></Link></li>
+                        <li><Link href="https://www.totika.org/totika-scheme-scheme-resources" target='_blank' className='flex flex-row items-center gap-2'>Tōtika scheme resources <FiExternalLink /></Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 lg:ml-[11rem]">

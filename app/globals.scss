@@ -296,3 +296,17 @@ p {
 .navigation-toggle:hover ~ .navigation-search .search-bar {
   background: rgb(243, 243, 243)!important;
 }
+
+.video-player-responsive {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-player-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

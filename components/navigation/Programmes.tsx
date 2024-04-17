@@ -37,7 +37,7 @@ const Programmes = () => {
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <a href="#"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Lead On.</h6></a>
+                                    <a href="/leadon/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Lead On.</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Managment</a></li>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register your Frontline Leader</a></li>
@@ -49,6 +49,7 @@ const Programmes = () => {
                                     <a href="#"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>ConstructSafe</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Book an assessment</a></li>
+                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Resources</a></li>
                                     </ul>
                                 </div>
 

@@ -9,6 +9,17 @@
     }
 }
 
+#leadon-header {
+    background-image: url('../../public/programmes/leadon/header-image-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/leadon/header-image.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
 #totika-header {
     background-image: url('../../public/programmes/totika/header-image-mobile.jpg');
     background-size: cover;

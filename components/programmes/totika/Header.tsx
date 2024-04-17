@@ -11,7 +11,7 @@ const Header = () => {
                     <Image src="/programmes/logos/totika.svg" alt="work should not hurt logo" width='400' height='300'></Image>
                 </div>
                 <div className="header-text-block flex flex-col gap-6 text-center w-full lg:w-3/4">
-                  <p className='text-base md:text-xl font-light'>Tōtika was developed to address inefficiencies in the procurement process caused by the lack of a common pre-qualification standard</p>
+                  <p className='text-base md:text-xl font-medium'>Tōtika was developed to address inefficiencies in the procurement process caused by the lack of a common pre-qualification standard</p>
                 </div>
               </div>
             </div>

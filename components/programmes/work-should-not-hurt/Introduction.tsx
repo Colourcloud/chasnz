@@ -15,8 +15,8 @@ const Introduction = () => {
                         <li><Link href="#">Resources</Link></li>
                     </ul>
                 </div>
-                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 lg:ml-[11rem]">
-                    <h4 className='font-bold text-4xl lg:text-5xl'>Work Should Not Hurt</h4>
+                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">
+                    <h4 className='font-bold text-4xl lg:text-6xl'>Work Should Not Hurt</h4>
                     <p className='text-[--text-colour]'>The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury.</p>
                     <h4 className='font-semibold text-2xl'>It&apos;s time to change the norm</h4>
                     <p className='text-[--text-colour]'>Work Should Not Hurt is a participative ergonomics programme. Put simply, this means actively involving workers and industry in developing and implementing changes to the way work is done.</p>

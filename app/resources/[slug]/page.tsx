@@ -22,7 +22,7 @@ interface Post {
   }
 }
 
-const BlogPost = async ({ params, title }: { params: { slug: string }, title?: string }) => {
+const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
   const reqUrl = `https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&slug=${params.slug}`;
   const response = await fetch(reqUrl);
   const posts: Post[] = await response.json();

@@ -28,6 +28,7 @@ interface Post {
   }
 }
 
+
 const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
   const reqUrl = `https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&slug=${params.slug}`;
   const response = await fetch(reqUrl);
@@ -77,4 +78,18 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
   );
 };
 
+export async function generateStaticParams() {
+  const reqUrl = `https://cms.chasnz.org/wp-json/wp/v2/posts?slug`; // Fetch all slugs
+
+  const response = await fetch(reqUrl);
+  const posts: { slug: string }[] = await response.json(); // Get an array of objects with just "slug" property
+
+  // Return an array of objects with the "params" key containing the slug
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+
 export default BlogPost;
+

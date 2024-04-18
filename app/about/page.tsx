@@ -5,10 +5,13 @@ import Subscribe from '@/components/common/Subscribe'
 import Header from '@/components/about/Header'
 import Introduction from '@/components/about/Introduction'
 import Board from '@/components/about/Board'
+import Team from '@/components/about/Team'
 
 export const metadata: Metadata = {
     title: 'CHASNZ – Learn more about chasnz',
   }
+
+  
 
 const page = () => {
   return (
@@ -17,6 +20,7 @@ const page = () => {
    <Header />
    <Introduction />
    <Board />
+   <Team />
    </>
   )
 }

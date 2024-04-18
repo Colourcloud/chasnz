@@ -37,7 +37,7 @@ const Resources = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          'https://chasnz.org/wp-json/wp/v2/posts?_embed&categories=168&per_page=5', { 
+          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=168&per_page=5', { 
             next: { revalidate: 3600 } 
           });
           

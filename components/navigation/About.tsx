@@ -21,8 +21,8 @@ const About = () => {
                                     <h6 className='text-black font-semibold text-xl'>About us</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/about" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About Chasnz</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</a></li>
+                                        <li><a href="#board-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
+                                        <li><a href="#team-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</a></li>
                                     </ul>
                                 </div>
                                 <div className="mega-menu_right_list_items">

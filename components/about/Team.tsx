@@ -14,7 +14,7 @@ import {
     DrawerTrigger,
   } from "@/components/ui/drawer"
 
-type BoardMember = {
+type TeamMember = {
     id: number;
     name: string;
     position: string;
@@ -23,14 +23,14 @@ type BoardMember = {
     imageUrl: string; // Now directly storing the URL
 };
 
-const Board = () => {
-    const [boardMembers, setBoardMembers] = useState<BoardMember[]>([]);
+const Team = () => {
+    const [boardMembers, setBoardMembers] = useState<TeamMember[]>([]);
     const [error, setError] = useState<string>('');
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/board-member?orderby=date&order=asc&per_page=20', {
+                const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/team-member?orderby=date&order=asc&per_page=20', {
                     next: { revalidate: 3600 }
                 });
                 const data = await response.json();
@@ -63,11 +63,11 @@ const Board = () => {
     }
 
     return (
-        <section className='py-20 lg:py-40' id="board-members">
+        <section className='pb-20 lg:pb-40' id="team-members">
             <div className="content-wrapper">
                 <div className="board-members flex flex-col gap-4">
-                    <h4 className='text-3xl lg:text-5xl text-[--primary-colour] font-semibold'>Meet the board of trustees</h4>
-                    <p className='text-xl font-medium text-[--text-colour]'>Below is a list of members that are on the board of trustees</p>
+                    <h4 className='text-3xl lg:text-5xl text-[--primary-colour] font-semibold'>Meet the Team</h4>
+                    <p className='text-xl font-medium text-[--text-colour]'>Below is a list of team members at Chasnz</p>
                 </div>
             <div className="board-member-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
             {boardMembers.map((member) => (
@@ -113,5 +113,5 @@ const Board = () => {
     );
 };
 
-export default Board;
+export default Team;
 

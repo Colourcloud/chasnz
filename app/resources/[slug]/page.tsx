@@ -1,21 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import Navigation from '@/components/common/Navigation'
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Navigation from '@/components/common/Navigation';
 import { IoArrowBackOutline } from "react-icons/io5";
 import Head from 'next/head';
-import { Metadata } from 'next';
-
-
-export async function generateStaticParams() {
-
-  const res = await fetch(`https://chasnz.org/wp-json/wp/v2/posts`)
-  const data = await res.json()
-
-  return data.map((resource: any) => ({
-    slug: resource.slug
-  }))
-}
 
 interface Post {
   slug: string;
@@ -34,13 +22,7 @@ interface Post {
   }
 }
 
-interface PostParams {
-  params: {
-    slug: string;
-  };
-}
-
-const BlogPost: React.FC<{ params: { slug: string }, title?: string }> = async ({ params, title }) => {
+const BlogPost = async ({ params, title }: { params: { slug: string }, title?: string }) => {
   const reqUrl = `https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&slug=${params.slug}`;
   const response = await fetch(reqUrl);
   const posts: Post[] = await response.json();
@@ -54,9 +36,6 @@ const BlogPost: React.FC<{ params: { slug: string }, title?: string }> = async (
   }
 
   const featuredMediaUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
-
-  
-  
 
   return (
     <>

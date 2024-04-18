@@ -3,7 +3,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/common/Navigation';
 import { IoArrowBackOutline } from "react-icons/io5";
+import { Metadata } from 'next';
 import Head from 'next/head';
+
+export const generateMetadata = ({ params }: { params: { slug: string } }): Metadata => ({
+  title: `Chasnz - ${params.slug.replace(/-/g, ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`,
+  description: 'Resources',
+});
 
 interface Post {
   slug: string;

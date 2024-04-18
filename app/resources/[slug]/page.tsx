@@ -92,22 +92,4 @@ const BlogPost: React.FC<{ params: { slug: string }, title?: string }> = async (
   );
 };
 
-export async function generateMetadata({ params }: { params: PostParams }) {
-  const reqUrl = `https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&slug=${params.slug}`;
-  const response = await fetch(reqUrl);
-  const posts: Post[] = await response.json();
-  const post = posts.length > 0 ? posts[0] : null;
-
-  if (!post) {
-    return {
-      title: 'No post found',
-    }
-  }
-
-  return {
-    title: `Chasnz - ${post.title.rendered}`, // Set the title from post data
-    description: post.excerpt.rendered, // Set the description from post data
-  }
-}
-
 export default BlogPost;

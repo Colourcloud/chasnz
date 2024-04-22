@@ -4,6 +4,7 @@ import "./globals.scss";
 import "./styles/programmes.scss";
 import NextTopLoader from 'nextjs-toploader';
 import Navigation from "@/components/common/Navigation";
+import Footer from "@/components/common/Footer";
 
 const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <NextTopLoader color="#7ABC25" showSpinner={false}/>
         <Navigation />
         {children}
+        <Footer />
         </body>
     </html>
   );

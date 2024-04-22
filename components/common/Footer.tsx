@@ -4,11 +4,52 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <section className="footer bg-white py-20">
         <div className="content-wrapper">
-          <div className="footer-rows">
-            <div className="footer-branding">
-              
+          <div className="footer-rows flex flex-col md:flex-row gap-24">
+            <div className="footer-branding flex flex-col gap-6">
+              <Image src="/footer/chaslogo.svg" alt="chasnz logo" width="300" height="200" />
+              <p className='uppercase font-medium text-sm text-[#A1A1A1]'>In partnership with:</p>
+              <Image src="/footer/acclogo.png" alt="acc logo" width="200" height="200" />
+              <p className='text-sm mt-12'>© CHASNZ 2023 - All Rights Reserved</p>
+            </div>
+
+            <div className="footer-links flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+              <div className="link-block">
+                <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Programmes</h4>
+                <ul className='flex flex-col gap-3 mt-4'>
+                  <li><Link href="/work-should-not-hurt/">Work Should Not Hurt</Link></li>
+                  <li><Link href="/totika/">Tōtika</Link></li>
+                  <li><Link href="/leadon/">Lead On.</Link></li>
+                  <li><Link href="/constructsafe/">ConstructSafe</Link></li>
+                </ul>
+              </div>
+
+              <div className="link-block">
+                <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Initiatives</h4>
+                <ul className='flex flex-col gap-3 mt-4'>
+                  <li>Energy Wheel</li>
+                </ul>
+              </div>
+
+              <div className="link-block">
+                <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Learn</h4>
+                <ul className='flex flex-col gap-3 mt-4'>
+                  <li>Resources</li>
+                  <li>Data Tools &amp; Insights</li>
+                </ul>
+              </div>
+
+              <div className="link-block">
+                <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Connect</h4>
+                <ul className='flex flex-col gap-3 mt-4'>
+                  <li><Link href="/about/">Meet the Team</Link></li>
+                  <li>Events</li>
+                  <li>News &amp; Updates</li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
+
             </div>
           </div>
         </div>

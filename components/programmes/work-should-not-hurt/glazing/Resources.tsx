@@ -84,7 +84,7 @@ const Resources = () => {
         <div className="content-wrapper">
           <div className="resource-grid">
             {posts.map((post) => (
-              <Link href={`/resources/${post.slug}`} key={post.id}>
+              <a href={`/resources/${post.slug}`} key={post.id}>
                 <div className="resource-card flex flex-row items-center justify-between py-4 pr-0 lg:pr-6">
                   <div className="flex flex-row gap-3 items-center">
                     <div className="resource-image">
@@ -125,7 +125,7 @@ const Resources = () => {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

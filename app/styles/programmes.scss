@@ -9,6 +9,7 @@
     }
 }
 
+
 #leadon-header {
     background-image: url('../../public/programmes/leadon/header-image-mobile.jpg');
     background-size: cover;
@@ -38,6 +39,105 @@
     background-repeat: no-repeat;
     @media screen and (min-width: 1024px) {
         background-image: url('../../public/programmes/wsnh/building-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-roofing-header {
+    background-image: url('../../public/programmes/wsnh/roofing-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/roofing-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-painting-header {
+    background-image: url('../../public/programmes/wsnh/painting-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/painting-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-management-header {
+    background-image: url('../../public/programmes/wsnh/management-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/management-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-concrete-header {
+    background-image: url('../../public/programmes/wsnh/concrete-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/concrete-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-flooring-header {
+    background-image: url('../../public/programmes/wsnh/flooring-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/flooring-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-electricians-header {
+    background-image: url('../../public/programmes/wsnh/electricians-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/electricians-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-glazing-header {
+    background-image: url('../../public/programmes/wsnh/glazing-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/glazing-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-brick-header {
+    background-image: url('../../public/programmes/wsnh/brick-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/brick-background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
+#trades-plumbing-header {
+    background-image: url('../../public/programmes/wsnh/plumbing-background-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/wsnh/plumbing-background.jpg');
         background-position: center;
         background-attachment: fixed;
     }

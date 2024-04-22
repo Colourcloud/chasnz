@@ -11,11 +11,11 @@ const Introduction = () => {
                     <h4 className='text-black text-2xl font-semibold'>Other Trade Industries:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
                         <li><Link href="/work-should-not-hurt/trades/scaffolding">Scaffolding</Link></li>
-                        <li><Link href="#">Roofing</Link></li>
-                        <li><Link href="#">Plumbing, gasfitting & drainlaying</Link></li>
-                        <li><Link href="#">Brick & Blocklaying</Link></li>
-                        <li><Link href="#">Flooring</Link></li>
-                        <li><Link href="#">Painting</Link></li>
+                        <li><Link href="/work-should-not-hurt/trades/roofing">Roofing</Link></li>
+                        <li><Link href="/work-should-not-hurt/trades/plumbing-gasfitting-drainlaying">Plumbing, gasfitting & drainlaying</Link></li>
+                        <li><Link href="/work-should-not-hurt/trades/brick-blocklaying">Brick & Blocklaying</Link></li>
+                        <li><Link href="/work-should-not-hurt/trades/flooring">Flooring</Link></li>
+                        <li><Link href="/work-should-not-hurt/trades/painting">Painting</Link></li>
                         <li><Link href="/work-should-not-hurt#trades" className='flex flex-row items-center gap-2'>View More <span><IoIosArrowDroprightCircle /></span></Link></li>
                     </ul>
                 </div>

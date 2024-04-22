@@ -21,6 +21,7 @@ const page = () => {
    <Introduction />
    <Board />
    <Team />
+   <Subscribe />
    </>
   )
 }

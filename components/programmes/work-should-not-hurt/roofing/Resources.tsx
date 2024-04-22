@@ -37,7 +37,7 @@ const Resources = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=14&per_page=5', { 
+          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=9&per_page=5', { 
             next: { revalidate: 3600 } 
           });
           
@@ -60,7 +60,7 @@ const Resources = () => {
         <div className="resource-container">
           <div className="resource-heading">
             <h4 className="text-2xl font-semibold">
-              Browse “Scaffolding” resources to get you site-ready
+              Browse “Roofing” resources to get you site-ready
             </h4>
           </div>
         </div>

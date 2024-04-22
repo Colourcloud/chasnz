@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { FiExternalLink } from "react-icons/fi";
+import Image from 'next/image';
 
 const Introduction = () => {
   return (
@@ -45,6 +46,10 @@ const Introduction = () => {
                         <p className='text-black text-xl lg:text-2xl font-semibold'>Does this sound like you?</p>
                         <p className='text-[--text-colour]'>To ensure your success, you will be interacting with others online, have a designated tutor available for offline support, and complete workplace-based learning. It combines self-paced, focused online content with interactive sessions and workplace “missions.” It&apos;s flexible and in short bursts &#45; so you aren&apos;t stuck in a classroom for days or taken away from work. There are also exciting benefits to being on a course with people from around the world.</p>
                         <p className='text-[--text-colour]'>Put your hand up to work with us on this important programme. Professional development opportunities like this are gold dust, and spaces are limited. Get in touch with us today to talk through any questions you have about the course or need help getting your manager to support you in this.</p>
+                    </div>
+                    <div className="text-block flex flex-col gap-6">
+                        <p className='text-black'>Programme run by</p>
+                        <a href="https://www.safetyfutures.com/" target="_blank"><Image src="/programmes/leadon/safety-logo.webp" alt="safety futures logo" width={200} height={200}></Image></a>
                     </div>
                 </div>
             </div>

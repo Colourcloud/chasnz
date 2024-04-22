@@ -60,7 +60,7 @@ const Subscribe: React.FC = () => {
         <div className="content-wrapper">
           <div className='flex flex-col items-center justify-center'>
             <h4 className='text-white text-3xl lg:text-4xl font-semibold text-center'>Never miss an update</h4>
-            <div className="hubspot-form" ref={hubspotFormRef} id="hubspotForm">
+            <div className="hubspot-form w-2/4 mt-10" ref={hubspotFormRef} id="hubspotForm">
               {/* The HubSpot form will be injected here */}
             </div>
           </div>

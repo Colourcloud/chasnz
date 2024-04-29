@@ -364,3 +364,41 @@ p {
     }
   }
 }
+
+#events-header {
+  background-image: url('../public/events/events-header-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1024px) {
+      background-image: url('../public/events/events-header.jpg');
+      background-position: center;
+      background-attachment: fixed;
+  }
+}
+.event-card-image {
+ img {
+  transition: 200ms ease;
+ }
+}
+.event-card:hover {
+  .event-card-image {
+    img {
+      scale: 1.1;
+    }
+  }
+}
+
+.event-information {
+  width: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 2;
+  }
+}

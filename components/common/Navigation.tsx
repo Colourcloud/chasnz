@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Programmes from '../navigation/Programmes';
 import Resources from '../navigation/Resources';
 import About from '../navigation/About';
+import Events from '../navigation/Events';
 import Logo from '../common/Logo';
 import { IoIosSearch } from "react-icons/io";
 
@@ -104,7 +105,12 @@ const Navigation = () => {
                                 <Resources />
                             </div>
                         </li>
-                        <li className='text-lg navigation-toggle' id="navigation-connect">Events</li>
+                        <li className='text-lg navigation-toggle' id="navigation-events">
+                            <a href='#'>Events</a>
+                            <div className="dropdown-menu">
+                                <Events />
+                            </div>
+                        </li>
                         <li className='text-lg navigation-toggle'>Contact</li>
                         <div className="navigation-search pl-8">
                           <button className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[225px] search-bar'>

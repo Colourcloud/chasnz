@@ -6,6 +6,7 @@ import Video from '@/components/programmes/totika/Video'
 import Casestudies from '@/components/programmes/totika/Casestudies'
 import Subscribe from '@/components/common/Subscribe'
 import Partners from '@/components/programmes/totika/Partners'
+import Prequalification from '@/components/programmes/totika/Prequalification'
 
 export const metadata: Metadata = {
     title: 'CHASNZ – Tōtika Programme',
@@ -18,6 +19,7 @@ const page = () => {
     <Introduction />
     <Video />
     <Casestudies />
+    <Prequalification />
     <Partners />
     <Subscribe />
     </>

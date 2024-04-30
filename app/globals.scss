@@ -102,10 +102,6 @@ body::-webkit-scrollbar {
   display: none; /* Hide scrollbar */
 }
 
-body,
-html {
-  overflow-x: hidden;
-}
 
 body {
   font-size: 16px;
@@ -247,6 +243,13 @@ p {
 }
 
 #navigation-about:hover {
+  .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#navigation-events:hover {
   .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -401,4 +404,11 @@ p {
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
     z-index: 2;
   }
+}
+
+.right-col {
+  position: sticky;
+  top: 20px; /* Adjust this to fit your header or nav height */
+  align-self: flex-start; /* Helps in starting from the top of the flex container */
+  height: fit-content; /* Important to ensure the height does not stretch */
 }

@@ -10,9 +10,9 @@ const Introduction = () => {
                     <h4 className='text-black text-2xl font-semibold'>WSHN related content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
                         <li><Link href="#trades">Trade Specific Information</Link></li>
-                        <li><Link href="#">Analysis & Insights</Link></li>
-                        <li><Link href="#">Get Involved</Link></li>
-                        <li><Link href="#">Resources</Link></li>
+                        <li><Link href="/work-should-not-hurt/analysis-insights">Analysis & Insights</Link></li>
+                        <li><Link href="/work-should-not-hurt/get-involved">Get Involved</Link></li>
+                        <li><Link href="#resources">Resources</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">

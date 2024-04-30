@@ -53,7 +53,7 @@ const Resources = () => {
   }, []);
 
   return (
-    <section className="resource-section pb-20 lg:pb-32 bg-white">
+    <section className="resource-section pb-20 lg:pb-32 bg-white" id="resources">
       <div className="content-wrapper">
         <div className="resource-container">
           <div className="resource-heading">

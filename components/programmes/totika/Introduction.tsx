@@ -10,7 +10,7 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold'>Tōtika related content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--totika-blue] mt-6 text-lg'>
-                        <li><Link href="#">Info for contractors and suppliers</Link></li>
+                        <li><Link href="/totika/contractor-suppliers">Info for contractors and suppliers</Link></li>
                         <li><Link href="#">Case studies</Link></li>
                         <li><Link href="https://www.totika.org/totika/signup" target='_blank' className='flex flex-row items-center gap-2'>Register for the Tōtika scheme <FiExternalLink /></Link></li>
                         <li><Link href="https://www.totika.org/totika-scheme-scheme-resources" target='_blank' className='flex flex-row items-center gap-2'>Tōtika scheme resources <FiExternalLink /></Link></li>

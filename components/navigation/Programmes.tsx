@@ -21,18 +21,18 @@ const Programmes = () => {
                                     <a href="/work-should-not-hurt"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Work should not hurt</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/work-should-not-hurt#trades" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Trade specific information</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
+                                        <li><a href="/work-should-not-hurt/analysis-insights" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
+                                        <li><a href="/work-should-not-hurt/get-involved" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
                                 <a href="/totika"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Tōtika</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contractors and suppliers</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Case Studies</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register for the Tōtika scheme</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Tōtika scheme resources</a></li>
+                                        <li><a href="/totika/contractor-suppliers" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contractors and suppliers</a></li>
+                                        <li><a href="/totika/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Case Studies</a></li>
+                                        <li><a href="https://www.totika.org/totika/signup" target="_blank" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register for the Tōtika scheme</a></li>
+                                        <li><a href="https://www.totika.org/totika-scheme-scheme-resources" target="_blank" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Tōtika scheme resources</a></li>
                                     </ul>
                                 </div>
 

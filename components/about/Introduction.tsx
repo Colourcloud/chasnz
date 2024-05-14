@@ -5,7 +5,7 @@ const Introduction = () => {
   return (
     <section className='py-20 lg:py-40 border-b-2 border-gray-200'>
         <div className="content-wrapper">
-            <div className="introduction-content flex flex-row gap-16 items-center">
+            <div className="introduction-content flex flex-col lg:flex-row gap-16 items-center">
                 <div className="text-content w-full lg:w-2/4">
                     <span className='text-base text-[--primary-colour] pb-4 block'>What we stand for</span>
                     <h4 className='text-3xl lg:text-6xl text-black font-bold'>Better work, better lives and a better future.</h4>

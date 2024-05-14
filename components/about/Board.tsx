@@ -78,7 +78,7 @@ const Board = () => {
                             <Drawer>
                                 <DrawerTrigger><Image src="/about/dropdown-icon.svg" alt='' width={40} height={40} /></DrawerTrigger>
                                 <DrawerContent className='max-h-[900px]'>
-                                    <div className="content-wrapper py-10 lg:py-20 overflow-y: scroll;">
+                                    <div className="content-wrapper py-10 lg:py-20 overflow-scroll">
                                     <div className="drawer-content flex flex-col lg:flex-row gap-10 overflow-auto">
                                         <div className="drawer-image w-full lg:w-2/4">
                                             <Image src={member.imageUrl} className='w-full' alt={member.name} width={700} height={700} unoptimized />

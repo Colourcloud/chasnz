@@ -412,3 +412,7 @@ p {
   align-self: flex-start; /* Helps in starting from the top of the flex container */
   height: fit-content; /* Important to ensure the height does not stretch */
 }
+
+.draw-content {
+  max-height: calc(100vh - 3rem);
+}

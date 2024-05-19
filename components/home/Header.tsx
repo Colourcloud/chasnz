@@ -12,8 +12,7 @@ const Header = () => {
                 </div>
                 <div className="header-text relative z-10 h-full flex flex-col justify-center items-center">
                     <div className='flex flex-col gap-6 items-center w-2/3 text-center'>
-                        <h1 className='text-8xl text-white font-bold'>A Catalyst For Change</h1>
-                        <p className='text-3xl text-white font-medium'>Guiding our people and places in a different way to create better work, better lives and a better future.</p>
+                        <h1 className='text-4xl lg:text-6xl text-white font-bold'>We are your nationwide partner in Health & Safety for your workplace.</h1>
                     </div>
                 </div>
         </div>

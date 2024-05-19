@@ -21,6 +21,17 @@
     }
 }
 
+#constructsafe-header {
+    background-image: url('../../public/programmes/constructsafe/header-image-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media screen and (min-width: 1024px) {
+        background-image: url('../../public/programmes/constructsafe/header-image.jpg');
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+
 #totika-header {
     background-image: url('../../public/programmes/totika/header-image-mobile.jpg');
     background-size: cover;
@@ -220,7 +231,7 @@
 }
 
 .resource-card:hover {
-    background-color: #1D3B44;
+    background-color: #618182;
     color: white!important;
     p {
         color: white!important;
@@ -240,9 +251,116 @@
     }
 }
 
+.chas-resource:hover {
+    background-color: var(--primary-colour)!important;
+    color: white!important;
+    p {
+        color: white!important;
+    }
+    span {
+        color: white!important;
+    }
+    // .resource-image {
+    //     width: 170px;
+    //     height: 100%;
+    //     margin-left: 0;
+    // }
+    .card-cta {
+        opacity: 1;
+        transition: 150ms ease;
+        transform: translateX(0px);
+    }
+}
+
+
+
 .prequalification {
     height: 700px;
     background-image: url('../../public/programmes/totika/prequal-bg.jpg');
     background-size: cover;
     background-position: center; 
+}
+
+.programme-text {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 100%;
+        background: white;
+        top: 0;
+        height: 180px;
+        width: 100%;
+    }
+}
+
+#wsnh-card {
+    background-image: url('../../public/home/programmes/wsnh.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#totika-card {
+    background-image: url('../../public/home/programmes/totika.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#leadon-card {
+    background-image: url('../../public/home/programmes/leadon.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#constructsafe-card {
+    background-image: url('../../public/home/programmes/constructsafe.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    position: relative;
+    padding: 24px;
+    &::before {
+        content: '';
+        z-index: 1;
+        height: 250px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    }
+}
+
+.programme-card {
+    p {
+        display: none;
+        opacity: 0;
+    }
+    &:hover {
+        p {
+            display: block;
+            opacity: 1;
+        }
+        a {
+            color: white;
+        }
+        .card-overlay {
+            opacity: 1;
+        }
+    }
+}
+
+.card-overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(69, 120, 3, 0.9);
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: 100ms ease;
+    pointer-events: none;
 }

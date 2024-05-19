@@ -17,6 +17,7 @@ interface Event {
         rendered: string;
     };
     acf: {
+        isactive: string;
         title: string;
         excerpt: string;
         date: string;
@@ -25,6 +26,7 @@ interface Event {
         location: string;
         cover_image: string; // Assuming this might be an ID that needs resolving to a URL
         content: string;
+        link: string;
     };
 }
 
@@ -80,6 +82,13 @@ const EventDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
        <title>{event.title.rendered}</title>
       </head>
       <div className="article-header w-full h-[500px] bg-black"></div>
+      <div>
+          {event.acf.isactive === "Yes" ? (
+               <span></span>
+               ) : (
+             <div className='w-full text-center text-sm text-white py-3 px-6 bg-red-600'>This event has finished and is no longer open for new registrations</div>
+           )}
+        </div>
       <div className="article-content py-20 lg:py-40">
         <div className='content-wrapper'>
           <div className="events-page-layout flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between">
@@ -115,13 +124,7 @@ const EventDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
                 </div>
                 <div className="section-block flex flex-col">
                   <span className='text-sm text-gray-500'>Time:</span>
-                  <p className='text-base  font-medium'>
-                    {new Date(event.acf.time).toLocaleTimeString('en-US', {
-                      hour: 'numeric',
-                      minute: '2-digit',
-                      hour12: true  //
-                    })}
-                    </p>
+                  <p className='text-base  font-medium'>{event.acf.time}</p>
                 </div>
                 <div className="section-block flex flex-col">
                   <span className='text-sm text-gray-500'>Duration:</span>
@@ -132,7 +135,11 @@ const EventDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
                   <p className='text-base font-medium'>{event.acf.location}</p>
                 </div>
                 <div className="section-block flex flex-col">
-                  <a href="#" className='w-full text-center text-sm text-white py-3 px-6 rounded-full bg-[--primary-colour]'>Register for the event</a>
+                  {event.acf.isactive === "Yes" ? (
+                    <a href={event.acf.link} className='w-full text-center text-sm text-white py-3 px-6 rounded-full bg-[--primary-colour]'>Register for the event</a>
+                  ) : (
+                    <div className='w-full text-center text-sm text-white py-3 px-6 rounded-full bg-gray-400'>Event has Ended</div>
+                  )}
                 </div>
               </div>
           </div>

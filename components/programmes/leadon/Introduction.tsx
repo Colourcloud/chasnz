@@ -15,7 +15,7 @@ const Introduction = () => {
                         <li><Link href="#">Register for Lead On.</Link></li>
                     </ul>
                 </div>
-                <div className="programme-text flex flex-col gap-10 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">
+                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <div className="text-block flex flex-col gap-6">
                         <h4 className='font-bold text-4xl lg:text-6xl'>Introduction to Leadon</h4>
                         <p className='text-[--leadon-orange] text-xl lg:text-2xl font-semibold'>Frontline leaders are the first line of protection and a last line of defence on our worksites.</p>

@@ -113,7 +113,7 @@ const Trades: React.FC = () => {
       },
       management: {
         title: 'Management & Support',
-        link: '/work-should-not-hurt/trades/management-support',
+        link: '/work-should-not-hurt/trades/manage-support',
         imageSrc: managementImage,
         description:
             "We have worked onsite alongside management & support workers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",

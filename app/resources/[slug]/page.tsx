@@ -88,8 +88,7 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
               })}
             </span>
             <h1 className='text-3xl lg:text-4xl font-semibold'>{post.title.rendered}</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></div>
-            <div className='flex flex-col gap-5 post-content' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+            <div className='flex flex-col gap-6 post-content' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
             {post.acf.download && (
               <a href={post.acf.download} className='text-white text-sm font-medium py-3 px-6 rounded-full bg-[--primary-colour] self-start'>{post.acf.button_label}</a>
             )}

@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import Subscribe from '@/components/common/Subscribe'
 import Header from '@/components/events/Header'
 import Events from '@/components/events/Events'
+import Introduction from '@/components/events/Introduction'
 
 export const metadata: Metadata = {
     title: 'CHASNZ – Events',
@@ -15,6 +16,7 @@ const page = () => {
     <>
     <Navigation />
     <Header />
+    <Introduction />
     <Events />
     <Subscribe />
     </>

@@ -15,7 +15,7 @@ const Introduction = () => {
                         <li><Link href="#resources">Resources</Link></li>
                     </ul>
                 </div>
-                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">
+                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <h4 className='font-bold text-4xl lg:text-6xl'>Work Should Not Hurt</h4>
                     <p className='text-[--text-colour]'>The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury.</p>
                     <h4 className='font-semibold text-2xl'>It&apos;s time to change the norm</h4>

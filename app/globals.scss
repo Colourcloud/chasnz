@@ -106,6 +106,7 @@ body::-webkit-scrollbar {
 body {
   font-size: 16px;
   background-color: white;
+  overflow-x: hidden;
 }
 p {
   line-height: 2rem;
@@ -122,6 +123,9 @@ p {
   @media screen and (min-width: 768px) {
     padding: 0px 64px;
   }
+  @media screen and (min-width: 1080px) {
+    padding: 0px 32px;
+  }
   @media screen and (min-width: 1280px) {
     padding: 0px 0px;
   }
@@ -132,6 +136,9 @@ p {
   padding: 0px 16px;
   @media screen and (min-width: 768px) {
     padding: 0px 64px;
+  }
+  @media screen and (min-width: 1080px) {
+    padding: 0px 32px;
   }
   @media screen and (min-width: 1280px) {
     padding: 0px 0px;
@@ -315,6 +322,23 @@ p {
   height: 100%;
 }
 
+.constructsafe-video-player {
+  position: relative;
+  width: 100%;
+  padding-top: 56.5%; /* 16:9 Aspect Ratio */
+  @media screen and (min-width: 768px) {
+    padding-top: 35.5%;
+  }
+}
+
+.constructsafe-video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #about-header {
   background-image: url('../public/about/header-image-mobile.jpg');
   background-size: cover;
@@ -414,5 +438,58 @@ p {
 }
 
 .draw-content {
-  max-height: calc(100vh - 3rem);
+  max-height: calc(100vh - 4rem);
+  @media screen and (min-width: 1024px) {
+    max-height: 100%;
+  }
+}
+
+.home-introduction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+  gap: 24px;
+  img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+
+.national-reach {
+  height: 500px;
+  background-image: url('../public/home/national-reach.png');
+  background-size: cover;
+  background-position: center;
+    background-attachment: fixed;
+  @media screen and (min-width: 768px) {
+    height: 750px;
+  }
+}
+
+.social-icon {
+  transition: 50ms ease;
+  &:hover {
+    color: var(--primary-colour);
+  }
+}
+
+.resource-button {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background: var(--primary-colour);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 999px;
+  text-align: center;
+  align-self: start;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.aboutus-banner {
+  background-image: url('../public/home/aboutus-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }

@@ -24,7 +24,7 @@ const page = () => {
                         <li><Link href="/work-should-not-hurt#resources">Resources</Link></li>
                     </ul>
                 </div>
-                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">
+                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <h4 className='font-bold text-4xl lg:text-6xl'>Get Involved</h4>
                     <p className='text-[--text-colour]'>We can&apos;t do this on our own. Work Should Not Hurt is a participatory ergonomics programme. Put simply, this means actively involving workers in developing and implementing changes to the way work is done to improve productivity and reduce the risks to safety and health. Let&apos;s join forces to support your industry. Together we can take steps to reduce preventable sprains and strains in the construction industry.</p>
                     <GetinvoledForm />

@@ -2,25 +2,28 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
-import buildingImage from '../../public/programmes/wsnh/trade-images/building.jpg';
+import whakatipu from '../../public/data-tools/whakatipu.jpg';
 import scaffoldingImage from '../../public/programmes/wsnh/trade-images/scaffolding.jpg';
 import roofingImage from '../../public/programmes/wsnh/trade-images/roofing.jpg';
+
 
 interface TradeData {
   [key: string]: {
     title: string;
     imageSrc: any;
     description: string;
+    link: string;
   };
 }
 
-const Sectors: React.FC = () => {
-  const [hoveredTrade, setHoveredTrade] = useState<string | null>("professionalservices"); // Initialize with "professionalservices"
+const Menus: React.FC = () => {
+  const [hoveredTrade, setHoveredTrade] = useState<string | null>("whakatipu"); // Initialize with "building"
   const [lastHoveredTrade, setLastHoveredTrade] = useState<string | null>(null);
 
   const handleTradeHover = (trade: string | null) => {
-    setHoveredTrade(trade || "professionalservices"); // If null is passed, default to "professionalservices"
+    setHoveredTrade(trade || "whakatipu"); // If null is passed, default to "building"
   };
 
   const handleTradeLeave = () => {
@@ -29,29 +32,26 @@ const Sectors: React.FC = () => {
   };
 
   const tradeData: TradeData = {
-    professionalservices: {
-      title: 'Professional Services',
-      imageSrc: buildingImage,
+    whakatipu: {
+      title: 'Project Whakatipu',
+      link: '/data-tools-and-insights/whakatipu/',
+      imageSrc: whakatipu,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
+        "Project Whakatipu is an industry project to create a data lake asset for  all New Zealand to benefit from. Organisations can share data in a  safe, confidential way and therefore create a large data set (lake),  from which data scientists will seek actionable insight around what  matters in creating a healthier and safer construction industry.",
     },
     industrybodies: {
-      title: 'Industry Bodies',
+      title: 'Measuring Health and Safety',
+      link: '/work-should-not-hurt/trades/scaffolding',
       imageSrc: scaffoldingImage,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
+        "Simple but effective tools available to the NZ construction sector to be used as tools to pinpoint risk areas and drive improvement.",
     },
     regulartorybodies: {
-      title: 'Regulatory Bodies',
+      title: 'Harm & Injury Interactive Dashboard',
+      link: 'https://app.powerbi.com/view?r=eyJrIjoiNDlhNjRjYzgtZmVkYi00MDM4LTgzYzAtMzc0ZDhkOTY4ZjExIiwidCI6IjYxMWMyMDNlLTRiNDItNGVhMC04MzdhLTJiYzE1MDE3MDBhMCJ9',
       imageSrc: roofingImage,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
-    },
-    knowledgedevelopment: {
-      title: 'Knowledge Development',
-      imageSrc: roofingImage,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
+          "Click here to view the latest data from WorkSafe and CHASNZ around construction fatalities, serious harm and claims.",
     },
     // Add data for other trades similarly
   };
@@ -59,18 +59,19 @@ const Sectors: React.FC = () => {
   const selectedTrade = hoveredTrade || lastHoveredTrade;
 
   return (
-    <section className="trades-section pb-20 lg:pb-32 bg-white" id="trades">
+    <section className="trades-section py-20 lg:py-32 bg-white" id="menus">
       <div className="content-wrapper">
         <div className="trades-text w-full lg:w-3/4 flex flex-col gap-6">
           <h4 className="text-3xl lg:text-5xl font-semibold">
-            We work with different sectors around New Zealand to empower a better tomorrow
+            Learn more about the effective tools available for free use across the New Zealand
           </h4>
-          <p className="text-xl font-medium">Browse our list of sectors we work with:</p>
+          <p className="text-xl font-medium">Browse the list of tools below:</p>
         </div>
         <div className="trades-container flex flex-row mt-14 justify-between gap-16">
           <div className="trades-list w-full lg:w-[35%]">
             <ul className="flex flex-col text-xl font-semibold">
               {Object.keys(tradeData).map((trade) => (
+                <Link href={tradeData[trade].link} key={trade} passHref>
                 <li
                   key={trade}
                   onMouseEnter={() => handleTradeHover(trade)}
@@ -83,6 +84,7 @@ const Sectors: React.FC = () => {
                     <BsArrowRight />
                   </span>
                 </li>
+                </Link>
               ))}
             </ul>
           </div>
@@ -108,4 +110,5 @@ const Sectors: React.FC = () => {
   );
 };
 
-export default Sectors;
+export default Menus;
+

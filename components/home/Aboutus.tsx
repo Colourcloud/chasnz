@@ -38,7 +38,7 @@ const Aboutus: React.FC = () => {
       link: '/about/',
       imageSrc: meettheteam,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
+        "Construction Health and Safety New Zealand, is an industry-led charitable trust working to improve the lives of construction workers by raising the standard of health, safety and wellbeing in construction.",
     },
     events: {
       title: 'Events',

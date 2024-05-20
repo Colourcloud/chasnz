@@ -27,7 +27,7 @@ const Programmes = () => {
         <div className="programme-banner h-[550px] bg-[--primary-colour] flex flex-col">
             <div className="site-wrapper">
                 <div className='py-20 border-b-2 border-white'>
-                    <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-4/5'>Discover our programmes and path the way for a safer working enviroment</h4>
+                    <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-4/5'>Discover our programmes and pave the way for a safer working enviroment</h4>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@ const Programmes = () => {
                     <div className="card-overlay"></div>
                     <div className="card-content">
                         <div className="card-text z-10 relative flex flex-col gap-4">
-                            <h6 className='text-2xl lg:text-3xl text-white font-semibold'>Work should not hurt</h6>
+                            <h6 className='text-2xl lg:text-3xl text-white font-semibold'>Work Should Not Hurt</h6>
                             <p className='text-white text-sm'>The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to injury.</p>
                             <Link href="/work-should-not-hurt/" className='text-[--primary-colour] font-semibold flex flex-row items-center gap-2'>Learn More <IoIosArrowDroprightCircle /></Link>
                         </div>

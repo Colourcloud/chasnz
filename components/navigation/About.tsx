@@ -20,7 +20,7 @@ const About = () => {
                                 <div className="mega-menu_right_list_items">
                                     <h6 className='text-black font-semibold text-xl'>About us</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><a href="/about" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About Chasnz</a></li>
+                                        <li><a href="/about" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About CHASNZ</a></li>
                                         <li><a href="/about#board-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
                                         <li><a href="/about#team-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</a></li>
                                     </ul>
@@ -28,7 +28,7 @@ const About = () => {
                                 <div className="mega-menu_right_list_items">
                                     <h6 className='text-black font-semibold text-xl'>Contact us</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contact us</a></li>
+                                        <li><a href="/contact/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contact us</a></li>
                                     </ul>
                                 </div>
                             </div>

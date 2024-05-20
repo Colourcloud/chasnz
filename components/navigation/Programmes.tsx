@@ -49,7 +49,7 @@ const Programmes = () => {
                                     <a href="/constructsafe/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>ConstructSafe</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/constructsafe/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Book an assessment</a></li>
-                                        <li><a href="/constructsafe/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Resources</a></li>
+                                        <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Resources</a></li>
                                     </ul>
                                 </div>
 

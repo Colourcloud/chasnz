@@ -4,7 +4,7 @@ import HubSpotForm from '@/components/common/HubspotForm'
 
 const Survey = () => {
   return (
-    <section className="leadership-tool pb-20 lg:pb-32">
+    <section className="leadership-tool pb-20 lg:pb-32" id="survey">
         <div className="content-wrapper">
             <div className='border-b-2 border-[--primary-colour]'>
                 <div className="section-text w-full md:w-4/5 flex flex-col gap-6 py-8">

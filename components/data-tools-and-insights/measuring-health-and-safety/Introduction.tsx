@@ -10,8 +10,8 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold'>Measuring Health & Safety Content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="#">Leadership framework tool</Link></li>
-                        <li><Link href="#">Confidential safety climate survey</Link></li>
+                        <li><Link href="#leadership">Leadership framework tool</Link></li>
+                        <li><Link href="#survey">Confidential safety climate survey</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">

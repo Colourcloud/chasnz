@@ -16,7 +16,7 @@ const Footer = () => {
               <p className='text-sm mt-12'>© CHASNZ 2023 - All Rights Reserved</p>
             </div>
 
-            <div className="footer-links flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
+            <div className="footer-links flex flex-col lg:flex-row flex-wrap gap-12 lg:gap-20">
               <div className="link-block">
                 <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Programmes</h4>
                 <ul className='flex flex-col gap-3 mt-4'>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Learn</h4>
                 <ul className='flex flex-col gap-3 mt-4'>
                   <li>Resources</li>
-                  <li>Data Tools &amp; Insights</li>
+                  <li><Link href="/data-tools-and-insights/">Data Tools &amp; Insights</Link></li>
                 </ul>
               </div>
 

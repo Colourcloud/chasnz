@@ -4,6 +4,7 @@ import Header from '@/components/data-tools-and-insights/measuring-health-and-sa
 import Introduction from '@/components/data-tools-and-insights/measuring-health-and-safety/Introduction'
 import Subscribe from '@/components/common/Subscribe'
 import Leadership from '@/components/data-tools-and-insights/measuring-health-and-safety/Leadership'
+import Survey from '@/components/data-tools-and-insights/measuring-health-and-safety/Survey'
 
 export const metadata: Metadata = {
     title: 'CHASNZ – Measuring Health & Safety',
@@ -15,6 +16,7 @@ const page = () => {
     <Header />
     <Introduction />
     <Leadership />
+    <Survey />
     <Subscribe />
     </>
   )

@@ -33,13 +33,7 @@ const Videos = () => {
                     </div>
                 </div>
                 <div className="constructsafe-video-player w-full md:w-[65%]">
-                <iframe
-                    src="https://player.vimeo.com/video/352386379?h=5f842ed230&title=0&byline=0&portrait=0"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    title="Responsive video player">
-                </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5FUBIxiwXCQ?si=1USA85RFWDrhs2JL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </div>

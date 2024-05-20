@@ -526,3 +526,14 @@ p {
       background-attachment: fixed;
   }
 }
+
+#measuring-health-and-safety-header {
+  background-image: url('../public/data-tools/measuring-health-header-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1024px) {
+    background-image: url('../public/data-tools/measuring-health-header.jpg');
+      background-position: center;
+      background-attachment: fixed;
+  }
+}

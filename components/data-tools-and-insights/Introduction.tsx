@@ -10,10 +10,8 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold'>Data Tools &amp; Insights Content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="#">Climate Survey</Link></li>
-                        <li><Link href="#">Client Leadership Framework</Link></li>
                         <li><Link href="/data-tools-and-insights/whakatipu/">Project Whakatipu</Link></li>
-                        <li><Link href="#">Measuring Health & Safety</Link></li>
+                        <li><Link href="/data-tools-and-insights/measuring-health-and-safety/">Measuring Health & Safety</Link></li>
                         <li><Link href="http://cms.chasnz.org/wp-content/uploads/2024/05/ConstructionLeadingHealthSafetyandWell-BeingIndicators_CHASNZ_.pdf" target="_blank">Lead & Lag Indicators</Link></li>
                         <li><Link href="https://app.powerbi.com/view?r=eyJrIjoiNDlhNjRjYzgtZmVkYi00MDM4LTgzYzAtMzc0ZDhkOTY4ZjExIiwidCI6IjYxMWMyMDNlLTRiNDItNGVhMC04MzdhLTJiYzE1MDE3MDBhMCJ9" className='flex flex-row items-center gap-2'>Harm & Injury Interactive Dashboard <FiExternalLink /></Link></li>
                     </ul>

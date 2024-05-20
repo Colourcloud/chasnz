@@ -47,7 +47,7 @@ const Resources = () => {
                                     <a href="/data-tools-and-insights/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Data Tools & Insights</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/data-tools-and-insights/whakatipu/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Whakatipu</a></li>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</a></li>
+                                        <li><a href="/data-tools-and-insights/measuring-health-and-safety/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</a></li>
                                     </ul>
                                 </div>
                             </div>

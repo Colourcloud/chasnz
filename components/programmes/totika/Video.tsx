@@ -11,13 +11,7 @@ const Video = () => {
                 <Link href="https://www.totika.org/totika/signup" target="_blank" className='bg-[--totika-blue] py-3 px-6 rounded-full text-sm text-white font-semibold flex flex-row items-center gap-1'>Register for Tōtika <IoIosArrowDroprightCircle className='text-lg'/></Link>
             </div>
             <div className="video-player-responsive mt-20">
-              <iframe
-                src="https://player.vimeo.com/video/873561482?color&autopause=0&loop=0&muted=0&title=1&portrait=1&byline=1#t="
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Responsive video player">
-              </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7YpfBuJq2EQ?si=0Gu9OsX34oT_QZeq" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </section>

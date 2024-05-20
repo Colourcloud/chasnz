@@ -111,7 +111,7 @@ const Navigation = () => {
                                 <Events />
                             </div>
                         </li>
-                        <li className='text-lg navigation-toggle'>Contact</li>
+                        <li className='text-lg navigation-toggle'><Link href="/contact/">Contact</Link></li>
                         <div className="navigation-search pl-8">
                           <button className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[225px] search-bar'>
                             <IoIosSearch className='text-gray-400 text-xl' />

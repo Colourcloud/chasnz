@@ -47,6 +47,13 @@ const Aboutus: React.FC = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
     },
+    news: {
+      title: 'News & Updates',
+      link: '/news-and-updates/',
+      imageSrc: events,
+      description:
+        "Stay tuned for articles, expert insights, and announcements about our upcoming workshops and training sessions. Whether it's innovative safety solutions, new legislative updates, or success stories from across the sector, this section is designed to provide you with valuable information that supports our shared goal of enhancing workplace safety. Thank you for visiting, and we look forward to keeping you updated.",
+    },
     regulartorybodies: {
       title: 'Contact us',
       link: '/contact/',

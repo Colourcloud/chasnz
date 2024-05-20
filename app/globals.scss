@@ -537,3 +537,14 @@ p {
       background-attachment: fixed;
   }
 }
+
+#news-header {
+  background-image: url('../public/common/news-header-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1024px) {
+    background-image: url('../public/common/news-header-mobile.jpg');
+      background-position: center;
+      background-attachment: fixed;
+  }
+}

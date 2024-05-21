@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Programmes = () => {
   return (
     <>
-    <section className="programmes py-20 lg:py-32">
+    {/* <section className="programmes py-20 lg:py-32">
         <div className="site-wrapper border-b-2 border-b-[--primary-colour]">
             <div className="section-text flex flex-col gap-6 w-full lg:w-4/5 pb-12">
                 <span className='text-base font-semibold text-[--primary-colour]'>Our Programmes</span>
@@ -22,12 +22,13 @@ const Programmes = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </section> */}
     <section className="programme-cards pb-20 lg:pb-32">
         <div className="programme-banner h-[550px] bg-[--primary-colour] flex flex-col">
             <div className="site-wrapper">
-                <div className='py-20 border-b-2 border-white'>
+                <div className='pt-20 pb-12 border-b-2 border-white flex flex-col gap-6'>
                     <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-4/5'>Discover our programmes and pave the way for a safer working enviroment</h4>
+                    <p className='text-xl font-medium text-white'>Delivering consistency of health and safety standards in the construction industry.</p>
                 </div>
             </div>
         </div>

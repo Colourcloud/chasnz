@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Rick = () => {
   return (
-    <section className="what-is-construct-safe pb-20 lg:pb-32">
+    <section className="what-is-construct-safe py-20 lg:py-32">
         <div className="content-wrapper">
             <div className="what-is-construct-safe_container">
                 <div className="introduction w-full md:w-2/5 mx-auto flex flex-col gap-2 items-center text-center">

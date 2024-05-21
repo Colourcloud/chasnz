@@ -15,7 +15,7 @@ const Reach = () => {
             </div>
         </div>
     </section>
-    <Marquee className='overflow-hidden border border-b-2 border-b-gray-200 max-w-[1920px] mx-auto flex flex-row gap-6 py-10 h-[150px]'>
+    <Marquee className='overflow-hidden max-w-[1920px] mx-auto flex flex-row gap-6 py-10 h-[150px]'>
                 <div className="brand-container w-[125px] object-contain ml-20">
                     <Image src="/home/brands/safety-future.png" alt="" width={200} height={100} className='w-full'></Image> 
                 </div>

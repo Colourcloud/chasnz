@@ -35,9 +35,8 @@ const Resources = () => {
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl'>General Resources</h6>
+                                    <a href="/general-resources/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>General Resources</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><a href="/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>General Resources</a></li>
                                         <li><a href="/work-should-not-hurt#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Work Should Not Hurt</a></li>
                                         <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
                                     </ul>

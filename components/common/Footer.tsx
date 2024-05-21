@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import HubSpotForm from './HubspotForm';
 
 const Footer = () => {
   return (
@@ -28,16 +29,9 @@ const Footer = () => {
               </div>
 
               <div className="link-block">
-                <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Initiatives</h4>
-                <ul className='flex flex-col gap-3 mt-4'>
-                  <li>Energy Wheel</li>
-                </ul>
-              </div>
-
-              <div className="link-block">
                 <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Learn</h4>
                 <ul className='flex flex-col gap-3 mt-4'>
-                  <li>Resources</li>
+                  <li><Link href="/general-resources/">Resources</Link></li>
                   <li><Link href="/data-tools-and-insights/">Data Tools &amp; Insights</Link></li>
                 </ul>
               </div>
@@ -59,8 +53,10 @@ const Footer = () => {
                   <li className='social-icon'><Link href="https://www.linkedin.com/company/construction-health-and-safety-nz-chasnz?originalSubdomain=nz" target="_blank"><FaLinkedin className='text-2xl'/></Link></li>
                   <li className='social-icon'><Link href="https://www.youtube.com/channel/UCddHM1cm6NXMe_JrxejeCrw" target="_blank"><FaYoutube className='text-2xl'/></Link></li>
                 </ul>
-                <div className="subscribe-footer mt-4">
-                  <p className='text-sm'>Subscribe:</p>
+                <div className="subscribe-footer mt-8 flex flex-col gap-2">
+                  <div>
+                    <HubSpotForm portalId="40083784" formId="da52cfc3-874f-491c-b773-e2b7baaee5c9" />
+                  </div>
                 </div>
               </div>
 

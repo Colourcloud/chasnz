@@ -548,3 +548,29 @@ p {
       background-attachment: fixed;
   }
 }
+
+#email-da52cfc3-874f-491c-b773-e2b7baaee5c9 {
+  background-color: white;
+  border: 2px solid #e2e2e2;
+  padding: 8px 24px;
+  border-radius: 100px;
+}
+
+#hsForm_da52cfc3-874f-491c-b773-e2b7baaee5c9 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .hs-error-msgs {
+    color: red;
+    font-size: 14px;
+  }
+  input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .actions {
+    input {
+      color: var(--primary-colour);
+    }
+  }
+}

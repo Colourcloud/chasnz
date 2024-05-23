@@ -10,10 +10,10 @@ const Introduction = () => {
             <div className="introduction-container flex flex-col lg:flex-row gap-16 lg:gap-0">
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold'>Leadon related content:</h4>
-                    <ul className='flex flex-col gap-6 underline text-[--leadon-orange] mt-6 text-lg'>
+                    {/* <ul className='flex flex-col gap-6 underline text-[--leadon-orange] mt-6 text-lg'>
                         <li><Link href="#">Information for Managment</Link></li>
                         <li><Link href="#">Register for Lead On.</Link></li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <div className="text-block flex flex-col gap-6">
@@ -23,7 +23,7 @@ const Introduction = () => {
                     </div>
                     <div className="text-block flex flex-col gap-6">
                         <p className='text-black text-xl lg:text-2xl font-semibold'>The fine print</p>
-                        <p className='text-[--text-colour]'>The programme is called Safety Leadership for Supervisors & Managers and is run by Safety Futures. It is aimed at those who are already leaders who want to take the next step, develop their careers, and grow their leadership skills, or people in your team that you see potential in and want to encourage their development. Course participants will work as part of a group from across New Zealand, connecting with other supervisors around the world. <a href="https://www.safetyfutures.com/program/safety-leadership-for-supervisors-and-managers/" target="_blank" className='text-[--primary-colour]'>Check it out here</a></p>
+                        <p className='text-[--text-colour]'>The programme is called Safety Leadership for Supervisors & Managers and is run by Safety Futures. It is aimed at those who are already leaders who want to take the next step, develop their careers, and grow their leadership skills, or people in your team that you see potential in and want to encourage their development. Course participants will work as part of a group from across New Zealand, connecting with other supervisors around the world.</p>
                     </div>
                     <div className="text-block flex flex-col gap-6">
                         <p className='text-[--leadon-orange] text-xl lg:text-2xl font-semibold'>Register as a Supervisor or Frontline Leader.</p>

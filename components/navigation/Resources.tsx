@@ -39,6 +39,7 @@ const Resources = () => {
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/work-should-not-hurt#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Work Should Not Hurt</a></li>
                                         <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
+                                        <li><a href="#" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Wheel</a></li>
                                     </ul>
                                 </div>
 

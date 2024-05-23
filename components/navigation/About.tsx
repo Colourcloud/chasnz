@@ -14,7 +14,7 @@ const About = () => {
                         </div>
                         <div className="mega-menu_right w-full">
                             <div className="w-3/4">
-                                <h4 className='text-black text-3xl font-bold'>Learn more about the Chasnz team</h4>
+                                <h4 className='text-black text-3xl font-bold'>Learn more about the CHASNZ team</h4>
                             </div>
                             <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                                 <div className="mega-menu_right_list_items">

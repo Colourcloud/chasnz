@@ -49,8 +49,8 @@ const Programmes = () => {
                                     </a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Managment</a></li>
-                                        <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register your Frontline Leader</a></li>
-                                        <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Supervisors</a></li>
+                                        {/* <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register your Frontline Leader</a></li>
+                                        <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Supervisors</a></li> */}
                                     </ul>
                                 </div>
 

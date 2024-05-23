@@ -83,7 +83,7 @@ const Navigation = () => {
         <div className="site-wrapper">
             <div className="navigation-container h-28 w-full flex items-center flex-row justify-between">
                 <div className="navigation-left">
-                  <Link href="/" className='nav-logo'><Image src={logoSrc} height="50" width="225" alt="chas logo"></Image></Link>
+                  <Link href="/" className='nav-logo'><Image src={logoSrc} height="50" width="240" alt="chas logo"></Image></Link>
                 </div>
                 <div className="navigation-right">
                     <ul className='flex flex-row text-white font-medium items-center'>

@@ -30,7 +30,7 @@ const caseStudies: CaseStudy[] = [
   {
     id: 't8',
     title: 'Tōtika - T8 case study',
-    imageSrc: '/programmes/totika/case-study/t8.webp',
+    imageSrc: '/programmes/totika/case-study/t8.jpg',
     description: 'With a focus on honesty, integrity, exceptional service, and reliably safe work sites for workers and the public, T8 are excited to use Tōtika to become further connected with the wider infrastructure industry. Tōtika has enabled T8 Traffic Control to realise financial and time savings within their business, along with observing many other benefits for their clients and the wider industry. We touched base with Christian Erick, T8’s HR/HSQE Manager, to learn more about their experience with Tōtika from a supplier’s perspective.',
     downloadLink: 'http://cms.chasnz.org/wp-content/uploads/2024/05/18198-Totika-T8-Case-Study-F.pdf',
   },
@@ -63,7 +63,7 @@ const Casestudies: React.FC = () => {
           </div>
           <div className="case-study-content w-full flex flex-col lg:flex-row gap-10">
             <div className="w-full lg:w-2/4">
-              <Image src={selectedCaseStudy.imageSrc} alt="" width={800} height={800} className='w-full' />
+              <Image src={selectedCaseStudy.imageSrc} priority alt="" width={800} height={800} className='w-full' />
             </div>
             <div className='w-full lg:w-2/4 flex flex-col gap-6'>
               <h4 className='text-3xl font-bold lg:text-5xl'>{selectedCaseStudy.title}</h4>

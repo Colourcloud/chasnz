@@ -13,7 +13,7 @@ const Introduction = () => {
                         <li><Link href="/data-tools-and-insights/whakatipu/">Project Whakatipu</Link></li>
                         <li><Link href="/data-tools-and-insights/measuring-health-and-safety/">Measuring Health & Safety</Link></li>
                         <li><Link href="http://cms.chasnz.org/wp-content/uploads/2024/05/ConstructionLeadingHealthSafetyandWell-BeingIndicators_CHASNZ_.pdf" target="_blank">Lead & Lag Indicators</Link></li>
-                        <li><Link href="https://app.powerbi.com/view?r=eyJrIjoiNDlhNjRjYzgtZmVkYi00MDM4LTgzYzAtMzc0ZDhkOTY4ZjExIiwidCI6IjYxMWMyMDNlLTRiNDItNGVhMC04MzdhLTJiYzE1MDE3MDBhMCJ9" className='flex flex-row items-center gap-2'>Harm & Injury Interactive Dashboard <FiExternalLink /></Link></li>
+                        <li><Link href="/analysis-insights/" className='flex flex-row items-center gap-2'>Analysis &amp; Insights</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">

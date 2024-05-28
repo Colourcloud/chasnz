@@ -390,6 +390,12 @@ p {
       font-size: 18px;
     }
   }
+  a {
+    color: var(--primary-colour);
+  }
+  .resource-button {
+      color: white!important;
+  }
 }
 
 #events-header {

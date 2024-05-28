@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   }
 
   const iframeSrc = "https://app.powerbi.com/view?r=eyJrIjoiYzE2MjhjYzMtNThiNy00NmM0LTljNGMtOGYzYjEzMjQyZDUwIiwidCI6ImI0OGExNmY2LTM3ZDUtNDU1NS05OTljLTgyNDU5ZjFjZWExOCJ9"; 
+  const iframeSrc2 = "https://app.powerbi.com/view?r=eyJrIjoiNDlhNjRjYzgtZmVkYi00MDM4LTgzYzAtMzc0ZDhkOTY4ZjExIiwidCI6IjYxMWMyMDNlLTRiNDItNGVhMC04MzdhLTJiYzE1MDE3MDBhMCJ9"; 
 
 const page = () => {
   return (
@@ -19,10 +20,6 @@ const page = () => {
             <div className="introduction-container flex flex-col lg:flex-row gap-16 lg:gap-0">
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold'>Analysis &amp; Insights content:</h4>
-                    <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="/work-should-not-hurt#trades">Trade Specific Information</Link></li>
-                        <li><Link href="#">Analysis & Insights</Link></li>
-                    </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <h4 className='font-bold text-4xl lg:text-6xl'>Analysis &amp; Insights</h4>
@@ -34,6 +31,9 @@ const page = () => {
             <div className="powerbi w-full py-20 lg:py-32">
                 <h4 className='text-4xl py-8 font-semibold'>What is the impact of injuries on our productivity?</h4>
                 <Powerbi src={iframeSrc} />
+            </div>
+            <div className="powerbi w-full pb-20 lg:pb-32">
+                <Powerbi src={iframeSrc2} />
             </div>
         </div>
     </div>

@@ -24,7 +24,6 @@ const Programmes = () => {
                                     </a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/work-should-not-hurt#trades" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Trade specific information</a></li>
-                                        <li><a href="/work-should-not-hurt/analysis-insights" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
                                         <li><a href="/work-should-not-hurt/get-involved" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                                     </ul>
                                 </div>

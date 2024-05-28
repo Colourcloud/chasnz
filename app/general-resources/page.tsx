@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import Subscribe from '@/components/common/Subscribe'
 import Header from '@/components/general-resources/Header'
 import Introduction from '@/components/general-resources/Introduction'
+import Resources from '@/components/general-resources/Resources'
 
 export const metadata: Metadata = {
     title: 'CHASNZ – General Resources',
@@ -16,6 +17,7 @@ const page = () => {
     <Navigation />
     <Header />
     <Introduction />
+    <Resources />
     <Subscribe />
     </>
   )

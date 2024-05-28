@@ -64,14 +64,14 @@ const Trades: React.FC = () => {
     },
     plumbing: {
         title: 'Plumbing, gasfitting & drainlaying',
-        link: '/work-should-not-hurt/trades/plumbing',
+        link: '/work-should-not-hurt/trades/plumbing-gasfitting-drainlaying',
         imageSrc: plumbingImage,
         description:
             "We have worked onsite alongside plumbers, gasfitters & drain layers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
       },
       brick: {
         title: 'Brick & blocklaying',
-        link: '/work-should-not-hurt/trades/bricklaying',
+        link: '/work-should-not-hurt/trades/brick-blocklaying',
         imageSrc: brickImage,
         description:
             "We have worked onsite alongside Bricklayers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",

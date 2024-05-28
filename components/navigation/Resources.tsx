@@ -18,7 +18,7 @@ const Resources = () => {
                             </div>
                             <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                                 <div className="mega-menu_right_list_items">
-                                    <h6 className='text-black font-semibold text-xl'>Trade Resources</h6>
+                                    <h6 className='text-black font-semibold text-xl'>Trade Resources:</h6>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/work-should-not-hurt/trades/building#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Building</a></li>
                                         <li><a href="/work-should-not-hurt/trades/scaffolding#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</a></li>
@@ -48,6 +48,7 @@ const Resources = () => {
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/data-tools-and-insights/whakatipu/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Whakatipu</a></li>
                                         <li><a href="/data-tools-and-insights/measuring-health-and-safety/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</a></li>
+                                        <li><a href="/analysis-insights/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
                                     </ul>
                                 </div>
                             </div>

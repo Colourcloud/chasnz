@@ -18,12 +18,10 @@ const page = () => {
         <div className="content-wrapper">
             <div className="introduction-container flex flex-col lg:flex-row gap-16 lg:gap-0">
                 <div className="programme-navigation w-full lg:w-[30%]">
-                    <h4 className='text-black text-2xl font-semibold'>WSHN related content:</h4>
+                    <h4 className='text-black text-2xl font-semibold'>Analysis &amp; Insights content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
                         <li><Link href="/work-should-not-hurt#trades">Trade Specific Information</Link></li>
                         <li><Link href="#">Analysis & Insights</Link></li>
-                        <li><Link href="/work-should-not-hurt/get-involved">Get Involved</Link></li>
-                        <li><Link href="/work-should-not-hurt#resources">Resources</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">

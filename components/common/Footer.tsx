@@ -7,7 +7,7 @@ import HubSpotForm from './HubspotForm';
 
 const Footer = () => {
   return (
-    <section className="footer bg-white py-20">
+    <section className="footer bg-white py-20 border-t border-gray-200">
         <div className="content-wrapper">
           <div className="footer-rows flex flex-col md:flex-row gap-24">
             <div className="footer-branding flex flex-col gap-6">

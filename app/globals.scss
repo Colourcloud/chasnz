@@ -396,6 +396,14 @@ p {
   .resource-button {
       color: white!important;
   }
+  .hubspot-button-cta {
+    background: var(--primary-colour);
+    color: white;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    }
 }
 
 #events-header {

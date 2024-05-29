@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40083784.js"></script>
         <NextTopLoader color="#7ABC25" showSpinner={false}/>
         <Navigation />
         {children}

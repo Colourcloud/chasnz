@@ -557,6 +557,29 @@ p {
   }
 }
 
+.events-background {
+  background-image: url('../public/events/events-header-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1024px) {
+    background-image: url('../public/events/events-header.jpg');
+      background-position: 50% 400%;
+      background-attachment: fixed;
+  }
+}
+
+.resource-header-background {
+  background-image: url('../public/common/resource-background-image-mobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1024px) {
+    background-image: url('../public/common/resource-background-image.jpg');
+      background-position: 50% 400%;
+      background-attachment: fixed;
+  }
+}
+
+
 #email-da52cfc3-874f-491c-b773-e2b7baaee5c9 {
   background-color: white;
   border: 2px solid #e2e2e2;

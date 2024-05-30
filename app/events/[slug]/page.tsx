@@ -81,7 +81,7 @@ const EventDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
       <head>
        <title>{event.title.rendered}</title>
       </head>
-      <div className="article-header w-full h-[500px] bg-black"></div>
+      <div className="article-header events-background w-full h-[500px] bg-black"></div>
       <div>
           {event.acf.isactive === "Yes" ? (
                <span></span>

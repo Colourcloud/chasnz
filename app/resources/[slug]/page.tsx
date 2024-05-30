@@ -53,7 +53,7 @@ interface Post {
 
 const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
   const reqUrl = `https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&slug=${params.slug}`;
-  const response = await fetch(reqUrl);
+  const response = await fetch(reqUrl, { next: { revalidate: 600 } });
   const posts: Post[] = await response.json();
 
   // Check if any posts are returned
@@ -69,7 +69,7 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
   return (
     <>
       <Navigation />
-      <div className="article-header w-full h-[500px] bg-black"></div>
+      <div className="article-header resource-header-background w-full h-[500px] bg-black"></div>
       <div className="article-content py-20 lg:py-40">
         <div className='content-wrapper'>
           <div className="article-wrapper max-w-[980px] mx-auto flex flex-col gap-6">

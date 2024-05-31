@@ -63,9 +63,8 @@ const Sectors: React.FC = () => {
       <div className="content-wrapper">
         <div className="trades-text w-full lg:w-3/4 flex flex-col gap-6">
           <h4 className="text-3xl lg:text-5xl font-semibold">
-            We work with different sectors around New Zealand to empower a better tomorrow
+          We work with a diverse group of profesionals, businesses and organisations in the construction industry to empower a better tomorrow.
           </h4>
-          <p className="text-xl font-medium">Browse our list of sectors we work with:</p>
         </div>
         <div className="trades-container flex flex-row mt-14 justify-between gap-16">
           <div className="trades-list w-full lg:w-[35%]">

@@ -68,16 +68,7 @@ const Aboutus: React.FC = () => {
 
   return (
     <>
-    <section className="aboutus-introduction pb-20">
-        <div className="aboutus-banner h-[700px] flex flex-col justify-center">
-            <div className="site-wrapper flex flex-col gap-6">
-                <h4 className='text-4xl lg:text-7xl text-white font-bold w-full md:w-4/5'>Your nationwide partner in health & safety for your workplace</h4>
-                <p className='text-2xl text-white font-semibold'>Better work, better lives and a better future.</p>
-            </div>
-        </div>
-    </section>
-
-    <section className="trades-section pb-20 lg:pb-20 bg-white" id="aboutus">
+   <section className="trades-section py-20 lg:py-32 bg-white" id="aboutus">
       <div className="content-wrapper">
         <div className="trades-container flex flex-row justify-between gap-16">
           <div className="trades-list w-full lg:w-[35%]">

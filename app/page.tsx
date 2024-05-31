@@ -10,6 +10,7 @@ import Partners from "@/components/programmes/totika/Partners";
 import Programmes from "@/components/home/Programmes";
 import Sectors from "@/components/home/Sectors";
 import Aboutus from "@/components/home/Aboutus";
+import Brands from "@/components/home/Brands";
 
 export const metadata: Metadata = {
   title: 'CHASNZ – World Class Construction Health and Safety',
@@ -22,8 +23,9 @@ export default function Home() {
         <Header />
         <Introduction />
         <Sectors />
-        <Reach />
+        <Brands />
         <Programmes />
+        <Reach />
         <Aboutus />
         <Subscribe />
     </main>

@@ -35,7 +35,7 @@ const Programmes = () => {
                                     </a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/totika/contractor-suppliers" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contractors and suppliers</a></li>
-                                        <li><a href="/totika/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Case Studies</a></li>
+                                        <li><a href="/totika/#case-studies" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Case Studies</a></li>
                                         <li><a href="https://www.totika.org/totika/signup" target="_blank" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Register for the Tōtika scheme</a></li>
                                         <li><a href="https://www.totika.org/totika-scheme-scheme-resources" target="_blank" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Tōtika scheme resources</a></li>
                                     </ul>

@@ -40,7 +40,7 @@ const Casestudies: React.FC = () => {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy>(caseStudies[0])
 
   return (
-    <section className="case-studies pb-20 lg:pb-40">
+    <section className="case-studies pb-20 lg:pb-40" id="case-studies">
       <div className="site-wrapper">
         <div className="section-text flex flex-col gap-6 w-full lg:w-4/5">
           <span className='text-base font-semibold text-[--totika-blue]'>Case Studies</span>

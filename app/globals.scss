@@ -480,6 +480,16 @@ p {
   }
 }
 
+.general-resources {
+  height: 500px;
+  background-image: url('../public/subscribe-background.jpg');
+  background-size: cover;
+  background-position: center;
+  @media screen and (min-width: 768px) {
+    height: 750px;
+  }
+}
+
 
 .resource-button {
   padding-top: 0.75rem;
@@ -570,11 +580,12 @@ p {
 
 .resource-header-background {
   background-image: url('../public/common/resource-background-image-mobile.jpg');
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
-    background-image: url('../public/common/resource-background-image.jpg');
-      background-position: 50% 400%;
+    background-size: 115%;
+    background-image: url('../public/subscribe-background.jpg');
+    background-position: center top;
       background-attachment: fixed;
   }
 }

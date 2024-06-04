@@ -105,12 +105,7 @@ const Navigation = () => {
                                 <Resources />
                             </div>
                         </li>
-                        <li className='text-lg navigation-toggle' id="navigation-events">
-                            <a href='#'>Events</a>
-                            <div className="dropdown-menu">
-                                <Events />
-                            </div>
-                        </li>
+                        <li className='text-lg navigation-toggle'><Link href="/events/">Events</Link></li>
                         <li className='text-lg navigation-toggle'><Link href="/contact/">Contact</Link></li>
                         <div className="navigation-search pl-8">
                           <button className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[225px] search-bar'>

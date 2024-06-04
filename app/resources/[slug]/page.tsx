@@ -5,6 +5,7 @@ import Navigation from '@/components/common/Navigation';
 import { IoArrowBackOutline } from "react-icons/io5";
 import { Metadata } from 'next';
 import Head from 'next/head';
+import ConsentForm from '@/components/common/ConsentForm';
 
 // export const generateMetadata = ({ params }: { params: { slug: string } }): Metadata => ({
 //   title: `Chasnz - ${params.slug.replace(/-/g, ' ').split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}`,
@@ -68,6 +69,7 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
 
   return (
     <>
+      <ConsentForm />
       <Navigation />
       <div className="article-header resource-header-background w-full h-[500px] bg-black"></div>
       <div className="article-content py-20 lg:py-40">

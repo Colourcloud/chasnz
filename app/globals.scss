@@ -605,3 +605,48 @@ p {
     }
   }
 }
+
+.consent-form-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  z-index: 9999;
+}
+
+.resource-consent-form {
+  margin-top: 24px;
+  input {
+    padding: 10px 18px;
+    border-radius: 100px;
+    border: 1px solid #EBEBEB;
+    outline: none;
+    width: 100%;
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+  span {
+    font-size: 14px;
+  }
+  .hs-button {
+    background-color: var(--primary-colour);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  #hsForm_101a34c4-946e-4e05-97d3-38e5bc390465 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .hs-error-msg {
+    font-size: 12px;
+    color: red;
+  }
+}

@@ -1,6 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'CHASNZ – Tōtika Programme',
+  }
 
 const Programmes = () => {
   return (

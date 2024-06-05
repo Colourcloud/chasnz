@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Programmes from '../navigation/Programmes';
+import ProgrammesNew from '../navigation/Programmes-new';
 import Resources from '../navigation/Resources';
 import About from '../navigation/About';
 import Events from '../navigation/Events';
@@ -96,7 +97,7 @@ const Navigation = () => {
                         <li className='text-lg navigation-toggle' id="navigation-programmes">
                             <a href='#'>Programmes</a>
                             <div className="dropdown-menu">
-                                <Programmes />
+                                <ProgrammesNew />
                             </div>
                         </li>
                         <li className='text-lg navigation-toggle' id="navigation-resources">

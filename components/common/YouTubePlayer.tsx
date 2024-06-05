@@ -17,7 +17,7 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({
   loop = true,
   controls = false,
 }) => {
-  const src = `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay ? '1' : '0'}&loop=${loop ? '1' : '0'}&controls=${controls ? '1' : '0'}&mute=${muted ? '1' : '0'}&playlist=${videoId}`;
+  const src = `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay ? '1' : '0'}&loop=${loop ? '1' : '0'}&controls=${controls ? '1' : '0'}&mute=${muted ? '1' : '0'}&playlist=${videoId}&modestbranding=1&rel=0&showinfo=0&disablekb=1`;
 
   return (
     <div id="myVideo" style={{ padding: '56.25% 0 0 0', position: 'relative' }}>

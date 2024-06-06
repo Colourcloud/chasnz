@@ -16,15 +16,24 @@ type Post = {
   };
   slug: string;
   date: string;
+  categories: number[];
   _embedded: {
-    'wp:featuredmedia'?: Array<{
+    'wp:featuredmedia': Array<{
       source_url: string;
     }>;
   };
 };
 
-const Resources = () => {
+const categoryMapping: Record<number, string> = {
+  26: 'Guidance',
+  27: 'News & Articles',
+  28: 'Research & Reports',
+};
+
+const Resources: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) {
@@ -36,14 +45,17 @@ const Resources = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=24&per_page=20', { 
-          next: { revalidate: 3600 } 
-        });
+        const response = await fetch(
+          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=24&per_page=40',
+          { next: { revalidate: 3600 } }
+        );
+
         if (!response.ok) {
           throw new Error('Failed to fetch posts');
         }
         const data: Post[] = await response.json();
         setPosts(data);
+        setFilteredPosts(data);
       } catch (error) {
         console.error('Error fetching posts:', error);
       }
@@ -52,8 +64,22 @@ const Resources = () => {
     fetchPosts();
   }, []);
 
+  const handleFilterClick = (category: string) => {
+    setSelectedCategory(category);
+    if (category === 'All') {
+      setFilteredPosts(posts);
+    } else {
+      const categoryID = Object.keys(categoryMapping).find(
+        key => categoryMapping[Number(key)] === category
+      );
+      setFilteredPosts(
+        posts.filter(post => post.categories.includes(Number(categoryID)))
+      );
+    }
+  };
+
   return (
-    <section className="resource-section pb-20 lg:pb-32 bg-white" id="resources">
+    <section className="resource-section py-20 lg:py-32 bg-white" id="resources">
       <div className="content-wrapper">
         <div className="resource-container">
           <div className="resource-heading">
@@ -65,31 +91,33 @@ const Resources = () => {
       </div>
       <div className="resource-filters bg-gray-100 w-full mt-10">
         <div className="content-wrapper">
-          <div className='scroll-bar py-8 overflow-x-scroll flex items-center flex-row gap-6 lg:gap-16'>
-            <p className='font-medium text-sm text-gray-500 whitespace-nowrap'>Filter by type:</p>
-            <ul className='flex flex-row gap-6 lg:gap-16 text-gray-600 items-center'>
-                <li className='whitespace-nowrap'>All</li>
-                <li className='whitespace-nowrap'>Guidance</li>
-                <li className='whitespace-nowrap'>Posters</li>
-                <li className='whitespace-nowrap'>Research &amp; Innovation</li>
-                <li className='whitespace-nowrap'>Toolbox Talks</li>
+          <div className="scroll-bar py-8 overflow-x-scroll flex items-center flex-row gap-6 lg:gap-16">
+            <p className="font-medium text-sm text-gray-500 whitespace-nowrap">Filter by type:</p>
+            <ul className="flex flex-row gap-6 lg:gap-16 text-gray-600 items-center">
+              {['All', ...Object.values(categoryMapping)].map(category => (
+                <li
+                  key={category}
+                  className={`whitespace-nowrap cursor-pointer ${selectedCategory === category ? 'text-blue-500' : ''}`}
+                  onClick={() => handleFilterClick(category)}
+                >
+                  {category}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-    </div>
+      </div>
 
       <div className="resource-layout mt-10">
         <div className="content-wrapper">
-          <div className="resource-grid" id="resources">
-            {posts.map((post) => (
-              <Link href={`/resources/${post.slug}`} key={post.id}>
-                <div className="resource-card chas-resource flex flex-row items-center justify-between py-4 pr-0 lg:pr-6">
+          <div className="resource-grid">
+            {filteredPosts.map(post => (
+              <a href={`/resources/${post.slug}`} key={post.id}>
+                <div className="resource-card flex flex-row items-center justify-between py-4 pr-0 lg:pr-6" data-category={post.categories.map(id => categoryMapping[id]).join(' ')}>
                   <div className="flex flex-row gap-3 items-center">
                     <div className="resource-image">
-                    <Image
-                        src={
-                          post._embedded['wp:featuredmedia']?.[0]?.source_url || '/placeholder.jpg'
-                        }
+                      <Image
+                        src={post._embedded['wp:featuredmedia'][0]?.source_url || '/placeholder.jpg'}
                         alt="Post Image"
                         width={300}
                         height={300}
@@ -101,11 +129,11 @@ const Resources = () => {
                           {post.title.rendered}
                         </h4>
                         <p
-                            className="text-sm font-light hidden md:block"
-                            dangerouslySetInnerHTML={{
-                                __html: `<span style="font-size: 0.875rem">${truncateText(post.excerpt.rendered, 100)}</span>`, // Adjust 100 to your desired maximum length
-                            }}
-                            />
+                          className="text-sm font-light hidden md:block"
+                          dangerouslySetInnerHTML={{
+                            __html: `<span style="font-size: 0.875rem">${truncateText(post.excerpt.rendered, 100)}</span>`,
+                          }}
+                        />
                       </div>
                       <span className="text-sm font-light">
                         {new Date(post.date).toLocaleDateString('en-US', {
@@ -122,7 +150,7 @@ const Resources = () => {
                     </span>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

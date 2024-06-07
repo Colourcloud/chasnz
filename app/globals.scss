@@ -127,6 +127,9 @@ p {
     padding: 0px 32px;
   }
   @media screen and (min-width: 1280px) {
+    padding: 0px 32px;
+  }
+  @media screen and (min-width: 1440px) {
     padding: 0px 0px;
   }
 }
@@ -141,6 +144,9 @@ p {
     padding: 0px 32px;
   }
   @media screen and (min-width: 1280px) {
+    padding: 0px 32px;
+  }
+  @media screen and (min-width: 1440px) {
     padding: 0px 0px;
   }
 }
@@ -162,6 +168,9 @@ p {
   position: relative;
   overflow: hidden;
   color: #fff;
+  background-image: url('../public/home/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
   &::before {
     content: '';
     position: absolute;
@@ -482,12 +491,23 @@ p {
 
 .national-reach {
   height: 500px;
+  position: relative;
   background-image: url('../public/home/national-reach.png');
   background-size: cover;
   background-position: center;
     background-attachment: fixed;
   @media screen and (min-width: 768px) {
     height: 750px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 400px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
   }
 }
 

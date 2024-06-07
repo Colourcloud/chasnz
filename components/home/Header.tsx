@@ -7,13 +7,10 @@ const Header = () => {
     <div>
         <div className="home-header">
             <div className="introduction-video">
-                <div className="video-wrapper absolute">
-                    <YouTubePlayer videoId="bM4Qjier-jI" autoplay={true} muted={true} loop={true} controls={false} />
-                </div>
                 <div className="header-text relative z-10 h-full flex flex-col justify-center items-center">
                     <div className='flex flex-col gap-8 items-center w-2/3 text-center'>
-                        <h1 className='text-4xl lg:text-6xl text-white font-bold'>We are your nationwide partner in Health & Safety for your workplace.</h1>
-                        <p className='text-2xl font-base'>We provide evidence based robust guidance and tools to help you manage Health, Safety and Wellbeing harm in your business &#45; whatever size that is.</p>
+                        <h1 className='text-4xl lg:text-6xl text-white font-bold'>Supporting the construction sectors to improve health and safety.</h1>
+                        <p className='text-2xl font-base'>Our vision is to shift health and safety in the construction industry from inconsistent compliance to consistent competence to have health and safe workers as a natural outcome of good work.</p>
                     </div>
                 </div>
         </div>

@@ -24,11 +24,10 @@ const Programmes = () => {
         </div>
     </section> */}
     <section className="programme-cards pb-20 lg:pb-32">
-        <div className="programme-banner h-[550px] bg-[--primary-colour] flex flex-col">
+        <div className="programme-banner h-[550px] bg-black flex flex-col">
             <div className="site-wrapper">
                 <div className='pt-20 pb-12 border-b-2 border-white flex flex-col gap-6'>
-                    <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-4/5'>Discover our programmes and pave the way for a safer working environment</h4>
-                    <p className='text-xl font-medium text-white'>Delivering consistency of health and safety standards in the construction industry.</p>
+                    <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-full'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements.</h4>
                 </div>
             </div>
         </div>

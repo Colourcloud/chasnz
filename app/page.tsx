@@ -22,8 +22,6 @@ export default function Home() {
         <Navigation />
         <Header />
         <Introduction />
-        <Sectors />
-        <Brands />
         <Programmes />
         <Reach />
         <Aboutus />

@@ -17,7 +17,7 @@ const Introduction = () => {
                 <div><Image src="/home/introduction-5.png" alt="" width={450} height={300} /></div>
                 <div><Image src="/home/introduction-6.png" alt="" width={450} height={300} /></div>
             </div> */}
-          <div className="sectors grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+          <div className="sectors grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 mt-20">
               <div className="section-card border border-[--primary-colour] ">
                   <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-12 min-h-[325px]">
                     <div className="card-image">

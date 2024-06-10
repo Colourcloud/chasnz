@@ -495,9 +495,9 @@ p {
   background-image: url('../public/home/national-reach.png');
   background-size: cover;
   background-position: center;
-    background-attachment: fixed;
   @media screen and (min-width: 768px) {
     height: 750px;
+    background-attachment: fixed;
   }
   &::before {
     content: '';

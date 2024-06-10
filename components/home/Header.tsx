@@ -8,9 +8,9 @@ const Header = () => {
         <div className="home-header">
             <div className="introduction-video">
                 <div className="header-text relative z-10 h-full flex flex-col justify-center items-center">
-                    <div className='flex flex-col gap-8 items-center w-2/3 text-center'>
+                    <div className='flex flex-col gap-8 items-center w-full md:w-2/3 text-center px-4 lg:px-0'>
                         <h1 className='text-4xl lg:text-6xl text-white font-bold'>Supporting the construction sectors to improve health and safety.</h1>
-                        <p className='text-2xl font-base'>Our vision is to shift health and safety in the construction industry from inconsistent compliance to consistent competence to have health and safe workers as a natural outcome of good work.</p>
+                        <p className='text-lg md:text-2xl font-base'>Our vision is to shift health and safety in the construction industry from inconsistent compliance to consistent competence to have health and safe workers as a natural outcome of good work.</p>
                     </div>
                 </div>
         </div>

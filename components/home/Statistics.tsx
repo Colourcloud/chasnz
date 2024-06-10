@@ -2,7 +2,7 @@ import React from 'react'
 
 const Statistics = () => {
   return (
-    <section className="statistics bg-[--primary-colour] py-20 lg:py-40">
+    <section className="statistics bg-[--primary-colour] py-20 lg:py-32">
         <div className="site-wrapper">
                 <div className='pb-12 border-b-2 border-white flex flex-col gap-6'>
                     <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-full'>2022 trends in health and safety and why we are rethinking injury prevention.</h4>

@@ -19,7 +19,7 @@ const Introduction = () => {
             </div> */}
           <div className="sectors grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 mt-20">
               <div className="section-card border border-[--primary-colour] ">
-                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-12 min-h-[325px]">
+                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-8 min-h-[325px]">
                     <div className="card-image">
                       <Image src="/home/service-buyers.svg" alt="" className='h-[125px] w-[125px]' width={100} height={100} />
                     </div>
@@ -33,7 +33,7 @@ const Introduction = () => {
               </div>
 
               <div className="section-card border border-[--primary-colour] ">
-                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-12 min-h-[325px]">
+                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-8 min-h-[325px]">
                     <div className="card-image">
                       <Image src="/home/safety-icon.svg" alt="" className='h-[125px] w-[125px]' width={100} height={100} />
                     </div>
@@ -47,7 +47,7 @@ const Introduction = () => {
               </div>
 
               <div className="section-card border border-[--primary-colour] ">
-                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-12 min-h-[325px]">
+                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-8 min-h-[325px]">
                     <div className="card-image">
                       <Image src="/home/trade-icon.svg" alt="" className='h-[125px] w-[125px]' width={100} height={100} />
                     </div>
@@ -61,7 +61,7 @@ const Introduction = () => {
               </div>
 
               <div className="section-card border border-[--primary-colour] ">
-                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-12 min-h-[325px]">
+                  <div className="card-icon flex flex-col gap-4 items-center bg-[--primary-colour] p-8 min-h-[325px]">
                     <div className="card-image">
                       <Image src="/home/car-icon.svg" alt="" className='h-[125px] w-[150px]' width={100} height={100} />
                     </div>

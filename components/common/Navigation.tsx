@@ -79,7 +79,7 @@ const Navigation = () => {
   return (
     <>
     <div className="navigation-backdrop"></div>
-    <div className='relative h-full'>
+    <div className='relative h-full hidden invisible pointer-events-none xl:visible xl:block xl:pointer-events-auto'>
         <div className="navigation absolute top-0 z-50 w-full">
         <div className="site-wrapper">
             <div className="navigation-container h-28 w-full flex items-center flex-row justify-between">

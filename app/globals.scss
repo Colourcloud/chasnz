@@ -152,6 +152,16 @@ p {
   }
 }
 
+.mobile-nav-dropdown {
+  transform: translateY(-100vh);
+  transition: 100ms ease;
+  opacity: 0;
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .programmes-header {
   width: 100%;
   height: calc(100vh - 25rem);

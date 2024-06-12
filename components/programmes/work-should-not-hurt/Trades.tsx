@@ -127,7 +127,7 @@ const Trades: React.FC = () => {
     <section className="trades-section py-20 lg:py-32 bg-white" id="trades">
       <div className="content-wrapper">
         <div className="trades-text w-full lg:w-3/4 flex flex-col gap-6">
-          <h4 className="text-3xl lg:text-4xl font-semibold">
+          <h4 className="text-2xl lg:text-4xl font-semibold">
             We&apos;re doing the ground work to understand the challenges faced by our trades
           </h4>
           <p className="text-xl font-medium">Browse our list of trade related material below:</p>

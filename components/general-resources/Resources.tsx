@@ -125,9 +125,9 @@ const Resources: React.FC = () => {
                         height={300}
                       />
                     </div>
-                    <div className="resource-card_information flex flex-col gap-2 p-6">
+                    <div className="resource-card_information flex flex-col gap-2 p-1 md:p-6">
                       <div>
-                        <h4 className="text-lg md:text-lg font-medium">
+                        <h4 className="text-sm md:text-base lg:text-lg font-medium">
                           {post.title.rendered}
                         </h4>
                         <p

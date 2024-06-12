@@ -5,7 +5,7 @@ const Statistics = () => {
     <section className="statistics bg-[--primary-colour] py-20 lg:py-32">
         <div className="site-wrapper">
                 <div className='pb-12 border-b-2 border-white flex flex-col gap-6'>
-                    <h4 className='text-4xl font-bold lg:text-6xl text-white w-full md:w-full'>2022 trends in health and safety and why we are rethinking injury prevention.</h4>
+                    <h4 className='text-4xl font-semibold lg:text-5xl text-white w-full md:w-4/5'>2022 trends in health and safety and why we are rethinking injury prevention.</h4>
                 </div>
 
                 <div className="stat-value-container grid grid-cols-1 lg:grid-cols-3 gap-16 mt-20">

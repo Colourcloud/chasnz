@@ -27,7 +27,7 @@ const Programmes = () => {
         <div className="programme-banner h-[550px] bg-black flex flex-col">
             <div className="site-wrapper">
                 <div className='pt-20 pb-12 border-b-2 border-white flex flex-col gap-6'>
-                    <h4 className='text-3xl md:text-4xl font-bold lg:text-6xl text-white w-full md:w-full'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements.</h4>
+                    <h4 className='text-3xl md:text-4xl font-semibold lg:text-5xl text-white w-full md:w-full'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements.</h4>
                 </div>
             </div>
         </div>

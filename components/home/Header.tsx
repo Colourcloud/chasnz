@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import YouTubePlayer from '../common/YouTubePlayer'
+import Image from 'next/image'
 
 const Header = () => {
   return (
@@ -15,7 +16,10 @@ const Header = () => {
                 </div>
         </div>
         </div>
-        <div className="banner-image w-full h-28 bg-gray-400 flex items-center justify-center">Banner to go here</div>
+        <div className="banner-image w-full bg-gray-400 flex items-center justify-center">
+          <Link href="/events/"><Image src="/common/webinar.jpg" className='hidden invisible md:visible md:block' alt="banner image" width={1920} height={200} /></Link>
+          <Link href="/events/"><Image src="/common/webinar-mobile.jpg" className='block visible md:invisible md:hidden' alt="banner image" width={1920} height={200} /></Link>
+        </div>
     </div>
   )
 }

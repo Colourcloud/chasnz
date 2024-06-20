@@ -68,7 +68,7 @@ const Aboutus: React.FC = () => {
 
   return (
     <>
-   <section className="trades-section py-20 lg:py-32 bg-white" id="aboutus">
+   <section className="trades-section py-20 lg:py-32 mt-20 lg:mt-32 bg-white" id="aboutus">
       <div className="content-wrapper">
         <div className="trades-container flex flex-row justify-between gap-16">
           <div className="trades-list w-full lg:w-[35%]">

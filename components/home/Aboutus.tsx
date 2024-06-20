@@ -103,7 +103,7 @@ const Aboutus: React.FC = () => {
               />
             </div>
             <div className="trade-information flex flex-col gap-4">
-                <h4 className="text-2xl font-semibold">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
+                <h4 className="text-3xl font-bold">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
               <p>{selectedTrade && tradeData[selectedTrade]?.description}</p>
             </div>
           </div>

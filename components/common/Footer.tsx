@@ -49,8 +49,8 @@ const Footer = () => {
               <div className="link-block">
                 <h4 className='text-lg font-semibold py-2 border-b border-b-black'>Follow us</h4>
                 <ul className='flex flex-row gap-3 mt-4'>
-                  <li className='social-icon'><Link href="https://www.linkedin.com/company/construction-health-and-safety-nz-chasnz?originalSubdomain=nz" target="_blank"><FaLinkedin className='text-2xl text-[#0077B5]'/></Link></li>
-                  <li className='social-icon'><Link href="https://www.youtube.com/channel/UCddHM1cm6NXMe_JrxejeCrw" target="_blank"><FaYoutube className='text-2xl text-[#FF0000]'/></Link></li>
+                  <li className='social-icon'><Link href="https://www.linkedin.com/company/construction-health-and-safety-nz-chasnz?originalSubdomain=nz" target="_blank"><FaLinkedin className='text-4xl text-[#0077B5]'/></Link></li>
+                  <li className='social-icon'><Link href="https://www.youtube.com/channel/UCddHM1cm6NXMe_JrxejeCrw" target="_blank"><FaYoutube className='text-4xl text-[#FF0000]'/></Link></li>
                 </ul>
                 <div className="subscribe-footer mt-8 flex flex-col gap-2">
                   <div>

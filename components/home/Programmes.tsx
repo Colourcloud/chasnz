@@ -6,27 +6,10 @@ import Link from 'next/link'
 const Programmes = () => {
   return (
     <>
-    {/* <section className="programmes py-20 lg:py-32">
-        <div className="site-wrapper border-b-2 border-b-[--primary-colour]">
-            <div className="section-text flex flex-col gap-6 w-full lg:w-4/5 pb-12">
-                <span className='text-base font-semibold text-[--primary-colour]'>Our Programmes</span>
-                <h4 className='text-2xl font-bold lg:text-6xl'>Rethinking injury prevention powered by a human approach.</h4>
-                <p className='text-xl font-medium'>Delivering consistency of health and safety standards in the construction industry.</p>
-            </div>
-        </div>
-        <div className="section mt-16">
-            <div className="site-wrapper">
-                <div className="section-graphics flex flex-col md:flex-row justify-between gap-8">
-                    <div><Image src="/home/programmes/image-1.png" alt="" width={700} height={800} /></div>
-                    <div><Image src="/home/programmes/image-2.png" alt="" width={800} height={800} /></div>
-                </div>
-            </div>
-        </div>
-    </section> */}
     <section className="programme-cards pb-20 lg:pb-32">
         <div className="programme-banner flex flex-col">
             <div className="site-wrapper">
-                <div className='pt-20 pb-12 border-b-2 border-white flex flex-col gap-6'>
+                <div className='pb-12 flex flex-col gap-6'>
                     <h4 className='text-3xl md:text-4xl font-bold lg:text-5xl text-[--dark-blue] w-full md:w-full !leading-tight'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements.</h4>
                 </div>
             </div>

@@ -52,7 +52,7 @@ const Introduction = () => {
             </div>
         </div>
 
-        <div className="sector-information bg-[--dark-blue] mt-12">
+        <div className="sector-information bg-[--dark-blue] mt-12 py-20 lg:py-0">
               <div className="site-wrapper h-full">
                 <div className="information-container h-full flex justify-start flex-col lg:flex-row gap-10 lg:gap-20">
 

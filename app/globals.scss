@@ -452,8 +452,8 @@ p {
 }
 
 #events-header {
-  background-image: url('../public/events/events-header-mobile.jpg');
   background-size: cover;
+  background-image: url('../public/events/events-header.jpg');
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
       background-image: url('../public/events/events-header.jpg');

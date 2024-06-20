@@ -7,7 +7,7 @@ const Introduction = () => {
     <section className="introduction py-20 lg:py-32">
         <div className="site-wrapper">
             <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
-                <h4 className='text-4xl font-bold lg:text-5xl'>How we can help you</h4>
+                <h4 className='text-4xl font-bold lg:text-5xl text-[--dark-blue]'>How we can help you</h4>
                 <p className='text-2xl font-light'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being harm in your business &#45; whatever size that is.</p>
             </div>
 

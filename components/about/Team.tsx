@@ -72,7 +72,7 @@ const Team = () => {
                     {boardMembers.map((member) => (
                         <div key={member.id} className="member-card flex flex-col gap-4">
                             <div className="member-image relative aspect-[4/3]">
-                                <Image src={member.imageUrl} alt={member.name} width={500} height={500} unoptimized className='object-fit h-full' />
+                                <Image src={member.imageUrl} alt={member.name} width={500} height={500} className='object-fit h-full' />
                                 <div className='dropdown-toggle transition absolute bottom-4 right-5'>
                                     <Drawer>
                                         <DrawerTrigger><Image src="/about/dropdown-icon.svg" alt='' width={40} height={40} /></DrawerTrigger>

@@ -127,10 +127,10 @@ const Trades: React.FC = () => {
     <section className="trades-section py-20 lg:py-32 bg-white" id="trades">
       <div className="content-wrapper">
         <div className="trades-text w-full lg:w-3/4 flex flex-col gap-6">
-          <h4 className="text-2xl lg:text-4xl font-semibold">
+          <h4 className="text-2xl lg:text-4xl font-semibold text-[--dark-blue]">
             We&apos;re doing the ground work to understand the challenges faced by our trades
           </h4>
-          <p className="text-xl font-medium">Browse our list of trade related material below:</p>
+          <p className="text-xl font-medium text-[--dark-blue]">Browse our list of trade related material below:</p>
         </div>
         <div className="trades-container flex flex-row mt-14 justify-between gap-16">
           <div className="trades-list w-full lg:w-[35%]">
@@ -165,8 +165,8 @@ const Trades: React.FC = () => {
               />
             </div>
             <div className="trade-information flex flex-col gap-4">
-                <h4 className="text-2xl font-semibold">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
-              <p>{selectedTrade && tradeData[selectedTrade]?.description}</p>
+                <h4 className="text-2xl font-semibold text-[--dark-blue]">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
+              <p className='text-[--dark-blue]'>{selectedTrade && tradeData[selectedTrade]?.description}</p>
             </div>
           </div>
         </div>

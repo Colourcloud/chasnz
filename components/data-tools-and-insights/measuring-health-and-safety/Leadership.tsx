@@ -9,7 +9,7 @@ const Leadership = () => {
             <div className='border-b-2 border-[--primary-colour]'>
                 <div className="section-text w-full md:w-4/5 flex flex-col gap-6 py-8">
                     <h2 className='text-4xl lg:text-5xl text-[--primary-colour] font-semibold'>Client Leadership Framework Tool</h2>
-                    <p className='text-base lg:text-xl'>This is a free online diagnostic tool. The results will help you to understand your company and learn how to improve your company&apos;s leadership framework</p>
+                    <p className='text-base lg:text-xl text-[--dark-blue]'>This is a free online diagnostic tool. The results will help you to understand your company and learn how to improve your company&apos;s leadership framework</p>
                 </div>
             </div>
             

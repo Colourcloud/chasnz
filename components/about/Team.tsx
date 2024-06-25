@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Markdown from 'react-markdown';
 import {
     Drawer,
     DrawerClose,
@@ -20,7 +19,7 @@ type TeamMember = {
     position: string;
     representing: string;
     bio: string;
-    imageUrl: string; // Now directly storing the URL
+    imageUrl: string;
 };
 
 const Team = () => {
@@ -36,7 +35,7 @@ const Team = () => {
                 const data = await response.json();
                 const fetchImageUrls = data.map(async (member: any) => {
                     const imageUrlResponse = await fetch(`https://cms.chasnz.org/wp-json/wp/v2/media/${member.acf.image}`, {
-                        next: { revalidate: 3600 }  // This also revalidates every hour
+                        next: { revalidate: 3600 }
                     });
                     const imageData = await imageUrlResponse.json();
                     return {
@@ -45,7 +44,7 @@ const Team = () => {
                         position: member.acf.position,
                         representing: member.acf.representing,
                         bio: member.acf.bio,
-                        imageUrl: imageData.source_url // Using source_url from the media object
+                        imageUrl: imageData.source_url
                     };
                 });
                 Promise.all(fetchImageUrls).then(setBoardMembers);
@@ -69,49 +68,46 @@ const Team = () => {
                     <h4 className='text-3xl lg:text-5xl text-[--primary-colour] font-semibold'>Meet the Team</h4>
                     <p className='text-xl font-medium text-[--text-colour]'>Below is a list of team members at Chasnz</p>
                 </div>
-            <div className="board-member-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            {boardMembers.map((member) => (
-                <div key={member.id} className="member-card flex flex-col gap-4">
-                    <div className="member-image relative aspect-[4/3]">
-                        <Image src={member.imageUrl} alt={member.name} width={500} height={500} unoptimized className='object-fit h-full' />
-                        <div className='dropdown-toggle transition absolute bottom-4 right-5'>
-                            <Drawer>
-                                <DrawerTrigger><Image src="/about/dropdown-icon.svg" alt='' width={40} height={40} /></DrawerTrigger>
-                                <DrawerContent className='max-h-[900px]'>
-                                    <div className="content-wrapper py-10 lg:py-20 overflow-y: scroll;">
-                                    <div className="drawer-content flex flex-col lg:flex-row gap-10 overflow-auto">
-                                        <div className="drawer-image w-full lg:w-2/4">
-                                            <Image src={member.imageUrl} className='w-full' alt={member.name} width={700} height={700} unoptimized />
-                                        </div>
-                                        <div className="drawer-text w-full lg:w-2/4 flex flex-col gap-6">
-                                            <div className='flex flex-col gap-1'>
-                                                <h6 className='text-2xl font-medium'>{member.name}</h6>
-                                                <p className='text-lg'>{member.position}</p>
-                                                <p className='text-lg'>{member.representing}</p>
+                <div className="board-member-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                    {boardMembers.map((member) => (
+                        <div key={member.id} className="member-card flex flex-col gap-4">
+                            <div className="member-image relative aspect-[4/3]">
+                                <Image src={member.imageUrl} alt={member.name} width={500} height={500} unoptimized className='object-fit h-full' />
+                                <div className='dropdown-toggle transition absolute bottom-4 right-5'>
+                                    <Drawer>
+                                        <DrawerTrigger><Image src="/about/dropdown-icon.svg" alt='' width={40} height={40} /></DrawerTrigger>
+                                        <DrawerContent className='max-h-[900px]'>
+                                            <div className="content-wrapper py-10 lg:py-20 overflow-y: scroll;">
+                                                <div className="drawer-content flex flex-col lg:flex-row gap-10 overflow-auto">
+                                                    <div className="drawer-image w-full lg:w-2/4">
+                                                        <Image src={member.imageUrl} className='w-full' alt={member.name} width={700} height={700} unoptimized />
+                                                    </div>
+                                                    <div className="drawer-text w-full lg:w-2/4 flex flex-col gap-6">
+                                                        <div className='flex flex-col gap-1'>
+                                                            <h6 className='text-2xl font-medium'>{member.name}</h6>
+                                                            <p className='text-lg'>{member.position}</p>
+                                                            <p className='text-lg'>{member.representing}</p>
+                                                        </div>
+                                                        <div className='bio-content flex flex-col gap-4' dangerouslySetInnerHTML={{ __html: member.bio }} />
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className='bio-content flex flex-col gap-4'><Markdown>{member.bio}</Markdown></div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </DrawerContent>
-                            </Drawer>
+                                        </DrawerContent>
+                                    </Drawer>
+                                </div>
+                            </div>
+                            <div className="member-bio">
+                                <h6 className='text-xl font-medium'>{member.name}</h6>
+                                <p className='text-base'>{member.position}</p>
+                                <p className='text-base'>{member.representing}</p>
+                                
+                            </div>
                         </div>
-                    </div>
-                    <div className="member-bio">
-                        <h6 className='text-xl font-medium'>{member.name}</h6>
-                        <p className='text-base'>{member.position}</p>
-                        <p className='text-base'>{member.representing}</p>
-                        {/* <div dangerouslySetInnerHTML={{ __html: member.bio }}></div> */}
-                        <div className="testing">
-                        </div>
-                    </div>
+                    ))}
                 </div>
-            ))}
-            </div>
             </div>
         </section>
     );
 };
 
 export default Team;
-

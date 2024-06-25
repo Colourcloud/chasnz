@@ -45,7 +45,7 @@ const Aboutus: React.FC = () => {
       link: '/events/',
       imageSrc: events,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
+        "Throughout the year we bring together leading experts to share the latest insights and trends in construction health and safety in New Zealand. Join us for exclusive webinars and events designed to keep you at the forefront of industry standards and best practices.",
     },
     news: {
       title: 'News & Updates',
@@ -83,7 +83,7 @@ const Aboutus: React.FC = () => {
                   title={tradeData[trade].title}
                 >
                   {tradeData[trade].title}
-                  <span className="text-2xl">
+                  <span className="text-2xl text-[--dark-blue]">
                     <BsArrowRight />
                   </span>
                 </li>
@@ -103,7 +103,7 @@ const Aboutus: React.FC = () => {
               />
             </div>
             <div className="trade-information flex flex-col gap-4">
-                <h4 className="text-3xl font-bold">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
+                <h4 className="text-3xl font-bold text-[--dark-blue]">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
               <p>{selectedTrade && tradeData[selectedTrade]?.description}</p>
             </div>
           </div>

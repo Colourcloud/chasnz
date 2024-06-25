@@ -89,7 +89,7 @@ const Board = () => {
                                                 <p className='text-lg'>{member.position}</p>
                                                 <p className='text-lg'>{member.representing}</p>
                                             </div>
-                                            <div className='bio-content flex flex-col gap-4'><Markdown>{member.bio}</Markdown></div>
+                                            <div className='bio-content flex flex-col gap-4' dangerouslySetInnerHTML={{ __html: member.bio }} />
                                         </div>
                                     </div>
                                     </div>

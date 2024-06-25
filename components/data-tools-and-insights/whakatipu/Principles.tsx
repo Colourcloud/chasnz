@@ -6,7 +6,7 @@ const Principles = () => {
     <section className="principles py-20 lg:py-32" id="principles">
         <div className="content-wrapper">
             <div className="section-text py-10 border-b-2 border-[#EBEBEB]">
-                <h4 className='text-4xl lg:text-5xl font-bold'>Key Principles</h4>
+                <h4 className='text-4xl lg:text-5xl font-bold text-[--dark-blue]'>Key Principles</h4>
             </div>
 
             <div className="content-container flex flex-col md:flex-row justify-between gap-16 mt-12">

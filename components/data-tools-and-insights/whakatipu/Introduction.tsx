@@ -8,7 +8,7 @@ const Introduction = () => {
         <div className="content-wrapper">
             <div className="introduction-container flex flex-col lg:flex-row gap-16 lg:gap-0">
                 <div className="programme-navigation w-full lg:w-[30%]">
-                    <h4 className='text-black text-2xl font-semibold'>Project Whakatipu Content:</h4>
+                    <h4 className='text-[--dark-blue] text-2xl font-semibold'>Project Whakatipu Content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
                         <li><Link href="#whatis">What is Project Whakatipu?</Link></li>
                         <li><Link href="#objectives">Objectives</Link></li>
@@ -19,7 +19,7 @@ const Introduction = () => {
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
-                    <h4 className='font-bold text-4xl lg:text-5xl'>Project Whakatipu</h4>
+                    <h4 className='font-bold text-4xl lg:text-5xl text-[--dark-blue]'>Project Whakatipu</h4>
                     <p className='text-[--text-colour]'>Many organisations have a wealth of data that could prove useful for understanding how to achieve better health and safety performance. Project Whakatipu is an industry project to create a data lake asset for all New Zealand to benefit from. Organisations will share data in a safe, confidential way and therefore create a large data set, from which data scientists will seek actionable insight around what matters in creating a healthier and safer construction industry.</p>
                 </div>
             </div>

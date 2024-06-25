@@ -11,9 +11,8 @@ const Introduction = () => {
                     
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
-                    <h4 className='font-bold text-4xl lg:text-6xl'>Events</h4>
-                    <p className='text-[--text-colour]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget auctor justo. Suspendisse in auctor nisi. Proin hendrerit varius enim, et interdum ante facilisis id. Quisque massa tellus, bibendum id ultricies sit amet, fringilla sit amet urna</p>
-                    <p className='text-[--text-colour]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget auctor justo. Suspendisse in auctor nisi. Proin hendrerit varius enim.</p>
+                    <h4 className='font-bold text-4xl lg:text-6xl text-[--dark-blue]'>Events</h4>
+                    <p className='text-[--text-colour]'>Throughout the year we bring together leading experts to share the latest insights and trends in construction health and safety in New Zealand. Join us for exclusive webinars and events designed to keep you at the forefront of industry standards and best practices.</p>
                 </div>
             </div>
         </div>

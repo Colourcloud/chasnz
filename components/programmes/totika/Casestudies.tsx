@@ -44,7 +44,7 @@ const Casestudies: React.FC = () => {
       <div className="site-wrapper">
         <div className="section-text flex flex-col gap-6 w-full lg:w-4/5">
           <span className='text-base font-semibold text-[--totika-blue]'>Case Studies</span>
-          <h4 className='text-2xl font-bold lg:text-6xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec.</h4>
+          <h4 className='text-2xl font-bold lg:text-6xl text-[--dark-blue]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec.</h4>
         </div>
 
         <div className="case-studies_tabs flex flex-col justify-between gap-16 mt-20">
@@ -66,7 +66,7 @@ const Casestudies: React.FC = () => {
               <Image src={selectedCaseStudy.imageSrc} priority alt="" width={800} height={800} className='w-full' />
             </div>
             <div className='w-full lg:w-2/4 flex flex-col gap-6'>
-              <h4 className='text-3xl font-bold lg:text-5xl'>{selectedCaseStudy.title}</h4>
+              <h4 className='text-3xl font-bold lg:text-5xl text-[--dark-blue]'>{selectedCaseStudy.title}</h4>
               <p>{selectedCaseStudy.description}</p>
               <a href={selectedCaseStudy.downloadLink} className='bg-[--totika-blue] py-3 px-6 rounded-full text-sm text-white font-semibold self-start'>Download Case Study</a>
             </div>

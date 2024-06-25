@@ -62,10 +62,10 @@ const Menus: React.FC = () => {
     <section className="trades-section py-20 lg:py-32 bg-white" id="menus">
       <div className="content-wrapper">
         <div className="trades-text w-full lg:w-3/4 flex flex-col gap-6">
-          <h4 className="text-3xl lg:text-5xl font-semibold">
+          <h4 className="text-3xl lg:text-5xl font-semibold text-[--dark-blue]">
             Learn more about the effective tools available for free use across the New Zealand
           </h4>
-          <p className="text-xl font-medium">Browse the list of tools below:</p>
+          <p className="text-xl font-medium text-[--dark-blue]">Browse the list of tools below:</p>
         </div>
         <div className="trades-container flex flex-row mt-14 justify-between gap-16">
           <div className="trades-list w-full lg:w-[35%]">
@@ -100,8 +100,8 @@ const Menus: React.FC = () => {
               />
             </div>
             <div className="trade-information flex flex-col gap-4">
-                <h4 className="text-2xl font-semibold">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
-              <p>{selectedTrade && tradeData[selectedTrade]?.description}</p>
+                <h4 className="text-2xl font-semibold text-[--dark-blue]">{selectedTrade && tradeData[selectedTrade]?.title}</h4>
+              <p className='text-[--dark-blue]'>{selectedTrade && tradeData[selectedTrade]?.description}</p>
             </div>
           </div>
         </div>

@@ -8,8 +8,8 @@ const Partners = () => {
         <div className="site-wrapper">
             <div className="section-text flex flex-col gap-6 w-full lg:w-4/5">
                 <span className='text-base font-semibold text-[--totika-blue]'>Supply Chain Leaders</span>
-                <h4 className='text-2xl font-bold lg:text-6xl'>Recognising supply chain leaders</h4>
-                <p className='text-xl font-medium'>Construction Health and Safety New Zealand</p>
+                <h4 className='text-2xl font-bold lg:text-6xl text-[--dark-blue]'>Recognising supply chain leaders</h4>
+                <p className='text-xl font-medium text-[--dark-blue]'>Construction Health and Safety New Zealand</p>
             </div>
             <Marquee className='overflow-hidden'>
             <div className="brands flex flex-row gap-6 mt-10">

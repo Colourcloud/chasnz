@@ -84,7 +84,7 @@ const Resources: React.FC = () => {
       <div className="content-wrapper">
         <div className="resource-container">
           <div className="resource-heading">
-            <h4 className="text-2xl font-semibold">
+            <h4 className="text-2xl font-semibold text-[--dark-blue]">
               Browse “Brick &amp; Blocklaying” resources to get you site-ready
             </h4>
           </div>

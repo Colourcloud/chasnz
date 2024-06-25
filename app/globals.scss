@@ -538,7 +538,7 @@ p {
   background-size: cover;
   background-position: center;
   @media screen and (min-width: 768px) {
-    height: 750px;
+    height: calc(100vh - 16rem);
   }
 }
 

@@ -72,7 +72,7 @@ const Team = () => {
                     {boardMembers.map((member) => (
                         <div key={member.id} className="member-card flex flex-col gap-4">
                             <div className="member-image relative aspect-[4/3]">
-                                <Image src={member.imageUrl} alt={member.name} width={500} height={500} className='object-fit h-full' />
+                                <Image src={member.imageUrl} alt={member.name} width={500} height={500} priority className='object-fit h-full' />
                                 <div className='dropdown-toggle transition absolute bottom-4 right-5'>
                                     <Drawer>
                                         <DrawerTrigger><Image src="/about/dropdown-icon.svg" alt='' width={40} height={40} /></DrawerTrigger>
@@ -80,7 +80,7 @@ const Team = () => {
                                             <div className="content-wrapper py-10 lg:py-20 overflow-y: scroll;">
                                                 <div className="drawer-content flex flex-col lg:flex-row gap-10 overflow-auto">
                                                     <div className="drawer-image w-full lg:w-2/4">
-                                                        <Image src={member.imageUrl} className='w-full' alt={member.name} width={700} height={700} unoptimized />
+                                                        <Image src={member.imageUrl} className='w-full' alt={member.name} width={700} height={700} priority />
                                                     </div>
                                                     <div className="drawer-text w-full lg:w-2/4 flex flex-col gap-6">
                                                         <div className='flex flex-col gap-1'>

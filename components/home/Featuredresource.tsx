@@ -10,6 +10,7 @@ interface Post {
   link: string;
   featured_media: number | null;
   content: { rendered: string };
+  slug: string; // Add slug property
 }
 
 interface Media {
@@ -105,7 +106,7 @@ const Featuredresource: React.FC = () => {
                     {extractExcerpt(post.content.rendered, 10)}
                   </p>
                   <Link
-                    href={post.link}
+                    href={`/resources/${post.slug}`}
                     className="text-[--primary-colour] underline"
                   >
                     Read more

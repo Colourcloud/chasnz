@@ -10,6 +10,7 @@ import Programmes from "@/components/home/Programmes";
 import Aboutus from "@/components/home/Aboutus";
 import Statistics from "@/components/home/Statistics";
 import Linkedin from "@/components/home/Linkedin";
+import Featuredresource from "@/components/home/Featuredresource";
 
 export const metadata: Metadata = {
   title: 'CHASNZ – World Class Construction Health and Safety',
@@ -22,6 +23,7 @@ export default function Home() {
         <Header />
         <Introduction />
         <Programmes />
+        <Featuredresource />
         <Statistics />
         <Reach />
         <Aboutus />

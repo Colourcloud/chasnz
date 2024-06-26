@@ -83,7 +83,7 @@ const Aboutus: React.FC = () => {
                   title={tradeData[trade].title}
                 >
                   {tradeData[trade].title}
-                  <span className="text-2xl text-[--dark-blue]">
+                  <span className="text-2xl">
                     <BsArrowRight />
                   </span>
                 </li>

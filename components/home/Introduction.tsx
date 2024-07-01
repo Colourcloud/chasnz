@@ -27,7 +27,7 @@ const Introduction: React.FC = () => {
       ],
       images: [
         '/home/service-image-1.jpg',
-        '/home/trade-image-2.jpg',
+        '/home/service-image-2.jpg',
         '/home/service-image-3.jpg',
       ],
       links: [

@@ -580,9 +580,10 @@ p {
 }
 
 #data-tools-header {
-  background-image: url('../public/data-tools/data-tools-header-image-mobile.jpg');
+  background-image: url('../public/data-tools/data-tools-header-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   @media screen and (min-width: 1024px) {
     background-image: url('../public/data-tools/data-tools-header-image.jpg');
       background-position: center;
@@ -590,7 +591,7 @@ p {
 }
 
 #whakatipu-header {
-  background-image: url('../public/data-tools/whakatipu-header-image-mobile.jpg');
+  background-image: url('../public/data-tools/whakatipu-header-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
@@ -600,7 +601,7 @@ p {
 }
 
 #whakatipu-support {
-  background-image: url('../public/data-tools/support-bg-mobile.jpg');
+  background-image: url('../public/data-tools/support-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {

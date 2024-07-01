@@ -17,8 +17,7 @@ const Header = () => {
         </div>
         </div>
         <div className="banner-image w-full  flex items-center justify-center">
-          <Link href="/events/"><Image src="/common/webinar.jpg" className='hidden invisible md:visible md:block' alt="banner image" width={1920} height={200} /></Link>
-          <Link href="/events/"><Image src="/common/webinar-mobile.jpg" className='block visible md:invisible md:hidden' alt="banner image" width={1920} height={200} /></Link>
+          <Link href="/events/"><Image src="/common/webinar.png" className='' alt="banner image" width={1920} height={150} /></Link>
         </div>
     </div>
   )

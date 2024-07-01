@@ -705,3 +705,7 @@ p {
     color: red;
   }
 }
+
+.green-filter .toggle-icon {
+  filter: invert(56%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(90%) contrast(85%);
+}

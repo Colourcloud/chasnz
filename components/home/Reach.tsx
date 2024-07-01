@@ -13,12 +13,12 @@ const Reach = () => {
                 </div>
             </div>
         </div>
-        <div className="text-block py-20 bg-[--dark-blue]">
+    </section>
+    <div className="text-block py-20 bg-[--dark-blue]">
           <div className="content-wrapper">
             <p className='text-white text-xl lg:text-2xl font-base'>The construction industry has 250,000 workers who make up the sector. At CHASNZ we maintain a national reach, from high rise construction to laying the foundations of the milking shed. This is how we are achieving our goal to raise the standard of health and safety culture and performance across the construction industry in New Zealand.</p>
           </div>
         </div>
-    </section>
     </>
     
   )

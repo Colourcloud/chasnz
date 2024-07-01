@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Resources = () => {
   return (
-    <section className="energy-wheel-resources pb-20 lg:pb-32">
+    <section className="energy-wheel-resources pb-20 lg:pb-32" id="resources">
         <div className="content-wrapper">
             <div className="resource-wrapper">
                 <h4 className='text-2xl font-semibold text-[--text-colour]'>Please be sure to check out and download the below content/assets we&apos;ve developed for your workplace to support your health and safety needs. We look forward to hearing your feedback on our Energy Wheel tool.</h4>

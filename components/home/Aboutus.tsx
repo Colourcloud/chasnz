@@ -6,7 +6,9 @@ import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs';
 import meettheteam from '../../public/home/meet-the-team.jpg';
 import events from '../../public/home/events.jpg';
-import roofingImage from '../../public/programmes/wsnh/trade-images/roofing.jpg';
+import news from '../../public/home/news.jpg';
+
+import contact from '../../public/home/contact.jpg';
 import { link } from 'fs';
 
 
@@ -50,16 +52,16 @@ const Aboutus: React.FC = () => {
     news: {
       title: 'News & Updates',
       link: '/news-and-updates/',
-      imageSrc: events,
+      imageSrc: news,
       description:
         "Stay tuned for articles, expert insights, and announcements about our upcoming workshops and training sessions. Whether it's innovative safety solutions, new legislative updates, or success stories from across the sector, this section is designed to provide you with valuable information that supports our shared goal of enhancing workplace safety. Thank you for visiting, and we look forward to keeping you updated.",
     },
     regulartorybodies: {
       title: 'Contact us',
       link: '/contact/',
-      imageSrc: roofingImage,
+      imageSrc: contact,
       description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.",
+          "For more information about supporting the New Zealand construction industry, contact us.",
     },
     // Add data for other trades similarly
   };

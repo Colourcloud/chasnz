@@ -185,6 +185,22 @@ p {
   }
 }
 
+.header-gradient {
+  &::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+  }
+}
+
 .home-header {
   width: 100%;
   height: 100vh;
@@ -193,7 +209,7 @@ p {
   color: #fff;
   background-image: url('../public/home/header-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   max-height: 800px;
   &::before {
     content: '';
@@ -312,7 +328,7 @@ p {
 // }
 
 .subscribe {
-  background-image: url('../public/subscribe-background.png');
+  background-image: url('../public/subscribe-background.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -389,7 +405,7 @@ p {
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
       background-image: url('../public/energy-wheel/header-image.jpg');
-      background-position: center;
+      background-position: top;
   }
 }
 
@@ -534,7 +550,7 @@ p {
 
 .general-resources {
   height: 500px;
-  background-image: url('../public/subscribe-background.jpg');
+  background-image: url('../public/common/resource-background-image.jpg');
   background-size: cover;
   background-position: center;
   @media screen and (min-width: 768px) {
@@ -594,11 +610,24 @@ p {
 }
 
 #measuring-health-and-safety-header {
-  background-image: url('../public/data-tools/measuring-health-header-mobile.jpg');
+  background-image: url('../public/data-tools/measuring-health-header.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: right;
   @media screen and (min-width: 1024px) {
     background-image: url('../public/data-tools/measuring-health-header.jpg');
+      background-position: center;
+  }
+}
+
+
+#analysis-insights-header {
+  background-image: url('../public/data-tools/analysis-and-insights-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  @media screen and (min-width: 1024px) {
+    background-image: url('../public/data-tools/analysis-and-insights-header.jpg');
       background-position: center;
   }
 }
@@ -608,7 +637,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
-    background-image: url('../public/common/news-header-mobile.jpg');
+    background-image: url('../public/common/news-header.jpg');
       background-position: center;
   }
 }
@@ -619,7 +648,7 @@ p {
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
     background-image: url('../public/events/events-header.jpg');
-      background-position: 50% 400%;
+      background-position: top;
   }
 }
 
@@ -629,8 +658,18 @@ p {
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
     background-size: 115%;
-    background-image: url('../public/subscribe-background.jpg');
-    background-position: center top;
+    background-image: url('../public/common/resource-background-image.jpg');
+    background-position: center;
+  }
+}
+
+#contact-header {
+  background-image: url('../public/common/contact-header.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1024px) {
+    background-image: url('../public/common/contact-header.jpg');
+    background-position: top;
   }
 }
 

@@ -19,7 +19,6 @@ const Introduction = () => {
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <h4 className='font-bold text-4xl lg:text-5xl text-[--dark-blue]'>Data Tools &amp; Insights</h4>
                     <p className='text-[--text-colour]'>CHASNZ has created some simple but effective tools available for free use across the New Zealand construction sector. These can be used to gain an independent view as to how health and safety is perceived by the workforce and used as tools to pinpoint risk areas and drive improvement.</p>
-                    <p className='text-[--text-colour]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel ipsum nec enim finibus euismod et in odio. Quisque id iaculis ante. Cras mattis, erat vel elementum convallis, nunc turpis interdum nunc.</p>
                 </div>
             </div>
         </div>

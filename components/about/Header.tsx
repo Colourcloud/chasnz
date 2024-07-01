@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Header = () => {
   return (
     <div>
-        <div className="programmes-header relative" id="about-header">
+        <div className="programmes-header relative header-gradient" id="about-header">
             <div className="content-wrapper relative h-full">
               <div className="header-container flex flex-col h-full items-center justify-center gap-10">
                 <div className="header-text-block flex flex-col gap-6 text-center w-full lg:w-3/4">

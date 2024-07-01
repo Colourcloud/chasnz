@@ -26,9 +26,9 @@ const Introduction: React.FC = () => {
         'It also encompasses building and infrastructure owners and providers.',
       ],
       images: [
-        '/home/trade-image-1.jpg',
+        '/home/service-image-1.jpg',
         '/home/trade-image-2.jpg',
-        '/home/trade-image-3.jpg',
+        '/home/service-image-3.jpg',
       ],
       links: [
         { href: '/general-resources/', text: 'General Resources' },
@@ -42,9 +42,9 @@ const Introduction: React.FC = () => {
         'Individuals working in safety roles, ranging from Health & Safety (H&S) representatives to directors of safety, as well as those who handle safety duties informally.',
       ],
       images: [
-        '/home/trade-image-1.jpg',
-        '/home/trade-image-2.jpg',
-        '/home/trade-image-3.jpg',
+        '/home/safety-image-1.jpg',
+        '/home/safety-image-2.jpg',
+        '/home/safety-image-3.jpg',
       ],
       links: [
         { href: '/general-resources/', text: 'General Resources' },
@@ -75,9 +75,9 @@ const Introduction: React.FC = () => {
         'Small to medium business owners (not dedicated safety professionals). These are organizations small enough that the boss often works hands-on or will take on practical tasks.',
       ],
       images: [
-        '/home/trade-image-1.jpg',
-        '/home/trade-image-2.jpg',
-        '/home/trade-image-3.jpg',
+        '/home/business-image-1.jpg',
+        '/home/business-image-2.jpg',
+        '/home/business-image-3.jpg',
       ],
       links: [
         { href: '/general-resources/', text: 'General Resources' },

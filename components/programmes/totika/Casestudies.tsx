@@ -44,7 +44,7 @@ const Casestudies: React.FC = () => {
       <div className="site-wrapper">
         <div className="section-text flex flex-col gap-6 w-full lg:w-4/5">
           <span className='text-base font-semibold text-[--totika-blue]'>Case Studies</span>
-          <h4 className='text-2xl font-bold lg:text-6xl text-[--dark-blue]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec.</h4>
+          <h4 className='text-2xl font-bold lg:text-6xl text-[--dark-blue]'>See how we've helped businesses across New Zealand</h4>
         </div>
 
         <div className="case-studies_tabs flex flex-col justify-between gap-16 mt-20">

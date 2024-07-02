@@ -112,11 +112,11 @@ const Introduction: React.FC = () => {
         <div className="information-images flex flex-col w-full lg:w-3/5 lg:mr-[-20rem]">
           <div className="top-images flex flex-row lg:mr-[-6rem]">
             {content.images.slice(0, 2).map((image, index) => (
-              <Image key={index} src={image} alt="" width={600} height={600} className='w-full' />
+              <Image key={index} src={image} alt="" width={600} height={400} className='w-full' />
             ))}
           </div>
           <div className="below-image lg:mr-[-6rem]">
-            <Image src={content.images[2]} alt="" width={1200} height={600} className='w-full' />
+            <Image src={content.images[2]} alt="" width={1200} height={400} className='w-full' />
           </div>
         </div>
       </div>

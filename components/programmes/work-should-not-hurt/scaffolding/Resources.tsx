@@ -84,7 +84,7 @@ const Resources: React.FC = () => {
       <div className="content-wrapper">
         <div className="resource-container">
           <div className="resource-heading">
-          <h4 className="text-sm md:text-base lg:text-lg font-medium text-[--dark-blue]">
+          <h4 className="text-2xl md:text-base lg:text-lg font-medium text-[--dark-blue]">
               Browse “Scaffolding” resources to get you site-ready
             </h4>
           </div>

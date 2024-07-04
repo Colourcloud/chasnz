@@ -749,3 +749,10 @@ p {
 .green-filter .toggle-icon {
   filter: invert(56%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(90%) contrast(85%);
 }
+
+.resource-page-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}

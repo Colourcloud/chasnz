@@ -6,7 +6,7 @@ interface EmbedIframeProps {
 
 const PowerbiFrame: React.FC<EmbedIframeProps> = ({ src }) => {
   return (
-    <div className="site-wrapper pt-20 lg:pt-32">
+    <div className="site-wrapper pb-20 lg:pb-32">
         <h4 className='text-3xl lg:text-4xl font-semibold text-center'>The impact of sprains & strains on our productivity</h4>
         <iframe
             className="lazyloaded mt-20"

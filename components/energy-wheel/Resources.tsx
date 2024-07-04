@@ -13,7 +13,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/explainer-video.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Explainer Video</h6>
-                            <Link href="/energy-wheel/explainer-video" className='resource-button'>Download</Link>
+                            <Link href="https://www.youtube.com/watch?v=6S9SKbOpA-M" target="_blank" className='resource-button'>Download</Link>
                         </div>
                     </div>
 

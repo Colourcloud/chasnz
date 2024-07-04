@@ -15,6 +15,7 @@ interface Event {
     };
     acf: {
         title: string;
+        isactive: string;
         excerpt: string;
         date: string;
         time: string;
@@ -31,7 +32,7 @@ const Events = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/event');
+                const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/event?_embed&per_page=3');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -61,13 +62,16 @@ const Events = () => {
     }
 
     return (
-        <section className='events-container py-20 lg:py-32'>
+        <section className='events-container py-20'>
             <div className="content-wrapper">
-                <div className="board-member-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                <h4 className="text-2xl font-semibold">
+                    Checkout our most recent events:
+                </h4>
+                <div className="event-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
                     {events.map((event) => (
                         <div key={event.id} className="event-card relative overflow-hidden">
                             <div className="event-card-image">
-                                <Image src={event.acf.cover_image || '/events/default-image.jpg'} alt={event.title.rendered} width={600} height={600} />
+                                <Image src={event.acf.cover_image} alt={event.title.rendered} width={600} height={600} />
                             </div>
                             <div className="event-information absolute bottom-0 p-6">
                                 <div className='flex flex-col gap-3 text-white relative z-10'>

@@ -66,7 +66,7 @@ const LatestNews = () => {
     const otherNews = news.slice(1);
 
     return (
-        <section className='news-container py-20 lg:py-32'>
+        <section className='news-container pt-20 lg:pt-32'>
             <div className="content-wrapper">
                 <div className="latest-news mb-12">
                     <div className="news-card relative overflow-hidden flex flex-col md:flex-row gap-8">
@@ -92,32 +92,6 @@ const LatestNews = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="news-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                    {otherNews.map((item) => (
-                        <div key={item.id} className="news-card relative overflow-hidden">
-                            <div className="news-card-image aspect-[4/3]">
-                                <Image src={item.acf.featured_image || '/news/default-image.jpg'} alt={item.title.rendered} width={600} height={600} className='aspect-[4/3]' />
-                            </div>
-                            <div className="news-information absolute bottom-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
-                                <div className='flex flex-col gap-3 text-white relative z-10'>
-                                    <span className="text-sm">
-                                        {new Date(item.date).toLocaleDateString('en-US', {
-                                            weekday: 'long',
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric',
-                                        })}
-                                    </span>
-                                    <h6 className='news-title text-2xl font-semibold'>{item.title.rendered}</h6>
-                                    <Link href={`/news-and-updates/${item.slug}`} className='flex flex-row items-center gap-2'>
-                                        Read More <IoIosArrowDroprightCircle />
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
                 </div>
             </div>
         </section>

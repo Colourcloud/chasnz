@@ -16,8 +16,8 @@ const page = () => {
     <>
         <Header />
         <Introduction />
-        <PowerbiFrame src="https://app.powerbi.com/view?r=eyJrIjoiZDJjNjQxNzItNmRjZi00YzZiLWI4YjEtYjk5YmNmYWM1MTdhIiwidCI6ImI0OGExNmY2LTM3ZDUtNDU1NS05OTljLTgyNDU5ZjFjZWExOCJ9" />
         <Resources />
+        <PowerbiFrame src="https://app.powerbi.com/view?r=eyJrIjoiZmNhYjFhZWEtYjU1My00YzY2LTkwZTYtZThkOTViZDRhMTk2IiwidCI6ImI0OGExNmY2LTM3ZDUtNDU1NS05OTljLTgyNDU5ZjFjZWExOCJ9" />
         <Subscribe />
     </>
   )

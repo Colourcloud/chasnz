@@ -4,7 +4,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 const Introduction = () => {
   return (
-    <div className="programme-introduction py-20 pb-20 lg:pb-32 bg-white border-b-2 border-gray-200">
+    <div className="programme-introduction py-20 bg-white border-b-2 border-gray-200">
         <div className="content-wrapper">
             <div className="introduction-container flex flex-col lg:flex-row gap-16 lg:gap-0">
                 <div className="programme-navigation w-full hidden lg:block lg:w-[30%]">

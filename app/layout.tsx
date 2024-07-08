@@ -6,6 +6,7 @@ import NextTopLoader from 'nextjs-toploader';
 import Navigation from "@/components/common/Navigation";
 import Footer from "@/components/common/Footer";
 import MobileNav from "@/components/common/MobileNav";
+import Newsletter from "@/components/common/Newsletter";
 
 const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -24,10 +25,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <NextTopLoader color="#7ABC25" showSpinner={false}/>
+        <Newsletter />
         <Navigation />
         <MobileNav />
         {children}
         <Footer />
+        <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hsforms.net/forms/v2.js"
+          ></script>
         <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40083784.js"></script>
         </body>
     </html>

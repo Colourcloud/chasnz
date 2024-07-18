@@ -5,6 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { IoMenu } from 'react-icons/io5';
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 const MobileNav: React.FC = () => {
   const [isNavActive, setIsNavActive] = useState(false);
 
@@ -47,22 +54,30 @@ const MobileNav: React.FC = () => {
         <div className="mobile-nav-content mt-20">
           <div className="site-wrapper">
             <div className="mobile-nav-layout flex flex-col">
-              
-              <div className="nav-block flex flex-col gap-4 border-b border-gray-300 py-8">
-                <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
-                <h6 className='text-gray-500 text-lg font-base'>Learn more about the CHASNZ team:</h6>
-                <ul className='flex flex-col gap-4'>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">About CHASNZ</a></li>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Board Members</a></li>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Meet the Team</a></li>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">News &amp; Updates</a></li>
-                </ul>
-              </div>
 
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Learn more about the CHASNZ team:</AccordionTrigger>
+                <AccordionContent>
+                    <div className="nav-block flex flex-col gap-4 py-4">
+                    <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
+                    <ul className='flex flex-col gap-4'>
+                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">About CHASNZ</a></li>
+                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Board Members</a></li>
+                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Meet the Team</a></li>
+                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">News &amp; Updates</a></li>
+                    </ul>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
 
-                <div className="nav-block flex flex-col gap-4 border-b border-gray-300 py-8">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Programmes</AccordionTrigger>
+                <AccordionContent>
+                <div className="nav-block flex flex-col gap-4 py-4">
                   <Image src="/navigation/mobile-nav/programmes.jpg" alt="" className='' width={550} height={200} />
-                  <h6 className='text-gray-500 text-lg font-base'>Programmes:</h6>
                   <ul className='flex flex-col gap-10'>
                     <li className='programmes-section'>
                       <a href="/work-should-not-hurt/" className='text-lg font-medium underline'>
@@ -107,18 +122,65 @@ const MobileNav: React.FC = () => {
                     
                   </ul>
                 </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+              
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Resources</AccordionTrigger>
+                <AccordionContent>
+                    <div className="nav-block flex flex-col gap-4 py-4">
+                    <Image src="/navigation/mobile-nav/resources.jpg" alt="" className='' width={550} height={200} />
+                    <ul className='flex flex-col gap-10'>
+                        <li className='resource-section'>
+                          <a href="/general-resources/" className='text-lg font-medium underline'>
+                            General Resources
+                          </a>
+                          <ul className='flex flex-col gap-4 mt-4'>
+                            <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
+                            <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Wheel</a></li>
+                          </ul>
+                        </li>
 
-                <div className="nav-block flex flex-col gap-4 border-b border-gray-300 py-8">
-                <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
-                <h6 className='text-gray-500 text-lg font-base'>Resources:</h6>
-                <ul className='flex flex-col gap-4'>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">About CHASNZ</a></li>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Board Members</a></li>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Meet the Team</a></li>
-                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">News &amp; Updates</a></li>
-                </ul>
-              </div>
+                        <li className='resource-section'>
+                          <a href="/work-should-not-hurt/" className='text-lg font-medium underline'>
+                            Work Should Not Hurt
+                          </a>
+                          <ul className='flex flex-col gap-4 mt-4'>
+                          <li><a href="/work-should-not-hurt/trades/brick-blocklaying#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Brick & Blocklaying</a></li>
+                              <li><a href="/work-should-not-hurt/trades/building#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Building</a></li>
+                              <li><a href="/work-should-not-hurt/trades/concrete#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Concrete Services</a></li>
+                              <li><a href="/work-should-not-hurt/trades/electricians#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Electricians</a></li>
+                              <li><a href="/work-should-not-hurt/trades/flooring#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Flooring</a></li>
+                              <li><a href="/work-should-not-hurt/trades/glazing#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Glazing</a></li>
+                              <li><a href="/work-should-not-hurt/trades/manage-support#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Management & Support</a></li>
+                              <li><a href="/work-should-not-hurt/trades/painting#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Painting</a></li>
+                              <li><a href="/work-should-not-hurt/trades/plumbing-gasfitting-drainlaying#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Plumbing, Gasfitting & Drainlaying</a></li>
+                              <li><a href="/work-should-not-hurt/trades/roofing#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Roofing</a></li>
+                              <li><a href="/work-should-not-hurt/trades/scaffolding#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</a></li>
+                          </ul>
+                        </li>
 
+                        <li className='resource-section'>
+                          <a href="/data-tools-and-insights/" className='text-lg font-medium underline'>
+                            Data Tools &amp; Insights
+                          </a>
+                          <ul className='flex flex-col gap-4 mt-4'>
+                            <li><a href="/data-tools-and-insights/measuring-health-and-safety/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</a></li>
+                            <li><a href="/analysis-insights/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
+                          </ul>
+                        </li>
+
+                    </ul>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            <a href="" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Events</a>
+            <a href="" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Contact</a>
+            
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ const Header = () => {
             <div className="content-wrapper relative h-full">
               <div className="header-container flex flex-col h-full items-center justify-center lg:justify-end gap-10">
                 <div className="programme-logo w-3/4 lg:w-full flex justify-center lg:justify-start lg:pb-8 z-10">
-                    <Image src="/logo.svg" alt="chasnz logo" width='400' height='300' className='w-[275px] xl:w-[400px]'></Image>
+                    
                 </div>
               </div>
             </div>

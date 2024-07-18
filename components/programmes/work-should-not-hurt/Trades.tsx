@@ -42,7 +42,7 @@ const Trades: React.FC = () => {
 
   const tradeData: TradeData = {
     brick: {
-        title: 'Brick & blocklaying',
+        title: 'Brick & Blocklaying',
         link: '/work-should-not-hurt/trades/brick-blocklaying',
         imageSrc: brickImage,
         description:
@@ -98,7 +98,7 @@ const Trades: React.FC = () => {
             "We have worked onsite alongside Painters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
     },
     plumbing: {
-        title: 'Plumbing, gasfitting & drainlaying',
+        title: 'Plumbing, Gasfitting & Drainlaying',
         link: '/work-should-not-hurt/trades/plumbing-gasfitting-drainlaying',
         imageSrc: plumbingImage,
         description:

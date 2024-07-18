@@ -71,8 +71,8 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
     <>
       <ConsentForm />
       <Navigation />
-      <div className="article-header resource-header-background w-full h-[500px] bg-black header-gradient relative"></div>
-      <div className="article-content py-20 lg:py-40">
+      <div className="article-header resource-header-background w-full h-[60px] xl:h-[100px] bg-black header-gradient relative"></div>
+      <div className="article-content py-20 lg:py-32">
         <div className='content-wrapper'>
           <div className="article-wrapper max-w-[980px] mx-auto flex flex-col gap-6">
             <a href="javascript:window.history.back();" className='flex flex-row items-center gap-1 text-xl'><IoArrowBackOutline /> Back to Resources</a>

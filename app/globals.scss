@@ -654,14 +654,13 @@ p {
 }
 
 .resource-header-background {
-  background-image: url('../public/common/resource-background-image.jpg');
   background-size: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: black;
   @media screen and (min-width: 1024px) {
     background-size: 115%;
-    background-image: url('../public/common/resource-background-image.jpg');
     background-position: center;
   }
 }

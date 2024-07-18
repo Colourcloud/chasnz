@@ -134,7 +134,7 @@ const Introduction: React.FC = () => {
       
         <section className="sector-icons mt-20 flex flex-col gap-6">
         <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
-          <h4 className='text-3xl font-bold lg:text-3xl text-[--dark-blue]'>Who do we help</h4>
+          <h4 className='text-3xl font-semibold lg:text-3xl text-[--dark-blue]'>Who do we help</h4>
         </div>
         <div className="section-toggles-container flex flex-row gap-8 justify-center">
           <div

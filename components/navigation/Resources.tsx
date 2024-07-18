@@ -36,7 +36,7 @@ const Resources = () => {
                                     <li><a href="/work-should-not-hurt/trades/glazing#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Glazing</a></li>
                                     <li><a href="/work-should-not-hurt/trades/manage-support#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Management & Support</a></li>
                                     <li><a href="/work-should-not-hurt/trades/painting#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Painting</a></li>
-                                    <li><a href="/work-should-not-hurt/trades/plumbing-gasfitting-drainlaying#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Plumbing, gasfitting & drainlaying</a></li>
+                                    <li><a href="/work-should-not-hurt/trades/plumbing-gasfitting-drainlaying#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Plumbing, Gasfitting & Drainlaying</a></li>
                                     <li><a href="/work-should-not-hurt/trades/roofing#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Roofing</a></li>
                                     <li><a href="/work-should-not-hurt/trades/scaffolding#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Scaffolding</a></li>
                                     </ul>

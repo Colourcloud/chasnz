@@ -51,7 +51,7 @@ const MobileNav: React.FC = () => {
       </div>
 
       <div className={`mobile-nav-dropdown fixed top-0 w-full h-screen overflow-y-scroll bg-gray-50 z-[998] ${isNavActive ? 'active' : ''}`}>
-        <div className="mobile-nav-content mt-20">
+        <div className="mobile-nav-content mt-20 pb-20">
           <div className="site-wrapper">
             <div className="mobile-nav-layout flex flex-col">
 
@@ -178,8 +178,8 @@ const MobileNav: React.FC = () => {
               </AccordionItem>
             </Accordion>
 
-            <a href="" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Events</a>
-            <a href="" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Contact</a>
+            <a href="/events/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Events</a>
+            <a href="/contact/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Contact</a>
             
             </div>
           </div>

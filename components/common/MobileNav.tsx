@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoMenu } from 'react-icons/io5';
+import { IoSearch } from "react-icons/io5";
 
 import {
   Accordion,
@@ -36,14 +37,19 @@ const MobileNav: React.FC = () => {
       <div className="mobile-navigation fixed top-0 w-full bg-white h-16 md:h-20 z-[999]">
         <div className="site-wrapper h-full">
           <div className="mobile-nav-container flex flex-row justify-between items-center h-full">
+            <div className="mobile-toggle flex">
+              <button onClick={toggleNav}>
+                <IoMenu className="text-3xl" />
+              </button>
+            </div>
             <div className="navigation-left">
               <Link href="/" className='nav-logo'>
                 <Image src="/logo-green.svg" height="50" width="175" alt="chas logo" />
               </Link>
             </div>
             <div className="mobile-toggle flex">
-              <button onClick={toggleNav}>
-                <IoMenu className="text-3xl" />
+              <button>
+                <IoSearch className="text-3xl" />
               </button>
             </div>
           </div>

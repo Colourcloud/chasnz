@@ -32,13 +32,6 @@ const Menus: React.FC = () => {
   };
 
   const tradeData: TradeData = {
-    whakatipu: {
-      title: 'Project Whakatipu',
-      link: '/data-tools-and-insights/whakatipu/',
-      imageSrc: whakatipu,
-      description:
-        "Project Whakatipu is an industry project to create a data lake asset for  all New Zealand to benefit from. Organisations can share data in a  safe, confidential way and therefore create a large data set (lake),  from which data scientists will seek actionable insight around what  matters in creating a healthier and safer construction industry.",
-    },
     industrybodies: {
       title: 'Measuring Health and Safety',
       link: '/work-should-not-hurt/trades/scaffolding',

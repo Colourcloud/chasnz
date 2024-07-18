@@ -530,7 +530,7 @@ p {
 .national-reach {
   height: 500px;
   position: relative;
-  background-image: url('../public/home/national-reach.png');
+  background-image: url('../public/home/national-reach.jpg');
   background-size: cover;
   background-position: center;
   @media screen and (min-width: 768px) {
@@ -654,8 +654,10 @@ p {
 }
 
 .resource-header-background {
-  background-image: url('../public/common/resource-background-image-mobile.jpg');
+  background-image: url('../public/common/resource-background-image.jpg');
   background-size: 100%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   @media screen and (min-width: 1024px) {
     background-size: 115%;
@@ -666,8 +668,9 @@ p {
 
 #contact-header {
   background-image: url('../public/common/contact-header.jpg');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   @media screen and (min-width: 1024px) {
     background-image: url('../public/common/contact-header.jpg');
     background-position: top;

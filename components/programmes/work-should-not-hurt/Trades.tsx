@@ -41,26 +41,61 @@ const Trades: React.FC = () => {
   };
 
   const tradeData: TradeData = {
+    brick: {
+        title: 'Brick & blocklaying',
+        link: '/work-should-not-hurt/trades/brick-blocklaying',
+        imageSrc: brickImage,
+        description:
+            "We have worked onsite alongside Bricklayers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
+    },
     building: {
-      title: 'Building',
-      link: '/work-should-not-hurt/trades/building',
-      imageSrc: buildingImage,
-      description:
-        "We have worked onsite alongside Builders to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
+        title: 'Building',
+        link: '/work-should-not-hurt/trades/building',
+        imageSrc: buildingImage,
+        description:
+            "We have worked onsite alongside Builders to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
     },
-    scaffolding: {
-      title: 'Scaffolding',
-      link: '/work-should-not-hurt/trades/scaffolding',
-      imageSrc: scaffoldingImage,
-      description:
-        "We have worked onsite alongside Scaffolders to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
+    concrete: {
+        title: 'Concrete Services',
+        link: '/work-should-not-hurt/trades/concrete',
+        imageSrc: concreteImage,
+        description:
+            "We have worked onsite alongside Concreters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
     },
-    roofing: {
-      title: 'Roofing',
-      link: '/work-should-not-hurt/trades/roofing',
-      imageSrc: roofingImage,
-      description:
-          "We have worked onsite alongside roofers to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
+    electricians: {
+        title: 'Electricians',
+        link: '/work-should-not-hurt/trades/electricians',
+        imageSrc: electricalImage,
+        description:
+            "We have worked onsite alongside Electricians to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
+    },
+    flooring: {
+        title: 'Flooring',
+        link: '/work-should-not-hurt/trades/flooring',
+        imageSrc: flooringImage,
+        description:
+            "We have worked onsite alongside Floorers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
+    },
+    glazing: {
+        title: 'Glazing',
+        link: '/work-should-not-hurt/trades/glazing',
+        imageSrc: glazingImage,
+        description:
+            "We have worked onsite alongside Glazers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
+    },
+    management: {
+        title: 'Management & Support',
+        link: '/work-should-not-hurt/trades/manage-support',
+        imageSrc: managementImage,
+        description:
+            "We have worked onsite alongside management & support workers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
+    },
+    painting: {
+        title: 'Painting',
+        link: '/work-should-not-hurt/trades/painting',
+        imageSrc: paintingImage,
+        description:
+            "We have worked onsite alongside Painters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
     },
     plumbing: {
         title: 'Plumbing, gasfitting & drainlaying',
@@ -68,58 +103,24 @@ const Trades: React.FC = () => {
         imageSrc: plumbingImage,
         description:
             "We have worked onsite alongside plumbers, gasfitters & drain layers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      brick: {
-        title: 'Brick & blocklaying',
-        link: '/work-should-not-hurt/trades/brick-blocklaying',
-        imageSrc: brickImage,
+    },
+    roofing: {
+        title: 'Roofing',
+        link: '/work-should-not-hurt/trades/roofing',
+        imageSrc: roofingImage,
         description:
-            "We have worked onsite alongside Bricklayers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      painting: {
-        title: 'Painting',
-        link: '/work-should-not-hurt/trades/painting',
-        imageSrc: paintingImage,
+            "We have worked onsite alongside roofers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
+    },
+    scaffolding: {
+        title: 'Scaffolding',
+        link: '/work-should-not-hurt/trades/scaffolding',
+        imageSrc: scaffoldingImage,
         description:
-            "We have worked onsite alongside Painters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      glazing: {
-        title: 'Glazing',
-        link: '/work-should-not-hurt/trades/glazing',
-        imageSrc: glazingImage,
-        description:
-            "We have worked onsite alongside Glazers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      electricians: {
-        title: 'Electricians',
-        link: '/work-should-not-hurt/trades/electricians',
-        imageSrc: electricalImage,
-        description:
-            "We have worked onsite alongside Electricians to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      flooring: {
-        title: 'Flooring',
-        link: '/work-should-not-hurt/trades/flooring',
-        imageSrc: flooringImage,
-        description:
-            "We have worked onsite alongside Floorers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      concrete: {
-        title: 'Concrete Services',
-        link: '/work-should-not-hurt/trades/concrete',
-        imageSrc: concreteImage,
-        description:
-            "We have worked onsite alongside Concreters to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
-      management: {
-        title: 'Management & Support',
-        link: '/work-should-not-hurt/trades/manage-support',
-        imageSrc: managementImage,
-        description:
-            "We have worked onsite alongside management & support workers to identify practical solutions to help you reduce the chance of pain and injury. It’s about working smarter, not harder.",
-      },
+            "We have worked onsite alongside Scaffolders to identify practical solutions to help you reduce the chance of pain and injury. It's about working smarter, not harder.",
+    },
     // Add data for other trades similarly
-  };
+};
+
 
   const selectedTrade = hoveredTrade || lastHoveredTrade;
 

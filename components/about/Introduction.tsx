@@ -8,7 +8,7 @@ const Introduction = () => {
             <div className="introduction-content flex flex-col lg:flex-row gap-16 items-center">
                 <div className="text-content w-full lg:w-2/4">
                     <span className='text-base text-[--primary-colour] pb-4 block'>What we stand for</span>
-                    <h4 className='text-3xl lg:text-6xl text-black font-bold'>Better work, better lives and a better future.</h4>
+                    <h4 className='text-3xl lg:text-6xl text-black font-semibold'>Better work, better lives and a better future.</h4>
                     <div className="text-block flex flex-col gap-5 mt-10">
                         <p>Construction Health and Safety New Zealand, is an industry-led charitable trust working to improve the lives of construction workers by raising the standard of health, safety and wellbeing in construction.</p>
                         <p>The CHASNZ Board comprises senior industry leaders, working together. They are dedicated to addressing the need for sustainable change, identifying areas of risk, providing guidance on best practice health and safety and ensuring health and safety is an intrinsic part of doing better business.</p>

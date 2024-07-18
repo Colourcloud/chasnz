@@ -21,7 +21,7 @@ const Introduction = () => {
                 </div>
                 <div className="programme-text flex flex-col gap-12 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">
                     <div className='flex flex-col gap-6'>
-                        <h4 className='font-semibold text-5xl lg:text-6xl text-[--dark-blue]'>Plumbing, Gasfitting &amp; Drainlaying</h4>
+                        <h4 className='font-semibold text-5xl lg:text-6xl text-[--dark-blue] !leading-tight'>Plumbing, Gasfitting &amp; Drainlaying</h4>
                         <p className='text-[--text-colour]'>We have worked onsite alongside plumbers, gas fitters and drain layers to identify practical solutions to help you reduce the chance of pain and injury. Scroll down to view a wide range of resources to help you work smarter, not harder.</p>
                     </div>
                     <div className='flex flex-col gap-6'>

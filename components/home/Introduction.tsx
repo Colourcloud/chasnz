@@ -93,7 +93,7 @@ const Introduction: React.FC = () => {
       <div className="information-container h-full flex justify-start flex-col lg:flex-row gap-10 lg:gap-20">
         <div className="information-text text-white w-full lg:w-2/5 flex flex-col gap-10 self-center">
           <div className="text-block">
-            <h4 className='text-3xl font-bold md:text-5xl text-[--primary-colour]'>{content.title}</h4>
+            <h4 className='text-3xl font-semibold md:text-5xl text-[--primary-colour]'>{content.title}</h4>
           </div>
           <div className="text-block flex flex-col gap-6">
             {content.paragraphs.map((para, index) => (
@@ -110,7 +110,7 @@ const Introduction: React.FC = () => {
           </div>
         </div>
         <div className="information-images flex flex-col w-full lg:w-3/5">
-          <div className="top-images flex flex-row">
+          <div className="top-images flex flex-row flex-wrap">
             {content.images.slice(0, 2).map((image, index) => (
               <Image key={index} src={image} alt="" width={600} height={400} className='w-full md:w-2/4' />
             ))}
@@ -127,8 +127,8 @@ const Introduction: React.FC = () => {
     <section className="introduction py-20 lg:py-32">
       <div className="site-wrapper">
         <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
-          <h4 className='text-4xl font-bold lg:text-5xl text-[--dark-blue]'>How we can help you</h4>
-          <p className='text-2xl font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being harm in your business &#45; whatever size that is.</p>
+          <h4 className='text-4xl font-semibold lg:text-5xl text-[--dark-blue]'>How we can help you</h4>
+          <p className='text-2xl font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being Wellbeing harm in your business - whatever size that is.</p>
         </div>
 
       
@@ -138,7 +138,7 @@ const Introduction: React.FC = () => {
         </div>
         <div className="section-toggles-container flex flex-row gap-8 justify-center">
           <div
-            className={`section-toggle flex flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
+            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('buyers')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">
@@ -150,7 +150,7 @@ const Introduction: React.FC = () => {
           </div>
 
           <div
-            className={`section-toggle flex flex-col gap-3 items-center ${selectedSection === 'safety' ? 'green-filter' : ''}`}
+            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'safety' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('safety')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">
@@ -162,7 +162,7 @@ const Introduction: React.FC = () => {
           </div>
 
           <div
-            className={`section-toggle flex flex-col gap-3 items-center ${selectedSection === 'trades' ? 'green-filter' : ''}`}
+            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'trades' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('trades')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">
@@ -174,7 +174,7 @@ const Introduction: React.FC = () => {
           </div>
 
           <div
-            className={`section-toggle flex flex-col gap-3 items-center ${selectedSection === 'business' ? 'green-filter' : ''}`}
+            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'business' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('business')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">

@@ -9,7 +9,7 @@ const Introduction = () => {
         <div className="content-wrapper">
             <div className="introduction-container flex flex-col lg:flex-row gap-16 lg:gap-0">
                 <div className="programme-navigation w-full lg:w-[30%]">
-                    <h4 className='text-[--dark-blue] text-2xl font-semibold'>Leadon related content:</h4>
+                    <h4 className='text-[--dark-blue] text-2xl font-semibold'>Lead on related content:</h4>
                     {/* <ul className='flex flex-col gap-6 underline text-[--leadon-orange] mt-6 text-lg'>
                         <li><Link href="#">Information for Managment</Link></li>
                         <li><Link href="#">Register for Lead On.</Link></li>
@@ -17,7 +17,7 @@ const Introduction = () => {
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
                     <div className="text-block flex flex-col gap-6">
-                        <h4 className='font-bold text-4xl lg:text-6xl text-[--dark-blue]'>Introduction to Leadon</h4>
+                        <h4 className='font-bold text-4xl lg:text-6xl text-[--dark-blue]'>Introduction to Lead on</h4>
                         <p className='text-[--leadon-orange] text-xl lg:text-2xl font-semibold'>Frontline leaders are the first line of protection and a last line of defence on our worksites.</p>
                         <p className='text-[--text-colour]'>CHASNZ is working with industry to develop our frontline leaders to build the capacity and capabilities that our frontline need to lead the safe execution of work. The Lead On. programme recognises the key role frontline leaders have in making a difference with how work is done and provides a framework for supervisors to develop leadership skills and capability for more effective onsite safety management. The programme is designed to have minimal impact on the working day, with only three hours a week required with the tutor and learning groups. CHASNZ is also sponsoring the cost of the programme. We are inviting supervisors from across the NZ construction sector to be part of our next Lead On intake starting on the 28th of February 2024. This is a free 11 week online course valued at $3000 for successful applicants.</p>
                     </div>

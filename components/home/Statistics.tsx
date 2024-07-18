@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Statistics = () => {
   return (
@@ -23,6 +24,9 @@ const Statistics = () => {
                     <h4 className='text-[--primary-colour] text-5xl font-bold pb-4 lg:text-7xl'>11</h4>
                     <p className='text-base md:text-xl'>Sadly, there were 11 fatalities. Work related fatalities are deaths that occur as a result of injury from work.</p>
                   </div>
+                </div>
+                <div>
+                  <Link href="/analysis-insights" className='text-[--primary-colour] text-2xl'>Latest Analysis &amp; Insights</Link>
                 </div>
           </div>
     </section>

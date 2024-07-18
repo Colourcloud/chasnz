@@ -128,7 +128,7 @@ const Introduction: React.FC = () => {
       <div className="site-wrapper">
         <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
           <h4 className='text-4xl font-semibold lg:text-5xl text-[--dark-blue]'>How we can help you</h4>
-          <p className='text-lg font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being Wellbeing harm in your business - whatever size that is.</p>
+          <p className='text-lg md:text-2xl font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being Wellbeing harm in your business - whatever size that is.</p>
         </div>
 
       

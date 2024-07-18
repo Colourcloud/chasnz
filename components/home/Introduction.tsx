@@ -93,7 +93,7 @@ const Introduction: React.FC = () => {
       <div className="information-container h-full flex justify-start flex-col lg:flex-row gap-10 lg:gap-20">
         <div className="information-text text-white w-full lg:w-2/5 flex flex-col gap-10 self-center">
           <div className="text-block">
-            <h4 className='text-4xl font-semibold md:text-5xl text-[--primary-colour]'>{content.title}</h4>
+            <h4 className='text-3xl font-semibold md:text-5xl text-[--primary-colour]'>{content.title}</h4>
           </div>
           <div className="text-block flex flex-col gap-6">
             {content.paragraphs.map((para, index) => (

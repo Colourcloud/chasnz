@@ -45,9 +45,9 @@ const ConsentForm: React.FC = () => {
 
   return (
     <div className="consent-form-container justify-center items-center">
-      <div className="consent-form w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-[500px] rounded-lg flex flex-col md:flex-row">
+      <div className="consent-form w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-auto md:h-[500px] rounded-lg flex flex-col md:flex-row">
         <div className="form-image w-full md:w-2/5 object-cover h-full">
-          <Image src="/common/form-image.jpg" alt="resource image" width={600} height={600} className="h-full w-full object-cover" />
+          <Image src="/common/form-image.jpg" alt="resource image" width={600} height={600} className="h-[160px] md:h-full w-full object-[50%,30%] object-cover" />
         </div>
         <div className="form-content w-full md:w-3/5 p-8 flex flex-col gap-4">
           <h4 className="text-2xl font-semibold">Please fill out the following form to gain access to CHASNZ resources</h4>

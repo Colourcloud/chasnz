@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoMenu } from 'react-icons/io5';
@@ -11,6 +11,18 @@ const MobileNav: React.FC = () => {
   const toggleNav = () => {
     setIsNavActive(!isNavActive);
   };
+
+  useEffect(() => {
+    if (isNavActive) {
+      document.body.style.position = 'fixed';
+      document.body.style.overflow = 'hidden';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.position = '';
+      document.body.style.overflow = '';
+      document.body.style.width = '';
+    }
+  }, [isNavActive]);
 
   return (
     <div className="mobile-nav-container xl:hidden">
@@ -37,8 +49,8 @@ const MobileNav: React.FC = () => {
             <div className="mobile-nav-layout flex flex-col">
               
               <div className="nav-block flex flex-col gap-4 border-b border-gray-300 py-8">
-                <Image src="/navigation/programmes/constructsafe-banner.jpg" alt="" className='' width={550} height={200} />
-                <h6 className='black text-lg font-medium'>Learn more about the CHASNZ team:</h6>
+                <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
+                <h6 className='text-gray-500 text-lg font-base'>Learn more about the CHASNZ team:</h6>
                 <ul className='flex flex-col gap-4'>
                   <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">About CHASNZ</a></li>
                   <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Board Members</a></li>
@@ -49,7 +61,8 @@ const MobileNav: React.FC = () => {
 
 
                 <div className="nav-block flex flex-col gap-4 border-b border-gray-300 py-8">
-                  <Image src="/navigation/programmes/constructsafe-banner.jpg" alt="" className='' width={550} height={200} />
+                  <Image src="/navigation/mobile-nav/programmes.jpg" alt="" className='' width={550} height={200} />
+                  <h6 className='text-gray-500 text-lg font-base'>Programmes:</h6>
                   <ul className='flex flex-col gap-10'>
                     <li className='programmes-section'>
                       <a href="/work-should-not-hurt/" className='text-lg font-medium underline'>
@@ -94,6 +107,17 @@ const MobileNav: React.FC = () => {
                     
                   </ul>
                 </div>
+
+                <div className="nav-block flex flex-col gap-4 border-b border-gray-300 py-8">
+                <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
+                <h6 className='text-gray-500 text-lg font-base'>Resources:</h6>
+                <ul className='flex flex-col gap-4'>
+                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">About CHASNZ</a></li>
+                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Board Members</a></li>
+                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Meet the Team</a></li>
+                  <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">News &amp; Updates</a></li>
+                </ul>
+              </div>
 
             </div>
           </div>

@@ -16,7 +16,6 @@ const page = () => {
     <>
     <Header />
     <Introduction />
-    <Rick />
     <Videos />
     <Resources />
     </>

@@ -13,7 +13,7 @@ const Videos: React.FC = () => {
 
   return (
    <>
-   <section className="video-section pb-20 lg:pb-32">
+   <section className="video-section pt-20 lg:pt-32">
         <div className="site-wrapper">
 
             <div className="video-container flex flex-col lg:flex-row justify-between gap-10">

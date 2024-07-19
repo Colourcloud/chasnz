@@ -68,10 +68,10 @@ const MobileNav: React.FC = () => {
                     <div className="nav-block flex flex-col gap-4 py-4">
                     <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
                     <ul className='flex flex-col gap-4'>
-                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">About CHASNZ</a></li>
-                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Board Members</a></li>
-                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">Meet the Team</a></li>
-                      <li className='text-gray-700 font-light hover:text-[--primary-colour] py-1'><a href="">News &amp; Updates</a></li>
+                        <li><a href="/about" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About CHASNZ</a></li>
+                        <li><a href="/about#board-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
+                        <li><a href="/about#team-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</a></li>
+                        <li><a href="/news-and-updates/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>News &amp; Updates</a></li>
                     </ul>
                   </div>
                 </AccordionContent>

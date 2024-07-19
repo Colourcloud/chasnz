@@ -136,7 +136,7 @@ const Introduction: React.FC = () => {
         <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
           <h4 className='text-3xl font-semibold lg:text-3xl text-[--dark-blue]'>Who do we help</h4>
         </div>
-        <div className="section-toggles-container flex flex-row gap-8 justify-center">
+        <div className="section-toggles-container grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[800px] mx-auto">
           <div
             className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('buyers')}

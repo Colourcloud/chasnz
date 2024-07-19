@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const Partners = () => {
   return (
-    <section className="partners py-20 lg:pt-60">
+    <section className="partners py-20 lg:pt-32">
         <div className="site-wrapper">
             <div className="section-text flex flex-col gap-6 w-full lg:w-4/5">
                 <span className='text-base font-semibold text-[--totika-blue]'>Supply Chain Leaders</span>

@@ -45,7 +45,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/toolbox.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Toolbox Talks</h6>
-                            <Link href="/energy-wheel/explainer-video" className='resource-button'>Download</Link>
+                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/07/18902-CHASNZ-Toolbox-Energy-Wheel-v2-UPDATED-No-Bleed.pdf" target="_blank" className='resource-button'>Download</Link>
                         </div>
                     </div>
 

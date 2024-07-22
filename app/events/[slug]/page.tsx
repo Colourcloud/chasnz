@@ -113,14 +113,16 @@ const EventDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
                 </div>
                 <div className="section-block flex flex-col">
                   <span className='text-sm text-gray-500'>Date:</span>
-                  <p className='text-base  font-medium'>
-                    {new Date(event.date).toLocaleDateString('en-US', {
-                      weekday: 'long',
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </p>
+                  <p className='text-base font-medium'>
+                  {new Date(
+                    `${event.acf.date.slice(0, 4)}-${event.acf.date.slice(4, 6)}-${event.acf.date.slice(6)}`
+                  ).toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </p>
                 </div>
                 <div className="section-block flex flex-col">
                   <span className='text-sm text-gray-500'>Time:</span>

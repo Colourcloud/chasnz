@@ -70,8 +70,8 @@ const Events = () => {
                 <div className="event-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
                     {events.map((event) => (
                         <div key={event.id} className="event-card relative overflow-hidden">
-                            <div className="event-card-image">
-                                <Image src={event.acf.cover_image} alt={event.title.rendered} width={600} height={600} />
+                            <div className="event-card-image h-full">
+                                <Image src={event.acf.cover_image} alt={event.title.rendered} width={600} height={600} className='h-full' />
                             </div>
                             <div className="event-information absolute bottom-0 p-6">
                                 <div className='flex flex-col gap-3 text-white relative z-10'>

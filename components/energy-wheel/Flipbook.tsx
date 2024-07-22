@@ -6,7 +6,7 @@ const Flipbook = () => {
       <div className="content-wrapper">
         <div className="flipbook-container bg-gray-500 w-full h-[700px] flex items-center justify-center">
           <iframe
-            src="http://cms.chasnz.org/wp-content/uploads/2024/07/18877-CHASNZ-Guide-to-High-Energy-Hazards-Guide-Jan-24-Update-F2-No-Bleed-1.pdf"
+            src="https://cms.chasnz.org/wp-content/uploads/2024/07/18877-CHASNZ-Guide-to-High-Energy-Hazards-Guide-Jan-24-Update-F2-No-Bleed-1.pdf"
             width="100%"
             height="100%"
             className="pdf-frame"

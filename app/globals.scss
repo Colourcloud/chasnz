@@ -511,7 +511,7 @@ p {
 }
 
 .draw-content {
-  max-height: calc(100vh - 6rem);
+  max-height: calc(100vh - 8rem);
   @media screen and (min-width: 1024px) {
     max-height: 100%;
   }

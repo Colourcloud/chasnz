@@ -14,9 +14,9 @@ const Programmes = () => {
                 </div>
             </div>
             <div className="site-wrapper w-full">
-            <div className="programme-card-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="programme-card-grid grid grid-cols-[1fr,1fr,1fr,1fr] gap-5 overflow-x-scroll md:grid-cols-2 lg:grid-cols-4 md:gap-8">
 
-                <div className="programme-card h-[400px] flex flex-col justify-end relative" id="constructsafe-card">
+                <div className="programme-card h-[400px] min-w-[300px] flex flex-col justify-end relative" id="constructsafe-card">
                     <div className="card-overlay"></div>
                     <div className="card-content">
                         <div className="card-text z-10 relative flex flex-col gap-4">
@@ -27,7 +27,7 @@ const Programmes = () => {
                     </div>
                 </div>
 
-                <div className="programme-card h-[400px] flex flex-col justify-end relative" id="leadon-card">
+                <div className="programme-card h-[400px] min-w-[300px] flex flex-col justify-end relative" id="leadon-card">
                     <div className="card-overlay"></div>
                     <div className="card-content">
                         <div className="card-text z-10 relative flex flex-col gap-4">
@@ -38,7 +38,7 @@ const Programmes = () => {
                     </div>
                 </div>
 
-                <div className="programme-card h-[400px] flex flex-col justify-end relative" id="totika-card">
+                <div className="programme-card h-[400px] min-w-[300px] flex flex-col justify-end relative" id="totika-card">
                     <div className="card-overlay"></div>
                     <div className="card-content">
                         <div className="card-text z-10 relative flex flex-col gap-4">
@@ -49,7 +49,7 @@ const Programmes = () => {
                     </div>
                 </div>
 
-                <div className="programme-card h-[400px] flex flex-col justify-end relative" id="wsnh-card">
+                <div className="programme-card h-[400px] min-w-[300px] flex flex-col justify-end relative" id="wsnh-card">
                     <div className="card-overlay"></div>
                     <div className="card-content">
                         <div className="card-text z-10 relative flex flex-col gap-4">

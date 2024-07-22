@@ -56,7 +56,7 @@ const Eventlist: React.FC = () => {
         }));
 
         setEvents(eventsWithImages);
-        setFilteredEvents(eventsWithImages);
+        setFilteredEvents(eventsWithImages.slice(3)); // Skip the first 3 events
       } catch (error) {
         console.error('Error fetching events:', error);
       }

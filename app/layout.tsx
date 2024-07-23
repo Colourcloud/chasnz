@@ -45,14 +45,14 @@ export default function RootLayout({
         <MobileNav />
         {children}
         <Footer />
-        <script
+        <Script
             type="text/javascript"
             id="hs-script-loader"
             async
             defer
             src="//js.hsforms.net/forms/v2.js"
-          ></script>
-        <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40083784.js"></script>
+          ></Script>
+          <Script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40083784.js"></Script>
         </body>
     </html>
   );

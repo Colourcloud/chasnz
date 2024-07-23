@@ -90,7 +90,7 @@ const Navigation = () => {
             <div className="navigation-container h-28 w-full flex items-center flex-row justify-between">
               <div className="navigation-left">
                 <Link href="/" className='nav-logo'>
-                  <Image src={logoSrc} height="50" width="350" alt="chas logo"></Image>
+                  <Image src={logoSrc} height="50" width="325" alt="chas logo"></Image>
                 </Link>
               </div>
               <div className="navigation-right">

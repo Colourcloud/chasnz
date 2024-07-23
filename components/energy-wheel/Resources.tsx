@@ -68,7 +68,7 @@ const Resources = () => {
 
                 </div>
                 <div className="hs-web-interactive-inline" data-hubspot-wrapper-cta-id="169023341905"> 
- <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLKFJTA535gn%2FjeoL018a4lpCcWBcEJvf3Eei34EtonrSTfPfmRG1sN7%2FpXeB7dkgK2x2032zt4OawpnYO%2F6cByL34TbwYhMF5Wmkz8wP94QjypG%2Fgx%2B%2FV%2BJYgLLy8J93f8JK6IKyDEAXAHvLQHjQZyI8U6wvbNSVtTck84v05YxD%2Bb7sWyJlBDlYcUkK%2BLcy62CAVwsi%2BZVh5TgDhWNKx9I4rE527kyfqft7zxpOOxXLvLl5UwtRsxrhiDwrtmWTFx%2FKw%3D%3D&amp;portalId=40083784" target="_blank" rel="noopener" class="hs-inline-web-interactive-169023341905   " data-hubspot-cta-id="169023341905"> Download </a> 
+ <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLKFJTA535gn%2FjeoL018a4lpCcWBcEJvf3Eei34EtonrSTfPfmRG1sN7%2FpXeB7dkgK2x2032zt4OawpnYO%2F6cByL34TbwYhMF5Wmkz8wP94QjypG%2Fgx%2B%2FV%2BJYgLLy8J93f8JK6IKyDEAXAHvLQHjQZyI8U6wvbNSVtTck84v05YxD%2Bb7sWyJlBDlYcUkK%2BLcy62CAVwsi%2BZVh5TgDhWNKx9I4rE527kyfqft7zxpOOxXLvLl5UwtRsxrhiDwrtmWTFx%2FKw%3D%3D&amp;portalId=40083784" target="_blank" rel="noopener" className="hs-inline-web-interactive-169023341905   " data-hubspot-cta-id="169023341905"> Download </a> 
 </div>
             </div>
         </div>

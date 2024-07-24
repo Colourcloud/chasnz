@@ -54,8 +54,8 @@ const Searchbox: React.FC = () => {
 
       try {
         const [postResponse, eventResponse] = await Promise.all([
-          fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&_embed`),
-          fetch(`https://cms.chasnz.org/wp-json/wp/v2/event?search=${query}&_embed`)
+          fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&_embed&per_page=20`),
+          fetch(`https://cms.chasnz.org/wp-json/wp/v2/event?search=${query}&_embed&per_page=20`)
         ]);
 
         const postData = await postResponse.json();
@@ -124,16 +124,16 @@ const Searchbox: React.FC = () => {
               <div className="search-box w-full h-screen bg-white rounded-xl">
                 <div className='flex flex-1 border-b'>
                   <form action="" className='flex flex-1 items-center px-6 h-16'>
-                    <IoIosSearch className='text-gray-400 text-2xl' />
+                    <IoIosSearch className='text-gray-400 text-3xl' />
                     <input 
                       type="text" 
                       placeholder="Search resources & events" 
-                      className='mx-3 flex-auto h-full' 
+                      className='mx-3 flex-auto h-full w-full' 
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
                     />
+                    <button className='py-2 font-semibold px-2  text-[9px] rounded-md self-center bg-gray-200 text-gray-700' onClick={() => setIsVisible(false)}>ESC</button>
                   </form>
-                  <button className='py-2 font-semibold px-2 mr-6 text-[9px] rounded-md self-center bg-gray-200 text-gray-700' onClick={() => setIsVisible(false)}>ESC</button>
                 </div>
                 <div className="tabs flex justify-around border-b">
                   <button
@@ -155,7 +155,7 @@ const Searchbox: React.FC = () => {
                   ) : (selectedTab === 'posts' ? posts : events).length === 0 ? (
                     <span className='italic text-sm text-gray-400 font-light self-center text-center w-full'>No search results, start searching</span>
                   ) : (
-                    <ul className='search-result-list flex flex-col gap-10 py-8 px-8 h-full'>
+                    <ul className='search-result-list flex flex-col gap-10 py-8 px-8 h-full pb-[10rem]'>
                       {(selectedTab === 'posts' ? posts : events).map((result) => (
                         <li key={result.id} className='text-sm text-gray-700'>
                           {selectedTab === 'posts' ? (

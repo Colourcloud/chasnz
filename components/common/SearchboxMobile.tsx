@@ -153,9 +153,12 @@ const Searchbox: React.FC = () => {
                   {isLoading ? (
                     <span className='italic text-sm text-gray-400 font-light self-center text-center w-full'>Loading...</span>
                   ) : (selectedTab === 'posts' ? posts : events).length === 0 ? (
+                    <div className='flex flex-col items-center w-full justify-center gap-3'>
+                    <Image src="/common/road-block.png" alt="Not found" width={100} height={200} className="mx-auto" />
                     <span className='italic text-sm text-gray-400 font-light self-center text-center w-full'>No search results, start searching</span>
+                  </div>
                   ) : (
-                    <ul className='search-result-list flex flex-col gap-10 py-8 px-8 h-full pb-[10rem]'>
+                    <ul className='search-result-list flex flex-col gap-10 py-8 px-5 h-full pb-[10rem]'>
                       {(selectedTab === 'posts' ? posts : events).map((result) => (
                         <li key={result.id} className='text-sm text-gray-700'>
                           {selectedTab === 'posts' ? (

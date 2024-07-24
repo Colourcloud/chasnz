@@ -63,7 +63,7 @@ const MobileNav: React.FC = () => {
                 <AccordionTrigger>Learn more about the CHASNZ team:</AccordionTrigger>
                 <AccordionContent>
                     <div className="nav-block flex flex-col gap-4 py-4">
-                    <Image src="/navigation/mobile-nav/about.jpg" alt="" className='' width={550} height={200} />
+                    
                     <ul className='flex flex-col gap-4'>
                         <li><a href="/about" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About CHASNZ</a></li>
                         <li><a href="/about#board-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
@@ -80,7 +80,7 @@ const MobileNav: React.FC = () => {
                 <AccordionTrigger>Programmes</AccordionTrigger>
                 <AccordionContent>
                 <div className="nav-block flex flex-col gap-4 py-4">
-                  <Image src="/navigation/mobile-nav/programmes.jpg" alt="" className='' width={550} height={200} />
+                  
                   <ul className='flex flex-col gap-10'>
                     <li className='programmes-section'>
                       <a href="/work-should-not-hurt/" className='text-lg font-medium underline'>
@@ -134,7 +134,7 @@ const MobileNav: React.FC = () => {
                 <AccordionTrigger>Resources</AccordionTrigger>
                 <AccordionContent>
                     <div className="nav-block flex flex-col gap-4 py-4">
-                    <Image src="/navigation/mobile-nav/resources.jpg" alt="" className='' width={550} height={200} />
+                    
                     <ul className='flex flex-col gap-10'>
                         <li className='resource-section'>
                           <a href="/general-resources/" className='text-lg font-medium underline'>

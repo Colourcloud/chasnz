@@ -104,7 +104,7 @@ const Introduction: React.FC = () => {
             <h6 className='text-lg font-semibold'>Related Links:</h6>
             <ul className='flex flex-row gap-4 mt-3 flex-wrap'>
               {content.links.map((link, index) => (
-                <li key={index}><Link href={link.href} className='text-[--primary-colour] underline'>{link.text}</Link></li>
+                <li key={index}><Link href={link.href} className='text-[--primary-colour] underline text-[18px]'>{link.text}</Link></li>
               ))}
             </ul>
           </div>
@@ -136,9 +136,9 @@ const Introduction: React.FC = () => {
         <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
           <h4 className='text-3xl font-semibold lg:text-3xl text-[--dark-blue]'>Who do we help</h4>
         </div>
-        <div className="section-toggles-container grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[800px] mx-auto">
+        <div className="section-toggles-container grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[900px] mx-auto">
           <div
-            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
+            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('buyers')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">
@@ -150,7 +150,7 @@ const Introduction: React.FC = () => {
           </div>
 
           <div
-            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'safety' ? 'green-filter' : ''}`}
+            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'safety' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('safety')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">
@@ -162,7 +162,7 @@ const Introduction: React.FC = () => {
           </div>
 
           <div
-            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'trades' ? 'green-filter' : ''}`}
+            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'trades' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('trades')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">
@@ -174,7 +174,7 @@ const Introduction: React.FC = () => {
           </div>
 
           <div
-            className={`cursor-pointer section-toggle flex flex-col gap-3 items-center ${selectedSection === 'business' ? 'green-filter' : ''}`}
+            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'business' ? 'green-filter' : ''}`}
             onClick={() => setSelectedSection('business')}
           >
             <div className="toggle-icon min-h-20 flex items-center justify-center">

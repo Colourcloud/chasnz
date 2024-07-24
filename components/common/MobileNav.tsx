@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { IoMenu } from 'react-icons/io5';
 import { IoSearch } from "react-icons/io5";
+import Searchbox from './SearchboxMobile';
 
 import {
   Accordion,
@@ -47,11 +48,7 @@ const MobileNav: React.FC = () => {
                 <Image src="/logo-green.svg" height="50" width="175" alt="chas logo" />
               </Link>
             </div>
-            <div className="mobile-toggle flex">
-              <button>
-                <IoSearch className="text-3xl" />
-              </button>
-            </div>
+            <Searchbox />
           </div>
         </div>
       </div>

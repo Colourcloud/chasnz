@@ -13,9 +13,9 @@ const Programmes = () => {
                     <h4 className='text-3xl md:text-4xl font-semibold lg:text-5xl text-[--dark-blue] w-full md:w-full !leading-tight'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements.</h4>
                 </div>
             </div>
-            <div className="site-wrapper w-full !pr-0">
+            <div className="site-wrapper w-full !pr-0 md:!pr-16">
             {/* <span className='text-right w-full pr-4 text-gray-400 pb-4 flex flex-row items-center justify-end'>Scroll for more <IoIosArrowRoundForward className='text-2xl' /></span> */}
-            <div className="programme-card-grid grid grid-cols-[1fr,1fr,1fr,1fr] gap-5 overflow-x-scroll md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+            <div className="programme-card-grid grid grid-cols-[1fr,1fr,1fr,1fr] gap-5 overflow-x-scroll lg:overflow-x-visible md:grid-cols-2 xl:grid-cols-4 md:gap-8">
 
                 <div className="programme-card h-[400px] min-w-[300px] flex flex-col justify-end relative" id="constructsafe-card">
                     <div className="card-overlay"></div>

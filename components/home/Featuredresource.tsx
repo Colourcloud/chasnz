@@ -72,14 +72,14 @@ const Featuredresource: React.FC = () => {
 
   return (
     <section className="featured-resources pb-20 lg:pb-32">
-      <div className="site-wrapper">
+      <div className="site-wrapper !pr-0 md:!pr-16">
         <div className="featured-container">
-          <h4 className="text-3xl md:text-4xl font-semibold text-[--text-colour]">
+          <h4 className="text-3xl md:text-4xl font-semibold lg:text-5xl text-[--dark-blue]">
             Popular resources
           </h4>
-          <div className="featured-grid mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="featured-grid mt-12 grid grid-cols-[1fr,1fr,1fr,1fr] overflow-x-scroll lg:overflow-x-visible md:grid-cols-2 xl:grid-cols-4 gap-8">
             {featuredPosts.map(post => (
-              <div className="grid-card flex flex-col gap-4" key={post.id}>
+              <div className="grid-card flex flex-col gap-4 min-w-[300px]" key={post.id}>
                 <div className="resource-image h-[250px] object-contain">
                   {post.featured_media && mediaUrls[post.featured_media] ? (
                     <Image

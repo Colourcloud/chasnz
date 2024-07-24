@@ -7,6 +7,7 @@ import ProgrammesNew from '../navigation/Programmes-new';
 import Resources from '../navigation/Resources';
 import About from '../navigation/About';
 import { IoIosSearch } from "react-icons/io";
+import Searchbox from './Searchbox';
 
 const Navigation = () => {
 
@@ -119,12 +120,7 @@ const Navigation = () => {
                   <li className='text-lg navigation-toggle' id="navigation-contact">
                     <Link href="/contact/">Contact</Link>
                   </li>
-                  <div className="navigation-search pl-8">
-                    <button className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[225px] search-bar'>
-                      <IoIosSearch className='text-gray-400 text-xl' />
-                      <span className='text-sm text-gray-400 font-light'>Search our website</span>
-                    </button>
-                  </div>
+                  <Searchbox />
                 </ul>
               </div>
             </div>

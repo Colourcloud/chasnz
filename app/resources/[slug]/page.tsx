@@ -94,10 +94,10 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
             <div className='flex flex-col gap-6 post-content' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
             {/* check to see if the post download field exist */}
             {post.acf.download && (
-            <div className={`hs-web-interactive-inline text-white text-sm font-medium py-3 px-6 rounded-full bg-[--primary-colour] self-start`} data-hubspot-wrapper-cta-id={post.acf.ctaid}>
+            <div className={`hs-web-interactive-inline px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-start`} data-hubspot-wrapper-cta-id={post.acf.ctaid}>
                 <a 
                   href={post.acf.download} 
-                  className={`hs-inline-web-interactive-${post.acf.ctaid}`} 
+                  className={`py-3 hs-inline-web-interactive-${post.acf.ctaid}`} 
                   target="_blank" 
                   rel="noopener" 
                   data-hubspot-cta-id={post.acf.ctaid}

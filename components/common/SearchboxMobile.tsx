@@ -114,8 +114,8 @@ const Searchbox: React.FC = () => {
         <>
           <div className="search-box-overlay fixed w-full h-screen bg-black/50 z-50 left-0 bottom-0 backdrop-blur-sm" onClick={() => setIsVisible(false)}></div>
           <div className="search-box-container-mobile z-50 flex justify-center items-center fixed left-0 right-0 bottom-0 top-0 w-full">
-            <div className="search-container fixed w-full lg:w-2/4 h-auto z-50 flex items-center justify-center">
-              <div className="search-box w-full h-auto bg-white rounded-xl">
+            <div className="search-container fixed w-full lg:w-2/4 h-screen z-50 flex items-center justify-center">
+              <div className="search-box w-full h-screen bg-white rounded-xl">
                 <div className='flex flex-1 border-b'>
                   <form action="" className='flex flex-1 items-center px-6 h-16'>
                     <IoIosSearch className='text-gray-400 text-2xl' />

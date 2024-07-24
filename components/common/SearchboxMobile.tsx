@@ -98,16 +98,22 @@ const Searchbox: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      document.body.classList.add('fixed-body');
+    } else {
+      document.body.classList.remove('fixed-body');
+    }
+  }, [isVisible]);
+
   return (
     <>
       <div className="navigation-search pl-8">
         <div className="mobile-toggle flex">
-              <button>
-                <IoSearch className="text-3xl" 
-                onClick={() => setIsVisible(true)}
-                />
-              </button>
-            </div>
+          <button>
+            <IoSearch className="text-3xl" onClick={() => setIsVisible(true)} />
+          </button>
+        </div>
       </div>
 
       {isVisible && (
@@ -121,7 +127,7 @@ const Searchbox: React.FC = () => {
                     <IoIosSearch className='text-gray-400 text-2xl' />
                     <input 
                       type="text" 
-                      placeholder="Search resources, events, and more" 
+                      placeholder="Search resources & events" 
                       className='mx-3 flex-auto h-full' 
                       value={query}
                       onChange={(e) => setQuery(e.target.value)}
@@ -189,11 +195,11 @@ const Searchbox: React.FC = () => {
                               <div className='flex flex-col w-4/5'>
                                 <h3 className='text-base'>{result.title.rendered}</h3>
                                 <p
-                                    className="!text-sm font-light hidden md:block"
-                                    dangerouslySetInnerHTML={{
-                                      __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
-                                    }}
-                                  />
+                                  className="!text-sm font-light hidden md:block"
+                                  dangerouslySetInnerHTML={{
+                                    __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
+                                  }}
+                                />
                               </div>
                             </a>
                           )}

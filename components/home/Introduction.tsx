@@ -90,8 +90,67 @@ const Introduction: React.FC = () => {
   const renderContent = () => {
     const content = sectionContent[selectedSection];
     return (
-      <div className="information-container h-full flex justify-start flex-col lg:flex-row gap-10 lg:gap-20">
-        <div className="information-text text-white w-full lg:w-2/5 flex flex-col gap-10 self-center">
+      <div className="information-container h-full flex justify-start flex-col lg:flex-row gap-10 lg:gap-20 lg:py-16">
+        <div className="information-text text-white w-full lg:w-2/4 flex flex-col gap-10 self-center">
+
+        <div className="select-group">
+          <div className="section-text w-full text-left mx-auto flex flex-col gap-2">
+            <h4 className='text-2xl font-semibold lg:text-3xl text-[--primary-colour]'>Who do we help</h4>
+            <p className='text-base'>Click below to find out who we help</p>
+          </div>
+
+          <div className="section-toggles-container grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-6 max-w-[900px] mt-12">
+            <div
+              className={`border-b border-t border-gray-600 md:border-none cursor-pointer section-toggle flex flex-row md:flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
+              onClick={() => setSelectedSection('buyers')}
+            >
+              <div className="toggle-icon min-h-20 flex items-center justify-center">
+                <Image src="/home/service-buyers.svg" alt="" width={50} height={50} className="w-3/5" />
+              </div>
+              <span className='text-sm text-gray-400 text-left md:text-center w-full'>
+                Construction Service Buyers
+              </span>
+            </div>
+
+            <div
+              className={`border-b border-gray-600 md:border-none cursor-pointer section-toggle flex flex-row md:flex-col gap-3 items-center ${selectedSection === 'safety' ? 'green-filter' : ''}`}
+              onClick={() => setSelectedSection('safety')}
+            >
+              <div className="toggle-icon min-h-20 flex items-center justify-center">
+                <Image src="/home/safety-icon.svg" alt="" width={50} height={50} className="w-3/5" />
+              </div>
+              <span className='text-sm text-gray-400 text-left md:text-center w-full'>
+                People who work in safety
+              </span>
+            </div>
+
+            <div
+              className={`border-b border-gray-600 md:border-none cursor-pointer section-toggle flex flex-row md:flex-col gap-3 items-center ${selectedSection === 'trades' ? 'green-filter' : ''}`}
+              onClick={() => setSelectedSection('trades')}
+            >
+              <div className="toggle-icon min-h-20 flex items-center justify-center">
+                <Image src="/home/trade-icon.svg" alt="" width={50} height={50} className="w-3/5" />
+              </div>
+              <span className='text-sm text-gray-400 text-left md:text-center w-full'>
+                Trades People
+              </span>
+            </div>
+
+            <div
+              className={`border-b border-gray-600 md:border-none cursor-pointer section-toggle flex flex-row md:flex-col gap-3 items-center ${selectedSection === 'business' ? 'green-filter' : ''}`}
+              onClick={() => setSelectedSection('business')}
+            >
+              <div className="toggle-icon min-h-20 flex items-center justify-center">
+                <Image src="/home/car-icon.svg" alt="" width={75} height={50} className="full" />
+              </div>
+              <span className='text-sm text-gray-400 text-left md:text-center w-full'>
+                Small to medium business owners
+              </span>
+            </div>
+          </div>
+
+        </div>
+
           <div className="text-block">
             <h4 className='text-3xl font-semibold md:text-5xl text-[--primary-colour]'>{content.title}</h4>
           </div>
@@ -112,7 +171,7 @@ const Introduction: React.FC = () => {
         <div className="information-images flex flex-col w-full lg:w-3/5">
           <div className="top-images flex flex-row flex-wrap">
             {content.images.slice(0, 2).map((image, index) => (
-              <Image key={index} src={image} alt="" width={600} height={400} className='w-full md:w-2/4' />
+              <Image key={index} src={image} alt="" width={600} height={400} className='w-2/4 md:w-2/4' />
             ))}
           </div>
           <div className="below-image">
@@ -130,66 +189,10 @@ const Introduction: React.FC = () => {
           <h4 className='text-4xl font-semibold lg:text-5xl text-[--dark-blue]'>How we can help you</h4>
           <p className='text-lg md:text-2xl font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being Wellbeing harm in your business - whatever size that is.</p>
         </div>
-
-      
-        <section className="sector-icons mt-20 flex flex-col gap-6">
-        <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
-          <h4 className='text-3xl font-semibold lg:text-3xl text-[--dark-blue]'>Who do we help</h4>
-        </div>
-        <div className="section-toggles-container grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[900px] mx-auto">
-          <div
-            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'buyers' ? 'green-filter' : ''}`}
-            onClick={() => setSelectedSection('buyers')}
-          >
-            <div className="toggle-icon min-h-20 flex items-center justify-center">
-              <Image src="/home/service-buyers.svg" alt="" width={100} height={100} className="w-full" />
-            </div>
-            <span className='text-base text-gray-400 text-center w-full md:w-3/4'>
-              Construction Service Buyers
-            </span>
-          </div>
-
-          <div
-            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'safety' ? 'green-filter' : ''}`}
-            onClick={() => setSelectedSection('safety')}
-          >
-            <div className="toggle-icon min-h-20 flex items-center justify-center">
-              <Image src="/home/safety-icon.svg" alt="" width={100} height={100} className="w-full" />
-            </div>
-            <span className='text-base text-gray-400 text-center w-full md:w-3/4'>
-              People who work in safety
-            </span>
-          </div>
-
-          <div
-            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'trades' ? 'green-filter' : ''}`}
-            onClick={() => setSelectedSection('trades')}
-          >
-            <div className="toggle-icon min-h-20 flex items-center justify-center">
-              <Image src="/home/trade-icon.svg" alt="" width={100} height={100} className="w-full" />
-            </div>
-            <span className='text-base text-gray-400 text-center w-full md:w-3/4'>
-              Trades People
-            </span>
-          </div>
-
-          <div
-            className={`cursor-pointer border border-gray-400 p-2 rounded-2xl justify-center section-toggle flex flex-col gap-3 items-center ${selectedSection === 'business' ? 'green-filter' : ''}`}
-            onClick={() => setSelectedSection('business')}
-          >
-            <div className="toggle-icon min-h-20 flex items-center justify-center">
-              <Image src="/home/car-icon.svg" alt="" width={100} height={100} className="w-full" />
-            </div>
-            <span className='text-base text-gray-400 text-center w-full md:w-3/4'>
-              Small to medium business owners
-            </span>
-          </div>
-        </div>
-        </section>
         
       </div>
 
-      <div className="sector-information bg-[--dark-blue] mt-12 py-20 lg:py-0">
+      <div className="sector-information bg-[--dark-blue] mt-20 lg:mt-32 py-20 lg:py-0">
         <div className="site-wrapper h-full">
           {renderContent()}
         </div>

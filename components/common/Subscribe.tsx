@@ -10,7 +10,7 @@ const Subscribe: React.FC = () => {
       <section className="subscribe">
         <div className="content-wrapper">
             <div className="subscribe-wrapper py-60 flex flex-col justify-center items-center gap-5">
-                <h4 className='text-white font-semibold text-3xl lg:text-5xl'>Let's work better.</h4>
+                <h4 className='text-white font-semibold text-3xl lg:text-5xl text-shadow'>Let's work better.</h4>
                 <Link href="/contact/" className='text-white text-xl font-medium flex flex-row items-center gap-2'>
                   Get in touch <span><IoIosArrowDroprightCircle /></span>
                 </Link>

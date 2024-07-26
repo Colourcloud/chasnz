@@ -10,7 +10,7 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-[--dark-blue] text-2xl font-semibold'>ConstructSafe related content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="#">Book an assessment</Link></li>
+                        <li><Link href="/constructsafe/book-assessment/">Book an assessment</Link></li>
                         <li><Link href="#resources">Learning resources</Link></li>
                         <li><Link href="http://myconstructsafe.kiwi/Login/TestCenter" target='_blank' className='flex flex-row items-center gap-2'>Log in to the portal <FiExternalLink /></Link></li>
                         <li><Link href="http://constructsafe.kiwi/check/profile" target='_blank' className='flex flex-row items-center gap-2'>Check a Profile <FiExternalLink /></Link></li>

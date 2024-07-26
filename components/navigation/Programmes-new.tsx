@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 export const metadata: Metadata = {
     title: 'CHASNZ – Tōtika Programme',
@@ -11,7 +12,7 @@ const ProgrammesNew = () => {
   return (
     <>
     <div className="site-wrapper">
-        <div className="programmes-menu flex flex-row gap-8 pt-20 pb-24">
+        <div className="programmes-menu flex flex-row gap-8 pt-20 pb-24 relative">
 
             <div className="programme-tile flex flex-col gap-4">
                 <div className="tile-image">
@@ -20,7 +21,7 @@ const ProgrammesNew = () => {
                 </a>
                 </div>
                 <ul className='text-base flex flex-col gap-4 mt-4'>
-                    <li><a href="/constructsafe/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Book an assessment</a></li>
+                    <li><a href="/constructsafe/book-assessment/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Book an assessment</a></li>
                     <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Resources</a></li>
                 </ul>
             </div>
@@ -63,7 +64,15 @@ const ProgrammesNew = () => {
                     <li><a href="/work-should-not-hurt/get-involved" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                 </ul>
             </div>
-
+        </div>
+    </div>
+    <div className="dropdown-footer w-full py-6 border-t">
+        <div className="site-wrapper flex flex-row gap-2 items-center justify-end">
+            <p className='text-sm font-light'>Follow us on our socials:</p>
+            <ul className='flex flex-row gap-3 items-center'>
+                <li className='social-icon'><Link href="https://www.linkedin.com/company/construction-health-and-safety-nz-chasnz?originalSubdomain=nz" target="_blank"><FaLinkedin className='text-2xl text-[#0077B5]'/></Link></li>
+                <li className='social-icon'><Link href="https://www.youtube.com/channel/UCddHM1cm6NXMe_JrxejeCrw" target="_blank"><FaYoutube className='text-2xl text-[#FF0000]'/></Link></li>
+            </ul>
         </div>
     </div>
     </>

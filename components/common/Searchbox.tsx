@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosSearch } from "react-icons/io";
 import Image from 'next/image';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 interface Post {
   id: number;

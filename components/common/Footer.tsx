@@ -12,6 +12,7 @@ const Footer = () => {
           <div className="footer-rows flex flex-col md:flex-row gap-24">
             <div className="footer-branding flex flex-col gap-6">
               <Image src="/logo-green.svg" alt="chasnz logo" width="250" height="150" />
+              <Image src="/common/award.png" alt="award" width="125" height="150" />
               <p className='uppercase font-medium text-sm text-[#A1A1A1]'>In partnership with:</p>
               <Image src="/footer/acclogo.svg" alt="acc logo" width="250" height="200" />
               <p className='text-sm mt-12'>© CHASNZ 2024 - All Rights Reserved</p>

@@ -1,6 +1,7 @@
 import React from 'react'
-import a from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Resources = () => {
   return (
@@ -53,6 +54,15 @@ const Resources = () => {
                         </div>
                     </div>
                     </div>
+                    <div className="dropdown-footer w-full py-6 border-t">
+        <div className="site-wrapper flex flex-row gap-2 items-center justify-end">
+            <p className='text-sm font-light'>Follow us on our socials:</p>
+            <ul className='flex flex-row gap-3 items-center'>
+                <li className='social-icon'><Link href="https://www.linkedin.com/company/construction-health-and-safety-nz-chasnz?originalSubdomain=nz" target="_blank"><FaLinkedin className='text-2xl text-[#0077B5]'/></Link></li>
+                <li className='social-icon'><Link href="https://www.youtube.com/channel/UCddHM1cm6NXMe_JrxejeCrw" target="_blank"><FaYoutube className='text-2xl text-[#FF0000]'/></Link></li>
+            </ul>
+        </div>
+    </div>
     </>
   )
 }

@@ -49,18 +49,21 @@ const Searchbox: React.FC = () => {
         setEvents([]);
         return;
       }
-
+  
       setIsLoading(true);
-
+  
       try {
-        const [postResponse, eventResponse] = await Promise.all([
-          fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&_embed&per_page=20`),
-          fetch(`https://cms.chasnz.org/wp-json/wp/v2/event?search=${query}&_embed&per_page=20`)
+        const [postResponse, eventResponse, videoWebinarResponse] = await Promise.all([
+          fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&_embed&per_page=100&categories_exclude=74`),
+          fetch(`https://cms.chasnz.org/wp-json/wp/v2/event?search=${query}&_embed&per_page=20`),
+          fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&categories=74&_embed&per_page=20`)
         ]);
-
+  
         const postData = await postResponse.json();
         const eventData = await eventResponse.json();
-
+        const videoWebinarData = await videoWebinarResponse.json();
+  
+        // Process events to ensure they have cover images
         const eventsWithImages = await Promise.all(eventData.map(async (event: Event) => {
           if (event.acf.cover_image) {
             const imgResponse = await fetch(`https://cms.chasnz.org/wp-json/wp/v2/media/${event.acf.cover_image}`);
@@ -69,20 +72,31 @@ const Searchbox: React.FC = () => {
           }
           return event;
         }));
-
+  
+        // Process webinars to ensure they have featured images
+        const webinarsWithImages = videoWebinarData.map((webinar: Post) => {
+          if (webinar._embedded?.['wp:featuredmedia']) {
+            (webinar as any).acf = { cover_image: webinar._embedded['wp:featuredmedia'][0].source_url };
+          }
+          return webinar;
+        });
+  
         setPosts(Array.isArray(postData) ? postData : []);
-        setEvents(Array.isArray(eventsWithImages) ? eventsWithImages : []);
+        setEvents(Array.isArray([...eventsWithImages, ...webinarsWithImages]) ? [...eventsWithImages, ...webinarsWithImages] : []);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
-
+  
       setIsLoading(false);
     };
-
+  
     const debounceFetch = setTimeout(fetchData, 300);
-
+  
     return () => clearTimeout(debounceFetch);
   }, [query]);
+  
+  
+  
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -140,7 +154,7 @@ const Searchbox: React.FC = () => {
                   className={`py-2 px-4 w-2/4 text-black ${selectedTab === 'events' ? 'border-b-2 border-[--primary-colour]' : ''}`}
                   onClick={() => setSelectedTab('events')}
                 >
-                  Events
+                  Webinars and Events
                 </button>
               </div>
               <div className="search-results min-h-60 max-h-[40rem] overflow-y-auto border-b flex">
@@ -179,7 +193,7 @@ const Searchbox: React.FC = () => {
                             </div>
                           </a>
                         ) : (
-                          <a href={`/events/${(result as Event).slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
+                          <a href={`/${(result as Event).acf.isactive ? 'events' : 'resources'}/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
                             {(result as Event).acf.cover_image && (
                               <Image
                                 src={(result as Event).acf.cover_image || '/placeholder.jpg'}
@@ -205,6 +219,7 @@ const Searchbox: React.FC = () => {
                   </ul>
                 )}
               </div>
+
               <div className="search-footer px-5 py-8">
                 {/* Additional footer content can go here */}
               </div>

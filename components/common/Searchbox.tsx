@@ -36,6 +36,8 @@ const Searchbox: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<'posts' | 'events' | 'research'>('posts');
   const [isVisible, setIsVisible] = useState<boolean>(false); // State for visibility
 
+  const containsEvent = (url: string) => url.includes('/events/');
+
   const truncateText = (text: string, maxLength: number) => {
     if (text.length <= maxLength) {
       return text;
@@ -51,9 +53,9 @@ const Searchbox: React.FC = () => {
         setResearchPosts([]);
         return;
       }
-  
+
       setIsLoading(true);
-  
+
       try {
         const [postResponse, eventResponse, videoWebinarResponse, researchResponse] = await Promise.all([
           fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&_embed&per_page=100&categories_exclude=74,5,12,17,22,32,37,42,47,52,57,63,68,28,72`),
@@ -61,12 +63,12 @@ const Searchbox: React.FC = () => {
           fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&categories=74&_embed&per_page=20`),
           fetch(`https://cms.chasnz.org/wp-json/wp/v2/posts?search=${query}&categories=5,12,17,22,32,37,42,47,52,57,63,68,28,72&_embed&per_page=100`)
         ]);
-  
+
         const postData = await postResponse.json();
         const eventData = await eventResponse.json();
         const videoWebinarData = await videoWebinarResponse.json();
         const researchData = await researchResponse.json();
-  
+
         // Process events to ensure they have cover images
         const eventsWithImages = await Promise.all(eventData.map(async (event: Event) => {
           if (event.acf.cover_image) {
@@ -76,7 +78,7 @@ const Searchbox: React.FC = () => {
           }
           return event;
         }));
-  
+
         // Process webinars to ensure they have featured images
         const webinarsWithImages = videoWebinarData.map((webinar: Post) => {
           if (webinar._embedded?.['wp:featuredmedia']) {
@@ -84,22 +86,22 @@ const Searchbox: React.FC = () => {
           }
           return webinar;
         });
-  
+
         setPosts(Array.isArray(postData) ? postData : []);
         setEvents(Array.isArray([...eventsWithImages, ...webinarsWithImages]) ? [...eventsWithImages, ...webinarsWithImages] : []);
         setResearchPosts(Array.isArray(researchData) ? researchData : []);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
-  
+
       setIsLoading(false);
     };
-  
+
     const debounceFetch = setTimeout(fetchData, 300);
-  
+
     return () => clearTimeout(debounceFetch);
   }, [query]);
-  
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -162,7 +164,7 @@ const Searchbox: React.FC = () => {
                   className={`py-2 px-4 w-1/3 text-black ${selectedTab === 'events' ? 'border-b-2 border-[--primary-colour]' : ''}`}
                   onClick={() => setSelectedTab('events')}
                 >
-                  Webinars and Events
+                  Webinars &amp; Events
                 </button>
               </div>
               <div className="search-results min-h-60 max-h-[40rem] overflow-y-auto border-b flex">
@@ -174,80 +176,88 @@ const Searchbox: React.FC = () => {
                     <span className='italic text-sm text-gray-400 font-light self-center text-center w-full'>No search results, start searching</span>
                   </div>
                 ) : (
-                  <ul className='search-result-list flex flex-col gap-10 py-8 px-8 h-full'>
-                    {(selectedTab === 'posts' ? posts : selectedTab === 'events' ? events : researchPosts).map((result) => (
-                      <li key={result.id} className='text-sm text-gray-700'>
-                        {selectedTab === 'posts' ? (
-                          <a href={`/resources/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
-                            {isPost(result) && result._embedded?.['wp:featuredmedia'] && (
-                              <Image
-                                src={result._embedded['wp:featuredmedia'][0].source_url}
-                                alt={result.title.rendered}
-                                width={100}
-                                height={100}
-                                className='object-fill'
-                              />
-                            )}
-                            <div className='flex flex-col w-4/5'>
-                              <h3 className='text-base'>{result.title.rendered}</h3>
-                              {isPost(result) && (
-                                <p
-                                  className="!text-sm font-light hidden md:block"
-                                  dangerouslySetInnerHTML={{
-                                    __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
-                                  }}
-                                />
-                              )}
-                            </div>
-                          </a>
-                        ) : selectedTab === 'events' ? (
-                          <a href={`/${(result as Event).acf.isactive ? 'events' : 'resources'}/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
-                            {(result as Event).acf.cover_image && (
-                              <Image
-                                src={(result as Event).acf.cover_image || '/placeholder.jpg'}
-                                alt={result.title.rendered}
-                                width={100}
-                                height={100}
-                                className='object-fill'
-                              />
-                            )}
-                            <div className='flex flex-col w-4/5'>
-                              <h3 className='text-base'>{result.title.rendered}</h3>
-                              <p
-                                  className="!text-sm font-light hidden md:block"
-                                  dangerouslySetInnerHTML={{
-                                    __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
-                                  }}
-                                />
-                            </div>
-                          </a>
-                        ) : (
-                          <a href={`/research/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
-                            {isPost(result) && result._embedded?.['wp:featuredmedia'] && (
-                              <Image
-                                src={result._embedded['wp:featuredmedia'][0].source_url}
-                                alt={result.title.rendered}
-                                width={100}
-                                height={100}
-                                className='object-fill'
-                              />
-                            )}
-                            <div className='flex flex-col w-4/5'>
-                              <h3 className='text-base'>{result.title.rendered}</h3>
-                              {isPost(result) && (
-                                <p
-                                  className="!text-sm font-light hidden md:block"
-                                  dangerouslySetInnerHTML={{
-                                    __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
-                                  }}
-                                />
-                              )}
-                            </div>
-                          </a>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
+                 
+
+<ul className='search-result-list flex flex-col gap-10 py-8 px-8 h-full'>
+  {(selectedTab === 'posts' ? posts : selectedTab === 'events' ? events : researchPosts).map((result) => (
+    <li key={result.id} className='text-sm text-gray-700'>
+      {selectedTab === 'posts' ? (
+        <a href={`/resources/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
+          {isPost(result) && result._embedded?.['wp:featuredmedia'] && (
+            <Image
+              src={result._embedded['wp:featuredmedia'][0].source_url}
+              alt={result.title.rendered}
+              width={100}
+              height={100}
+              className='object-fill'
+            />
+          )}
+          <div className='flex flex-col w-4/5'>
+            <h3 className='text-base'>{result.title.rendered}</h3>
+            {isPost(result) && (
+              <p
+                className="!text-sm font-light hidden md:block"
+                dangerouslySetInnerHTML={{
+                  __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
+                }}
+              />
+            )}
+          </div>
+        </a>
+      ) : selectedTab === 'events' ? (
+        <a href={`/${(result as Event).acf.isactive ? 'events' : 'resources'}/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
+          {(result as Event).acf.cover_image && (
+            <Image
+              src={(result as Event).acf.cover_image || '/placeholder.jpg'}
+              alt={result.title.rendered}
+              width={100}
+              height={100}
+              className='object-fill'
+            />
+          )}
+          <div className='flex flex-col w-4/5'>
+            <h3 className='text-base flex flex-row gap-2'>
+              {result.title.rendered}
+              {containsEvent(`/${(result as Event).acf.isactive ? 'events' : 'resources'}/${result.slug}`) && (
+                <span className='text-xs font-medium text-white bg-[--primary-colour] py-1 px-3 self-start rounded-full'>Event</span>
+              )}
+            </h3>
+            <p
+              className="!text-sm font-light hidden md:block"
+              dangerouslySetInnerHTML={{
+                __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
+              }}
+            />
+          </div>
+        </a>
+      ) : (
+        <a href={`/research/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
+          {isPost(result) && result._embedded?.['wp:featuredmedia'] && (
+            <Image
+              src={result._embedded['wp:featuredmedia'][0].source_url}
+              alt={result.title.rendered}
+              width={100}
+              height={100}
+              className='object-fill'
+            />
+          )}
+          <div className='flex flex-col w-4/5'>
+            <h3 className='text-base'>{result.title.rendered}</h3>
+            {isPost(result) && (
+              <p
+                className="!text-sm font-light hidden md:block"
+                dangerouslySetInnerHTML={{
+                  __html: `<span style="font-size: 0.2rem">${truncateText(result.excerpt.rendered, 150)}</span>`,
+                }}
+              />
+            )}
+          </div>
+        </a>
+      )}
+    </li>
+  ))}
+</ul>
+
                 )}
               </div>
 

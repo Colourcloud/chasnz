@@ -403,6 +403,7 @@ p {
   background-image: url('../public/about/header-image-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   @media screen and (min-width: 1024px) {
       background-image: url('../public/about/header-image.jpg');
       background-position: center;

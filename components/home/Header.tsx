@@ -16,9 +16,14 @@ const Header = () => {
                 </div>
         </div>
         </div>
-        <div className="banner-image w-full  flex items-center justify-center mt-12">
-          <Link href="/events/"><Image src="/common/webinar.png" className='' alt="banner image" width={1920} height={150} /></Link>
+
+        <div className="content-wrapper">
+          <div className="banner-image w-full flex items-center justify-center mt-12">
+            <Link href="/events/"><Image src="/common/webinar.png" className='hidden invisible lg:block lg:visible' alt="banner image" width={1920} height={150} /></Link>
+            <Link href="/events/"><Image src="/common/webinar-mobile.png" className='block visible lg:invisible lg:hidden' alt="banner image" width={1920} height={150} /></Link>
+          </div>
         </div>
+        
     </div>
   )
 }

@@ -159,9 +159,9 @@ const Searchbox: React.FC = () => {
               </div>
               <div className="tabs flex justify-around border-b">
                 <button className={`py-2 px-4 w-1/4 text-black ${selectedTab === 'programmes' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('programmes')}>Programmes</button>
-                <button className={`py-2 px-4 w-1/3 text-black ${selectedTab === 'posts' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('posts')}>Resources</button>
-                <button className={`py-2 px-4 w-1/3 text-black ${selectedTab === 'research' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('research')}>Research</button>
-                <button className={`py-2 px-4 w-1/3 text-black ${selectedTab === 'events' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('events')}>Webinars & Events</button>
+                <button className={`py-2 px-4 w-1/4 text-black ${selectedTab === 'posts' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('posts')}>Resources</button>
+                <button className={`py-2 px-4 w-1/4 text-black ${selectedTab === 'research' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('research')}>Research</button>
+                <button className={`py-2 px-4 w-1/4 text-black ${selectedTab === 'events' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('events')}>Webinars & Events</button>
               </div>
               <div className="search-results min-h-60 max-h-[40rem] overflow-y-auto border-b flex">
                 {isLoading ? (

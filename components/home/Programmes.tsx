@@ -10,7 +10,7 @@ const Programmes = () => {
         <div className="programme-banner flex flex-col">
             <div className="site-wrapper">
                 <div className='pb-12 flex flex-col gap-6'>
-                    <h4 className='text-3xl md:text-4xl font-semibold lg:text-5xl text-[--dark-blue] w-full md:w-full !leading-tight'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements.</h4>
+                    <h4 className='text-3xl md:text-4xl font-semibold lg:text-5xl text-[--dark-blue] w-full md:w-full !leading-tight'>Discover our programmes and download a range of resources &#40;at no cost&#41; for your businesses health and safety requirements</h4>
                 </div>
             </div>
             <div className="site-wrapper w-full !pr-0 md:!pr-16">

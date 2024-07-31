@@ -62,7 +62,7 @@ const Statistics = () => {
                 {inView && <CountUp end={stats.injuries} duration={2} />}
               </h4>
               <p className='text-base md:text-xl'>Serious harm injuries</p>
-              <p className='text-base'>As per Worksafe published serious harm statistics</p>
+              <p className='text-base md:text-xl'>As per Worksafe published serious harm statistics</p>
             </div>
           )}
 

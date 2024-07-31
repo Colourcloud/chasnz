@@ -10,19 +10,27 @@ interface HubSpotFormWrapperProps {
 
 const HubSpotFormWrapper: React.FC<HubSpotFormWrapperProps> = ({ portalId, formId, onFormSubmit }) => {
   useEffect(() => {
-    const checkForHubSpot = setInterval(() => {
-      if (window.hbspt && window.hbspt.forms) {
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.async = true;
+    script.defer = true;
+    
+    script.onload = () => {
+      if (window.hbspt) {
         window.hbspt.forms.create({
           portalId,
           formId,
           target: `#hubspotForm-${formId}`,
           onFormSubmit,
         });
-        clearInterval(checkForHubSpot);
       }
-    }, 100);
+    };
 
-    return () => clearInterval(checkForHubSpot);
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, [portalId, formId, onFormSubmit]);
 
   return <div id={`hubspotForm-${formId}`} />;

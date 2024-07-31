@@ -11,6 +11,7 @@ import Aboutus from "@/components/home/Aboutus";
 import Statistics from "@/components/home/Statistics";
 import Linkedin from "@/components/home/Linkedin";
 import Featuredresource from "@/components/home/Featuredresource";
+import Test from "@/components/common/Test";
 
 export const metadata: Metadata = {
   title: 'CHASNZ – World Class Construction Health and Safety',
@@ -29,6 +30,7 @@ export default function Home() {
         <Aboutus />
         <Linkedin />
         <Subscribe />
+        {/* <Test /> */}
     </main>
   );
 }

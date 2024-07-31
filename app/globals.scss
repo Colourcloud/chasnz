@@ -275,6 +275,14 @@ p {
   top: 92px;
 }
 
+.navigation-right {
+  li {
+    &:hover {
+      color: var(--primary-colour)!important;
+    }
+  }
+}
+
 .navigation-backdrop {
   opacity: 0;
   visibility: hidden;

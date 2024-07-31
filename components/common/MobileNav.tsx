@@ -188,7 +188,7 @@ const MobileNav: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="dropdown-footer w-full py-6 absolute bottom-0 border-t">
+        <div className="dropdown-footer w-full py-6 border-t">
                 <div className="site-wrapper flex flex-row gap-2 items-center justify-start">
                     <p className='text-sm font-light'>Follow us on our socials:</p>
                     <ul className='flex flex-row gap-3 items-center'>

@@ -3,6 +3,12 @@ import Link from 'next/link'
 import Header from '@/components/programmes/totika/Header'
 import { FiExternalLink } from "react-icons/fi";
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'CHASNZ – Contractor & Suppliers',
+  }
+
 
 const page = () => {
   return (

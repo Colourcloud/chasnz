@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { IoMenu } from 'react-icons/io5';
 import { IoSearch } from "react-icons/io5";
 import Searchbox from './SearchboxMobile';
+import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 import {
   Accordion,
@@ -187,6 +188,15 @@ const MobileNav: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="dropdown-footer w-full py-6 absolute bottom-0 border-t">
+                <div className="site-wrapper flex flex-row gap-2 items-center justify-start">
+                    <p className='text-sm font-light'>Follow us on our socials:</p>
+                    <ul className='flex flex-row gap-3 items-center'>
+                        <li className='social-icon'><Link href="https://www.linkedin.com/company/construction-health-and-safety-nz-chasnz?originalSubdomain=nz" target="_blank"><FaLinkedin className='text-2xl text-[#0077B5]'/></Link></li>
+                        <li className='social-icon'><Link href="https://www.youtube.com/channel/UCddHM1cm6NXMe_JrxejeCrw" target="_blank"><FaYoutube className='text-2xl text-[#FF0000]'/></Link></li>
+                    </ul>
+                </div>
+    </div>
       </div>
     </div>
   );

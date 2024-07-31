@@ -21,7 +21,8 @@ const Newsletter: React.FC = () => {
 
     const newsletterCookie = getCookie('newsletterCookie');
     const newsletterCloseCookie = getCookie('newsletterCloseCookie');
-    if (newsletterCookie || newsletterCloseCookie) {
+    const chasnzResourceCookie = getCookie('chasnz-resource-cookie');
+    if (newsletterCookie || newsletterCloseCookie || chasnzResourceCookie) {
       setIsCookieSet(true);
     }
     setInitialCheckDone(true);

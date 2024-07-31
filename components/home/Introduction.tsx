@@ -16,7 +16,7 @@ interface SectionContents {
 }
 
 const Introduction: React.FC = () => {
-  const [selectedSection, setSelectedSection] = useState<string>('trades');
+  const [selectedSection, setSelectedSection] = useState<string>('buyers');
 
   const sectionContent: SectionContents = {
     buyers: {

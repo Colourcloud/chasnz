@@ -41,7 +41,7 @@ const page = () => {
                         <p className='text-[--text-colour]'>Complete and upload proof of a Tōtika-recognised assessment to your dashboard</p>
                     </div>
                     <div className="text-block flex flex-col gap-4">
-                        <p className='text-black text-xl lg:text-2xl font-semibold'>What assessments do we recognise?</p>
+                        <p className='text-[--totika-blue] text-xl lg:text-2xl font-semibold'>What assessments do we recognise?</p>
                         <ul className='text-lg text-[--text-colour] leading-8 list-disc pl-4'>
                             <li>Tōtika prequalification assessments from our four member schemes</li>
                             <li>Non-Tōtika prequalification assessments from our four member schemes completed before the 1st of September 2021. Note: these assessments will only provide a &apos;Developing&apos; grading.</li>

@@ -11,7 +11,7 @@ const Introduction = () => {
                     
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
-                    <h4 className='font-bold text-4xl lg:text-6xl'>General Resources</h4>
+                    <h4 className='font-bold text-4xl lg:text-6xl'>General resources</h4>
                     <p className='text-[--text-colour]'>Discover essential insights into health and safety for the construction sector. The resources below provide useful information for common health and safety issues on construction sites.</p>
                 </div>
             </div>

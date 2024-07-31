@@ -26,7 +26,7 @@ const Introduction = () => {
                         <p className='text-[--text-colour]'>The programme is called Safety Leadership for Supervisors & Managers and is run by Safety Futures. It is aimed at those who are already leaders who want to take the next step, develop their careers, and grow their leadership skills, or people in your team that you see potential in and want to encourage their development. Course participants will work as part of a group from across New Zealand, connecting with other supervisors around the world.</p>
                     </div>
                     <div className="text-block flex flex-col gap-6">
-                        <p className='text-[--leadon-orange] text-xl lg:text-2xl font-semibold'>Register as a Supervisor or Frontline Leader.</p>
+                        <p className='text-[--leadon-orange] text-xl lg:text-2xl font-semibold'>Register as a supervisor or frontline leader.</p>
                         <p className='text-[--text-colour]'>Supervisors will be interacting with others online, have a designated tutor available for offline support, and complete workplace-based learning. The programme combines self-paced, focused online content with interactive sessions and workplace “missions.” It&apos;s flexible and in short bursts &#45; so they aren&apos;t stuck in a classroom for days or taken away from work. There are also exciting benefits to being on a course with people from around the world. We know our industry has strong preconceptions about online training, and we don&apos;t want people to be turned off by this approach.</p>
                     </div>
                     <div className="text-block flex flex-col gap-6">

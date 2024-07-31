@@ -65,8 +65,8 @@ const Team = () => {
         <section className='pb-20 lg:pb-40' id="team-members">
             <div className="content-wrapper">
                 <div className="board-members flex flex-col gap-4">
-                    <h4 className='text-3xl lg:text-5xl text-[--primary-colour] font-semibold'>Meet the Team</h4>
-                    <p className='text-xl font-medium text-[--text-colour]'>Below is a list of team members at Chasnz</p>
+                    <h4 className='text-3xl lg:text-5xl text-[--primary-colour] font-semibold'>Meet the team</h4>
+                    <p className='text-xl font-medium text-[--text-colour]'>Below is a list of team members at CHASNZ</p>
                 </div>
                 <div className="board-member-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
                     {boardMembers.map((member) => (

@@ -19,7 +19,7 @@ const Resources = () => {
                             </div>
                             <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                                 <div className="mega-menu_right_list_items">
-                                    <a href="/general-resources/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>General Resources</h6></a>
+                                    <a href="/general-resources/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>General resources</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
                                         <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Wheel</a></li>
@@ -44,10 +44,10 @@ const Resources = () => {
                                 </div>
 
                                 <div className="mega-menu_right_list_items">
-                                    <a href="/data-tools-and-insights/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Data Tools & Insights</h6></a>
+                                    <a href="/data-tools-and-insights/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>Data tools & insights</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
-                                        <li><a href="/data-tools-and-insights/measuring-health-and-safety/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring Health & Safety</a></li>
-                                        <li><a href="/analysis-insights/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & Insights</a></li>
+                                        <li><a href="/data-tools-and-insights/measuring-health-and-safety/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Measuring health & safety</a></li>
+                                        <li><a href="/analysis-insights/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Analysis & insights</a></li>
                                     </ul>
                                 </div>
                             </div>

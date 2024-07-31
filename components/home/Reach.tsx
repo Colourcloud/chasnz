@@ -9,7 +9,7 @@ const Reach = () => {
         <div className="content-wrapper h-full">
             <div className="section-content flex flex-col h-full justify-end relative z-10">
                 <div className="section-text text-white w-full md:w-3/5 flex flex-col gap-4 mb-8">
-                    <h4 className='text-5xl font-semibold lg:text-6xl'>A National Reach</h4>
+                    <h4 className='text-5xl font-semibold lg:text-6xl'>A national reach</h4>
                 </div>
             </div>
         </div>

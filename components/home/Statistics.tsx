@@ -30,7 +30,7 @@ const Statistics = () => {
     <section className="statistics bg-[--dark-blue] py-20 lg:py-32">
       <div className="site-wrapper">
         <div className='pb-12 border-b-2 border-[--primary-colour] flex flex-col lg:flex-row justify-between lg:items-center gap-4 lg:gap-0'>
-          <h4 className='text-4xl font-semibold lg:text-5xl text-white w-full md:w-[75%]'>2023 and 2024 key statistics in health and safety.</h4>
+          <h4 className='text-4xl font-semibold lg:text-5xl text-white w-full md:w-[75%]'>2023 and 2024 key statistics in health and safety</h4>
         </div>
 
         <div className="flex gap-4 mt-8">

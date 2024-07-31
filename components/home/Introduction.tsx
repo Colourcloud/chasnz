@@ -39,7 +39,7 @@ const Introduction: React.FC = () => {
     safety: {
       title: 'We help people who work in safety',
       paragraphs: [
-        'Individuals working in safety roles, ranging from Health & Safety (H&S) representatives to directors of safety, as well as those who handle safety duties informally.',
+        'Individuals working in safety roles, ranging from Health & Safety (H&S) representatives to directors of safety, as well as those who handle safety duties informally',
       ],
       images: [
         '/home/safety-image-1.jpg',
@@ -132,7 +132,7 @@ const Introduction: React.FC = () => {
                 <Image src="/home/trade-icon.svg" alt="" width={50} height={50} className="w-3/5" />
               </div>
               <span className='text-sm text-gray-400 text-left md:text-center w-full'>
-                Trades People
+                Tradespeople
               </span>
             </div>
 
@@ -187,7 +187,7 @@ const Introduction: React.FC = () => {
       <div className="site-wrapper">
         <div className="section-text w-full md:w-3/4 xl:w-3/4 text-center mx-auto flex flex-col gap-4">
           <h4 className='text-4xl font-semibold lg:text-5xl text-[--dark-blue]'>How we can help you</h4>
-          <p className='text-lg md:text-2xl font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being harm in your business - whatever size that is.</p>
+          <p className='text-lg md:text-2xl font-light text-[--dark-blue]'>We provide evidence robust guidance and tools to help you manage Health, Safety and Well-being harm in your business - whatever size that is</p>
         </div>
         
       </div>

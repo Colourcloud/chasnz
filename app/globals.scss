@@ -276,7 +276,7 @@ p {
 }
 
 .navigation-right {
-  li {
+  a, button{
     &:hover {
       color: var(--primary-colour)!important;
     }
@@ -311,6 +311,13 @@ p {
 }
 
 #navigation-resources:hover {
+  .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+#navigation-contact:hover {
   .dropdown-menu {
     opacity: 1;
     visibility: visible;

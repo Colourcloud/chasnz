@@ -8,6 +8,8 @@ import Resources from '../navigation/Resources';
 import About from '../navigation/About';
 import { IoIosSearch } from "react-icons/io";
 import Searchbox from './Searchbox';
+import Contact from '../navigation/Contact';
+import Events from '../navigation/Events';
 
 const Navigation = () => {
 
@@ -21,9 +23,9 @@ const Navigation = () => {
 
     const handleHover = (event: Event) => {
       const target = event.currentTarget as HTMLElement;
-      if (target.id === 'navigation-events' || target.id === 'navigation-contact') {
-        return; // Skip the hover effect for Events and Contact
-      }
+      // if (target.id === 'navigation-events' || target.id === 'navigation-contact') {
+      //   return; // Skip the hover effect for Events and Contact
+      // }
       setLogoSrc("/logo-green.svg"); // Change logo to green version
       navigationToggles.forEach(toggle => {
         toggle.classList.add('text-black');
@@ -41,9 +43,9 @@ const Navigation = () => {
 
     const handleHoverOut = (event: Event) => {
       const target = event.currentTarget as HTMLElement;
-      if (target.id === 'navigation-events' || target.id === 'navigation-contact') {
-        return; // Skip the hover out effect for Events and Contact
-      }
+      // if (target.id === 'navigation-events' || target.id === 'navigation-contact') {
+      //   return; // Skip the hover out effect for Events and Contact
+      // }
       setLogoSrc("/logo.svg"); // Revert logo to original
       navigationToggles.forEach(toggle => {
         toggle.classList.remove('text-black');
@@ -97,28 +99,34 @@ const Navigation = () => {
               <div className="navigation-right">
                 <ul className='flex flex-row text-white font-medium items-center'>
                   <li className='text-lg navigation-toggle' id="navigation-about">
-                    <a href='#'>About</a>
+                    <button>About</button>
                     <div className="dropdown-menu">
                       <About />
                     </div>
                   </li>
                   <li className='text-lg navigation-toggle' id="navigation-programmes">
-                    <a href='#'>Programmes</a>
+                    <button>Programmes</button>
                     <div className="dropdown-menu">
                       <ProgrammesNew />
                     </div>
                   </li>
                   <li className='text-lg navigation-toggle' id="navigation-resources">
-                    <a href='#'>Resources</a>
+                    <button>Resources</button>
                     <div className="dropdown-menu">
                       <Resources />
                     </div>
                   </li>
                   <li className='text-lg navigation-toggle' id="navigation-events">
-                    <Link href="/events/">Events</Link>
+                    <button>Events</button>
+                    <div className="dropdown-menu">
+                      <Events />
+                    </div>
                   </li>
                   <li className='text-lg navigation-toggle' id="navigation-contact">
-                    <Link href="/contact/">Contact</Link>
+                    <button>Contact</button>
+                    <div className="dropdown-menu">
+                      <Contact />
+                    </div>
                   </li>
                   <Searchbox />
                 </ul>

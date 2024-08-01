@@ -66,7 +66,7 @@ const Eventlist: React.FC = () => {
   }, []);
 
   return (
-    <section className="resource-section py-20 bg-white" id="resources">
+    <section className="resource-section py-20 bg-white" id="previous-events">
       <div className="content-wrapper">
         <div className="resource-container">
           <div className="resource-heading">

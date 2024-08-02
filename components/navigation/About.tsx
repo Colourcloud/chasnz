@@ -33,7 +33,11 @@ const About = () => {
                                         <li><a href="/contact/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Contact us</a></li>
                                     </ul>
                                 </div>
+                                <div className="mega-menu_right_list_items">
+                                    <Image src="/common/award.png" alt="award" width="175" height="150" />
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
     </div>

@@ -65,7 +65,7 @@ const Events = () => {
         <section className='events-container py-20'>
             <div className="content-wrapper">
                 <h4 className="text-2xl font-semibold">
-                    Checkout our most recent webinars &amp; events:
+                    Check out our most recent webinars
                 </h4>
                 <div className="event-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
                     {events.map((event) => (

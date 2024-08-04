@@ -8,7 +8,7 @@ import Introduction from '@/components/events/Introduction'
 import Eventlist from '@/components/events/Eventlist'
 
 export const metadata: Metadata = {
-    title: 'CHASNZ – Events',
+    title: 'CHASNZ – Webinars & Events',
   }
 
 

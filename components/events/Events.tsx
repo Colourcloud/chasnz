@@ -32,7 +32,7 @@ const Events = () => {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/event?_embed&per_page=3');
+                const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/event?_embed&per_page=4');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -65,10 +65,11 @@ const Events = () => {
         <section className='events-container py-20'>
             <div className="content-wrapper">
                 <h4 className="text-2xl font-semibold">
-                    Checkout our most recent events:
+                    Checkout our most recent webinars &amp; events:
                 </h4>
-                <div className="event-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                <div className="event-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
                     {events.map((event) => (
+                        <Link href={`/events/${event.slug}`}>
                         <div key={event.id} className="event-card relative overflow-hidden">
                             <div className="event-card-image h-full">
                                 <Image src={event.acf.cover_image} alt={event.title.rendered} width={600} height={600} className='h-full' />
@@ -76,20 +77,21 @@ const Events = () => {
                             <div className="event-information absolute bottom-0 p-6">
                                 <div className='flex flex-col gap-3 text-white relative z-10'>
                                 <span className="text-sm">
-                                    {new Date(event.date).toLocaleDateString('en-US', {
+                                    {new Date(
+                                        `${event.acf.date.slice(0, 4)}-${event.acf.date.slice(4, 6)}-${event.acf.date.slice(6)}`
+                                    ).toLocaleDateString('en-US', {
                                         weekday: 'long',
                                         year: 'numeric',
                                         month: 'long',
                                         day: 'numeric',
                                     })}
                                     </span>
-                                    <h6 className='event-name text-2xl font-semibold'>{event.title.rendered}</h6>
-                                    <Link href={`/events/${event.slug}`} className='flex flex-row items-center gap-2'>
-                                        Read More <IoIosArrowDroprightCircle />
-                                    </Link>
+                                    <h6 className='event-name text-xl font-semibold'>{event.title.rendered}</h6>
+                                    
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -15,14 +15,14 @@ const Events = () => {
             </div>
             <div className="mega-menu_right w-full">
                 <div className="w-3/4">
-                    <h4 className='text-black text-3xl font-bold'>Take part in events brought to you by CHASNZ</h4>
+                    <h4 className='text-black text-3xl font-bold'>Webinars &amp; events brought to you by CHASNZ</h4>
                 </div>
                 <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                     <div className="mega-menu_right_list_items">
-                        <h6 className='text-black font-semibold text-xl'>Events</h6>
+                        <h6 className='text-black font-semibold text-xl'>Webinars &amp; events</h6>
                         <ul className='text-base flex flex-col gap-4 mt-4'>
-                            <li><a href="/events" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Recent Events</a></li>
-                            <li><a href="/events#previous-events" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Previous Events</a></li>
+                            <li><a href="/events" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Recent Webinars</a></li>
+                            <li><a href="/events#previous-events" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Previous Webinars</a></li>
                         </ul>
                     </div>
                 </div>

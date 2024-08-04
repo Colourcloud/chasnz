@@ -182,7 +182,7 @@ const MobileNav: React.FC = () => {
               </AccordionItem>
             </Accordion>
 
-            <a href="/events/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Events</a>
+            <a href="/events/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Webinars</a>
             <a href="/contact/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Contact</a>
             
             </div>

@@ -8,6 +8,7 @@ import Footer from "@/components/common/Footer";
 import MobileNav from "@/components/common/MobileNav";
 import Newsletter from "@/components/common/Newsletter";
 import Script from "next/script";
+import GoogleAnalytics from "@/components/common/GoogleAnalytics";
 
 const poppins = Poppins({ weight: ['300', '400', '500', '600', '700'], subsets: ['latin'] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
       </Script>
       </head>
       <body className={poppins.className}>
+        <GoogleAnalytics />
         <NextTopLoader color="#7ABC25" showSpinner={false}/>
         <Newsletter />
         <Navigation />

@@ -7,3 +7,4 @@ Host: https://www.chasnz.org
 
 # Sitemaps
 Sitemap: https://www.chasnz.org/sitemap.xml
+Sitemap: https://www.chasnz.org/sitemap-0.xml

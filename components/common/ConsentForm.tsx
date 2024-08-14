@@ -17,9 +17,9 @@ const ConsentForm: React.FC = () => {
       }
     };
 
-    const hubspotCookie = getCookie('hubspotutk');
+    // const hubspotCookie = getCookie('hubspotutk');
     const chasnzCookie = getCookie('chasnz-resource-cookie');
-    if (hubspotCookie || chasnzCookie) {
+    if ( chasnzCookie) {
       setIsCookieSet(true);
     }
     setInitialCheckDone(true);

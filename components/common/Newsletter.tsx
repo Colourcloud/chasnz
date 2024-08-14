@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { IoClose } from "react-icons/io5";
 
 const Newsletter: React.FC = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
     const getCookie = (name: string): string | undefined => {
@@ -19,11 +19,11 @@ const Newsletter: React.FC = () => {
     const hubspotCookie = getCookie('hubspotutk');
     const hasSeenNewsletter = getCookie('HasSeenNewsletter');
 
-    if (hubspotCookie || hasSeenNewsletter) {
-      setIsVisible(false);
+    if (!hubspotCookie && !hasSeenNewsletter) {
+      setIsVisible(true);
     }
 
-    if (isVisible) {
+    if (!hubspotCookie && !hasSeenNewsletter) {
       const script = document.createElement('script');
       script.src = '//js.hsforms.net/forms/embed/v2.js';
       script.charset = 'utf-8';
@@ -34,23 +34,21 @@ const Newsletter: React.FC = () => {
             region: 'na1',
             portalId: '40083784',
             formId: '78b53e0a-b49b-4c2c-a8f6-40025faaebc5',
-            target: '#hubspot-form', // Ensure the form is rendered inside this div
+            target: '#hubspot-form',
           });
         }
       };
       document.head.appendChild(script);
     }
-  }, [isVisible]);
+  }, []);
 
   const handleCloseForm = () => {
     document.cookie = "HasSeenNewsletter=true; path=/; max-age=1209600"; // Set cookie for 14 days
     setIsVisible(false);
   };
 
-  if (!isVisible) return null;
-
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
+    <div className={`fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50 ${!isVisible ? 'hidden' : ''}`}>
       <div className="newsletter-container relative w-full max-w-3xl mx-auto p-4">
         <div className="newsletter-content flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="newsletter-image w-full md:w-2/5">

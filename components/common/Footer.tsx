@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
-import HubSpotForm from './HubspotForm';
+// import HubSpotForm from './HubspotForm';
 
 const Footer = () => {
   return (
@@ -55,7 +55,7 @@ const Footer = () => {
                 </ul>
                 <div className="subscribe-footer mt-8 flex flex-col gap-2">
                   <div>
-                    <HubSpotForm portalId="40083784" formId="da52cfc3-874f-491c-b773-e2b7baaee5c9" />
+                    {/* <HubSpotForm portalId="40083784" formId="da52cfc3-874f-491c-b773-e2b7baaee5c9" /> */}
                   </div>
                 </div>
               </div>

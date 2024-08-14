@@ -8,24 +8,42 @@ const Newsletter: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//js.hsforms.net/forms/embed/v2.js';
-    script.charset = 'utf-8';
-    script.type = 'text/javascript';
-    script.onload = () => {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          region: 'na1',
-          portalId: '40083784',
-          formId: '78b53e0a-b49b-4c2c-a8f6-40025faaebc5',
-          target: '#hubspot-form', // Ensure the form is rendered inside this div
-        });
+    const getCookie = (name: string): string | undefined => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) {
+        return parts.pop()?.split(';').shift();
       }
     };
-    document.head.appendChild(script);
-  }, []);
+
+    const hubspotCookie = getCookie('hubspotutk');
+    const hasSeenNewsletter = getCookie('HasSeenNewsletter');
+
+    if (hubspotCookie || hasSeenNewsletter) {
+      setIsVisible(false);
+    }
+
+    if (isVisible) {
+      const script = document.createElement('script');
+      script.src = '//js.hsforms.net/forms/embed/v2.js';
+      script.charset = 'utf-8';
+      script.type = 'text/javascript';
+      script.onload = () => {
+        if (window.hbspt) {
+          window.hbspt.forms.create({
+            region: 'na1',
+            portalId: '40083784',
+            formId: '78b53e0a-b49b-4c2c-a8f6-40025faaebc5',
+            target: '#hubspot-form', // Ensure the form is rendered inside this div
+          });
+        }
+      };
+      document.head.appendChild(script);
+    }
+  }, [isVisible]);
 
   const handleCloseForm = () => {
+    document.cookie = "HasSeenNewsletter=true; path=/; max-age=1209600"; // Set cookie for 14 days
     setIsVisible(false);
   };
 

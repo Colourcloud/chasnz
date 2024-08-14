@@ -36,7 +36,7 @@ const Newsletter: React.FC = () => {
     setShouldShowForm(false);
   };
 
-  if (shouldShowForm) return null;
+  if (!shouldShowForm) return null;
 
   return (
     <div className="consent-form-container justify-center items-center">

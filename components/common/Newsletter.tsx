@@ -6,37 +6,47 @@ import HubSpotFormWrapper from './HubspotFormWrapper';
 import { IoClose } from "react-icons/io5";
 
 const Newsletter: React.FC = () => {
-  const [shouldShowForm, setShouldShowForm] = useState<boolean>(true);
+  const [isCookieSet, setIsCookieSet] = useState<boolean>(false);
+  const [initialCheckDone, setInitialCheckDone] = useState<boolean>(false);
+  const [showForm, setShowForm] = useState<boolean>(true);
 
   useEffect(() => {
     const getCookie = (name: string): string | undefined => {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop()?.split(';').shift();
+      if (parts.length === 2) {
+        return parts.pop()?.split(';').shift();
+      }
     };
 
-    const isCookieSet = Boolean(
-      getCookie('newsletterCookie') ||
-      getCookie('newsletterCloseCookie') ||
-      getCookie('chasnz-resource-cookie')
-    );
-
-    setShouldShowForm(!isCookieSet);
+    const newsletterCookie = getCookie('newsletterCookie');
+    const newsletterCloseCookie = getCookie('newsletterCloseCookie');
+    const chasnzResourceCookie = getCookie('chasnz-resource-cookie');
+    if (newsletterCookie || newsletterCloseCookie || chasnzResourceCookie) {
+      setIsCookieSet(true);
+    }
+    setInitialCheckDone(true);
   }, []);
 
   const handleFormSubmit = () => {
     console.log('Form has been submitted');
     alert('Form has been submitted');
-    document.cookie = "newsletterCookie=true; path=/; max-age=31536000"; // 1 year
-    setShouldShowForm(false);
+    document.cookie = "newsletterCookie=true; path=/; max-age=31536000"; // Set cookie for 1 year
+    setIsCookieSet(true);
   };
 
   const handleCloseForm = () => {
-    document.cookie = "newsletterCloseCookie=true; path=/; max-age=1209600"; // 2 weeks
-    setShouldShowForm(false);
+    setShowForm(false);
+    document.cookie = "newsletterCloseCookie=true; path=/; max-age=1209600"; // Set cookie for 2 weeks
   };
 
-  if (!shouldShowForm) return null;
+  if (!initialCheckDone) {
+    return null; // Render nothing until initial cookie check is done
+  }
+
+  if (isCookieSet || !showForm) {
+    return null; // Render nothing if cookies are set or if form is closed
+  }
 
   return (
     <div className="consent-form-container justify-center items-center">
@@ -47,9 +57,9 @@ const Newsletter: React.FC = () => {
         <div className="form-content w-full md:w-3/5 p-8 flex flex-col gap-4">
           <h4 className="text-3xl font-semibold">Be the first to know</h4>
           <p className="text-sm font-light">Join our mailing list for construction health and safety updates.</p>
-          <button onClick={handleCloseForm} className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-gray-700 focus:outline-none">
-            <IoClose />
-          </button>
+          <div className="absolute top-4 right-4">
+            <button onClick={handleCloseForm} className="text-2xl text-gray-500 hover:text-gray-700 focus:outline-none"><IoClose /></button>
+          </div>
           <div className="resource-consent-form">
             <HubSpotFormWrapper
               portalId="40083784"

@@ -2,70 +2,58 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import HubSpotFormWrapper from './HubspotFormWrapper';
 import { IoClose } from "react-icons/io5";
 
 const Newsletter: React.FC = () => {
-  const [isCookieSet, setIsCookieSet] = useState<boolean>(false);
-  const [initialCheckDone, setInitialCheckDone] = useState<boolean>(false);
-  const [showForm, setShowForm] = useState<boolean>(true);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
 
   useEffect(() => {
-    const getCookie = (name: string): string | undefined => {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) {
-        return parts.pop()?.split(';').shift();
+    const script = document.createElement('script');
+    script.src = '//js.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    script.onload = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          region: 'na1',
+          portalId: '40083784',
+          formId: '78b53e0a-b49b-4c2c-a8f6-40025faaebc5',
+          target: '#hubspot-form', // Ensure the form is rendered inside this div
+        });
       }
     };
-
-    const newsletterCookie = getCookie('newsletterCookie');
-    const newsletterCloseCookie = getCookie('newsletterCloseCookie');
-    const chasnzResourceCookie = getCookie('chasnz-resource-cookie');
-    if (newsletterCookie || newsletterCloseCookie || chasnzResourceCookie) {
-      setIsCookieSet(true);
-    }
-    setInitialCheckDone(true);
+    document.head.appendChild(script);
   }, []);
 
-  const handleFormSubmit = () => {
-    console.log('Form has been submitted');
-    alert('Form has been submitted');
-    document.cookie = "newsletterCookie=true; path=/; max-age=31536000"; // Set cookie for 1 year
-    setIsCookieSet(true);
-  };
-
   const handleCloseForm = () => {
-    setShowForm(false);
-    document.cookie = "newsletterCloseCookie=true; path=/; max-age=1209600"; // Set cookie for 2 weeks
+    setIsVisible(false);
   };
 
-  if (!initialCheckDone) {
-    return null; // Render nothing until initial cookie check is done
-  }
-
-  if (isCookieSet || !showForm) {
-    return null; // Render nothing if cookies are set or if form is closed
-  }
+  if (!isVisible) return null;
 
   return (
-    <div className="consent-form-container justify-center items-center">
-      <div className="consent-form relative w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-auto md:h-[500px] rounded-lg flex flex-col md:flex-row">
-        <div className="form-image w-full md:w-2/5 object-cover h-full">
-          <Image src="/common/form-image.jpg" alt="resource image" width={600} height={600} className="h-[160px] md:h-full w-full object-[50%,30%] object-cover" />
-        </div>
-        <div className="form-content w-full md:w-3/5 p-8 flex flex-col gap-4">
-          <h4 className="text-3xl font-semibold">Be the first to know</h4>
-          <p className="text-sm font-light">Join our mailing list for construction health and safety updates.</p>
-          <div className="absolute top-4 right-4">
-            <button onClick={handleCloseForm} className="text-2xl text-gray-500 hover:text-gray-700 focus:outline-none"><IoClose /></button>
-          </div>
-          <div className="resource-consent-form">
-            <HubSpotFormWrapper
-              portalId="40083784"
-              formId="78b53e0a-b49b-4c2c-a8f6-40025faaebc5"
-              onFormSubmit={handleFormSubmit}
+    <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
+      <div className="newsletter-container relative w-full max-w-3xl mx-auto p-4">
+        <div className="newsletter-content flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
+          <div className="newsletter-image w-full md:w-2/5">
+            <Image
+              src="/common/form-image.jpg"
+              alt="resource image"
+              width={600}
+              height={600}
+              className="w-full h-[160px] md:h-full object-cover"
             />
+          </div>
+          <div className="newsletter-form w-full md:w-3/5 p-8 relative">
+            <button
+              onClick={handleCloseForm}
+              className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              <IoClose />
+            </button>
+            <h4 className="text-3xl font-semibold">Be the first to know</h4>
+            <p className="text-sm font-light">Join our mailing list for construction health and safety updates.</p>
+            <div id="hubspot-form" className="mt-4"></div>
           </div>
         </div>
       </div>

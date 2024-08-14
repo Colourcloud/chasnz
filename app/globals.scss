@@ -814,3 +814,28 @@ p {
 .search-box-container-mobile {
   height: calc(100vh - -1rem);
 }
+
+#hubspot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .hs-error-msg {
+    font-size: 14px;
+  }
+  input {
+    padding: 10px 18px;
+    margin-top: 24px;
+    border-radius: 100px;
+    border: 1px solid #ebebeb;
+    outline: none;
+    width: 100%;
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+  .hs-button {
+    background: var(--primary-colour);
+    color: white;
+    font-size: 14px;
+  }
+}

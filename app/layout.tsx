@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <Script strategy="afterInteractive">
+      <Script strategy="beforeInteractive">
         {`
         (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

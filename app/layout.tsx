@@ -75,14 +75,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-{/* <Script
-          id="hs-forms-loader"
-          strategy="afterInteractive"
-          src="//js.hsforms.net/forms/v2.js"
-        />
-        <Script
-          id="hs-scripts-loader"
-          strategy="afterInteractive"
-          src="//js.hs-scripts.com/40083784.js"
-        /> */}

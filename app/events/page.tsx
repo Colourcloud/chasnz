@@ -19,7 +19,7 @@ const page = () => {
     <Header />
     <Introduction />
     <Events />
-    {/* <Eventlist /> */}
+    <Eventlist />
     <Subscribe />
     </>
   )

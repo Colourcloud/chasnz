@@ -25,7 +25,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/hazard-board.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Hazard Board Sticker</h6>
-                            <Link href="https://cms.chasnz.org/wp-content/uploads/2024/07/18776-New-Energy-Wheel-195mm-QR-Label-v2-UPDATED-No-Bleed.pdf" target='_blank' className='resource-button'>Download</Link>
+                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/08/CHASNZ-Energy-Wheel-195mm-QR-Label.pdf" target='_blank' className='resource-button'>Download</Link>
                         </div>
                     </div>
 
@@ -33,7 +33,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/hard-hat.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Hard Hat Sticker</h6>
-                            <Link href="https://cms.chasnz.org/wp-content/uploads/2024/07/18896-CHASNZ-New-Energy-Wheel-60mm-sticker-F-No-Bleed.pdf" target='_blank' className='resource-button'>Download</Link>
+                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/08/CHASNZ-Energy-Wheel-Sticker-60mm.pdf" target='_blank' className='resource-button'>Download</Link>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/pocket-guide.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Pocket Guide</h6>
-                            <Link href="https://cms.chasnz.org/wp-content/uploads/2024/07/18734-New-Energy-Pocket-card-90x55mm-v4-UPDATED-No-Bleed-2.pdf" target='_blank' className='resource-button'>Download</Link>
+                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/08/CHASNZ-Energy-Wheel-Pocket-Guide.pdf" target='_blank' className='resource-button'>Download</Link>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/toolbox.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Toolbox Talks</h6>
-                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/07/18902-CHASNZ-Toolbox-Energy-Wheel-v2-UPDATED-No-Bleed.pdf" target="_blank" className='resource-button'>Download</Link>
+                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/08/CHASNZ-Toolbox-Energy-Wheel.pdf" target="_blank" className='resource-button'>Download</Link>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@ const Resources = () => {
                         <Image src="/energy-wheel/site-guide.jpg" className='w-full' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
                             <h6 className='font-semibold text-lg text-[--text-colour]'>Site Guide</h6>
-                            <Link href="https://share.hsforms.com/1uUd2fCkjTny_4MztTDA6Iwnv4ug" target='_blank' className='resource-button'>Download</Link>
+                            <Link href="http://cms.chasnz.org/wp-content/uploads/2024/08/CHASNZ-High-Energy-Hazards-Guide-Print.pdf" target='_blank' className='resource-button'>Download</Link>
                         </div>
                     </div>
 

@@ -19,8 +19,24 @@ const Introduction = () => {
                         <li><Link href="/work-should-not-hurt#trades" className='flex flex-row items-center gap-2'>View More <span><IoIosArrowDroprightCircle /></span></Link></li>
                     </ul>
                 </div>
-                <div className="programme-text flex flex-col gap-12 w-full lg:w-[70%] ml-0 lg:ml-[8rem]">
-                    <div className='flex flex-col gap-6'>
+                <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-8 lg:px-20">
+                    <div className='pb-4 border-b-2'>
+                        <div className="trade-stats w-full flex flex-col gap-6 md:flex-row justify-between">
+                            <div className="trade-stat-container flex flex-col gap-3">
+                                <h4 className='text-4xl lg:text-5xl font-semibold text-[--primary-colour] border-b-2 border-[--primary-colour] p-1'>2.7M+</h4>
+                                <p className='text-[--text-colour]'>Sqm scaffolding not erected</p>
+                            </div>
+                            <div className="trade-stat-container flex flex-col gap-3">
+                                <h4 className='text-4xl lg:text-5xl font-semibold text-[--primary-colour] border-b-2 border-[--primary-colour] p-1'>135M</h4>
+                                <p className='text-[--text-colour]'>Sqm scaffolding not moved</p>
+                            </div>
+                            <div className="trade-stat-container flex flex-col gap-3">
+                                <h4 className='text-4xl lg:text-5xl font-semibold text-[--primary-colour] border-b-2 border-[--primary-colour] p-1'>38</h4>
+                                <p className='text-[--text-colour]'>Days off on average per strain or sprain</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='flex flex-col gap-6 mt-[3rem]'>
                         <h4 className='font-semibold text-5xl lg:text-6xl text-[--dark-blue]'>Scaffolding</h4>
                         <p className='text-[--text-colour]'>We have worked onsite alongside scaffolders to identify practical solutions to help you reduce the chance of pain and injury. Scroll down to view a wide range of resources to help you work smarter, not harder.</p>
                     </div>

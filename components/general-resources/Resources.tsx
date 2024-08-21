@@ -48,7 +48,7 @@ const Resources: React.FC = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=69&per_page=30',
+          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=69&per_page=100',
           { next: { revalidate: 3600 } }
         );
 

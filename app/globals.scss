@@ -427,12 +427,12 @@ p {
 }
 
 #energy-wheel-header {
-  background-image: url('../public/energy-wheel/header-gif.gif');
+  background-image: url('../public/energy-wheel/header-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   @media screen and (min-width: 1024px) {
-      background-image: url('../public/energy-wheel/header-gif.gif');
+      background-image: url('../public/energy-wheel/header-image.jpg');
       background-position: top;
   }
 }

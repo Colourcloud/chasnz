@@ -5,8 +5,16 @@ const Header = () => {
     <div>
       <div className="programmes-header relative header-gradient" id="energy-wheel-header">
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover hidden invisible md:visible md:block"
           src="/energy-wheel/header-video.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover md:hidden md:invisible"
+          src="/energy-wheel/header-video-mobile.webm"
           autoPlay
           loop
           muted

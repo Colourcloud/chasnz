@@ -6,7 +6,7 @@ const Header = () => {
       <div className="programmes-header relative header-gradient" id="energy-wheel-header">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="/energy-wheel/header-video.mp4"
+          src="/energy-wheel/header-video.webm"
           autoPlay
           loop
           muted

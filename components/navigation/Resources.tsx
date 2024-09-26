@@ -22,7 +22,7 @@ const Resources = () => {
                                     <a href="/general-resources/"><h6 className='text-black font-semibold text-xl underline hover:text-[--primary-colour]'>General resources</h6></a>
                                     <ul className='text-base flex flex-col gap-4 mt-4'>
                                         <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
-                                        <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Wheel</a></li>
+                                        <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Based Safety Wheel</a></li>
                                     </ul>
                                 </div>
 

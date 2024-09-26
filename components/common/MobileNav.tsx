@@ -143,7 +143,7 @@ const MobileNav: React.FC = () => {
                           </a>
                           <ul className='flex flex-col gap-4 mt-4'>
                             <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>ConstructSafe</a></li>
-                            <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Wheel</a></li>
+                            <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Based Safety Wheel</a></li>
                           </ul>
                         </li>
 

@@ -11,7 +11,7 @@ const Resources = () => {
     <section className="energy-wheel-resources pb-20 lg:pb-32" id="resources">
         <div className="content-wrapper">
             <div className="resource-wrapper">
-                <h4 className='text-2xl font-semibold text-[--text-colour]'>Please be sure to check out and download the below content/assets we&apos;ve developed for your workplace to support your health and safety needs. We look forward to hearing your feedback on our Energy Based Safety Wheel tool.</h4>
+                <h4 className='text-2xl font-semibold text-[--text-colour]'>Please be sure to check out and download the below content/assets we&apos;ve developed for your workplace to support your health and safety needs. We look forward to hearing your feedback on our Energy Based Safety tool.</h4>
                 <div className="resource-grid-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-20">
                     <div className="grid-item flex flex-col gap-4">
                         <Image src="/energy-wheel/explainer-video.jpg" className='w-full aspect-[4/3]' alt='' width={400} height={250} />
@@ -56,7 +56,7 @@ const Resources = () => {
                     <div className="grid-item flex flex-col gap-4">
                         <Image src="/energy-wheel/science.jpg" className='w-full aspect-[4/3]' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
-                            <h6 className='font-semibold text-lg text-[--text-colour]'>The Energy Based Safety Wheel Art and Science</h6>
+                            <h6 className='font-semibold text-lg text-[--text-colour]'>The Energy Based Safety Art and Science</h6>
                             <Link href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLJKH9k7%2BObhR8phhHxJ1Q5Qks5tNVas7DjEVFYM2zr29zPAO%2B%2FGWGzR%2FAvMXEU3JYnxVzejGokAI0DYZ88FsHGemzY4j74M6Ts1MKbUzkLdJx2%2FahoeYdu3gtsvKeKyu%2Fh2dh8P56ughelcgTbR1dgQxR9vfsXQaf5GXKrclvIX%2B%2F0fABIRGnDbuxRrb2oocKj1xGFdZRaLX%2FIfvFPgLSYvBveqBh6TkA4%3D&portalId=40083784" target='_blank' className='resource-button'>Download</Link>
                         </div>
                     </div>

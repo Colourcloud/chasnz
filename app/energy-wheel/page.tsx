@@ -8,7 +8,7 @@ import Subscribe from '@/components/common/Subscribe'
 import Credits from '@/components/energy-wheel/Credits'
 
 export const metadata: Metadata = {
-    title: 'CHASNZ – Energy Wheel',
+    title: 'CHASNZ – Energy Based Safety',
   }
 
 const page = () => {

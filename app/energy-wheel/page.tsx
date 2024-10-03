@@ -6,7 +6,6 @@ import Flipbook from '@/components/energy-wheel/Flipbook'
 import Resources from '@/components/energy-wheel/Resources'
 import Subscribe from '@/components/common/Subscribe'
 import Credits from '@/components/energy-wheel/Credits'
-import BookingForm from '@/components/events/BookingForm'
 
 export const metadata: Metadata = {
     title: 'CHASNZ – Energy Based Safety',
@@ -21,7 +20,6 @@ const page = () => {
     <Resources />
     <Credits />
     <Subscribe />
-    <BookingForm />
     </>
 
   )

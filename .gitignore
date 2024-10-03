@@ -38,3 +38,8 @@ jspm_packages
 .next
 
 public/chas.mp4
+
+# Environment variable files
+.env
+.env.local
+.env.*.local

@@ -252,7 +252,7 @@ const Searchbox: React.FC = () => {
                               </div>
                             </a>
                           ) : (
-                          <a href={`${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
+                          <a href={`/resources/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
                             {isPost(result) && result._embedded?.['wp:featuredmedia'] && (
                               <Image src={result._embedded['wp:featuredmedia'][0].source_url} alt={result.title.rendered} width={100} height={100} className='object-fill' />
                             )}

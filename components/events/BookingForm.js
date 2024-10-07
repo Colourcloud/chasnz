@@ -63,7 +63,7 @@ export default function HubSpotForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8" data-hubspot-form="ignore">
       <div className="mb-4">
         <label htmlFor="firstname" className="block mb-2 font-bold text-gray-700">First Name</label>
         <input

@@ -103,6 +103,28 @@ const page = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-8 md:mt-16 max-w-7xl mx-auto">
 
+
+              {/* Christchurch Workshop */}
+              <div className="grid-card rounded-lg bg-black overflow-hidden relative h-96" id="christchurch-card">
+                <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
+                  <p className='text-white text-lg font-semibold'>
+                    <span>{getSeatsRemaining('energy-safety-christchurch')}</span>/100
+                  </p>
+                  <span className='text-white text-xs'>Spots left</span>
+                </div>
+                <div className="absolute bottom-0 w-full bg-black/75 flex flex-col gap-5 text-left p-5 justify-between min-h-[210px]">
+                  <div className='flex flex-col'>
+                    <h5 className='text-2xl text-white font-semibold'>Christchurch</h5>
+                    <p className='text-sm text-white'>Russley Golf Club and Function Centre, 428 Memorial Avenue</p>
+                  </div>
+                  <div className='flex flex-col items-start'>
+                    <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-christchurch')}</h6>
+                    <p className='text-sm text-white'>8.30am to 12pm</p>
+                    <button className='book-event-button text-[--primary-colour] font-semibold mt-3' id="christchurch-button" onClick={() => handleRegisterClick('energy-safety-christchurch')}>Register Now</button>
+                  </div>
+                </div>
+              </div>
+              
               {/* Auckland Workshop */}
               <div className="grid-card rounded-lg overflow-hidden relative h-96" id="auckland-card">
                 <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
@@ -145,32 +167,20 @@ const page = () => {
                 </div>
               </div>
 
-              {/* Christchurch Workshop */}
-              <div className="grid-card rounded-lg bg-black overflow-hidden relative h-96" id="christchurch-card">
-                <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
-                  <p className='text-white text-lg font-semibold'>
-                    <span>{getSeatsRemaining('energy-safety-christchurch')}</span>/100
-                  </p>
-                  <span className='text-white text-xs'>Spots left</span>
-                </div>
-                <div className="absolute bottom-0 w-full bg-black/75 flex flex-col gap-5 text-left p-5 justify-between min-h-[210px]">
-                  <div className='flex flex-col'>
-                    <h5 className='text-2xl text-white font-semibold'>Christchurch</h5>
-                    <p className='text-sm text-white'>Russley Golf Club and Function Centre, 428 Memorial Avenue</p>
-                  </div>
-                  <div className='flex flex-col items-start'>
-                    <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-christchurch')}</h6>
-                    <p className='text-sm text-white'>8.30am to 12pm</p>
-                    <button className='book-event-button text-[--primary-colour] font-semibold mt-3' id="christchurch-button" onClick={() => handleRegisterClick('energy-safety-christchurch')}>Register Now</button>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
       </div>
       <Facilitated />
+      <div className="pb-12 lg:pb-32">
+        <div className="site-wrapper">
+          <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto text-left md:text-center">
+            <h6 className='text-2xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>A big thank you and credit goes to our good friend <span className='text-[--primary-colour]'>Dr Matt Hallowell</span></h6>
+            <p className='text-base md:text-lg'>who led the research and wrote the paper that this presentation is based on. Dr Hallowell heads up the Construction Safety Research Association based out of the University of Colorado in the USA and continues to ensure good, practical research is done to improve the safety of the work we do:</p>
+            <span className='text-sm'>Hallowell, Matthew R. “The Energy Wheel: The Art & Science of Energy-Based Hazard Recognition.” Prof. Safety 66 &#40;2021&#41;: 27-33.</span>
+          </div>
+        </div>
+      </div>
       <Subscribe />
     </>
   );

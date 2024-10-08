@@ -22,15 +22,15 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
     firstname: '',
     lastname: '',
     email: '',
-    phone: '',
+    company: '',
   });
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // Mapping of locations to their dates and HubSpot form IDs
   const locationInfo: { [key: string]: { date: string; formId: string } } = {
+    Christchurch: { date: '4th November, 2024', formId: '936591b5-ab3a-4c34-87aa-beadcc4469b2' },
     Auckland: { date: '6th November, 2024', formId: '215f61c2-f265-40f3-b642-165e15101b80' },
     Wellington: { date: '7th November, 2024', formId: '96d6110b-1174-4484-b7b1-e07a1f481509' },
-    Christchurch: { date: '4th November, 2024', formId: '936591b5-ab3a-4c34-87aa-beadcc4469b2' },
   };
 
   useEffect(() => {
@@ -90,7 +90,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
           firstname: '',
           lastname: '',
           email: '',
-          phone: '',
+          company: '',
         })
         setTimeout(() => {
           onClose();
@@ -159,8 +159,8 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
               <input type="email" id="email" name="email" placeholder='Please enter your email' value={formData.email} onChange={handleChange} required className="mt-1 p-2 w-full border-gray-300 border rounded-md" />
             </div>
             <div className='w-full'>
-              <label htmlFor="phone" className="block text-gray-700 font-base text-sm">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder='Please enter your number' value={formData.phone} onChange={handleChange} required className="mt-1 p-2 w-full border-gray-300 border rounded-md" />
+              <label htmlFor="company" className="block text-gray-700 font-base text-sm">Company Name</label>
+              <input type="text" id="company" name="company" placeholder='Please enter your company name' value={formData.company} onChange={handleChange} required className="mt-1 p-2 w-full border-gray-300 border rounded-md" />
             </div>
           </div>
 

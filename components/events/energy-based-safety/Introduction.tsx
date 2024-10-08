@@ -17,7 +17,16 @@ const Introduction = () => {
             <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
                 <div className="flex flex-col gap-6 w-full md:w-2/4">
                     <h3 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>Learn all about Energy Based Safety to help improve hazard recognition</h3>
-                    <p className='text-base md:text-lg text-[--text-colour]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus  aliquam ipsum ut egestas. Praesent non lobortis tellus. Donec mattis  lacinia orci, vitae cursus ex pulvinar vel. Vestibulum viverra ante eget sollicitudin.</p>
+                    <p className='text-lg font-semibold md:text-xl text-[--text-colour]'>A few topics we wil be covering:</p>
+                    <ul className='list-disc list-inside flex flex-col gap-2 text-[--text-colour]'>
+                        <li>Examples of what we see and what we miss</li>
+                        <li>Energy Wheel Tool - testing and scientific validation</li>
+                        <li>Low energy and high energy hazards</li>
+                        <li>Why some hazards are easy to identify and while others are often overlooked</li>
+                        <li>High-Energy control assessment &#40;HECA&#41;</li>
+                        <li>Measuring and monitoring</li>
+                        <li>Direct and alternative controls</li>
+                    </ul>
                 </div>
                 <div className='w-full md:w-2/4 h-[600px] bg-gray-200 rounded-xl'>
 

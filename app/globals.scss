@@ -768,6 +768,7 @@ video {
   z-index: 9999;
 }
 
+
 .resource-consent-form {
   margin-top: 24px;
   input {
@@ -883,4 +884,22 @@ video {
 #christchurch-card {
   background-image: url('../public/events/energy-safety/christchurch.jpg');
   background-position: center;
+}
+
+.facility-card-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.form-container {
+  max-height: calc(100vh)
+
+}
+
+.workshop-booking-form {
+  input {
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
 }

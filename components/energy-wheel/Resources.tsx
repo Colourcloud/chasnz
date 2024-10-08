@@ -56,7 +56,7 @@ const Resources = () => {
                     <div className="grid-item flex flex-col gap-4">
                         <Image src="/energy-wheel/science.jpg" className='w-full aspect-[4/3]' alt='' width={400} height={250} />
                         <div className="grid-item-content flex flex-row justify-between items-center">
-                            <h6 className='font-semibold text-lg text-[--text-colour]'>The Energy Based Safety Art and Science</h6>
+                            <h6 className='font-semibold text-lg text-[--text-colour]'>Article</h6>
                             <Link href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLJKH9k7%2BObhR8phhHxJ1Q5Qks5tNVas7DjEVFYM2zr29zPAO%2B%2FGWGzR%2FAvMXEU3JYnxVzejGokAI0DYZ88FsHGemzY4j74M6Ts1MKbUzkLdJx2%2FahoeYdu3gtsvKeKyu%2Fh2dh8P56ughelcgTbR1dgQxR9vfsXQaf5GXKrclvIX%2B%2F0fABIRGnDbuxRrb2oocKj1xGFdZRaLX%2FIfvFPgLSYvBveqBh6TkA4%3D&portalId=40083784" target='_blank' className='resource-button'>Download</Link>
                         </div>
                     </div>

@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import { IoClose } from "react-icons/io5";
 import Image from 'next/image';
+import { IoIosMail } from "react-icons/io";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 
 interface BookingFormProps {
   isVisible: boolean;
@@ -25,6 +27,11 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
     company: '',
   });
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [calendarLinks, setCalendarLinks] = useState<{
+    ics: string;
+    google: string;
+    outlook: string;
+  } | null>(null);
 
   // Mapping of locations to their dates and HubSpot form IDs
   const locationInfo: { [key: string]: { date: string; formId: string } } = {
@@ -53,6 +60,53 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
 
   const handleLocationChange = (location: string) => {
     setSelectedLocation(location);
+  };
+
+  const generateCalendarLinks = (location: string, dateString: string) => {
+    // Parse the date string
+    const [day, month, year] = dateString.split(' ');
+    const monthNumber = new Date(Date.parse(month + " 1, " + year)).getMonth() + 1;
+    const dayNumber = parseInt(day.replace('th', '').replace('st', '').replace('nd', '').replace('rd', ''));
+
+    // Create Date objects for start and end times
+    const startDate = new Date(parseInt(year), monthNumber - 1, dayNumber, 8, 30);
+    const endDate = new Date(parseInt(year), monthNumber - 1, dayNumber, 12, 0);
+
+    // Format dates for ICS file
+    const formatDate = (date: Date) => {
+      return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    };
+
+    const eventTitle = `Energy Based Safety Workshop - ${location}`;
+    const eventDescription = `Energy Based Safety Workshop in ${location}`;
+
+    // Generate ICS content
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:${formatDate(startDate)}
+DTEND:${formatDate(endDate)}
+SUMMARY:${eventTitle}
+DESCRIPTION:${eventDescription}
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+
+    // Create Blob and URL for ICS file
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const icsUrl = URL.createObjectURL(blob);
+
+    // Generate Google Calendar link
+    const googleUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${formatDate(startDate)}/${formatDate(endDate)}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(location)}`;
+
+    // Generate Outlook Web link
+    const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(eventTitle)}&startdt=${startDate.toISOString()}&enddt=${endDate.toISOString()}&body=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(location)}`;
+
+    return {
+      ics: icsUrl,
+      google: googleUrl,
+      outlook: outlookUrl,
+    };
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -84,17 +138,23 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
       if (response.ok) {
         setSubmitStatus('success');
         console.log('Form submitted successfully');
-        //set a timeout of 3 seconds
+
+        // Generate calendar links
+        const links = generateCalendarLinks(selectedLocation, locationInfo[selectedLocation].date);
+        setCalendarLinks(links);
+
         //reset form
         setFormData({
           firstname: '',
           lastname: '',
           email: '',
           company: '',
-        })
-        setTimeout(() => {
-          onClose();
-        }, 3000);
+        });
+
+        // Close form after 10 seconds (increased from 3 to give users more time to add to calendar)
+        // setTimeout(() => {
+        //   onClose();
+        // }, 10000);
       } else {
         const errorData = await response.json();
         console.error('Error submitting form:', errorData);
@@ -164,6 +224,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
             </div>
           </div>
 
+          {submitStatus !== 'success' && (
           <div className="submission-summary mt-10">
             <div className=''>
               <h6 className='text-base font-medium'>Registration Summary:</h6>
@@ -190,9 +251,38 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
               </div>
             </div>
           </div>
+        )}
 
           {submitStatus === 'success' && (
-            <p className="mt-4 text-[--primary-colour] text-sm text-center w-full rounded-md py-3">Thank you for your registration! Your spot has now been secured</p>
+            <div className="mt-4 text-[--primary-colour] text-sm text-center w-full rounded-md py-3">
+              <p className='py-3 text-center text-green-800 text-sm bg-green-100 border border-green-400 rounded-md flex flex-row justify-center items-center gap-1'><IoIosCheckmarkCircle className='text-xl' /> Thank you for your registration! Your spot has now been secured</p>
+              {calendarLinks && (
+                <div className="mt-4">
+                  <p className="font-light text-sm text-black">Add event to your calendar:</p>
+                  <div className="flex flex-wrap gap-2 mt-2 justify-center">
+                    <a
+                      href={calendarLinks.ics}
+                      download="Energy-Based-Safety-Workshop.ics"
+                      className="bg-white border text-black py-2 px-4 rounded-md text-sm font-medium flex flex-row items-center gap-1"
+                    >
+                      <IoIosMail className='text-2xl'/>Use system calendar
+                    </a>
+                    <a
+                      href={calendarLinks.google}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white border text-black py-2 px-4 rounded-md text-sm font-medium flex flex-row items-center gap-2"
+                    >
+                      <span><Image src="/events/energy-safety/google.svg" alt="Add to Outlook" width={20} height={20} /></span>Add to Google Calendar
+                    </a>
+                    <a
+                      href={calendarLinks.outlook} target="_blank" rel="noopener noreferrer" className="bg-white border text-black py-2 px-4 rounded-md text-sm font-medium flex flex-row items-center gap-2">
+                      <span><Image src="/events/energy-safety/outlook.svg" alt="Add to Outlook" width={20} height={20} /></span>Add to Outlook
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
           )}
           {submitStatus === 'error' && (
             <p className="mt-4 text-red-500 text-sm text-center w-full rounded-md py-3">Error submitting form. Please try again.</p>

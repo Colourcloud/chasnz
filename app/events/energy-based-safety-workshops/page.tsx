@@ -115,7 +115,7 @@ const page = () => {
                 <div className="absolute bottom-0 w-full bg-black/75 flex flex-col gap-5 text-left p-5 justify-between min-h-[210px]">
                   <div className='flex flex-col'>
                     <h5 className='text-2xl text-white font-semibold'>Christchurch</h5>
-                    <p className='text-sm text-white'>Russley Golf Club and Function Centre, 428 Memorial Avenue</p>
+                    <p className='text-lg text-white'>Russley Golf Club and Function Centre, 428 Memorial Avenue</p>
                   </div>
                   <div className='flex flex-col items-start'>
                     <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-christchurch')}</h6>
@@ -136,7 +136,7 @@ const page = () => {
                 <div className="absolute bottom-0 w-full bg-black/75 flex flex-col gap-5 text-left p-5 justify-between min-h-[210px]">
                   <div className='flex flex-col'>
                     <h5 className='text-2xl text-white font-semibold'>Auckland</h5>
-                    <p className='text-sm text-white'>Royal Oaks Bowls, 146 Selwyn Street, Onehunga</p>
+                    <p className='text-lg text-white'>Royal Oaks Bowls, 146 Selwyn Street, Onehunga</p>
                   </div>
                   <div className='flex flex-col items-start'>
                     <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-auckland')}</h6>
@@ -157,7 +157,7 @@ const page = () => {
                 <div className="absolute bottom-0 w-full bg-black/75 flex flex-col gap-5 text-left p-5 justify-between min-h-[210px]">
                   <div className='flex flex-col'>
                     <h5 className='text-2xl text-white font-semibold'>Wellington</h5>
-                    <p className='text-sm text-white'>Boulcott&apos;s Farm Heritage Golf Club. 33 Military Road. Boulcott.</p>
+                    <p className='text-lg text-white'>Boulcott&apos;s Farm Heritage Golf Club. 33 Military Road. Boulcott.</p>
                   </div>
                   <div className='flex flex-col items-start'>
                     <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-wellington')}</h6>

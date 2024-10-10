@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Introduction = () => {
   return (
@@ -17,6 +18,7 @@ const Introduction = () => {
             <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
                 <div className="flex flex-col gap-6 w-full md:w-2/4">
                     <h3 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>Learn all about Energy Based Safety to help improve hazard recognition</h3>
+                    <p className='text-base md:text-lg'>There are three different categories of energy and potential &apos;high&apos; energy hazards, direct controls and alternative controls associated with each hazard. The 10 categories are within the green energy wheel.</p>
                     <p className='text-lg font-semibold md:text-xl text-[--text-colour]'>A few topics we wil be covering:</p>
                     <ul className='list-disc list-inside flex flex-col gap-2 text-[--text-colour]'>
                         <li>Examples of what we see and what we miss</li>
@@ -28,8 +30,8 @@ const Introduction = () => {
                         <li>Direct and alternative controls</li>
                     </ul>
                 </div>
-                <div className='w-full md:w-2/4 h-[600px] bg-gray-200 rounded-xl'>
-
+                <div className='w-full md:w-2/4'>
+                    <Image src="/events/energy-safety/energy-wheel.gif" alt="animated energy wheel image" width={600} height={600} />
                 </div>
             </div>
         </div>

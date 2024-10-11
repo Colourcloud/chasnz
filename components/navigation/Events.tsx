@@ -19,10 +19,16 @@ const Events = () => {
                 </div>
                 <div className="mega-menu_right_list mt-10 flex flex-row gap-14 flex-wrap">
                     <div className="mega-menu_right_list_items">
-                        <h6 className='text-black font-semibold text-xl'>Webinars &amp; events</h6>
+                        <h6 className='text-black font-semibold text-xl'>Webinars</h6>
                         <ul className='text-base flex flex-col gap-4 mt-4'>
                             <li><a href="/events" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Recent Webinars</a></li>
                             <li><a href="/events#previous-events" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Previous Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div className="mega-menu_right_list_items">
+                        <h6 className='text-black font-semibold text-xl'>Events</h6>
+                        <ul className='text-base flex flex-col gap-4 mt-4'>
+                            
                         </ul>
                     </div>
                 </div>

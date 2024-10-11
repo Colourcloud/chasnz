@@ -117,7 +117,7 @@ const Navigation = () => {
                     </div>
                   </li>
                   <li className='text-lg navigation-toggle' id="navigation-events">
-                    <button>Webinars</button>
+                    <button>Events</button>
                     <div className="dropdown-menu">
                       <Events />
                     </div>

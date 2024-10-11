@@ -182,7 +182,31 @@ const MobileNav: React.FC = () => {
               </AccordionItem>
             </Accordion>
 
-            <a href="/events/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Webinars</a>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Events &amp; Webinars</AccordionTrigger>
+                <AccordionContent>
+                    <div className="nav-block flex flex-col gap-4 py-4">
+                    <ul className='flex flex-col gap-10'>
+                        <li className='resource-section'>
+                        <p className='text-lg font-medium'>Webinars</p>
+                          <ul className='flex flex-col gap-4 mt-4'>
+                            <li><a href="/constructsafe#resources" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Recent Webinars</a></li>
+                            <li><a href="/energy-wheel/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Previous Webinars</a></li>
+                          </ul>
+                        </li>
+                        <li className='resource-section'>
+                        <p className='text-lg font-medium'>Events</p>
+                          <ul className='flex flex-col gap-4 mt-4'>
+                            
+                          </ul>
+                        </li>
+                    </ul>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
             <a href="/contact/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Contact</a>
             
             </div>

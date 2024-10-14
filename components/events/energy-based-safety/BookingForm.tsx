@@ -239,7 +239,7 @@ END:VCALENDAR`;
                 </div>
                 <div>
                   <span className='text-sm font-light text-gray-500'>Time:</span>
-                  <p className='text-base'>8.30am - 12:00pm</p>
+                  <p className='text-base'>8.30am - 12:30pm</p>
                 </div>
                 <button 
                   type="submit" 

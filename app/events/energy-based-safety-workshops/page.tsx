@@ -95,7 +95,7 @@ const page = () => {
           <div className="flex flex-col gap-8 justify-center items-center">
             <div className="w-full md:w-4/5 text-center flex flex-col gap-6">
               <h4 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight text-white'>
-                We have 3 hour <span className='text-[--primary-colour]'>FREE</span> workshops being held in <span className='text-[--primary-colour]'>Auckland,</span> <span className='text-[--primary-colour]'>Wellington</span> and <span className='text-[--primary-colour]'>Christchurch.</span>
+                We have 4 hour <span className='text-[--primary-colour]'>FREE</span> workshops being held in <span className='text-[--primary-colour]'>Auckland,</span> <span className='text-[--primary-colour]'>Wellington</span> and <span className='text-[--primary-colour]'>Christchurch.</span>
               </h4>
               <p className='text-white text-lg md:text-xl'>
                 Take advantage of this opportunity and book in now for a workshop in your chosen location. Remember there is no fee to attend. Light refreshments will be provided.
@@ -108,7 +108,7 @@ const page = () => {
               <div className="grid-card rounded-lg bg-black overflow-hidden relative h-96" id="christchurch-card">
                 <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
                   <p className='text-white text-lg font-semibold'>
-                    <span>{getSeatsRemaining('energy-safety-christchurch')}</span>/100
+                    <span>{getSeatsRemaining('energy-safety-christchurch')}</span>/75
                   </p>
                   <span className='text-white text-xs'>Spots left</span>
                 </div>
@@ -119,7 +119,7 @@ const page = () => {
                   </div>
                   <div className='flex flex-col items-start'>
                     <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-christchurch')}</h6>
-                    <p className='text-sm text-white'>8.30am to 12pm</p>
+                    <p className='text-sm text-white'>8.30am to 12:30pm</p>
                     <button className='book-event-button text-[--primary-colour] font-semibold mt-3' id="christchurch-button" onClick={() => handleRegisterClick('energy-safety-christchurch')}>Register Now</button>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ const page = () => {
               <div className="grid-card rounded-lg overflow-hidden relative h-96" id="auckland-card">
                 <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
                   <p className='text-white text-lg font-semibold'>
-                    <span>{getSeatsRemaining('energy-safety-auckland')}</span>/100
+                    <span>{getSeatsRemaining('energy-safety-auckland')}</span>/75
                   </p>
                   <span className='text-white text-xs'>Spots left</span>
                 </div>
@@ -140,7 +140,7 @@ const page = () => {
                   </div>
                   <div className='flex flex-col items-start'>
                     <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-auckland')}</h6>
-                    <p className='text-sm text-white'>8.30am to 12pm</p>
+                    <p className='text-sm text-white'>8.30am to 12:30pm</p>
                     <button className='book-event-button text-[--primary-colour] font-semibold mt-3' id="auckland-button" onClick={() => handleRegisterClick('energy-safety-auckland')}>Register Now</button>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const page = () => {
               <div className="grid-card rounded-lg bg-black overflow-hidden relative h-96" id="wellington-card">
                 <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
                   <p className='text-white text-lg font-semibold'>
-                    <span>{getSeatsRemaining('energy-safety-wellington')}</span>/100
+                    <span>{getSeatsRemaining('energy-safety-wellington')}</span>/75
                   </p>
                   <span className='text-white text-xs'>Spots left</span>
                 </div>
@@ -161,7 +161,7 @@ const page = () => {
                   </div>
                   <div className='flex flex-col items-start'>
                     <h6 className='text-lg text-white font-semibold'>{getFormattedDate('energy-safety-wellington')}</h6>
-                    <p className='text-sm text-white'>8.30am to 12pm</p>
+                    <p className='text-sm text-white'>8.30am to 12:30pm</p>
                     <button className='book-event-button text-[--primary-colour] font-semibold mt-3' id="wellington-button" onClick={() => handleRegisterClick('energy-safety-wellington')}>Register Now</button>
                   </div>
                 </div>

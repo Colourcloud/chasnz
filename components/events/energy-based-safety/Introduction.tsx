@@ -7,7 +7,7 @@ const Introduction = () => {
     <div className="introduction-section bg-white py-16 lg:py-32 border-b">
         <div className="site-wrapper">
             <div className="flex flex-col gap-6 w-full md:w-4/5">
-                <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>Calling all <span className='text-[--primary-colour]'>Health and Safety</span> Professionals: If you can&apos;t identify the hazard, then you don&apos;t know how exposed you are or how to control it.</h2>
+                <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>Are you curious about Energy Based Safety? If you can&apos;t identify the hazard, then you don&apos;t know how exposed you are or how to control it.</h2>
                 <p className='text-base md:text-lg text-[--text-colour]'>We launched our Energy Based Hazard Recognition program earlier this year and there has been huge interest in the resources we created as well as invitations to present the Energy program tool to a range of companies across the construction health and safety sector.</p>
                 <p className='text-base md:text-lg text-[--text-colour]'>Chris Alderson &#40;CEO, CHASNZ&#41; and Jon Harper-Slade &#40;GM Health and Safety Innovation, CHASNZ&#41; are leading 3 x in-person FREE workshops in Auckland, Wellington and Christchurch in November.</p>
             </div>

@@ -32,6 +32,30 @@ const Facilitated = () => {
                         <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
+
+                  <div className="facility-card rounded-lg overflow-hidden relative">
+                      <Image src="/events/energy-safety/chris-polaczuk.webp" alt='' width={800} height={800} />
+                      <div className="facility-card-gradient absolute bottom-0 left-0 right-0 h-32 p-8 gap-2 flex flex-row justify-between items-center">
+                        <div className='flex flex-col'>
+                          <h6 className='text-2xl text-white font-semibold'>Chris Polaczuk</h6>
+                          <p className='text-base text-white font-medium'>Ergonomics Programme Manager, CHASNZ</p>
+                        </div>
+                        <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
+                      </div>
+                  </div>
+
+                  <div className="facility-card rounded-lg overflow-hidden relative">
+                      <Image src="/events/energy-safety/stephven-kolose.webp" alt='' width={800} height={800} />
+                      <div className="facility-card-gradient absolute bottom-0 left-0 right-0 h-32 p-8 gap-2 flex flex-row justify-between items-center">
+                        <div className='flex flex-col'>
+                          <h6 className='text-2xl text-white font-semibold'>Dr Stephven Kolose</h6>
+                          <p className='text-base text-white font-medium'>Principal Ergonomist</p>
+                        </div>
+                        <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
+                      </div>
+                  </div>
+
+
                 </div>
             </div>
         </div>

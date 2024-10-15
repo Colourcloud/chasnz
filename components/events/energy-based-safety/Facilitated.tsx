@@ -19,7 +19,7 @@ const Facilitated = () => {
                           <h6 className='text-2xl text-white font-semibold'>Chris Alderson</h6>
                           <p className='text-base text-white font-medium'>CHASNZ, CEO</p>
                         </div>
-                        <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
+                        <Link href="https://www.linkedin.com/in/christopheralderson/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
                   <div className="facility-card rounded-lg overflow-hidden relative">
@@ -29,7 +29,7 @@ const Facilitated = () => {
                           <h6 className='text-2xl text-white font-semibold'>Jon Harper-Slade</h6>
                           <p className='text-base text-white font-medium'>GM Health & Safety Innovation, CHASNZ</p>
                         </div>
-                        <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
+                        <Link href="https://www.linkedin.com/in/jonharper-slade/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
 
@@ -40,7 +40,7 @@ const Facilitated = () => {
                           <h6 className='text-2xl text-white font-semibold'>Chris Polaczuk</h6>
                           <p className='text-base text-white font-medium'>Ergonomics Programme Manager, CHASNZ</p>
                         </div>
-                        <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
+                        <Link href="https://www.linkedin.com/in/chris-polaczuk-937a33205/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
 
@@ -51,7 +51,7 @@ const Facilitated = () => {
                           <h6 className='text-2xl text-white font-semibold'>Dr Stephven Kolose</h6>
                           <p className='text-base text-white font-medium'>Principal Ergonomist</p>
                         </div>
-                        <Link href="" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
+                        <Link href="https://www.linkedin.com/in/stephven-kolose-474b55197/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
 

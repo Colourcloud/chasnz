@@ -504,6 +504,7 @@ video {
   background-image: url('../public/events/energy-based-safety-bg.jpg');
   background-repeat: no-repeat;
   position: relative;
+  height: calc(100vh - 10rem);
   @media screen and (min-width: 1024px) {
       background-image: url('../public/events/energy-based-safety-bg.jpg');
       background-position: center;

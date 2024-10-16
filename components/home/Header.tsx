@@ -19,8 +19,7 @@ const Header = () => {
 
         <div className="content-wrapper">
           <div className="banner-image w-full flex items-center justify-center mt-12">
-            <Link href="/events/safety-leadership-culture-development"><Image src="/common/webinar.png" className='hidden invisible lg:block lg:visible' alt="banner image" width={1920} height={150} /></Link>
-            <Link href="/events/safety-leadership-culture-development"><Image src="/common/webinar-mobile.png" className='block visible lg:invisible lg:hidden' alt="banner image" width={1920} height={150} /></Link>
+            <Link href="/events/energy-based-safety-workshops"><Image src="/common/webinar.gif" className='block' alt="energy based safety workshop banner" width={1920} height={150} /></Link>
           </div>
         </div>
         

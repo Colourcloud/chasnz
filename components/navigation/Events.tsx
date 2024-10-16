@@ -28,7 +28,7 @@ const Events = () => {
                     <div className="mega-menu_right_list_items">
                         <h6 className='text-black font-semibold text-xl'>Events</h6>
                         <ul className='text-base flex flex-col gap-4 mt-4'>
-                            
+                            <li><a href="/events/energy-based-safety-workshops" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Energy Based Safety Workshops</a></li>
                         </ul>
                     </div>
                 </div>

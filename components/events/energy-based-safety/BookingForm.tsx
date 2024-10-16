@@ -9,6 +9,17 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 interface BookingFormProps {
   isVisible: boolean;
   onClose: () => void;
+  workshops: Workshop[];
+}
+
+interface Workshop {
+  id: number;
+  slug: string;
+  title: { rendered: string };
+  acf: {
+    seats_remaining: number;
+    workshop_date: string;
+  };
 }
 
 declare global {
@@ -17,8 +28,8 @@ declare global {
   }
 }
 
-const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
-  const [selectedLocation, setSelectedLocation] = useState<string>('Auckland');
+const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose, workshops }) => {
+  const [selectedLocation, setSelectedLocation] = useState<string>('');
   const [hutk, setHutk] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     firstname: '',
@@ -33,11 +44,10 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
     outlook: string;
   } | null>(null);
 
-  // Mapping of locations to their dates and HubSpot form IDs
   const locationInfo: { [key: string]: { date: string; formId: string } } = {
-    Christchurch: { date: '4th November, 2024', formId: '936591b5-ab3a-4c34-87aa-beadcc4469b2' },
-    Auckland: { date: '6th November, 2024', formId: '215f61c2-f265-40f3-b642-165e15101b80' },
-    Wellington: { date: '7th November, 2024', formId: '96d6110b-1174-4484-b7b1-e07a1f481509' },
+    'energy-safety-christchurch': { date: '4th November, 2024', formId: '936591b5-ab3a-4c34-87aa-beadcc4469b2' },
+    'energy-safety-auckland': { date: '6th November, 2024', formId: '215f61c2-f265-40f3-b642-165e15101b80' },
+    'energy-safety-wellington': { date: '7th November, 2024', formId: '96d6110b-1174-4484-b7b1-e07a1f481509' },
   };
 
   useEffect(() => {
@@ -63,16 +73,13 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
   };
 
   const generateCalendarLinks = (location: string, dateString: string) => {
-    // Parse the date string
     const [day, month, year] = dateString.split(' ');
     const monthNumber = new Date(Date.parse(month + " 1, " + year)).getMonth() + 1;
     const dayNumber = parseInt(day.replace('th', '').replace('st', '').replace('nd', '').replace('rd', ''));
 
-    // Create Date objects for start and end times
     const startDate = new Date(parseInt(year), monthNumber - 1, dayNumber, 8, 30);
     const endDate = new Date(parseInt(year), monthNumber - 1, dayNumber, 12, 0);
 
-    // Format dates for ICS file
     const formatDate = (date: Date) => {
       return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
     };
@@ -80,7 +87,6 @@ const BookingForm: React.FC<BookingFormProps> = ({ isVisible, onClose }) => {
     const eventTitle = `Energy Based Safety Workshop - ${location}`;
     const eventDescription = `Energy Based Safety Workshop in ${location}`;
 
-    // Generate ICS content
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
@@ -92,14 +98,11 @@ LOCATION:${location}
 END:VEVENT
 END:VCALENDAR`;
 
-    // Create Blob and URL for ICS file
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
     const icsUrl = URL.createObjectURL(blob);
 
-    // Generate Google Calendar link
     const googleUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${formatDate(startDate)}/${formatDate(endDate)}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(location)}`;
 
-    // Generate Outlook Web link
     const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(eventTitle)}&startdt=${startDate.toISOString()}&enddt=${endDate.toISOString()}&body=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(location)}`;
 
     return {
@@ -139,22 +142,15 @@ END:VCALENDAR`;
         setSubmitStatus('success');
         console.log('Form submitted successfully');
 
-        // Generate calendar links
         const links = generateCalendarLinks(selectedLocation, locationInfo[selectedLocation].date);
         setCalendarLinks(links);
 
-        //reset form
         setFormData({
           firstname: '',
           lastname: '',
           email: '',
           company: '',
         });
-
-        // Close form after 10 seconds (increased from 3 to give users more time to add to calendar)
-        // setTimeout(() => {
-        //   onClose();
-        // }, 10000);
       } else {
         const errorData = await response.json();
         console.error('Error submitting form:', errorData);
@@ -164,6 +160,15 @@ END:VCALENDAR`;
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
     }
+  };
+
+  const getSeatsRemaining = (slug: string) => {
+    const workshop = workshops.find(w => w.slug === slug);
+    return workshop ? workshop.acf.seats_remaining : 0;
+  };
+
+  const isLocationDisabled = (slug: string) => {
+    return getSeatsRemaining(slug) <= 0;
   };
 
   return (
@@ -187,15 +192,28 @@ END:VCALENDAR`;
             {Object.entries(locationInfo).map(([location, info]) => (
               <label 
                 key={location}
-                className={`p-2 border rounded-lg cursor-pointer w-full ${selectedLocation === location ? 'border-green-500 border-2' : 'border-gray-300'}`} 
-                onClick={() => handleLocationChange(location)}
+                className={`p-2 border rounded-lg cursor-pointer w-full 
+                  ${selectedLocation === location ? 'border-green-500 border-2' : 'border-gray-300'}
+                  ${isLocationDisabled(location) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                onClick={() => !isLocationDisabled(location) && handleLocationChange(location)}
               >
-                <input type="radio" name="location" value={location} className="hidden" checked={selectedLocation === location} readOnly />
+                <input 
+                  type="radio" 
+                  name="location" 
+                  value={location} 
+                  className="hidden" 
+                  checked={selectedLocation === location} 
+                  disabled={isLocationDisabled(location)}
+                  readOnly 
+                />
                 <div className='flex flex-row gap-3'>
-                  <Image src={`/events/energy-safety/${location.toLowerCase()}.jpg`} alt={location} width={200} height={200} className="rounded-lg h-12 w-12 object-cover" />
+                  <Image src={`/events/energy-safety/${location.split('-').pop()}.jpg`} alt={location} width={200} height={200} className="rounded-lg h-12 w-12 object-cover" />
                   <div className='flex flex-col justify-center'>
-                    <p className="text-base font-semibold">{location}</p>
+                    <p className="text-base font-semibold">{location.split('-').pop()}</p>
                     <p className="text-xs text-gray-500 font-light">{info.date}</p>
+                    {isLocationDisabled(location) && (
+                      <p className="text-xs text-red-500">No seats available</p>
+                    )}
                   </div>
                 </div>
               </label>
@@ -231,11 +249,11 @@ END:VCALENDAR`;
               <div className="flex flex-row gap-4 mt-4 justify-between flex-wrap">
                 <div>
                   <span className='text-sm font-light text-gray-500'>Location:</span>
-                  <p className='text-base'>{selectedLocation}</p>
+                  <p className='text-base'>{selectedLocation.split('-').pop()}</p>
                 </div>
                 <div>
                   <span className='text-sm font-light text-gray-500'>Date:</span>
-                  <p className='text-base'>{locationInfo[selectedLocation].date}</p>
+                  <p className='text-base'>{locationInfo[selectedLocation]?.date || 'Not selected'}</p>
                 </div>
                 <div>
                   <span className='text-sm font-light text-gray-500'>Time:</span>
@@ -244,7 +262,7 @@ END:VCALENDAR`;
                 <button 
                   type="submit" 
                   className="bg-green-500 text-white py-3 px-8 rounded-lg text-sm font-medium"
-                  disabled={submitStatus === 'submitting'}
+                  disabled={submitStatus === 'submitting' || !selectedLocation}
                 >
                   {submitStatus === 'submitting' ? 'Submitting...' : 'Register Now'}
                 </button>
@@ -273,13 +291,17 @@ END:VCALENDAR`;
                       rel="noopener noreferrer"
                       className="bg-white border text-black py-2 px-4 rounded-md text-sm font-medium flex flex-row items-center gap-2"
                     >
-                      <span><Image src="/events/energy-safety/google.svg" alt="Add to Outlook" width={20} height={20} /></span>Add to Google Calendar
+                      <span><Image src="/events/energy-safety/google.svg" alt="Add to Google Calendar" width={20} height={20} /></span>Add to Google Calendar
                     </a>
                     <a
-                      href={calendarLinks.outlook} target="_blank" rel="noopener noreferrer" className="bg-white border text-black py-2 px-4 rounded-md text-sm font-medium flex flex-row items-center gap-2">
+                      href={calendarLinks.outlook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white border text-black py-2 px-4 rounded-md text-sm font-medium flex flex-row items-center gap-2"
+                    >
                       <span><Image src="/events/energy-safety/outlook.svg" alt="Add to Outlook" width={20} height={20} /></span>Add to Outlook
                     </a>
-                  </div>
+                    </div>
                 </div>
               )}
             </div>

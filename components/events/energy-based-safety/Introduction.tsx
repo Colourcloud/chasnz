@@ -18,7 +18,7 @@ const Introduction = () => {
             <div className="flex flex-col md:flex-row justify-between gap-16 items-center">
                 <div className="flex flex-col gap-6 w-full md:w-2/4">
                     <h3 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>Learn about Energy Based Safety to help improve safety performance</h3>
-                    <p className='text-base md:text-lg'>There are three different categories of energy and potential &apos;high&apos; energy hazards, direct controls and alternative controls associated with each hazard. The 10 categories are within the green energy wheel.</p>
+                    <p className='text-base md:text-lg'>Ten different categories of energy appear on the energy wheel. The hazards people work in the presence of fit within these energy categories.  The wheel helps people find the hazards, which then allows us to focus on the 'high' energy hazards, ensuring as far as we can that direct controls are present before people start work.</p>
                     <p className='text-lg font-semibold md:text-xl text-[--text-colour]'>A few topics we wil be covering:</p>
                     <ul className='list-disc list-inside flex flex-col gap-2 text-[--text-colour]'>
                         <li>Examples of what we see and what we miss</li>

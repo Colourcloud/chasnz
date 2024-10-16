@@ -68,6 +68,20 @@ const Page = () => {
     return workshop ? workshop.acf.seats_remaining <= 0 : true;
   };
 
+  useEffect(() => {
+    if (isFormVisible) {
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+  }, [isFormVisible]);
+
   const handleRegisterClick = (workshopSlug: string) => {
     if (!isWorkshopFull(workshopSlug)) {
       setIsFormVisible(true);

@@ -892,8 +892,10 @@ video {
 }
 
 .form-container {
-  max-height: calc(100vh)
-
+  max-height: calc(90vh);
+  @media screen and (min-width: 1024px) {
+    max-height: calc(100vh);
+  }
 }
 
 .workshop-booking-form {

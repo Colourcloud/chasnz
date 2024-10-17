@@ -123,11 +123,10 @@ const Page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-8 md:mt-16 max-w-7xl mx-auto">
               {['christchurch', 'auckland', 'wellington'].map((city) => (
                 <div key={city} className="grid-card rounded-lg bg-black overflow-hidden relative h-96" id={`${city}-card`}>
-                  <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-8 rounded-bl-lg">
-                    <p className='text-white text-lg font-semibold'>
-                      <span>{getSeatsRemaining(`energy-safety-${city}`)}</span>/75
+                  <div className="absolute top-0 right-0 bg-[--primary-colour] flex flex-col justify-center items-center py-2 px-5 rounded-bl-lg">
+                    <p className='text-white text-base font-semibold'>
+                      Not many spots left!
                     </p>
-                    <span className='text-white text-xs'>Spots left</span>
                   </div>
                   <div className="absolute bottom-0 w-full bg-black/75 flex flex-col gap-5 text-left p-5 justify-between min-h-[210px]">
                     <div className='flex flex-col'>

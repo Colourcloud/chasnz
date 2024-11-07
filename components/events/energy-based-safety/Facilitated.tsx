@@ -9,7 +9,7 @@ const Facilitated = () => {
         <div className="site-wrapper">
             <div className="flex flex-col gap-12">
                 <div className="flex flex-col gap-6 w-full md:w-4/6 mx-auto text-center">
-                    <h6 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>The workshops will be facilitated by <span className='text-[--primary-colour]'>Chris Alderson</span> and <span className='text-[--primary-colour]'>Jon Harper-Slade</span></h6>
+                    <h6 className='text-3xl md:text-4xl lg:text-5xl font-semibold !leading-tight'>The workshops was facilitated by <span className='text-[--primary-colour]'>Chris Alderson</span> and <span className='text-[--primary-colour]'>Jon Harper-Slade</span></h6>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                   <div className="facility-card rounded-lg overflow-hidden relative">

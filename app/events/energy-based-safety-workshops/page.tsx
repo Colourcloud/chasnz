@@ -91,13 +91,13 @@ const Page = () => {
   return (
     <>
       <Navigation />
-      <BookingForm
+      {/* <BookingForm
         isVisible={isFormVisible}
         onClose={() => setIsFormVisible(false)}
         workshops={workshops}
-      />
+      /> */}
       <Header />
-      <div className="book-now-button fixed bottom-0 left-0 right-0 w-full py-4 bg-[#1C242E] px-4 z-[999]">
+      {/* <div className="book-now-button fixed bottom-0 left-0 right-0 w-full py-4 bg-[#1C242E] px-4 z-[999]">
         <div className='flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center'>
           <p className='text-white text-sm md:text-lg font-semibold'>Register for the workshops before spaces run out!</p>
           <button 
@@ -107,9 +107,9 @@ const Page = () => {
             Register Now
           </button>
         </div>
-      </div>
-      <Introduction />
-      <div className="py-16 lg:py-24 bg-[--dark-blue]">
+      </div> */}
+      {/* <Introduction /> */}
+      {/* <div className="py-16 lg:py-24 bg-[--dark-blue]">
         <div className="site-wrapper">
           <div className="flex flex-col gap-8 justify-center items-center">
             <div className="w-full md:w-4/5 text-center flex flex-col gap-6">
@@ -159,7 +159,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Facilitated />
       <div className="pb-12 lg:pb-32">
         <div className="site-wrapper">

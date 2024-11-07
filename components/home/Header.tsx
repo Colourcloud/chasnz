@@ -17,11 +17,11 @@ const Header = () => {
         </div>
         </div>
 
-        <div className="content-wrapper">
+        {/* <div className="content-wrapper">
           <div className="banner-image w-full flex items-center justify-center mt-12">
             <Link href="/events/energy-based-safety-workshops"><Image src="/common/webinar.gif" className='block' alt="energy based safety workshop banner" width={1920} height={150} /></Link>
           </div>
-        </div>
+        </div> */}
         
     </div>
   )

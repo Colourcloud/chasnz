@@ -20,7 +20,7 @@ const page = () => {
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
                         <li><Link href="/work-should-not-hurt#trades">Trade Specific Information</Link></li>
                         <li><Link href="#">Get Involved</Link></li>
-                        <li><Link href="/work-should-not-hurt#resources">Resources</Link></li>
+                        <li><Link href="/work-should-not-hurt/wsnh-injury-dashboard">WSNH Injury Dashboard</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">

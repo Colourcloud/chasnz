@@ -76,13 +76,16 @@ const NewsDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
             <head>
                 <title>{news.title.rendered}</title>
             </head>
-            <div className="article-header w-full h-[500px] bg-black"></div>
-            <div className="article-content py-20 lg:py-40">
+            <div className="article-header w-full h-[110px] bg-black"></div>
+            <div className="article-content py-16 lg:py-32">
                 <div className='content-wrapper'>
-                    <div className="news-page-layout flex flex-col lg:flex-row gap-5 lg:gap-0 justify-between">
-                        <div className="left-col w-full lg:w-[75%]">
+                    <div className="news-page-layout flex flex-col gap-5 lg:gap-0">
+                        <div className="left-col w-full lg:w-full">
                             <div className="news-wrapper max-w-[980px] mx-auto flex flex-col gap-6">
-                                <Link href="/news-and-updates" className='flex flex-row items-center gap-1 text-xl'><IoArrowBackOutline /> Back to News</Link>
+                                <Link href="/newsroom" className='flex flex-row items-center gap-1 text-xl'><IoArrowBackOutline /> Back to News</Link>
+                                <div className="news-image">
+                                    <Image className='w-full' src={news.acf.featured_image || '/news/default-image.jpg'} alt={news.title.rendered} width={800} height={800} layout='responsive' />
+                                </div>
                                 <span className="text-base text-[#9C9C9C]">
                                     {new Date(news.date).toLocaleDateString('en-US', {
                                         weekday: 'long',
@@ -96,11 +99,6 @@ const NewsDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
                                 {news.acf.link && (
                                     <a href={news.acf.link} className='text-white text-sm font-medium py-3 px-6 rounded-full bg-[--primary-colour] self-start'>{news.acf.link_label}</a>
                                 )}
-                            </div>
-                        </div>
-                        <div className="right-col w-full lg:w-[25%] border rounded-lg border-gray-200 p-6 flex flex-col gap-4">
-                            <div className="news-image">
-                                <Image className='w-full' src={news.acf.featured_image || '/news/default-image.jpg'} alt={news.title.rendered} width={300} height={300} layout='responsive' />
                             </div>
                         </div>
                     </div>

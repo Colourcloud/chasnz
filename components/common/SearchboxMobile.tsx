@@ -165,7 +165,7 @@ const Searchbox: React.FC = () => {
           <div className="search-box-overlay fixed w-full h-screen bg-black/50 z-50 left-0 bottom-0 backdrop-blur-sm" onClick={() => setIsVisible(false)}></div>
           <div className="search-container fixed w-full lg:w-2/4 h-auto z-50 left-[50%] translate-x-[-50%] bottom-[50%] flex items-center justify-center mx-auto top-[50%]">
             <div className="search-box w-full h-auto bg-white rounded-xl">
-              <div className='flex flex-1 border-b'>
+              <div className='flex flex-1'>
                 <form action="" className='flex flex-1 items-center px-6 h-16'>
                   <IoIosSearch className='text-gray-400 text-2xl' />
                   <input 
@@ -184,7 +184,7 @@ const Searchbox: React.FC = () => {
                 <button className={`py-3 px-4 text-black ${selectedTab === 'research' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('research')}>Research</button>
                 <button className={`py-3 px-4 text-black text-nowrap ${selectedTab === 'events' ? 'border-b-2 border-[--primary-colour]' : ''}`} onClick={() => setSelectedTab('events')}>Webinars & Events</button>
               </div>
-              <div className="search-results min-h-60 max-h-[40rem] overflow-y-auto border-b flex">
+              <div className="search-results min-h-60 max-h-[25rem] overflow-y-auto border-b flex">
                 {isLoading ? (
                   <span className='italic text-sm text-gray-400 font-light self-center text-center w-full'>Loading...</span>
                 ) : (selectedTab === 'posts' ? posts : selectedTab === 'events' ? events : selectedTab === 'research' ? researchPosts : programmes).length === 0 ? (
@@ -199,7 +199,7 @@ const Searchbox: React.FC = () => {
                         {selectedTab === 'posts' ? (
                           <a href={`/resources/${result.slug}`} target="_blank" rel="noopener noreferrer" className='flex flex-row gap-3 items-center'>
                             {isPost(result) && result._embedded?.['wp:featuredmedia'] && (
-                              <Image src={result._embedded['wp:featuredmedia'][0].source_url} alt={result.title.rendered} width={100} height={100} className='object-fill' />
+                              <Image src={result._embedded['wp:featuredmedia'][0].source_url} alt={result.title.rendered} width={64} height={64} className='object-fill' />
                             )}
                             <div className='flex flex-col w-4/5'>
                               <h3 className='text-base'>{result.title.rendered}</h3>
@@ -269,9 +269,7 @@ const Searchbox: React.FC = () => {
                   </ul>
                 )}
               </div>
-              <div className="search-footer px-5 py-8">
-                {/* Additional footer content can go here */}
-              </div>
+              
             </div>
           </div>
         </>

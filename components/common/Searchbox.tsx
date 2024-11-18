@@ -131,11 +131,11 @@ const Searchbox: React.FC = () => {
     <>
       <div className="navigation-search pl-8">
         <button 
-          className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[225px] search-bar'
+          className='rounded-full bg-white py-[9px] px-5 flex flex-row gap-1 min-w-[200px] search-bar'
           onClick={() => setIsVisible(true)}
         >
           <IoIosSearch className='text-gray-400 text-xl' />
-          <span className='text-sm text-gray-400 font-light'>Search our website</span>
+          <span className='text-sm text-gray-400 font-light'>Search Website</span>
         </button>
       </div>
 

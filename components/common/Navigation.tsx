@@ -98,31 +98,34 @@ const Navigation = () => {
               </div>
               <div className="navigation-right">
                 <ul className='flex flex-row text-white font-medium items-center'>
-                  <li className='text-lg navigation-toggle' id="navigation-about">
+                  <li className='text-base navigation-toggle' id="navigation-about">
                     <button>About</button>
                     <div className="dropdown-menu">
                       <About />
                     </div>
                   </li>
-                  <li className='text-lg navigation-toggle' id="navigation-programmes">
+                  <li className='text-base navigation-toggle' id="navigation-programmes">
                     <button>Programmes</button>
                     <div className="dropdown-menu">
                       <ProgrammesNew />
                     </div>
                   </li>
-                  <li className='text-lg navigation-toggle' id="navigation-resources">
+                  <li className='text-base navigation-toggle' id="navigation-resources">
                     <button>Resources</button>
                     <div className="dropdown-menu">
                       <Resources />
                     </div>
                   </li>
-                  <li className='text-lg navigation-toggle' id="navigation-events">
+                  <li className='text-base navigation-toggle' id="navigation-events">
                     <button>Webinars/Events</button>
                     <div className="dropdown-menu">
                       <Events />
                     </div>
                   </li>
-                  <li className='text-lg navigation-toggle' id="navigation-contact">
+                  <li className='text-base navigation-toggle' id="navigation-events">
+                    <Link href="/newsroom">Newsroom</Link>
+                  </li>
+                  <li className='text-base navigation-toggle' id="navigation-contact">
                     <button>Contact</button>
                     <div className="dropdown-menu">
                       <Contact />

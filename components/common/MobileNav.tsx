@@ -61,7 +61,7 @@ const MobileNav: React.FC = () => {
 
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger>Learn more about the CHASNZ team:</AccordionTrigger>
+                <AccordionTrigger>Learn more about the CHASNZ team</AccordionTrigger>
                 <AccordionContent>
                     <div className="nav-block flex flex-col gap-4 py-4">
                     
@@ -69,7 +69,6 @@ const MobileNav: React.FC = () => {
                         <li><a href="/about" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>About CHASNZ</a></li>
                         <li><a href="/about#board-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Board Members</a></li>
                         <li><a href="/about#team-members" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Meet the Team</a></li>
-                        <li><a href="/newsroom/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Newsroom</a></li>
                     </ul>
                   </div>
                 </AccordionContent>
@@ -208,6 +207,7 @@ const MobileNav: React.FC = () => {
               </AccordionItem>
             </Accordion>
 
+            <a href="/newsroom/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Newsroom</a>
             <a href="/contact/" className='flex flex-1 items-center justify-between py-4 font-medium border-b'>Contact</a>
             
             </div>

@@ -5,7 +5,7 @@ import Footer from '@/components/common/Footer'
 import Subscribe from '@/components/common/Subscribe'
 
 export const metadata: Metadata = {
-    title: 'Webstruxure Testing Page',
+    title: 'Webstruxure Testing Page – CHASNZ',
 }
 
 const page = () => {

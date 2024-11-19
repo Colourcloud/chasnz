@@ -15,7 +15,6 @@ const page = () => {
     <section className="h-[100px] bg-black"></section>
     <section className="h-screen bg-white"></section>
     <Subscribe />
-    <Footer />
     </>
   )
 }

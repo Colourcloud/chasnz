@@ -21,8 +21,17 @@ export default function AssessmentEmbed({ userEmail = 'trevor@webstruxure.co.nz'
       }
 
       const handleMessage = (event: MessageEvent) => {
-        if (iframeRef.current) {
-          iframeRef.current.height = event.data;
+        if (!iframeRef.current) return;
+        
+        // Make sure the message is from the expected origin
+        if (event.origin !== childOrigin) return;
+
+        // Handle the height value
+        const height = event.data;
+        if (typeof height === 'number' || typeof height === 'string') {
+          iframeRef.current.height = String(height);
+        } else {
+          console.warn('Received unexpected height format:', height);
         }
       };
 

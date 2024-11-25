@@ -7,14 +7,25 @@ interface AssessmentEmbedProps {
   userEmail?: string;
 }
 
-export default function AssessmentEmbed({ userEmail = 'trevor@webstruxure.co.nz' }: AssessmentEmbedProps) {
+export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   const iframeRef = useRef<HTMLEmbedElement>(null);
+
+  const getEmailFromCookie = () => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; user-email=`);
+    if (parts.length === 2) {
+      const encodedEmail = parts.pop()?.split(';').shift();
+      return encodedEmail ? decodeURIComponent(encodedEmail) : userEmail;
+    }
+    return userEmail; // fallback to prop if no cookie
+  };
 
   useEffect(() => {
     try {
       const appOrigin = window.location.origin;
       const childOrigin = "https://dev.chasnz.dotnous.co.nz";
-      const iFrameSrc = `${childOrigin}/assessment.aspx?parentOrigin=${appOrigin}&email=${userEmail}`;
+      const email = getEmailFromCookie();
+      const iFrameSrc = `${childOrigin}/assessment.aspx?parentOrigin=${appOrigin}&email=${email}`;
       
       if (iframeRef.current) {
         iframeRef.current.src = iFrameSrc;

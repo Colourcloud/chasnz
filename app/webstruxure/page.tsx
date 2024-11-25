@@ -4,6 +4,7 @@ import Navigation from '@/components/common/Navigation'
 import Footer from '@/components/common/Footer'
 import Subscribe from '@/components/common/Subscribe'
 import AssessmentEmbed from '@/components/Tools/AssessmentEmbed'
+import AssessmentConsentForm from '@/components/Tools/AssessmentConsentForm'
 
 export const metadata: Metadata = {
     title: 'Webstruxure Testing Page – CHASNZ',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
+    <AssessmentConsentForm />
     <Navigation />
     <section className="h-[100px] bg-black"></section>
     <section className="min-h-screen bg-white">

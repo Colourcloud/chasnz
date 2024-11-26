@@ -80,7 +80,7 @@ const Featuredresource: React.FC = () => {
           <div className="featured-grid mt-12 grid grid-cols-[1fr,1fr,1fr,1fr] overflow-x-scroll lg:overflow-x-visible md:grid-cols-2 xl:grid-cols-4 gap-8">
             {featuredPosts.map(post => (
               <div className="grid-card flex flex-col gap-4 min-w-[300px]" key={post.id}>
-                <div className="resource-image object-contain aspect-video">
+                <div className="resource-image object-contain">
                   {post.featured_media && mediaUrls[post.featured_media] ? (
                     <Image
                       src={mediaUrls[post.featured_media]}

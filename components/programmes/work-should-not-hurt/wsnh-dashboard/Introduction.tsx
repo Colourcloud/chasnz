@@ -9,14 +9,15 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold text-[--dark-blue]'>WSHN related content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="#trades">Trade Specific Information</Link></li>
+                        <li><Link href="/work-should-not-hurt#trades">Trade Specific Information</Link></li>
                         <li><Link href="/work-should-not-hurt/get-involved">Get Involved</Link></li>
-                        <li><Link href="#resources">Resources</Link></li>
-                        <li><Link href="/work-should-not-hurt/wsnh-injury-dashboard">WSNH Injury Dashboard</Link></li>
+                        <li><Link href="/work-should-not-hurt#resources">Resources</Link></li>
+                        <li><Link href="/work-should-not-hurt/wsnh-injury-dashboard">CHASNZ Claims and Injuries dashboard</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
-                    <h4 className='font-bold text-4xl lg:text-5xl text-[--dark-blue]'>WSNH Injury Dashboard</h4>
+                    <h4 className='font-bold text-4xl lg:text-5xl text-[--dark-blue]'>CHASNZ Claims and Injuries dashboard</h4>
+                    <p className='text-[--text-colour]'>Our partner ACC have shared their claims data with us to show you the cost of claims and injuries to our industry. Explore our interactive data tool below to see what this data can tell you</p>
                 </div>
             </div>
         </div>

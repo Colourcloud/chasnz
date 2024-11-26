@@ -12,7 +12,7 @@ import Powerbi from '@/components/common/Powerbi'
 
 
 export const metadata: Metadata = {
-  title: "CHASNZ - WSNH Injury Dashboard",
+  title: "CHASNZ Claims and Injuries dashboard",
   description: "Our Vision is to shift health and safety in the construction industry from inconsistent compliance to consistent competence, and to have healthy and safe workers as a natural outcome of good work.",
   keywords: [
     "construction safety",
@@ -61,7 +61,7 @@ const page = () => {
         <Introduction />
         <div className="powerbi w-full py-20">
           <div className="site-wrapper">
-            <h4 className='text-4xl py-8 font-semibold text-[--dark-blue] text-center'>WSNH Injury Dashboard</h4>
+            <h4 className='text-4xl py-8 font-semibold text-[--dark-blue] text-center'>CHASNZ Claims and Injuries dashboard</h4>
             <Powerbi src={iframeSrc} />
           </div>
         </div>

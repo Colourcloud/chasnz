@@ -64,7 +64,7 @@ const ProgrammesNew = () => {
                     <li><a href="/work-should-not-hurt/get-involved" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                     <li>
                         <a href="/work-should-not-hurt/wsnh-injury-dashboard" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>
-                        WSNH Injury Dashboard
+                        CHASNZ Claims and Injuries dashboard
                         <div className='flex flex-col'>
                             <span className='text-xs text-gray-500'>Provided by ACC</span>
                             <Image src="/footer/acclogo.svg" alt='' width={175} height={100} />

@@ -12,7 +12,7 @@ const Introduction = () => {
                         <li><Link href="#trades">Trade Specific Information</Link></li>
                         <li><Link href="/work-should-not-hurt/get-involved">Get Involved</Link></li>
                         <li><Link href="#resources">Resources</Link></li>
-                        <li><Link href="/work-should-not-hurt/wsnh-injury-dashboard">WSNH Injury Dashboard</Link></li>
+                        <li><Link href="/work-should-not-hurt/wsnh-injury-dashboard">CHASNZ Claims and Injuries dashboard</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">

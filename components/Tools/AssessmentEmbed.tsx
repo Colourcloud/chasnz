@@ -25,7 +25,7 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
       const appOrigin = window.location.origin;
       const childOrigin = "https://dev.chasnz.dotnous.co.nz";
       const email = getEmailFromCookie();
-      const iFrameSrc = childOrigin + "/assessment.aspx" + "?parentOrigin=" + appOrigin+'&email=trevor@webstruxure.co.nz';
+      const iFrameSrc = childOrigin + "/assessment.aspx" + "?parentOrigin=" + appOrigin + "&email=" + encodeURIComponent(email || "");
       
       if (iframeRef.current) {
         iframeRef.current.src = iFrameSrc;

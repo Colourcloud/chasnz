@@ -34,12 +34,52 @@ const Services = () => {
     ];
 
     return (
-        <div className='bg-[--dark-blue] py-24 lg:py-32'>
+        <div className='bg-[--dark-blue] py-24 lg:py-32 relative'>
+                <div className="marquee absolute flex top-[20%] z-[1] w-full h-16 overflow-hidden bg-[url('/mobile-safety/tape-bg.svg')] bg-repeat-x">
+                    <div className="marquee-content whitespace-nowrap animate-marquee flex items-center">
+                        {[...Array(25)].map((_, i) => (
+                        <span key={i} className="inline-block px-4 text-[#FEC400] font-bold text-2xl transform">
+                            SAFETY
+                        </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="marquee-two absolute flex top-[40%] z-[1] w-full h-16 overflow-hidden bg-[url('/mobile-safety/tape-bg.svg')] bg-repeat-x">
+                    <div className="marquee-content whitespace-nowrap animate-marquee flex items-center">
+                        {[...Array(25)].map((_, i) => (
+                        <span key={i} className="inline-block px-4 text-[#FEC400] font-bold text-2xl transform">
+                            WARNING
+                        </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="marquee absolute flex top-[60%] z-[1] w-full h-16 overflow-hidden bg-[url('/mobile-safety/tape-bg.svg')] bg-repeat-x">
+                    <div className="marquee-content whitespace-nowrap animate-marquee flex items-center">
+                        {[...Array(25)].map((_, i) => (
+                        <span key={i} className="inline-block px-4 text-[#FEC400] font-bold text-2xl transform">
+                            SAFETY
+                        </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="marquee-two absolute flex top-[80%] z-[1] w-full h-16 overflow-hidden bg-[url('/mobile-safety/tape-bg.svg')] bg-repeat-x">
+                    <div className="marquee-content whitespace-nowrap animate-marquee flex items-center">
+                        {[...Array(25)].map((_, i) => (
+                        <span key={i} className="inline-block px-4 text-[#FEC400] font-bold text-2xl transform">
+                            WARNING
+                        </span>
+                        ))}
+                    </div>
+                </div>
             <div className="max-w-6xl mx-auto px-4">
                 {/* Desktop View */}
                 <div className="hidden md:flex md:flex-col gap-72">
+                    
                     {serviceContent.map((content, index) => (
-                        <div key={index} className="flex flex-row items-center gap-10">
+                        <div key={index} className="relative flex flex-row items-center gap-10 z-10">
                             <div className="w-2/5 flex flex-col gap-6">
                                 <motion.div 
                                     initial={{ scale: 0 }}

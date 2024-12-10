@@ -50,7 +50,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ children, type = 'word' }) 
           <span
             style={{
               display: 'inline-block',
-              padding: '3px 0px',
+              padding: '4px 0px',
               lineHeight: '1',
               transform: isVisible ? 'translateY(0px)' : 'translateY(100px)',
               transition: `transform 0.4s ${index * 0.05}s, opacity 0.4s ${index * 0.05}s`,

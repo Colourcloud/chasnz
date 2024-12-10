@@ -95,7 +95,6 @@ html {
   scrollbar-width: none; /* Remove scrollbar width */
   scroll-behavior: smooth;
   // overflow-x: hidden!important;
-  overflow-x: hidden!important;
 }
 
 
@@ -972,4 +971,12 @@ video {
     color: #FEC400;
     background: black;
   }
+}
+
+.mobile-safety-download {
+  height: calc(100vh - 6rem);
+  background-image: url('../public/mobile-safety/pdf-header.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }

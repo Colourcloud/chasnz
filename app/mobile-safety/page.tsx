@@ -13,6 +13,15 @@ const page = () => {
         <Vehicles />
         <ScrollSection />
         <PdfHeader />
+        <section className='py-32 max-w-6xl mx-auto'>
+            <h6 className='text-3xl text-center pb-12'>EXAMPLE PDF TO VIEW</h6>
+            <iframe
+            src="https://docs.google.com/gview?url=https://cms.chasnz.org/wp-content/uploads/2024/11/WSNH_TBT_ALL_HAVS_V2.1.pdf&embedded=true"
+            style={{ width: '100%', height: '700px' }}
+            frameBorder="0"
+            title="PDF Viewer"
+          ></iframe>
+        </section>
     </section>
     </>
   )

@@ -53,7 +53,7 @@ const Header = () => {
             />
           </motion.div>
         </div>
-        <div className="marquee absolute flex bottom-0 w-full h-16 overflow-hidden bg-[url('/mobile-safety/tape-bg.svg')] bg-repeat-x">
+        {/* <div className="marquee absolute flex bottom-0 w-full h-16 overflow-hidden bg-[url('/mobile-safety/tape-bg.svg')] bg-repeat-x">
           <div className="marquee-content whitespace-nowrap animate-marquee flex items-center">
             {[...Array(25)].map((_, i) => (
               <span key={i} className="inline-block px-4 text-[#FEC400] font-bold text-2xl transform">
@@ -70,7 +70,7 @@ const Header = () => {
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
       </section>
     </>
   );

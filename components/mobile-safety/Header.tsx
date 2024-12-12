@@ -42,7 +42,7 @@ const Header = () => {
               transition={{ duration: 0.4, delay: 0.8 }}
               className='mt-12'
               >
-              <Link href="#" className='px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center'>Download Presentation</Link>
+              <Link href="http://cms.chasnz.org/wp-content/uploads/2024/12/CHASNZ-Guide-to-Mobile-Plant-Safety.pdf" target='_blank' className='px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center'>Download Presentation</Link>
             </motion.div>
             
           </div>

@@ -34,7 +34,7 @@ const Services = () => {
     ];
 
     return (
-        <div className='bg-slate-950 py-24 lg:py-32 relative'>
+        <div className='bg-black py-24 lg:py-32 relative'>
             <div className="max-w-6xl mx-auto px-4">
                 {/* Desktop View */}
                 <div className="hidden md:flex md:flex-col gap-72">

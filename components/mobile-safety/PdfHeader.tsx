@@ -95,7 +95,6 @@ const PdfHeader = () => {
             </motion.div>
           ))}
         </motion.div>
-        <Link href="#" className='px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center mt-12'>Download Presentation</Link>
       </div>
     </section>
   )

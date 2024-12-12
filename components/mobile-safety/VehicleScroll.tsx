@@ -22,43 +22,43 @@ const vehicleData: Vehicle[] = [
       id: 2,
       title: "Mobile Cranes",
       description: "Heavy-duty vehicle with an adjustable boom used to lift, move and place heavy materials and equipment on construction sites. Features various lifting capacities and reach configurations for different project requirements.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/mobile-crane.jpg"
     },
     {
       id: 3,
       title: "Concrete Pump Trucks",
       description: "Specialized trucks equipped with a boom-mounted pump system that precisely delivers concrete to various heights and distances. Essential for pouring concrete in hard-to-reach areas and multi-story construction projects.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/concrete-pump-truck.jpg"
     },
     {
       id: 4,
       title: "Mobile Elevated Work Platforms",
       description: "Self-propelled machines providing safe elevated access for workers and tools. Includes scissor lifts, boom lifts, and cherry pickers, allowing work at various heights while maintaining stability and safety.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/mobile-lift.jpg"
     },
     {
       id: 5,
       title: "Excavators",
       description: "Tracked or wheeled machines with a boom, stick, and bucket for digging, trenching, and material handling. Versatile equipment used for earthmoving, demolition, and general construction tasks.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/excavator.jpg"
     },
     {
       id: 6,
       title: "Rollers",
       description: "Compaction equipment used to densify soil, gravel, concrete, or asphalt surfaces. Available in various sizes and configurations including smooth drum, padfoot, and pneumatic tire designs.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/roller.jpg"
     },
     {
       id: 7,
       title: "Loaders",
       description: "Versatile machines equipped with a front-mounted bucket for loading, carrying, and transferring materials. Essential for moving earth, aggregate, and construction materials around job sites.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/loader.jpg"
     },
     {
       id: 8,
       title: "Telehandlers",
       description: "Multi-purpose machines combining the lifting capabilities of a forklift with the reach of a crane. Features an extending boom with various attachment options for lifting, placing, and moving materials at height.",
-      image: "/mobile-safety/asphalt.jpg"
+      image: "/mobile-safety/telehandler.jpg"
     },
     // Add more vehicles here...
   ]
@@ -119,7 +119,7 @@ const VehicleItem = ({
         className={`w-full transition-colors duration-300 ease-in-out
           ${isActive ? 'bg-[--primary-colour]' : 'bg-transparent'}`}
       >
-        <div className="max-w-[1440px] grid grid-cols-2 gap-12 mx-auto items-center px-16">
+        <div className="max-w-[1580px] grid grid-cols-2 gap-12 mx-auto items-center px-16">
           <div className="flex flex-col gap-3 py-12">
             <h6 className={`text-2xl md:text-4xl font-semibold transition-all duration-300 ease-in-out
               ${isActive ? 'text-white !text-6xl' : 'text-gray-600'}`}>
@@ -174,7 +174,7 @@ const VehicleItem = ({
     };
   
     return (
-      <section className="py-16 lg:py-32">
+      <section className="pt-16 lg:pt-32">
         <ImagePreloader images={imageUrls} />
         
         <div className="flex flex-col gap-6 max-w-6xl mx-auto text-left md:text-center px-4">

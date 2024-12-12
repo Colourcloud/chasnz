@@ -77,16 +77,16 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
   }, []);
 
   const defaultItems: ScrollItem[] = items.length ? items : [
-    { id: 1, title: 'Section 1' },
-    { id: 2, title: 'Section 2' },
-    { id: 3, title: 'Section 3' },
-    { id: 4, title: 'Section 4' },
-    { id: 5, title: 'Section 5' },
+    { id: 1, title: 'PDF Section 1' },
+    { id: 2, title: 'PDF Section 2' },
+    { id: 3, title: 'PDF Section 3' },
+    { id: 4, title: 'PDF Section 4' },
+    { id: 5, title: 'PDF Section 5' },
   ];
 
   return (
     <section>
-        <div className="flex flex-col gap-6 max-w-6xl mx-auto text-left md:text-center px-4">
+        {/* <div className="flex flex-col gap-6 max-w-6xl mx-auto text-left md:text-center px-4">
         <AnimatedText type="letter">
           <h2 className='text-4xl md:text-4xl lg:text-6xl font-semibold'>
             Types of Mobile Plant in Construction
@@ -101,7 +101,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
         >
           Plant encompasses vehicles, machinery, equipment, tools, vessels, and even aircraft used across various industries. In construction, this includes cranes, hoists, cutting and grinding tools, compressors, and earthmoving or excavation machinery. A subset of this is Mobile Plant, which refers specifically to movable equipment commonly used on construction sites, such as:
         </motion.p>
-      </div>
+      </div> */}
 
 
       <div 

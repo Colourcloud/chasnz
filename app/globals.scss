@@ -356,6 +356,7 @@ p {
   background-image: url('../public/subscribe-background.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .no-hover-effect .dropdown-menu {
@@ -974,7 +975,7 @@ video {
 }
 
 .mobile-safety-download {
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 10rem);
   background-image: url('../public/mobile-safety/pdf-header.jpg');
   background-attachment: fixed;
   background-size: cover;

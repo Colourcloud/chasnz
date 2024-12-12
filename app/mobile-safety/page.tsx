@@ -7,18 +7,21 @@ import PdfHeader from '@/components/mobile-safety/PdfHeader'
 import HorizontalScrollSection from '@/components/mobile-safety/Horiz'
 import GreenParallax from '@/components/common/GreenParallax'
 import VehiclesScroll from '@/components/mobile-safety/VehicleScroll'
+import Subscribe from '@/components/common/Subscribe'
+import Contact from '@/components/mobile-safety/Contact'
 
 const page = () => {
   return (
     <>
     <section className='mobile-safety-content'>
         <Header />
-        <Vehicles />
+        {/* <Vehicles /> */}
         <VehiclesScroll />
         <ScrollSection />
         <PdfHeader />
         <HorizontalScrollSection />
-        
+        <Contact />
+        <Subscribe />
     </section>
     </>
   )

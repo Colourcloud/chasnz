@@ -10,7 +10,7 @@ const Header = () => {
   const { scrollYProgress } = useScroll();
 
   // Transform values based on scroll progress
-  const scale = useTransform(scrollYProgress, [0, 0.1], [0.8, 1.5]);
+  const scale = useTransform(scrollYProgress, [0, 0.1], [0.8, 2.5]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 1]);
 
   return (

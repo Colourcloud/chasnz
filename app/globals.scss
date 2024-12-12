@@ -980,3 +980,30 @@ video {
   background-size: cover;
   background-position: center;
 }
+
+.vehicle-container {
+  border-bottom: 1px solid #ebebeb;
+
+}
+
+.vehicle-container:nth-of-type(1) {
+  border-top: 1px solid #ebebeb;
+}
+
+.vehicle-container {
+  background-color: transparent;
+  transition: background-color 0.7s ease;
+}
+
+.vehicle-container.is-visible {
+  background-color: var(--primary-colour);
+}
+
+.vehicle-container.is-visible .vehicle-image {
+  opacity: 1 !important;
+}
+
+.vehicle-container.is-visible .vehicle-image div div {
+  transform: scale(1);
+}
+

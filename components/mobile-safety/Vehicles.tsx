@@ -1,147 +1,136 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import AnimatedText from '../ui/AnimateText'
-import { motion, AnimatePresence } from 'framer-motion'
 
-interface Vehicle {
-  title: string;
-  description: string;
-  image: string;
+type Vehicle = {
+  id: number
+  title: string
+  description: string
+  image: string
 }
 
-const vehicles: Vehicle[] = [
+const vehicleData: Vehicle[] = [
   {
+    id: 1,
     title: "Asphalt Pavers",
     description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
     image: "/mobile-safety/asphalt.jpg"
   },
   {
+    id: 2,
     title: "Mobile Cranes",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
+    description: "Heavy-duty vehicle with an adjustable boom used to lift, move and place heavy materials and equipment on construction sites. Features various lifting capacities and reach configurations for different project requirements.",
     image: "/mobile-safety/asphalt.jpg"
   },
   {
+    id: 3,
     title: "Concrete Pump Trucks",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
-    image: "/mobile-safety/asphalt.jpg"
+    description: "Specialized trucks equipped with a boom-mounted pump system that precisely delivers concrete to various heights and distances. Essential for pouring concrete in hard-to-reach areas and multi-story construction projects.",
+    image: "/mobile-safety/concrete-pump-truck.jpg"
   },
   {
+    id: 4,
     title: "Mobile Elevated Work Platforms",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
+    description: "Self-propelled machines providing safe elevated access for workers and tools. Includes scissor lifts, boom lifts, and cherry pickers, allowing work at various heights while maintaining stability and safety.",
     image: "/mobile-safety/asphalt.jpg"
   },
   {
+    id: 5,
     title: "Excavators",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
+    description: "Tracked or wheeled machines with a boom, stick, and bucket for digging, trenching, and material handling. Versatile equipment used for earthmoving, demolition, and general construction tasks.",
     image: "/mobile-safety/asphalt.jpg"
   },
   {
+    id: 6,
     title: "Rollers",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
+    description: "Compaction equipment used to densify soil, gravel, concrete, or asphalt surfaces. Available in various sizes and configurations including smooth drum, padfoot, and pneumatic tire designs.",
     image: "/mobile-safety/asphalt.jpg"
   },
   {
+    id: 7,
     title: "Loaders",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
+    description: "Versatile machines equipped with a front-mounted bucket for loading, carrying, and transferring materials. Essential for moving earth, aggregate, and construction materials around job sites.",
     image: "/mobile-safety/asphalt.jpg"
   },
   {
+    id: 8,
     title: "Telehandlers",
-    description: "Used to lay asphalt on roads, bridges, parking lots, and other surfaces. These machines ensure even spreading and compaction of the asphalt layer.",
+    description: "Multi-purpose machines combining the lifting capabilities of a forklift with the reach of a crane. Features an extending boom with various attachment options for lifting, placing, and moving materials at height.",
     image: "/mobile-safety/asphalt.jpg"
-  }
+  },
+  // Add more vehicles here...
 ]
 
+// Image Preloader Component
+const ImagePreloader = ({ images }: { images: string[] }) => {
+  return (
+    <div className="hidden">
+      {images.map((src, index) => (
+        <Image
+          key={index}
+          src={src}
+          alt="preload"
+          width={800}
+          height={600}
+          priority={true}
+        />
+      ))}
+    </div>
+  )
+}
+
 const Vehicles = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
+  // Extract all image URLs from vehicleData
+  const imageUrls = vehicleData.map(vehicle => vehicle.image)
 
   return (
-    <section className='py-16 lg:py-24'>
+    <section className="py-16 lg:py-32">
+      {/* Preload all images */}
+      <ImagePreloader images={imageUrls} />
+      
       <div className="flex flex-col gap-6 max-w-6xl mx-auto text-left md:text-center px-4">
         <AnimatedText type="letter">
           <h2 className='text-4xl md:text-4xl lg:text-6xl font-semibold'>
             Types of Mobile Plant in Construction
           </h2>
         </AnimatedText>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.6 }}
-          className='text-black text-base md:text-lg font-base'
-        >
+        <p className='text-black text-base md:text-lg font-base'>
           Plant encompasses vehicles, machinery, equipment, tools, vessels, and even aircraft used across various industries. In construction, this includes cranes, hoists, cutting and grinding tools, compressors, and earthmoving or excavation machinery. A subset of this is Mobile Plant, which refers specifically to movable equipment commonly used on construction sites, such as:
-        </motion.p>
+        </p>
       </div>
-
-      <div className='mt-16 lg:mt-24'>
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-10 vehicle-container">
-            <div className="flex flex-col gap-6 vehicle-info w-full md:w-2/5">
-              <div className="vehicle-select flex flex-col gap-6">
-                {vehicles.map((vehicle, index) => (
-                  <div 
-                    key={index} 
-                    className='flex flex-col gap-2 cursor-pointer'
-                    onClick={() => setActiveIndex(index)}
-                  >
-                    <div className="relative">
-                      <div 
-                        className={`absolute left-0 w-1 h-full transition-all duration-300 ${
-                          index === activeIndex ? 'bg-[--primary-colour]' : 'bg-transparent'
-                        }`}
-                      />
-                      <h6 
-                        className={`text-xl font-semibold md:text-3xl lg:text-3xl pl-4 transition-all duration-300 ${
-                          index === activeIndex ? 'text-black' : 'text-gray-400 text-lg md:text-xl lg:text-xl hover:text-gray-600'
-                        }`}
-                      >
-                        {vehicle.title}
-                      </h6>
-                    </div>
-                    <AnimatePresence mode="wait">
-                      {index === activeIndex && (
-                        <motion.p
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0 }}
-                          className='text-black text-base font-base pl-4'
-                        >
-                          {vehicle.description}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
+      <div className="flex flex-col vehicle-types mt-24">
+        {vehicleData.map((vehicle) => (
+          <div 
+            key={vehicle.id} 
+            className="vehicle-container group w-full transition-all duration-300 hover:bg-[--primary-colour]"
+          >
+            <div className="max-w-[1440px] grid grid-cols-2 gap-12 mx-auto items-center px-16">
+              <div className="vehicle-text flex flex-col gap-3 py-12">
+                <h6 className='text-2xl md:text-4xl font-semibold text-gray-400 transition-all duration-300 group-hover:text-white group-hover:text-5xl'>
+                  {vehicle.title}
+                </h6>
+                <p className='text-gray-400 text-base transition-colors duration-300 group-hover:text-white'>
+                  {vehicle.description}
+                </p>
+              </div>
+              <div className="vehicle-image overflow-hidden h-0 group-hover:h-[350px] transition-all duration-300 flex items-center justify-center">
+                <div className="w-full h-full flex items-center justify-center">
+                  <div className="transform scale-75 origin-center transition-all duration-300 ease-in-out group-hover:scale-100 opacity-0 group-hover:opacity-100 w-full h-full flex items-center justify-center">
+                    <Image
+                      src={vehicle.image}
+                      alt={vehicle.title}
+                      width={800}
+                      height={600}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                ))}
+                </div>
               </div>
             </div>
-            <div className="vehicle-image w-full md:w-3/5 overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeIndex}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0 }}
-                  transition={{ 
-                    duration: 0.2,
-                    ease: "easeInOut"
-                  }}
-                  className="origin-center"
-                >
-                  <Image 
-                    src={vehicles[activeIndex].image} 
-                    alt={vehicles[activeIndex].title} 
-                    width={900} 
-                    height={900}
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   )

@@ -18,7 +18,8 @@ const Header = () => {
       <div className='bg-black h-[100px]'>
         <Navigation />
       </div>
-      <section className="bg-black py-16 lg:py-32 relative overflow-hidden max-w-[1920px] mx-auto">
+      <section className="bg-black">
+        <div className='py-16 lg:py-32 relative overflow-hidden max-w-[1920px] mx-auto'>
         <div className="section-block relative z-10 flex flex-col h-full items-center justify-center">
           <div className="section-text max-w-5xl mx-auto flex flex-col gap-6 text-center">
             <AnimatedText type="letter">
@@ -66,6 +67,7 @@ const Header = () => {
               </video>
             </div>
           </motion.div>
+        </div>
         </div>
       </section>
     </>

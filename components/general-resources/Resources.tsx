@@ -86,7 +86,7 @@ const Resources: React.FC = () => {
         <div className="resource-container">
           <div className="resource-heading">
             <h4 className="text-2xl font-semibold">
-              Browse “General Resesources” resources to get you site-ready
+              Browse “General Resources” resources to get you site-ready
             </h4>
           </div>
         </div>

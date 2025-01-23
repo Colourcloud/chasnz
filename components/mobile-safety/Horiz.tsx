@@ -4,11 +4,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AnimatedText from '../ui/AnimateText';
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 interface ScrollItem {
   id: number;
   title: string;
-  content?: React.ReactNode;
+  image: string;
+  description: string[];
 }
 
 interface HorizontalScrollSectionProps {
@@ -22,7 +24,7 @@ interface HorizontalScrollSectionProps {
 const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
   items = [],
   itemWidth = '80vw',
-  itemHeight = '80vh',
+  itemHeight = '70vh',
   gap = 8,
   className = '',
 }) => {
@@ -77,11 +79,47 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
   }, []);
 
   const defaultItems: ScrollItem[] = items.length ? items : [
-    { id: 1, title: 'PDF Section 1' },
-    { id: 2, title: 'PDF Section 2' },
-    { id: 3, title: 'PDF Section 3' },
-    { id: 4, title: 'PDF Section 4' },
-    { id: 5, title: 'PDF Section 5' },
+    {
+      id: 1,
+      title: 'Form a group of competent workers',
+      image: '/mobile-safety/placeholder.webp',
+      description: [
+        'Construction work sites present a range of hazards outside of plant operation and so it is important for work area controllers to consider minimum safety standards for competency to access a construction work site.'
+      ]
+    },
+    {
+      id: 2,
+      title: 'Agree on a standard to measure',
+      image: '/mobile-safety/placeholder.webp',
+      description: [
+        'The group should collectively decide the hazards and appropriate control measures that every worker must know, and demonstrate, to be safe in this job.'
+      ]
+    },
+    {
+      id: 3,
+      title: 'Develop and deliver materials to train workers',
+      image: '/mobile-safety/placeholder.webp',
+      description: [
+        'Work area controllers should have the ability to access both industry and company standards when considering minimum competency standards.'
+      ]
+    },
+    {
+      id: 4,
+      title: 'Measure worker knowledge as a minimum standard',
+      image: '/mobile-safety/placeholder.webp',
+      description: [
+        'As a minimum, it is recommended that each trained operator should be assessed to measure their understanding gained through training.'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Measure worker application of skill to exceed a standard',
+      image: '/mobile-safety/placeholder.webp',
+      description: [
+        'Once an operator has demonstrated the minimum required knowledge of the standard by succeeding in a knowledge assessment, they should then demonstrate evidence that they are applying that knowledge at work.'
+      ]
+    },
+    // ... you can add more items following this structure
   ];
 
   return (
@@ -121,23 +159,40 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
           {defaultItems.map((item) => (
             <div
               key={item.id}
-              className="flex-shrink-0 rounded-xl bg-gray-100 flex items-center justify-center"
+              className="flex-shrink-0 bg-white border rounded-lg overflow-hidden"
               style={{ 
                 width: itemWidth, 
                 height: itemHeight,
               }}
             >
-              {item.content ? (
-                item.content
-              ) : (
-                <h2 className="text-4xl font-bold">{item.title}</h2>
-              )}
+              <div className="flex flex-col md:flex-row h-full">
+                <div className="w-full md:w-[40%] h-[40%] md:h-full relative">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
+                </div>
+                
+                <div className="w-full md:w-[60%] p-6 md:p-12 overflow-y-auto flex flex-col justify-center h-[60%] md:h-full">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">{item.title}</h2>
+                  
+                  <div className="space-y-4">
+                    {item.description.map((paragraph, index) => (
+                      <p key={index} className="text-gray-700 text-sm md:text-base">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-
 
     </section>
     

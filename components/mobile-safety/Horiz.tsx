@@ -11,6 +11,7 @@ interface ScrollItem {
   title: string;
   image: string;
   description: string[];
+  list?: string[]; // Optional array of list items
 }
 
 interface HorizontalScrollSectionProps {
@@ -25,7 +26,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
   items = [],
   itemWidth = '80vw',
   itemHeight = '70vh',
-  gap = 8,
+  gap = 6,
   className = '',
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -81,42 +82,61 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
   const defaultItems: ScrollItem[] = items.length ? items : [
     {
       id: 1,
-      title: 'Form a group of competent workers',
-      image: '/mobile-safety/placeholder.webp',
+      title: 'Mobile Plant Safety in Construction',
+      image: '/mobile-safety/slide-images/cover.jpg',
       description: [
-        'Construction work sites present a range of hazards outside of plant operation and so it is important for work area controllers to consider minimum safety standards for competency to access a construction work site.'
+        'CHASNZ and industry; working together to achieve consistent site access standards and safer worksites for everyone.',
+        'When considering the question of what is reasonably practicable in the context of the HSWA the regulator and courts will apply relevant legislation, approved codes of practice',
+        'CHASNZ is seen by WorkSafe NZ as a provider of industry guidance for the construction industry.'
       ]
     },
     {
       id: 2,
-      title: 'Agree on a standard to measure',
-      image: '/mobile-safety/placeholder.webp',
+      title: 'Introduction',
+      image: '/mobile-safety/slide-images/introduction.jpg',
       description: [
-        'The group should collectively decide the hazards and appropriate control measures that every worker must know, and demonstrate, to be safe in this job.'
+        'The use of Mobile Plant in construction is common and carries with it significant hazards that can affect both operators of Mobile Plant and those working around them.',
+        'Under the Health and Safety at Work Act 2015, duties are placed on those who control work sites, those who own mobile plant, and those who operate it.',
+        'This guide has been created to assist these parties in planning, selecting, operating, maintaining and responsibly retiring mobile plant in a construction setting.'
       ]
     },
     {
       id: 3,
-      title: 'Develop and deliver materials to train workers',
-      image: '/mobile-safety/placeholder.webp',
+      title: 'Types of Mobile Plant',
+      image: '/mobile-safety/slide-images/types-of-mobile.jpg',
       description: [
-        'Work area controllers should have the ability to access both industry and company standards when considering minimum competency standards.'
+        'Plant includes any vehicle, machinery, equipment, tool, vessel and/or aircraft etc. Examples in construction include cranes and hoists, cutting and grinding equipment, compressors, and earthmoving and excavation machinery.',
+        'Mobile Plant is a sub sector of this group and includes a variety of machines, including common construction equipment like:'
+      ],
+      list: [
+        'Asphalt pavers',
+        'Mobile cranes',
+        'Concrete pump trucks',
+        'Mobile elevated work platforms',
+        'Excavators',
+        'Rollers',
+        'Loaders',
+        'Telehandlers'
       ]
     },
     {
       id: 4,
-      title: 'Measure worker knowledge as a minimum standard',
+      title: 'Machine design safety considerations',
       image: '/mobile-safety/placeholder.webp',
       description: [
-        'As a minimum, it is recommended that each trained operator should be assessed to measure their understanding gained through training.'
+        'To best understand this, your company should undertake a risk assessment to determine the best type of machine, or machines to suit the needs of the expected work activity.',
+        'When importing machinery, the buyer should verify that the manufacturing standard of the machine meets the current New Zealand, or International standard for manufacture. These can be found by visiting www.standards.govt.nz.',
+        'As part of a risk assessment process, particularly when considering a specific machine that is not newly manufactured, consideration must be given to the safety features of the machine in comparison to newly manufactured equipment.'
       ]
     },
     {
       id: 5,
-      title: 'Measure worker application of skill to exceed a standard',
+      title: 'Plant safety considerations for those controlling work areas',
       image: '/mobile-safety/placeholder.webp',
       description: [
-        'Once an operator has demonstrated the minimum required knowledge of the standard by succeeding in a knowledge assessment, they should then demonstrate evidence that they are applying that knowledge at work.'
+        'The Act places duties on those who control work areas. Often in construction these are not the companies who operate mobile plant within the work site.',
+        'Those who control work areas are not always competent in assessing the requirement of mobile plant to undertake a specific task, and so there are cross over duties between the work area controller and the machine operator (or mobile plant owner).',
+        'Prior to selecting types of mobile plant for use in a work area, steps should be taken to ensure that any mobile plant in a work area is firstly safe to be operated.'
       ]
     },
     // ... you can add more items following this structure
@@ -159,7 +179,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
           {defaultItems.map((item) => (
             <div
               key={item.id}
-              className="flex-shrink-0 bg-white border rounded-lg overflow-hidden"
+              className="flex-shrink-0 bg-white border rounded-lg overflow-hidden slider-box"
               style={{ 
                 width: itemWidth, 
                 height: itemHeight,
@@ -177,7 +197,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
                 </div>
                 
                 <div className="w-full md:w-[60%] p-6 md:p-12 overflow-y-auto flex flex-col justify-center h-[60%] md:h-full">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">{item.title}</h2>
+                  <h2 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-6">{item.title}</h2>
                   
                   <div className="space-y-4">
                     {item.description.map((paragraph, index) => (
@@ -185,6 +205,15 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
                         {paragraph}
                       </p>
                     ))}
+                    {item.list && item.list.length > 0 && (
+                      <ul className="list-disc pl-4 flex flex-row flex-wrap gap-5">
+                        {item.list.map((listItem, index) => (
+                          <li key={index} className="text-gray-700 text-sm md:text-base">
+                            {listItem}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>

@@ -8,28 +8,33 @@ const Services = () => {
     const serviceContent = [
         {
             image: '/mobile-safety/compentent-workers.jpg',
+            icon: '/mobile-safety/icons/group.svg',
             title: 'Form a group of competent workers',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla accumsan nulla, id luctus neque dictum ac. Fusce vel elit iaculis, egestas nulla quis, feugiat nulla'
+            description: 'Construction work sites present a range of hazards outside of plant operation and so it is important for work area controllers to consider minimum safety standards for competency to access a construction work site.'
         },
         {
             image: '/mobile-safety/measure.jpg',
+            icon: '/mobile-safety/icons/agree.svg',
             title: 'Agree on a standard to measure',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla accumsan nulla, id luctus neque dictum ac. Fusce vel elit iaculis, egestas nulla quis, feugiat nulla'
+            description: 'The group should collectively decide the hazards and appropriate control measures that every worker must know, and demonstrate, to be safe in this job.'
         },
         {
             image: '/mobile-safety/train.jpg',
+            icon: '/mobile-safety/icons/develop.svg',
             title: 'Develop and deliver materials to train workers',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla accumsan nulla, id luctus neque dictum ac. Fusce vel elit iaculis, egestas nulla quis, feugiat nulla'
+            description: 'Work area controllers should have the ability to access both industry and company standards when considering minimum competency standards.'
         },
         {
             image: '/mobile-safety/train.jpg',
+            icon: '/mobile-safety/icons/measure.svg',
             title: 'Measure worker knowledge as a minimum standard',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla accumsan nulla, id luctus neque dictum ac. Fusce vel elit iaculis, egestas nulla quis, feugiat nulla'
+            description: 'As a minimum, it is recommended that each trained operator should be assessed to measure their understanding gained through training.'
         },
         {
             image: '/mobile-safety/train.jpg',
+            icon: '/mobile-safety/icons/application.svg',
             title: 'Measure worker application of skill to exceed a standard',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla accumsan nulla, id luctus neque dictum ac. Fusce vel elit iaculis, egestas nulla quis, feugiat nulla'
+            description: 'Once an operator has demonstrated the minimum required knowledge of the standard by succeeding in a knowledge assessment, they should then demonstrate evidence that they are applying that knowledge at work.'
         }
     ];
 
@@ -51,8 +56,16 @@ const Services = () => {
                                         stiffness: 260,
                                         damping: 20 
                                     }}
-                                    className="h-24 w-24 bg-[--primary-colour] rounded-lg"
-                                />
+                                    className="h-24 w-24 bg-[--primary-colour] rounded-lg flex items-center justify-center"
+                                >
+                                    <Image 
+                                        src={content.icon}
+                                        alt={content.title}
+                                        width={64}
+                                        height={64}
+                                        className="w-16 h-16"
+                                    />
+                                </motion.div>
                                 <AnimatedText>
                                     <h4 className='text-white text-4xl font-semibold'>{content.title}</h4>
                                 </AnimatedText>
@@ -100,10 +113,18 @@ const Services = () => {
                                         stiffness: 260,
                                         damping: 20 
                                     }}
-                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg"
-                                />
+                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
+                                >
+                                    <Image 
+                                        src="/mobile/safert/icons/group.svg"
+                                        alt="Info icon"
+                                        width={24}
+                                        height={24}
+                                        className="w-8 h-8"
+                                    />
+                                </motion.div>
                             <AnimatedText><h4 className='text-white text-2xl font-semibold'>Form a group of competent workers</h4></AnimatedText>
-                            <p className='text-white text-base'>Just because they&apos;re pre-built does not mean you lose the freedom to make your website your own. Our template websites are still highly customisable to suit your brand and capture your uniqueness.</p>
+                            <p className='text-white text-base'>Construction work sites present a range of hazards outside of plant operation and so it is important for work area controllers to consider minimum safety standards for competency to access a construction work site.</p>
                         </div>
                     </div>
                     <div className="content-block flex flex-col gap-8">
@@ -118,10 +139,18 @@ const Services = () => {
                                         stiffness: 260,
                                         damping: 20 
                                     }}
-                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg"
-                                />
+                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
+                                >
+                                    <Image 
+                                        src="/icons/info-icon.png"
+                                        alt="Info icon"
+                                        width={24}
+                                        height={24}
+                                        className="w-8 h-8"
+                                    />
+                                </motion.div>
                             <AnimatedText><h4 className='text-white text-2xl font-semibold'>Agree on a standard to measure</h4></AnimatedText>
-                            <p className='text-white text-base'>We have a large collection of pre-designed elements & templates that have already been tried & tested for a large range of different industries. This allows our clients to save time & cost for their projects</p>
+                            <p className='text-white text-base'>The group should collectively decide the hazards and appropriate control measures that every worker must know, and demonstrate, to be safe in this job.</p>
                         </div>
                     </div>
                     <div className="content-block flex flex-col gap-8">
@@ -136,10 +165,18 @@ const Services = () => {
                                         stiffness: 260,
                                         damping: 20 
                                     }}
-                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg"
-                                />
+                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
+                                >
+                                    <Image 
+                                        src="/icons/info-icon.png"
+                                        alt="Info icon"
+                                        width={24}
+                                        height={24}
+                                        className="w-8 h-8"
+                                    />
+                                </motion.div>
                             <AnimatedText><h4 className='text-white text-2xl font-semibold'>Develop and deliver materials to train workers</h4></AnimatedText>
-                            <p className='text-white text-base'>We&apos;re constantly improving and upgrading our templates and components to make sure they stay up to date with the ever-evolving digital world.</p>
+                            <p className='text-white text-base'>Work area controllers should have the ability to access both industry and company standards when considering minimum competency standards.</p>
                         </div>
                     </div>
                     <div className="content-block flex flex-col gap-8">
@@ -154,10 +191,18 @@ const Services = () => {
                                         stiffness: 260,
                                         damping: 20 
                                     }}
-                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg"
-                                />
+                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
+                                >
+                                    <Image 
+                                        src="/icons/info-icon.png"
+                                        alt="Info icon"
+                                        width={24}
+                                        height={24}
+                                        className="w-8 h-8"
+                                    />
+                                </motion.div>
                             <AnimatedText><h4 className='text-white text-2xl font-semibold'>Measure worker knowledge as a minimum standard</h4></AnimatedText>
-                            <p className='text-white text-base'>We&apos;re constantly improving and upgrading our templates and components to make sure they stay up to date with the ever-evolving digital world.</p>
+                            <p className='text-white text-base'>As a minimum, it is recommended that each trained operator should be assessed to measure their understanding gained through training.</p>
                         </div>
                     </div>
                     <div className="content-block flex flex-col gap-8">
@@ -172,10 +217,18 @@ const Services = () => {
                                         stiffness: 260,
                                         damping: 20 
                                     }}
-                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg"
-                                />
+                                    className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
+                                >
+                                    <Image 
+                                        src="/icons/info-icon.png"
+                                        alt="Info icon"
+                                        width={24}
+                                        height={24}
+                                        className="w-8 h-8"
+                                    />
+                                </motion.div>
                             <AnimatedText><h4 className='text-white text-2xl font-semibold'>Measure worker application of skill to exceed a standard</h4></AnimatedText>
-                            <p className='text-white text-base'>We&apos;re constantly improving and upgrading our templates and components to make sure they stay up to date with the ever-evolving digital world.</p>
+                            <p className='text-white text-base'>Once an operator has demonstrated the minimum required knowledge of the standard by succeeding in a knowledge assessment, they should then demonstrate evidence that they are applying that knowledge at work.</p>
                         </div>
                     </div>
                 </section>

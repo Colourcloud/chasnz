@@ -1007,4 +1007,19 @@ video {
 .vehicle-container.is-visible .vehicle-image div div {
   transform: scale(1);
 }
+.slider-box:nth-of-type(1) {
+  background-color: #1C242E;
+  h2 {
+    color: var(--primary-colour);
+  }
+  p {
+    color: white;
+  }
+}
 
+.slider-box {
+  li:marker {
+    color: var(--primary-colour);
+  }
+
+}

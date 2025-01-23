@@ -170,7 +170,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
       <div className="sticky top-0 h-screen overflow-hidden">
         <div
           ref={sectionRef}
-          className="flex will-change-transform"
+          className="flex will-change-transform slider-container"
           style={{ 
             gap: `${gap}rem`, 
             padding: `${gap}rem`,
@@ -196,7 +196,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
                   />
                 </div>
                 
-                <div className="w-full md:w-[60%] p-6 md:p-12 overflow-y-auto flex flex-col justify-center h-[60%] md:h-full">
+                <div className="w-full md:w-[60%] p-2 md:p-12 overflow-y-auto flex flex-col justify-center h-[60%] md:h-full">
                   <h2 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-6">{item.title}</h2>
                   
                   <div className="space-y-4">

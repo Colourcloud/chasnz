@@ -1011,6 +1011,11 @@ video {
   background-color: #1C242E;
   h2 {
     color: var(--primary-colour);
+    font-size: 24px!important;
+    line-height: 1.2;
+    @media screen and (min-width: 1024px) {
+      font-size: 48px!important;
+    }
   }
   p {
     color: white;
@@ -1021,5 +1026,15 @@ video {
   li:marker {
     color: var(--primary-colour);
   }
+  width: 90vw!important;
+  @media screen and (min-width: 1024px) {
+    width: 80vw!important
+  }
+}
 
+.slider-container {
+  padding: 8rem 2rem!important;
+  @media screen and (min-width: 1024px) {
+    padding: 8rem!important;
+  }
 }

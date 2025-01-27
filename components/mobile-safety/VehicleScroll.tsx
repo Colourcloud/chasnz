@@ -60,6 +60,12 @@ const vehicleData: Vehicle[] = [
       description: "Multi-purpose machines combining the lifting capabilities of a forklift with the reach of a crane. Features an extending boom with various attachment options for lifting, placing, and moving materials at height.",
       image: "/mobile-safety/telehandler.jpg"
     },
+    {
+      id: 9,
+      title: "Trucks & Trailers",
+      description: "Multi-purpose machines combining the lifting capabilities of a forklift with the reach of a crane. Features an extending boom with various attachment options for lifting, placing, and moving materials at height.",
+      image: "/mobile-safety/truck-trailer.jpg"
+    },
     // Add more vehicles here...
   ]
 

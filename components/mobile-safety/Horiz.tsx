@@ -122,7 +122,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
     {
       id: 4,
       title: 'Machine design safety considerations',
-      image: '/mobile-safety/placeholder.webp',
+      image: '/mobile-safety/telehandler.jpg',
       description: [
         'To best understand this, your company should undertake a risk assessment to determine the best type of machine, or machines to suit the needs of the expected work activity.',
         'When importing machinery, the buyer should verify that the manufacturing standard of the machine meets the current New Zealand, or International standard for manufacture. These can be found by visiting www.standards.govt.nz.',
@@ -132,7 +132,7 @@ const HorizontalScrollSection: React.FC<HorizontalScrollSectionProps> = ({
     {
       id: 5,
       title: 'Plant safety considerations for those controlling work areas',
-      image: '/mobile-safety/placeholder.webp',
+      image: '/mobile-safety/slide-images/plant-safety.jpg',
       description: [
         'The Act places duties on those who control work areas. Often in construction these are not the companies who operate mobile plant within the work site.',
         'Those who control work areas are not always competent in assessing the requirement of mobile plant to undertake a specific task, and so there are cross over duties between the work area controller and the machine operator (or mobile plant owner).',

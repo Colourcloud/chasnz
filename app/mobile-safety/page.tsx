@@ -9,6 +9,7 @@ import GreenParallax from '@/components/common/GreenParallax'
 import VehiclesScroll from '@/components/mobile-safety/VehicleScroll'
 import Subscribe from '@/components/common/Subscribe'
 import Contact from '@/components/mobile-safety/Contact'
+import MobileHorizontalScroll from '@/components/mobile-safety/MobileHoriz'
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
         <ScrollSection />
         <PdfHeader />
         <HorizontalScrollSection />
+        <MobileHorizontalScroll />
         <Contact />
         <Subscribe />
     </section>

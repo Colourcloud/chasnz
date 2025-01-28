@@ -116,7 +116,7 @@ const Services = () => {
                                     className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
                                 >
                                     <Image 
-                                        src="/mobile/safert/icons/group.svg"
+                                        src="/mobile-safety/icons/group.svg"
                                         alt="Info icon"
                                         width={24}
                                         height={24}
@@ -142,7 +142,7 @@ const Services = () => {
                                     className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
                                 >
                                     <Image 
-                                        src="/icons/info-icon.png"
+                                        src="/mobile-safety/icons/agree.svg"
                                         alt="Info icon"
                                         width={24}
                                         height={24}
@@ -168,7 +168,7 @@ const Services = () => {
                                     className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
                                 >
                                     <Image 
-                                        src="/icons/info-icon.png"
+                                        src="/mobile-safety/icons/develop.svg"
                                         alt="Info icon"
                                         width={24}
                                         height={24}
@@ -194,7 +194,7 @@ const Services = () => {
                                     className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
                                 >
                                     <Image 
-                                        src="/icons/info-icon.png"
+                                        src="/mobile-safety/icons/measure.svg"
                                         alt="Info icon"
                                         width={24}
                                         height={24}
@@ -220,7 +220,7 @@ const Services = () => {
                                     className="h-16 w-16 bg-[--primary-colour] rounded-lg flex items-center justify-center"
                                 >
                                     <Image 
-                                        src="/icons/info-icon.png"
+                                        src="/mobile-safety/icons/application.svg"
                                         alt="Info icon"
                                         width={24}
                                         height={24}

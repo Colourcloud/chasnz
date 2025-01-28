@@ -125,18 +125,8 @@ const VehicleItem = ({
         className={`w-full transition-colors duration-300 ease-in-out
           ${isActive ? 'bg-[--primary-colour]' : 'bg-transparent'}`}
       >
-        <div className="max-w-[1580px] grid grid-cols-2 gap-12 mx-auto items-center px-16">
-          <div className="flex flex-col gap-3 py-12">
-            <h6 className={`text-2xl md:text-4xl font-semibold transition-all duration-300 ease-in-out
-              ${isActive ? 'text-white !text-6xl' : 'text-gray-600'}`}>
-              {vehicle.title}
-            </h6>
-            <p className={`text-base transition-colors duration-300 ease-in-out
-              ${isActive ? 'text-white' : 'text-gray-600'}`}>
-              {vehicle.description}
-            </p>
-          </div>
-          <div className={`overflow-hidden h-[450px] transition-all duration-300 ease-in-out
+        <div className="max-w-[1580px] grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mx-auto items-center px-4 lg:px-16">
+          <div className={`overflow-hidden h-[250px] lg:h-[450px] order-1 lg:order-2 transition-all duration-300 ease-in-out
             ${isActive ? 'opacity-100' : 'opacity-0'}`}>
             <div className="w-full h-full flex items-center justify-center">
               <div className={`w-full h-full flex items-center justify-center transition-transform duration-300 ease-in-out
@@ -150,6 +140,18 @@ const VehicleItem = ({
                 />
               </div>
             </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:gap-3 py-6 lg:py-12 order-2 lg:order-1">
+            <h6 className={`transition-all duration-300 ease-in-out font-semibold
+              ${isActive 
+                ? 'text-2xl md:text-3xl lg:text-5xl text-white' 
+                : 'text-xl md:text-2xl lg:text-4xl text-gray-600'}`}>
+              {vehicle.title}
+            </h6>
+            <p className={`text-sm lg:text-base transition-colors duration-300 ease-in-out
+              ${isActive ? 'text-white' : 'text-gray-600'}`}>
+              {vehicle.description}
+            </p>
           </div>
         </div>
       </div>
@@ -183,13 +185,13 @@ const VehicleItem = ({
       <section className="pt-16 lg:pt-32">
         <ImagePreloader images={imageUrls} />
         
-        <div className="flex flex-col gap-6 max-w-6xl mx-auto text-left md:text-center px-4">
+        <div className="flex flex-col gap-4 lg:gap-6 max-w-6xl mx-auto text-left md:text-center px-4">
           <AnimatedText type="letter">
-            <h2 className='text-4xl md:text-4xl lg:text-6xl font-semibold'>
+            <h2 className='text-3xl md:text-4xl lg:text-6xl font-semibold'>
               Types of Mobile Plant in Construction
             </h2>
           </AnimatedText>
-          <p className='text-black text-base md:text-lg font-base'>
+          <p className='text-black text-sm md:text-base lg:text-lg font-base'>
             Plant encompasses vehicles, machinery, equipment, tools, vessels, and even aircraft used across various industries. In construction, this includes cranes, hoists, cutting and grinding tools, compressors, and earthmoving or excavation machinery. A subset of this is Mobile Plant, which refers specifically to movable equipment commonly used on construction sites, such as:
           </p>
         </div>

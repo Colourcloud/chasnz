@@ -54,7 +54,7 @@ const PdfHeader = () => {
       <div className="max-w-6xl mx-auto text-center flex flex-col gap-6 h-full justify-center">
         <AnimatedText type='letter'>
           <h3 className='text-4xl md:text-4xl lg:text-6xl font-semibold text-white'>
-            Mobile Plant Safety presentation
+            Mobile Plant Safety guidance
           </h3>
         </AnimatedText>
 
@@ -65,7 +65,7 @@ const PdfHeader = () => {
           animate={isParagraphInView ? "visible" : "hidden"}
           className='text-base md:text-2xl lg:text-xl text-white'
         >
-          Within the Mobile Plant Safety presentation - you will find insightful detailed information on how to implement a machine safety management system for companies including jobs to undertake for each critical category:
+          Within the Mobile Plant Safety guidance - you will find insightful detailed information on how to implement a machine safety management system for companies including jobs to undertake for each critical category:
         </motion.p>
 
         <motion.div 

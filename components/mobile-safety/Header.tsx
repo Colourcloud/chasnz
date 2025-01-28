@@ -33,9 +33,7 @@ const Header = () => {
               transition={{ duration: 0.4, delay: 0.6 }}
               className='text-white text-base md:text-lg font-base'
             >
-              We have developed various guidance and tools for construction plant and equipment sector.
-              The use of Mobile Plant in construction is common and carries with it significant hazards
-              that can affect both operators of Mobile Plant and those working around them.
+              We have developed a detailed Mobile Plant Guidance for the construction plant and equipment sector. The use of Mobile Plant in construction is common and carries with it significant hazards that can affect both operators of Mobile Plant and those working around them.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

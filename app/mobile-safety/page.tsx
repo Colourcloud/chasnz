@@ -16,10 +16,10 @@ const page = () => {
     <>
     <section className='mobile-safety-content'>
         <Header />
+        <PdfHeader />
         {/* <Vehicles /> */}
         <VehiclesScroll />
         <ScrollSection />
-        <PdfHeader />
         <HorizontalScrollSection />
         <MobileHorizontalScroll />
         <Contact />

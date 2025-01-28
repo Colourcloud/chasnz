@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { FaArrowCircleRight } from "react-icons/fa";
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ScrollItem {
@@ -83,7 +84,7 @@ const MobileHorizontalScroll: React.FC<MobileHorizontalScrollProps> = ({
 
   return (
     <div className="w-full overflow-x-auto mt-12 relative md:hidden md:invisible">
-        <span className='text-right w-full block text-sm text-gray-500 pr-6'>Scroll to view more</span>
+        <span className='w-full text-sm text-[--primary-colour] font-semibold pr-6 flex items-center justify-end gap-2'>Swipe to view more <FaArrowCircleRight /></span>
       <div className="flex w-full">
         {defaultItems.map((item) => (
           <div

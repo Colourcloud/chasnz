@@ -104,7 +104,7 @@ const VehicleItem = ({
         },
         {
           threshold: [0, 0.25, 0.5, 0.75, 1],
-          rootMargin: '-50px'
+          rootMargin: '-25px 0px'
         }
       );
   
@@ -125,31 +125,46 @@ const VehicleItem = ({
         className={`w-full transition-colors duration-300 ease-in-out
           ${isActive ? 'bg-[--primary-colour]' : 'bg-transparent'}`}
       >
-        <div className="max-w-[1580px] grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mx-auto items-center px-4 lg:px-16">
-          <div className={`overflow-hidden h-[250px] lg:h-[450px] order-1 lg:order-2 transition-all duration-300 ease-in-out
-            ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="w-full h-full flex items-center justify-center">
-              <div className={`w-full h-full flex items-center justify-center transition-transform duration-300 ease-in-out
-                ${isActive ? 'scale-100' : 'scale-75'}`}>
-                <Image
-                  src={vehicle.image}
-                  alt={vehicle.title}
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+        <div className="max-w-[1580px] grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-12 mx-auto items-center px-4 lg:px-16">
+          <div className="h-[250px] lg:h-[450px] order-1 lg:order-2 relative overflow-hidden">
+            <div className={`
+              absolute inset-0
+              transition-all duration-300 ease-in-out
+              ${isActive 
+                ? 'opacity-100 lg:scale-100' 
+                : 'opacity-0 lg:scale-90'}`
+            }>
+              <Image
+                src={vehicle.image}
+                alt={vehicle.title}
+                width={800}
+                height={600}
+                className={`
+                  w-full h-full object-cover
+                  transition-transform duration-500 ease-in-out
+                  lg:hover:scale-105
+                `}
+                priority={true}
+              />
             </div>
           </div>
-          <div className="flex flex-col gap-2 lg:gap-3 py-6 lg:py-12 order-2 lg:order-1">
-            <h6 className={`transition-all duration-300 ease-in-out font-semibold
+          <div className="flex flex-col gap-2 lg:gap-3 py-4 lg:py-12 order-2 lg:order-1">
+            <h6 className={`
+              font-semibold
+              transition-all duration-300 ease-in-out
+              text-xl lg:text-2xl
               ${isActive 
-                ? 'text-2xl md:text-3xl lg:text-5xl text-white' 
-                : 'text-xl md:text-2xl lg:text-4xl text-gray-600'}`}>
+                ? 'text-white lg:text-5xl' 
+                : 'text-gray-600 lg:text-3xl'
+              }`
+            }>
               {vehicle.title}
             </h6>
-            <p className={`text-sm lg:text-base transition-colors duration-300 ease-in-out
-              ${isActive ? 'text-white' : 'text-gray-600'}`}>
+            <p className={`
+              transition-colors duration-300 ease-in-out
+              text-sm lg:text-base
+              ${isActive ? 'text-white' : 'text-gray-600'}
+            `}>
               {vehicle.description}
             </p>
           </div>

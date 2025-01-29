@@ -52,7 +52,7 @@ const PdfHeader = () => {
   return (
     <section className='py-16 lg:py-32 mobile-safety-download px-4'>
       <div className="max-w-6xl mx-auto text-center flex flex-col gap-6 h-full justify-center">
-        <AnimatedText type='letter'>
+        <AnimatedText type='word'>
           <h3 className='text-4xl md:text-4xl lg:text-6xl font-semibold text-white'>
             Mobile Plant Safety guidance
           </h3>

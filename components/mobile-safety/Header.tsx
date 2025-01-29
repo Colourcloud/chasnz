@@ -21,7 +21,7 @@ const Header = () => {
       <section className="bg-black">
         <div className='py-16 lg:py-32 relative overflow-hidden max-w-[1920px] mx-auto'>
         <div className="section-block relative z-10 flex flex-col h-full items-center justify-center">
-          <div className="section-text max-w-5xl mx-auto flex flex-col gap-6 text-center">
+          <div className="section-text max-w-5xl mx-auto flex flex-col gap-6 text-center px-4 lg:px-0">
             <AnimatedText type="letter">
               <h1 className='text-4xl md:text-4xl lg:text-8xl text-white font-semibold tracking-tight'>
                 Mobile Plant Safety

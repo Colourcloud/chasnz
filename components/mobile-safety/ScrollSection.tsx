@@ -19,7 +19,7 @@ const Services = () => {
             description: 'The group should collectively decide the hazards and appropriate control measures that every worker must know, and demonstrate, to be safe in this job.'
         },
         {
-            image: '/mobile-safety/train.jpg',
+            image: '/mobile-safety/develop-and-deliver.jpg',
             icon: '/mobile-safety/icons/develop.svg',
             title: 'Develop and deliver materials to train workers',
             description: 'Work area controllers should have the ability to access both industry and company standards when considering minimum competency standards.'
@@ -31,7 +31,7 @@ const Services = () => {
             description: 'As a minimum, it is recommended that each trained operator should be assessed to measure their understanding gained through training.'
         },
         {
-            image: '/mobile-safety/train.jpg',
+            image: '/mobile-safety/measure-worker-application.jpg',
             icon: '/mobile-safety/icons/application.svg',
             title: 'Measure worker application of skill to exceed a standard',
             description: 'Once an operator has demonstrated the minimum required knowledge of the standard by succeeding in a knowledge assessment, they should then demonstrate evidence that they are applying that knowledge at work.'

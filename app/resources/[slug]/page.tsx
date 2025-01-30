@@ -91,8 +91,6 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
               })}
             </span>
             <h1 className='text-3xl lg:text-4xl font-semibold'>{post.title.rendered}</h1>
-            <div className='flex flex-col gap-6 post-content' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
-            {/* check to see if the post download field exist */}
             {post.acf.download && (
             <div className={`hs-web-interactive-inline px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-start`} data-hubspot-wrapper-cta-id={post.acf.ctaid}>
                 <a 
@@ -106,6 +104,9 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
                 </a>
             </div>
             )}
+            <div className='flex flex-col gap-6 post-content' dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+            {/* check to see if the post download field exist */}
+            
             {/* <div className="hs-web-interactive-inline" data-hubspot-wrapper-cta-id="169009420371">
               {post.acf.download && (
                 <a href={post.acf.download} className='text-white text-sm font-medium py-3 px-6 rounded-full bg-[--primary-colour] self-start' target="_blank" rel="noopener" className="hs-inline-web-interactive-169009420371   " data-hubspot-cta-id="169009420371">{post.acf.button_label}</a>

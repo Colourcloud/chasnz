@@ -28,11 +28,11 @@ interface TradeData {
 }
 
 const Trades: React.FC = () => {
-  const [hoveredTrade, setHoveredTrade] = useState<string | null>("building"); // Initialize with "building"
+  const [hoveredTrade, setHoveredTrade] = useState<string | null>("brick"); // Initialize with "brick"
   const [lastHoveredTrade, setLastHoveredTrade] = useState<string | null>(null);
 
   const handleTradeHover = (trade: string | null) => {
-    setHoveredTrade(trade || "building"); // If null is passed, default to "building"
+    setHoveredTrade(trade || "brick"); // If null is passed, default to "brick"
   };
 
   const handleTradeLeave = () => {

@@ -31,6 +31,9 @@ const categoryMapping: Record<number, string> = {
   4: 'Toolbox Talks',
 };
 
+// Define the order of categories
+const orderedCategories = ['Guidance', 'Posters', 'Research & Innovation', 'Toolbox Talks'];
+
 const Resources: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
@@ -85,7 +88,7 @@ const Resources: React.FC = () => {
         <div className="resource-container">
           <div className="resource-heading">
             <h4 className="text-2xl font-semibold text-[--dark-blue]">
-              Browse “Building” resources to get you site-ready
+              Browse "Building" resources to get you site-ready
             </h4>
           </div>
         </div>
@@ -95,7 +98,7 @@ const Resources: React.FC = () => {
           <div className="scroll-bar py-8 overflow-x-scroll flex items-center flex-row gap-6 lg:gap-16">
             <p className="font-medium text-sm text-gray-500 whitespace-nowrap">Filter by type:</p>
             <ul className="flex flex-row gap-6 lg:gap-16 text-gray-600 items-center">
-              {['All', ...Object.values(categoryMapping)].map(category => (
+              {['All', ...orderedCategories].map(category => (
                 <li
                   key={category}
                   className={`whitespace-nowrap cursor-pointer ${selectedCategory === category ? 'text-blue-500' : ''}`}

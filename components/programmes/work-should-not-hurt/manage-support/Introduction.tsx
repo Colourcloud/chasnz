@@ -28,7 +28,7 @@ const Introduction = () => {
                             </div>
                             <div className="trade-stat-container flex flex-col gap-3">
                                 <h4 className='text-4xl lg:text-5xl font-semibold text-[--primary-colour] border-b-2 border-[--primary-colour] p-1'>Injuries</h4>
-                                <p className='text-[--text-colour]'>Back Shoulders wrists</p>
+                                <p className='text-[--text-colour]'>Back Shoulders Wrists</p>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const Introduction = () => {
                     </div>
                     <div className='flex flex-col gap-6'>
                         <h6 className='text-[--text-colour] font-semibold text-xl lg:text-2xl'>Explore the Work Should Not Hurt programme and discover how you can get involved in changing the way we work.</h6>
-                        <p className='text-[--text-colour]'>The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury. We publish a wide range of resources covering many work health and safety topics on working in the construction industry.</p>
+                        <p className='text-[--text-colour]'>The Work Should Not Hurt programme aims to make sure workers in the construction industry can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury. We publish a wide range of resources covering many work health and safety topics on working in the construction industry.</p>
                     </div>
                 </div>
             </div>

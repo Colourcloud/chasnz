@@ -154,7 +154,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="content-block flex flex-col gap-8">
-                            <Image src="/mobile-safety/train.jpg" alt="yes" className='w-full rounded-lg template-service-image' width="1200" height="1200"></Image>
+                            <Image src="/mobile-safety/develop-and-deliver.jpg" alt="yes" className='w-full rounded-lg template-service-image' width="1200" height="1200"></Image>
                         <div className="content-text flex flex-col gap-4">
                             <motion.div 
                                     initial={{ scale: 0 }}
@@ -206,7 +206,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="content-block flex flex-col gap-8">
-                            <Image src="/mobile-safety/train.jpg" alt="yes" className='w-full rounded-lg template-service-image' width="1200" height="1200"></Image>
+                            <Image src="/mobile-safety/measure-worker-application.jpg" alt="yes" className='w-full rounded-lg template-service-image' width="1200" height="1200"></Image>
                         <div className="content-text flex flex-col gap-4">
                             <motion.div 
                                     initial={{ scale: 0 }}

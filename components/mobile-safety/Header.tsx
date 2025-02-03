@@ -41,7 +41,7 @@ const Header = () => {
               transition={{ duration: 0.4, delay: 0.8 }}
               className='mt-12'
               >
-              <Link href="http://cms.chasnz.org/wp-content/uploads/2024/12/CHASNZ-Guide-to-Mobile-Plant-Safety.pdf" target='_blank' className='px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center'>Download the Mobile Plant Guidance</Link>
+              <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLJgnaxYQob24lcacaB0iDmzgI%2BWwqayyf%2FShSYPMOBvE3aEDzSDcKWN4kwI1yfI%2BiXV%2B3mLL8nZQ3pSIwTl0FZ4bMNiMQ8hxq1bpGGOpuds3K%2FWDFkoG4x8lXkeyE%2BhhwejIu14qilLcXCHEQq4EQYem5SV08VxH%2BoOrVz9bHlzleUB3tjtdWFoIAa40iMfC2no%2BghuyuppfpHZ2en%2BwalvvGZjokFm1Ab3Bk38BRyeYayq1C3lRDYj0nOF&portalId=40083784" target="_blank" rel="noopener" className="hs-inline-web-interactive-185733104253 px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center" data-hubspot-cta-id="185733104253">Download the Mobile Plant Guidance</a>
             </motion.div>
             
           </div>

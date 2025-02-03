@@ -25,11 +25,14 @@ type Post = {
 };
 
 const categoryMapping: Record<number, string> = {
-  55: 'Guidance',
-  58: 'Posters',
-  57: 'Research & Innovation',
-  56: 'Toolbox Talks',
+  3: 'Guidance',
+  6: 'Posters',
+  5: 'Research & Innovation',
+  4: 'Toolbox Talks',
 };
+
+// Define the order of categories
+const orderedCategories = ['Guidance', 'Posters', 'Research & Innovation', 'Toolbox Talks'];
 
 const Resources: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -47,7 +50,7 @@ const Resources: React.FC = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=54&per_page=100',
+          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=2&per_page=100',
           { next: { revalidate: 3600 } }
         );
 
@@ -85,7 +88,7 @@ const Resources: React.FC = () => {
         <div className="resource-container">
           <div className="resource-heading">
             <h4 className="text-2xl font-semibold text-[--dark-blue]">
-              Browse “Flooring” resources to get you site-ready
+              Browse "Flooring" resources to get you site-ready
             </h4>
           </div>
         </div>
@@ -95,7 +98,7 @@ const Resources: React.FC = () => {
           <div className="scroll-bar py-8 overflow-x-scroll flex items-center flex-row gap-6 lg:gap-16">
             <p className="font-medium text-sm text-gray-500 whitespace-nowrap">Filter by type:</p>
             <ul className="flex flex-row gap-6 lg:gap-16 text-gray-600 items-center">
-              {['All', ...Object.values(categoryMapping)].map(category => (
+              {['All', ...orderedCategories].map(category => (
                 <li
                   key={category}
                   className={`whitespace-nowrap cursor-pointer ${selectedCategory === category ? 'text-blue-500' : ''}`}

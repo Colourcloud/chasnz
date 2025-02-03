@@ -24,9 +24,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   // Assuming resMetadata is an array and we are interested in the first element
   if (resMetadata.length > 0 && resMetadata[0]) {
+    // Strip HTML tags from excerpt
+    const cleanDescription = resMetadata[0].excerpt.rendered
+      .replace(/<[^>]+>/g, '') // Remove HTML tags
+      .replace(/&nbsp;/g, ' ') // Replace &nbsp; with space
+      .replace(/&amp;/g, '&') // Replace &amp; with &
+      .replace(/&quot;/g, '"') // Replace &quot; with "
+      .replace(/&#039;/g, "'") // Replace &#039; with '
+      .trim();
+
+    const featuredImage = resMetadata[0]._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+
     return {
       title: resMetadata[0].title.rendered,
-      description: resMetadata[0].excerpt.rendered, // Use excerpt for description
+      description: cleanDescription,
+      openGraph: {
+        title: resMetadata[0].title.rendered,
+        description: cleanDescription,
+        images: featuredImage ? [{ url: featuredImage }] : [],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: resMetadata[0].title.rendered,
+        description: cleanDescription,
+        images: featuredImage ? [featuredImage] : [],
+      },
     };
   } else {
     throw new Error("No data received from the API");

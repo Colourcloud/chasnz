@@ -51,7 +51,7 @@ const Aboutus: React.FC = () => {
     },
     news: {
       title: 'News & Updates',
-      link: '/news-and-updates/',
+      link: '/newsroom/',
       imageSrc: news,
       description:
         "Stay tuned for articles, expert insights, and announcements about our upcoming workshops and training sessions. Whether it's innovative safety solutions, new legislative updates, or success stories from across the sector, this section is designed to provide you with valuable information that supports our shared goal of enhancing workplace safety. Thank you for visiting, and we look forward to keeping you updated.",

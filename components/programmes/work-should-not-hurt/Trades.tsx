@@ -28,11 +28,11 @@ interface TradeData {
 }
 
 const Trades: React.FC = () => {
-  const [hoveredTrade, setHoveredTrade] = useState<string | null>("brick"); // Initialize with "brick"
-  const [lastHoveredTrade, setLastHoveredTrade] = useState<string | null>(null);
+  const [hoveredTrade, setHoveredTrade] = useState<string | null>("building");
+  const [lastHoveredTrade, setLastHoveredTrade] = useState<string | null>("building");
 
   const handleTradeHover = (trade: string | null) => {
-    setHoveredTrade(trade || "brick"); // If null is passed, default to "brick"
+    setHoveredTrade(trade);
   };
 
   const handleTradeLeave = () => {
@@ -156,14 +156,17 @@ const Trades: React.FC = () => {
           </div>
           <div className="trade-description flex-col gap-6 w-full lg:w-[65%] hidden md:flex">
             <div className="trade-image">
-              <Image
-                src={selectedTrade && tradeData[selectedTrade]?.imageSrc || ''}
-                alt={`${selectedTrade && tradeData[selectedTrade]?.title} image`}
-                width="800"
-                height="800"
-                priority={true}
-                className='w-full'
-              />
+              {Object.keys(tradeData).map((trade) => (
+                <Image
+                  key={trade}
+                  src={tradeData[trade].imageSrc}
+                  alt={`${tradeData[trade].title} image`}
+                  width="800"
+                  height="800"
+                  priority={true}
+                  className={`w-full ${selectedTrade === trade ? '' : 'hidden'}`}
+                />
+              ))}
             </div>
             <div className="trade-information flex flex-col gap-4">
                 <h4 className="text-2xl font-semibold text-[--dark-blue]">{selectedTrade && tradeData[selectedTrade]?.title}</h4>

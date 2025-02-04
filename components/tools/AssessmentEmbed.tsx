@@ -8,7 +8,7 @@ interface AssessmentEmbedProps {
 }
 
 export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
-  const iframeRef = useRef<HTMLEmbedElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const getEmailFromCookie = () => {
     const value = `; ${document.cookie}`;
@@ -57,10 +57,12 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   }, [userEmail]);
 
   return (
-    <embed
+    <iframe
       ref={iframeRef}
       id="iframe_content_wrapper"
-      style={{ width: '100%' }}
+      style={{ width: '100%', border: 'none' }}
+      title="Assessment Tool"
+      allow="fullscreen"
     />
   );
 }

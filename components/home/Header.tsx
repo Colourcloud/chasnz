@@ -19,7 +19,8 @@ const Header = () => {
 
         <div className="content-wrapper">
           <div className="banner-image w-full flex items-center justify-center mt-12">
-            <Link href="/general-resources"><Image src="/common/webinar.gif" className='block' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
+            <Link href="/general-resources#resources"><Image src="/common/webinar.png" className='hidden md:block' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
+            <Link href="/general-resources#resources"><Image src="/common/webinar-mobile.png" className='block md:hidden' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
           </div>
         </div>
         

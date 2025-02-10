@@ -25,10 +25,10 @@ type Post = {
 };
 
 const categoryMapping: Record<number, string> = {
-  3: 'Guidance',
-  6: 'Posters',
-  5: 'Research & Innovation',
-  4: 'Toolbox Talks',
+  30: 'Guidance',
+  31: 'Posters',
+  32: 'Research & Innovation',
+  33: 'Toolbox Talks',
 };
 
 // Define the order of categories
@@ -50,7 +50,7 @@ const Resources: React.FC = () => {
     const fetchPosts = async () => {
       try {
         const response = await fetch(
-          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=2&per_page=100',
+          'https://cms.chasnz.org/wp-json/wp/v2/posts?_embed&categories=29&per_page=100',
           { next: { revalidate: 3600 } }
         );
 

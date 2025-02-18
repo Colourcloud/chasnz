@@ -88,7 +88,7 @@ const MobileNav: React.FC = () => {
                       </a>
                       <ul className='flex flex-col gap-4 mt-4'>
                         <li><a href="/work-should-not-hurt#trades" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Trade specific information</a></li>
-                        {/* <li><a href="/having-a-hmmm" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Have a hmmm in the workplace</a></li> */}
+                        <li><a href="/having-a-hmmm" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Have a hmmm in the workplace</a></li>
                         <li><a href="/work-should-not-hurt/get-involved" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                         <li><a href="/work-should-not-hurt/wsnh-injury-dashboard" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>CHASNZ Claims and Injuries dashboard</a></li>
                       </ul>
@@ -201,7 +201,7 @@ const MobileNav: React.FC = () => {
                         <li className='resource-section'>
                         <p className='text-lg font-medium'>Events</p>
                           <ul className='flex flex-col gap-4 mt-4'>
-
+                            <li><a href="/events/communication-and-culture-event" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Communication and Culture</a></li>
                           </ul>
                         </li>
                     </ul>

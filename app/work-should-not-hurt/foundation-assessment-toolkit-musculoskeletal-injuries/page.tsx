@@ -7,7 +7,7 @@ import AssessmentEmbed from '@/components/tools/AssessmentEmbed'
 import AssessmentConsentForm from '@/components/tools/AssessmentConsentForm'
 
 export const metadata: Metadata = {
-    title: 'Webstruxure Testing Page – CHASNZ',
+    title: 'CHASNZ - Foundation Assessment Toolkit: Musculoskeletal Injuries',
 }
 
 const page = () => {

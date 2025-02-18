@@ -19,7 +19,6 @@ const Facilitated = () => {
                           <h6 className='text-2xl text-white font-semibold'>Helen Lingard</h6>
                           {/* <p className='text-base text-white font-medium'>CHASNZ, CEO</p> */}
                         </div>
-                        <Link href="https://www.linkedin.com/in/christopheralderson/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
                   <div className="facility-card rounded-lg overflow-hidden relative">
@@ -28,7 +27,6 @@ const Facilitated = () => {
                         <div className='flex flex-col'>
                           <h6 className='text-2xl text-white font-semibold'>Stephen Harvey</h6>
                         </div>
-                        <Link href="https://www.linkedin.com/in/jonharper-slade/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
 
@@ -38,7 +36,6 @@ const Facilitated = () => {
                         <div className='flex flex-col'>
                           <h6 className='text-2xl text-white font-semibold'>Darek Toner</h6>
                         </div>
-                        <Link href="https://www.linkedin.com/in/chris-polaczuk-937a33205/" target='_blank'><FaLinkedin className='text-white text-3xl hover:text-[#0072b1]' /></Link>
                       </div>
                   </div>
                 </div>

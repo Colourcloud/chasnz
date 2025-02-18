@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Topics = () => {
   return (
     <section className="py-12 lg:py-32 border-t">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4">
             <h6 className='text-2xl md:text-3xl lg:text-4xl font-semibold max-w-4xl mx-auto text-center'>Below is a list of <span className='text-[--primary-colour]'>key topics</span> we will be discussing throughout the event</h6>
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between items-center py-12 lg:py-32">
                 <div className='flex flex-col gap-6  w-full lg:w-2/5'>

@@ -16,7 +16,7 @@ const Facilitated = () => {
                       <Image src="/events/communication-and-culture/helen.jpg" alt='Helen Lingard' width={800} height={800} />
                       <div className="facility-card-gradient absolute bottom-0 left-0 right-0 h-32 p-8 gap-2 flex flex-row justify-between items-center">
                         <div className='flex flex-col'>
-                          <h6 className='text-2xl text-white font-semibold'>Helen Lingard</h6>
+                          <h6 className='text-2xl text-white font-semibold'>Dist. Prof Helen Lingard</h6>
                           {/* <p className='text-base text-white font-medium'>CHASNZ, CEO</p> */}
                         </div>
                       </div>
@@ -31,10 +31,10 @@ const Facilitated = () => {
                   </div>
 
                   <div className="facility-card rounded-lg overflow-hidden relative">
-                      <Image src="/events/communication-and-culture/darek-toner.jpg" alt='Darek Toner' width={800} height={800} />
+                      <Image src="/events/communication-and-culture/darek-toner.jpg" alt='Derek Toner' width={800} height={800} />
                       <div className="facility-card-gradient absolute bottom-0 left-0 right-0 h-32 p-8 gap-2 flex flex-row justify-between items-center">
                         <div className='flex flex-col'>
-                          <h6 className='text-2xl text-white font-semibold'>Darek Toner</h6>
+                          <h6 className='text-2xl text-white font-semibold'>Derek Toner</h6>
                         </div>
                       </div>
                   </div>

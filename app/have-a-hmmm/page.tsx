@@ -8,7 +8,7 @@ import Slider from '@/components/having-a-hmmm/Slider'
 import Subscribe from '@/components/common/Subscribe'
 
 export const metadata: Metadata = {
-  title: 'CHASNZ - Having a Hmmm',
+  title: 'CHASNZ - Have a Hmmm',
   description: 'ACCs Have a hmmmm campaign encourages people to stop and think about the consequences of injury before acting.',
 }
 

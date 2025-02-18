@@ -19,9 +19,9 @@ const Header = () => {
 
         <div className="content-wrapper">
           <div className="banner-image w-full flex flex-col gap-4 items-center justify-center mt-12">
-            <Link href="/events/medical-cannibis-employers-and-employees-rights-and-responsibilties"><Image src="/common/webinar-2.jpg" className='hidden md:block' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
+            <Link href="/events/medical-cannabis-employers-and-employees-rights-and-responsibilties"><Image src="/common/webinar-2.jpg" className='hidden md:block' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
             <Link href="/general-resources#resources"><Image src="/common/webinar.png" className='hidden md:block' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
-            <Link href="/events/medical-cannibis-employers-and-employees-rights-and-responsibilties"><Image src="/common/webinar-2-mobile.jpg" className='block md:hidden' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
+            <Link href="/events/medical-cannabis-employers-and-employees-rights-and-responsibilties"><Image src="/common/webinar-2-mobile.jpg" className='block md:hidden' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
             <Link href="/general-resources#resources"><Image src="/common/webinar-mobile.png" className='block md:hidden' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
           </div>
         </div>

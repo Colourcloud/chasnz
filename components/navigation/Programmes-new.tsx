@@ -61,6 +61,12 @@ const ProgrammesNew = () => {
                 </div>
                 <ul className='text-base flex flex-col gap-4 mt-4'>
                     <li><a href="/work-should-not-hurt#trades" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Trade specific information</a></li>
+                    {/* <li>
+                        <a href="/having-a-hmmm" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Have a hmmm in the workplace</a>
+                        <div className='flex flex-col'>
+                            <span className='text-xs text-gray-500 font-light'>In partnership with ACC</span>
+                        </div>
+                    </li> */}
                     <li><a href="/work-should-not-hurt/get-involved" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Get Involved</a></li>
                     <li>
                         <a href="/work-should-not-hurt/wsnh-injury-dashboard" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>

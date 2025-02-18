@@ -34,7 +34,7 @@
  
     --radius: 0.5rem;
 
-    --primary-colour: #4FBF4B;
+    --primary-colour: #56D54F;
     --text-colour: #1C242E;
     --totika-blue: #14A5B9;
     --leadon-orange: #FF6600;
@@ -542,6 +542,46 @@ video {
     right: 0;
     bottom: 0;
     background: rgb(17,23,31, 0.8);
+    z-index: 2;
+  }
+}
+
+#having-a-hmmm-header {
+  background-size: cover;
+  background-image: url('../public/having-a-hmmm/header-image.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  height: calc(100vh - 10rem);
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,0,0, 0.5);
+    z-index: 2;
+  }
+}
+
+#communication-and-culture-header {
+  background-size: cover;
+  background-image: url('../public/events/communication-and-culture/header-image.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  height: calc(100vh - 10rem);
+  @media screen and (min-width: 1024px) {
+      background-position: center;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,0,0, 0.55);
     z-index: 2;
   }
 }

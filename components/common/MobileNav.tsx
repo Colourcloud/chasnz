@@ -112,7 +112,7 @@ const MobileNav: React.FC = () => {
                         Lead On
                       </a>
                       <ul className='flex flex-col gap-4 mt-4'>
-                        <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Managment</a></li>
+                        <li><a href="/leadon/" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Information for Management</a></li>
                       </ul>
                     </li>
 

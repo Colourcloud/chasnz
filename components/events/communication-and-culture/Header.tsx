@@ -13,6 +13,7 @@ const Header = () => {
               </div>
             </div>
         </div>
+        <div className='w-full text-center text-sm text-white py-3 px-6 bg-red-600'>Registrations for this in-person event in March is now closed as we have reached our maximum numbers.</div>
     </div>
   )
 }

@@ -25,18 +25,6 @@ const Header = () => {
           <div className="banner-image w-full flex flex-col gap-4 items-center justify-center mt-12">
             <Link href="/events/medical-cannabis-employers-and-employees-rights-and-responsibilties"><Image src="/common/webinar-2.png" className='hidden md:block' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
             <Link href="/events/medical-cannabis-employers-and-employees-rights-and-responsibilties"><Image src="/common/webinar-2-mobile.png" className='block md:hidden' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
-            <Link href="/events/communication-and-culture-event">
-              <video 
-                className="w-full relative"
-                autoPlay
-                muted
-                loop
-                playsInline
-              >
-                <source src="/common/webinar-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </Link>
           </div>
         </div>
         

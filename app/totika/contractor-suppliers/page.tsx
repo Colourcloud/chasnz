@@ -42,7 +42,7 @@ const page = () => {
                     <div className="text-block flex flex-col gap-4">
                         <p className='text-[--totika-blue] text-xl lg:text-2xl font-semibold'>What do I do next? </p>
                         <p className='text-[--primary-colour]'><a href="https://www.totika.org/totika/signup" target="_blank">Click here to sign up for free</a></p>
-                        <p className='text-[--primary-colour]'><a href="https://form.typeform.com/to/UHcfPXGc?typeform-source=www.totika.org" target="_blank">Work out which Supplier category you are</a></p>
+                        <p className='text-[--primary-colour]'><a href="https://www.totika.org/cat" target="_blank">Work out which Supplier category you are</a></p>
                         <p className='text-[--text-colour]'>Fill in your dashboard with your company details</p>
                         <p className='text-[--text-colour]'>Complete and upload proof of a Tōtika-recognised assessment to your dashboard</p>
                     </div>

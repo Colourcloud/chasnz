@@ -1,7 +1,7 @@
 // components/AssessmentEmbed.tsx
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface AssessmentEmbedProps {
   userEmail?: string;
@@ -9,7 +9,6 @@ interface AssessmentEmbedProps {
 
 export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [isCookieSet, setIsCookieSet] = useState<boolean>(false);
 
   const getEmailFromCookie = () => {
     const value = `; ${document.cookie}`;
@@ -22,16 +21,15 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   };
 
   useEffect(() => {
-    // Check if cookie exists
-    const email = getEmailFromCookie();
-    setIsCookieSet(!!email);
-
-    if (!email) return; // Don't proceed if no email
-
     try {
       const appOrigin = window.location.origin;
       const childOrigin = "https://dev.chasnz.dotnous.co.nz";
-      const iFrameSrc = childOrigin + "/assessment.aspx" + "?parentOrigin=" + appOrigin + "&email=" + encodeURIComponent(email || "");
+      const email = getEmailFromCookie();
+      
+      // Don't set src if no email is available
+      if (!email) return;
+      
+      const iFrameSrc = childOrigin + "/assessment.aspx" + "?parentOrigin=" + appOrigin + "&email=" + encodeURIComponent(email);
       
       if (iframeRef.current) {
         iframeRef.current.src = iFrameSrc;
@@ -62,11 +60,7 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
     }
   }, [userEmail]);
 
-  // Don't render anything if cookie is not set
-  if (!isCookieSet) {
-    return null;
-  }
-
+  // Always render the iframe, but only set its src when email is available
   return (
     <iframe
       ref={iframeRef}

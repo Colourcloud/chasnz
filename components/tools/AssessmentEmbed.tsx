@@ -1,7 +1,7 @@
 // components/AssessmentEmbed.tsx
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface AssessmentEmbedProps {
   userEmail?: string;
@@ -9,6 +9,7 @@ interface AssessmentEmbedProps {
 
 export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const [isCookieSet, setIsCookieSet] = useState<boolean>(false);
 
   const getEmailFromCookie = () => {
     const value = `; ${document.cookie}`;
@@ -21,10 +22,15 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   };
 
   useEffect(() => {
+    // Check if cookie exists
+    const email = getEmailFromCookie();
+    setIsCookieSet(!!email);
+
+    if (!email) return; // Don't proceed if no email
+
     try {
       const appOrigin = window.location.origin;
       const childOrigin = "https://dev.chasnz.dotnous.co.nz";
-      const email = getEmailFromCookie();
       const iFrameSrc = childOrigin + "/assessment.aspx" + "?parentOrigin=" + appOrigin + "&email=" + encodeURIComponent(email || "");
       
       if (iframeRef.current) {
@@ -55,6 +61,11 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
       console.error(exception);
     }
   }, [userEmail]);
+
+  // Don't render anything if cookie is not set
+  if (!isCookieSet) {
+    return null;
+  }
 
   return (
     <iframe

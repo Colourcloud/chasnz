@@ -3,10 +3,24 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+const COMPANY_SIZE_OPTIONS = [
+  'Under 10 people',
+  '10-30 people',
+  '30-50 people',
+  '50-80 people',
+  'Over 80 people'
+];
+
 const AssessmentConsentForm = () => {
   const [isCookieSet, setIsCookieSet] = useState<boolean>(false);
   const [initialCheckDone, setInitialCheckDone] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>('');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    company_size: ''
+  });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
@@ -31,21 +45,53 @@ const AssessmentConsentForm = () => {
     return emailRegex.test(email);
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
     
-    if (!validateEmail(email)) {
+    if (!validateEmail(formData.email)) {
       setError('Please enter a valid email address');
+      return;
+    }
+
+    if (!formData.firstName || !formData.lastName || !formData.company || !formData.company_size) {
+      setError('Please fill in all required fields');
       return;
     }
 
     setIsSubmitting(true);
 
     try {
+      // Submit to HubSpot
+      const response = await fetch('/api/submit-assessment-consent', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          context: {
+            pageUri: window.location.href,
+            pageName: document.title,
+            hutk: document.cookie.split('hubspotutk=')[1]?.split(';')[0],
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
       // Set cookies
-      document.cookie = `user-email=${encodeURIComponent(email)}; path=/; max-age=31536000`;
-      
+      document.cookie = `user-email=${encodeURIComponent(formData.email)}; path=/; max-age=31536000`;
       setIsCookieSet(true);
       
       // Reload the page after a short delay
@@ -68,7 +114,7 @@ const AssessmentConsentForm = () => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[9999]">
-      <div className="consent-form w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-auto md:h-[500px] rounded-lg flex flex-col md:flex-row">
+      <div className="consent-form w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-auto md:h-[600px] rounded-lg flex flex-col md:flex-row">
         <div className="form-image w-full md:w-2/5 object-cover h-full">
           <Image 
             src="/common/form-image.jpg" 
@@ -80,31 +126,89 @@ const AssessmentConsentForm = () => {
         </div>
         <div className="form-content w-full md:w-3/5 p-8 flex flex-col gap-4">
           <h4 className="text-2xl font-semibold">
-            Please provide your email to access the assessment
+            Please provide your details to access the assessment
           </h4>
           <p className="text-sm font-light">
             You will only need to fill out this form one time or until you clear your browser cookie data
           </p>
           
           <form onSubmit={handleSubmit} className="mt-4 space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="First Name*"
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Last Name*"
+                  required
+                />
+              </div>
+            </div>
+            
             <div>
-             
               <input
                 type="email"
                 id="email"
                 name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleInputChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your email address"
+                placeholder="Email Address*"
                 required
               />
-              {error && (
-                <p className="mt-1 text-sm text-red-600">
-                  {error}
-                </p>
-              )}
             </div>
+
+            <div>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                value={formData.company}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Company Name*"
+                required
+              />
+            </div>
+
+            <div>
+              <select
+                id="company_size"
+                name="company_size"
+                value={formData.company_size}
+                onChange={handleInputChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                required
+              >
+                <option value="">Company Size*</option>
+                {COMPANY_SIZE_OPTIONS.map((size) => (
+                  <option key={size} value={size}>
+                    {size}
+                  </option>
+                ))}
+              </select>
+            </div>
+            
+            {error && (
+              <p className="mt-1 text-sm text-red-600">
+                {error}
+              </p>
+            )}
             
             <button
               type="submit"

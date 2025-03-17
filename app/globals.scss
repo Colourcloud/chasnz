@@ -1087,3 +1087,13 @@ video {
     padding: 8rem!important;
   }
 }
+
+.consent-form {
+  ::placeholder {
+    font-size: 14px;
+  }
+  select {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+}

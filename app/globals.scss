@@ -218,10 +218,13 @@ p {
   overflow: hidden;
   color: #fff;
   // background-image: url('../public/home/header-bg.jpg');
-  background-image: url('../public/home/having-a-hmmm-header.jpg');
+  background-image: url('../public/home/wsnh-assessment-tool-background.jpg');
   background-size: cover;
   background-position: center;
-  max-height: 800px;
+  max-height: none;
+  @media screen and (min-width: 1024px) {
+    max-height: 800px;
+  }
   &::before {
     content: '';
     position: absolute;

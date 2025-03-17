@@ -23,7 +23,7 @@ export default function AssessmentEmbed({ userEmail }: AssessmentEmbedProps) {
   useEffect(() => {
     try {
       const appOrigin = window.location.origin;
-      const childOrigin = "https://dev.chasnz.dotnous.co.nz";
+      const childOrigin = "https://chasnz.dotnous.co.nz";
       const email = getEmailFromCookie();
       
       // Don't set src if no email is available

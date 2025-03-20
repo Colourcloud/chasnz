@@ -1084,6 +1084,23 @@ video {
   }
 }
 
+.slider-box-leadon {
+  li:marker {
+    color: var(--primary-colour);
+  }
+  width: 90vw!important;
+  @media screen and (min-width: 1024px) {
+    width: 80vw!important
+  }
+}
+
+.slider-container {
+  padding: 8rem 2rem!important;
+  @media screen and (min-width: 1024px) {
+    padding: 8rem!important;
+  }
+}
+
 .slider-container {
   padding: 8rem 2rem!important;
   @media screen and (min-width: 1024px) {

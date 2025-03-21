@@ -76,7 +76,7 @@ const MobileHorizontalScroll: React.FC<MobileHorizontalScrollProps> = ({
         <div className="flex flex-col gap-6">
           <h6 className='text-white text-3xl md:text-5xl lg:text-6xl font-bold'>View The Report</h6>
           <p className='text-white text-base lg:text-lg font-light max-w-5xl'>The below report captures the journey of CHASNZ&apos;s pilot programme called Lead On. The report provides more evidence from an external and refreshed view of the programmes successes and challenges. The document brings together the initial evaluation completed by CHASNZ and builds on those views by speaking again directly with some learners and their managers about how they&apos;ve embedded the learnings from the programme.</p>
-          <Link href="#" className='text-[#FF6600] text-sm font-semibold py-3 px-6 bg-white self-start'>Download The Report</Link>
+          <Link href="http://cms.chasnz.org/wp-content/uploads/2025/03/19468-LeadOn-Capturing-the-Journey-of-the-Lead-On-Trial-v8.pdf" target='_blank' className='text-[#FF6600] text-sm font-semibold py-3 px-6 bg-white self-start'>Download The Report</Link>
         </div>
       </div>
       </div>

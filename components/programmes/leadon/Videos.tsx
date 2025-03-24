@@ -23,13 +23,17 @@ const Videos = () => {
       youtubeId: "ZKon1XKvS3M",
       thumbnail: "/programmes/leadon/video-thumbnail-2.jpg",
       alt: "Leadon video 2",
-      title: "Guest-speaker: Helen Lingard"
+      title: "Guest-speaker: Helen Lingard",
+      downloadTitle: "Download Presentation",
+      downloadLink: "http://cms.chasnz.org/wp-content/uploads/2025/03/Helen-Lingard-7-Mar-CHASNZ-Slides-PDF52.pdf"
     },
     {
       youtubeId: "DSADU1kxI84",
       thumbnail: "/programmes/leadon/video-thumbnail-3.jpg",
       alt: "Leadon video 3", 
-      title: "Guest-speaker: Stephen Harvey"
+      title: "Guest-speaker: Stephen Harvey",
+      downloadTitle: "Download Presentation",
+      downloadLink: "http://cms.chasnz.org/wp-content/uploads/2025/03/Auckland-CHASNZ-1.pdf"
     }
   ];
 
@@ -61,27 +65,44 @@ const Videos = () => {
                   <div className="overflow-x-auto hide-scrollbar -mx-4 px-4 md:mx-0 md:px-0" ref={sectionRef}>
                       <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 md:mt-10 lg:mt-16">
                         {videos.map((video, index) => (
-                          <motion.div 
-                              key={index}
-                              className="video-card w-[300px] md:w-full bg-black flex-shrink-0 cursor-pointer relative group"
-                              initial={{ opacity: 0, x: 50 }}
-                              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-                              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 + (index * 0.2) }}
-                              onClick={() => handleVideoClick(video.youtubeId)}
-                          >
-                              <Image src={video.thumbnail} alt={video.alt} width={1000} height={1000} />
-                              <div className="absolute inset-0 flex flex-col justify-between">
-                                {/* Play button in the center */}
-                                <div className="flex-grow flex items-center justify-center">
-                                  <FaCirclePlay className="text-white text-5xl transition-transform duration-300 transform group-hover:scale-110" />
+                          <div key={index} className="flex flex-col">
+                            <motion.div 
+                                className="video-card w-[300px] md:w-full bg-black flex-shrink-0 cursor-pointer relative group"
+                                initial={{ opacity: 0, x: 50 }}
+                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 + (index * 0.2) }}
+                                onClick={() => handleVideoClick(video.youtubeId)}
+                            >
+                                <Image src={video.thumbnail} alt={video.alt} width={1000} height={1000} />
+                                <div className="absolute inset-0 flex flex-col justify-between">
+                                  {/* Play button in the center */}
+                                  <div className="flex-grow flex items-center justify-center">
+                                    <FaCirclePlay className="text-white text-5xl transition-transform duration-300 transform group-hover:scale-110" />
+                                  </div>
+                                  
+                                  {/* Title at the bottom */}
+                                  <div className="w-full bg-gradient-to-t from-black/80 to-transparent p-4">
+                                    <p className="text-white font-medium text-xl text-left px-3">{video.title}</p>
+                                  </div>
                                 </div>
-                                
-                                {/* Title at the bottom */}
-                                <div className="w-full bg-gradient-to-t from-black/80 to-transparent p-4">
-                                  <p className="text-white font-medium text-xl text-left px-3">{video.title}</p>
-                                </div>
-                              </div>
-                          </motion.div>
+                            </motion.div>
+                            {/* Download link section */}
+                            {video.downloadLink && video.downloadTitle && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 + (index * 0.2) }}
+                                className="mt-3 flex items-center text-sm text-white"
+                              >
+                                <a href={video.downloadLink} target='_blank' className="flex items-center hover:underline bg-[#FF6600] text-white text-sm py-3 px-6 rounded-md">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                  </svg>
+                                  {video.downloadTitle}
+                                </a>
+                              </motion.div>
+                            )}
+                          </div>
                         ))}
                       </div>
                   </div>

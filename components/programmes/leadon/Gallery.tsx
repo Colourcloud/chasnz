@@ -14,12 +14,13 @@ const Gallery = () => {
         <div className="leadon-gallery mt-12">
         <Marquee gradientWidth={0}>
             <Image src="/programmes/leadon/gallery/gallery-1.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
-            <Image src="/programmes/leadon/gallery/gallery-2.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
-            <Image src="/programmes/leadon/gallery/gallery-3.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
-            <Image src="/programmes/leadon/gallery/gallery-4.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
-            <Image src="/programmes/leadon/gallery/gallery-5.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
-            <Image src="/programmes/leadon/gallery/gallery-6.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
-            <Image src="/programmes/leadon/gallery/gallery-7.jpg" alt="Slider image 1" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-2.jpg" alt="Slider image 2" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-3.jpg" alt="Slider image 3" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-4.jpg" alt="Slider image 4" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-5.jpg" alt="Slider image 6" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-6.jpg" alt="Slider image 7" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-8.jpg" alt="Slider image 5" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
+            <Image src="/programmes/leadon/gallery/gallery-7.jpg" alt="Slider image 8" className='w-[200px] md:w-[350px] mx-2 lg:mx-4' width={1000} height={1000} />
         </Marquee>
         </div>
     </section>

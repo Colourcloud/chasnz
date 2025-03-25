@@ -19,14 +19,14 @@ const Videos = () => {
       alt: "Leadon video 1",
       title: "Guest-speaker: Derek Toner"
     },
-    {
-      youtubeId: "ZKon1XKvS3M",
-      thumbnail: "/programmes/leadon/video-thumbnail-2.jpg",
-      alt: "Leadon video 2",
-      title: "Guest-speaker: Helen Lingard",
-      downloadTitle: "Download Presentation",
-      downloadLink: "http://cms.chasnz.org/wp-content/uploads/2025/03/Helen-Lingard-7-Mar-CHASNZ-Slides-PDF52.pdf"
-    },
+    // {
+    //   youtubeId: "ZKon1XKvS3M",
+    //   thumbnail: "/programmes/leadon/video-thumbnail-2.jpg",
+    //   alt: "Leadon video 2",
+    //   title: "Guest-speaker: Helen Lingard",
+    //   downloadTitle: "Download Presentation",
+    //   downloadLink: "http://cms.chasnz.org/wp-content/uploads/2025/03/Helen-Lingard-7-Mar-CHASNZ-Slides-PDF52.pdf"
+    // },
     {
       youtubeId: "DSADU1kxI84",
       thumbnail: "/programmes/leadon/video-thumbnail-3.jpg",

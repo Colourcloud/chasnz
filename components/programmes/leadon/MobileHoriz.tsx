@@ -51,7 +51,7 @@ const MobileHorizontalScroll: React.FC<MobileHorizontalScrollProps> = ({
     },
     {
       id: 4,
-      title: 'Key takeaways from the chasnz evaluation in a nutshell',
+      title: 'Key takeaways from the CHASNZ evaluation in a nutshell',
       image: '/programmes/leadon/slides/evaluation.jpg',
       description: [
         'The CHASNZ team conducted their own evaluation during and after the pilot programme’s completion. CHASNZ wanted to understand the logistical aspects of attending the course as well as the learning content. All 19 participants successfully completed the programme.',

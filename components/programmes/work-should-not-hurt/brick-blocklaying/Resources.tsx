@@ -88,7 +88,7 @@ const Resources: React.FC = () => {
         <div className="resource-container">
           <div className="resource-heading">
             <h4 className="text-2xl font-semibold text-[--dark-blue]">
-              Browse “Brick &amp; Blocklaying” resources to get you site-ready
+              Browse "Brick &amp; Blocklaying" resources to get you site-ready
             </h4>
           </div>
         </div>
@@ -129,9 +129,11 @@ const Resources: React.FC = () => {
                     </div>
                     <div className="resource-card_information flex flex-col gap-2 p-6">
                       <div>
-                      <h4 className="text-sm md:text-base lg:text-lg font-medium">
-                          {post.title.rendered}
-                        </h4>
+                      <h4 className="text-sm md:text-base lg:text-lg font-medium"
+                          dangerouslySetInnerHTML={{
+                            __html: post.title.rendered
+                          }}
+                        />
                         <p
                           className="text-sm font-light hidden md:block"
                           dangerouslySetInnerHTML={{

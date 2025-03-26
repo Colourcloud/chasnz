@@ -112,7 +112,7 @@ const BlogPost: React.FC<{ params: { slug: string } }> = async ({ params }) => {
                 day: 'numeric',
               })}
             </span>
-            <h1 className='text-3xl lg:text-4xl font-semibold'>{post.title.rendered}</h1>
+            <h1 className='text-3xl lg:text-4xl font-semibold' dangerouslySetInnerHTML={{ __html: post.title.rendered }}></h1>
             {post.acf.download && (
             <div className={`hs-web-interactive-inline px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-start`} data-hubspot-wrapper-cta-id={post.acf.ctaid}>
                 <a 

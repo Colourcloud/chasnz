@@ -86,7 +86,20 @@ const Frameworks = () => {
         <div 
           className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-xl h-[95vh] transform transition-transform duration-300 ease-in-out overflow-auto ${animateModal ? 'translate-y-0' : 'translate-y-full'}`}
         >
-            <div className="frameworks-modal-cover w-full h-[600px] bg-cover bg-center flex flex-col justify-center items-center" style={{ backgroundImage: `url(${selectedFramework?.coverimage || selectedFramework?.image})` }}>
+            <div className="frameworks-modal-cover w-full h-[600px] relative flex flex-col justify-center items-center">
+                <div className="absolute inset-0 z-0">
+                    <Image 
+                        src={selectedFramework?.coverimage || selectedFramework?.image || ''}
+                        alt={selectedFramework?.title || 'Framework cover'}
+                        width={1920}
+                        height={1080}
+                        priority
+                        className="object-cover h-full w-full"
+                        sizes="100vw"
+                        quality={80}
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                </div>
                 <span className='text-white text-sm font-medium cursor-pointer z-10 absolute top-10 right-10' onClick={handleCloseModal}><IoClose className='text-2xl' /></span>
                 
                 <div className="flex flex-col gap-6 relative z-10">

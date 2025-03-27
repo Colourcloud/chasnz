@@ -49,11 +49,11 @@ const Frameworks = () => {
             <h4 className='text-2xl md:text-4xl lg:text-5xl font-semibold max-w-2xl !leading-tight'>Download our <span className='text-[--primary-colour]'>competency framework documents</span></h4>
             <p className='text-black text-base font-light lg:text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus  aliquam ipsum ut egestas. Praesent non lobortis tellus. Donec mattis  lacinia orci, vitae cursus ex pulvinar vel. Vestibulum viverra ante eget sollicitudin lacinia. Vestibulum mollis</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 mt-16">
             {frameworksData.map((framework, index) => (
                 <div 
                   key={index} 
-                  className="framework-card relative min-h-[400px] rounded-lg overflow-hidden cursor-pointer"
+                  className="framework-card relative min-h-[200px] md:min-h-[400px] rounded-lg overflow-hidden cursor-pointer"
                   onClick={() => handleOpenFramework(framework)}
                 >
                     <div className="absolute inset-0 overflow-hidden">
@@ -65,8 +65,8 @@ const Frameworks = () => {
                             className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110" 
                         />
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                        <h6 className='text-white text-lg md:text-xl font-medium'>{framework.title}</h6>
+                    <div className="absolute bottom-0 left-0 right-0 p-3 md:p-6 z-10">
+                        <h6 className='text-white text-sm md:text-xl font-medium'>{framework.title}</h6>
                     </div>
                 </div>
             ))}
@@ -84,7 +84,7 @@ const Frameworks = () => {
         
         {/* Modal Content */}
         <div 
-          className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-xl h-[95vh] transform transition-transform duration-300 ease-in-out overflow-auto ${animateModal ? 'translate-y-0' : 'translate-y-full'}`}
+          className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-xl h-[90vh] lg:h-[95vh] transform transition-transform duration-300 ease-in-out overflow-auto ${animateModal ? 'translate-y-0' : 'translate-y-full'}`}
         >
             <div className="frameworks-modal-cover w-full h-[600px] relative flex flex-col justify-center items-center">
                 <div className="absolute inset-0 z-0">
@@ -103,7 +103,7 @@ const Frameworks = () => {
                 <span className='text-white text-sm font-medium cursor-pointer z-10 absolute top-10 right-10' onClick={handleCloseModal}><IoClose className='text-2xl' /></span>
                 
                 <div className="flex flex-col gap-6 relative z-10">
-                    <h6 className='text-white text-2xl md:text-4xl lg:text-6xl font-medium max-w-3xl text-center'>{selectedFramework?.title}</h6>
+                    <h6 className='text-white text-3xl md:text-4xl lg:text-6xl font-medium max-w-3xl text-center'>{selectedFramework?.title}</h6>
                     <div className={`hs-web-interactive-inline px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center`} data-hubspot-wrapper-cta-id={selectedFramework?.download?.trackingId}>
                         <a 
                           href={selectedFramework?.download?.link} 

@@ -15,10 +15,10 @@ const Introduction = () => {
             <div className="flex flex-col gap-8 lg:gap-16 lg:flex-row justify-between items-center">
                 <div className="flex flex-col gap-6 w-full lg:w-2/5">
                     <AnimatedText type="word"><h2 className='text-2xl md:text-4xl lg:text-5xl font-semibold'>Trades Health and safety competency</h2></AnimatedText>
-                    <motion.p initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.4, delay: 0.6 }} className='text-black text-base font-light' >
+                    <motion.p initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.4, delay: 0.4 }} className='text-black text-base font-light' >
                         We have developed a range of Health and Safety Competency framework documents for the Trades Sector, allowing those who design and contribute to construction health and safety training content to align with ConstructSafe Trades Health and Safety Competency assessment for specific trades.
                     </motion.p>
-                    <motion.p initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.4, delay: 0.7 }} className='text-black text-base font-light' >
+                    <motion.p initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ duration: 0.4, delay: 0.4 }} className='text-black text-base font-light' >
                         The intent is to make it easy for training content to meet the knowledge and aptitude requirements that candidates need to meet the standard. All of these frameworks are FREE to access. Please email us at <a href="mailto:info@chasnz.org">info@chasnz.org</a> with any queries or feedback.
                     </motion.p>
                 </div>
@@ -26,7 +26,7 @@ const Introduction = () => {
                     <div className="grid grid-cols-12 gap-3">
                         {/* First large image (left side) */}
                         <motion.div 
-                            className="col-span-12 md:col-span-6 h-[600px]"
+                            className="col-span-12 md:col-span-6 h-[400px] lg:h-[600px]"
                             initial={{ opacity: 0, x: 100 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
                             transition={{ duration: 0.7 }}
@@ -40,7 +40,7 @@ const Introduction = () => {
                             />
                         </motion.div>
                         {/* Two stacked images (right side) */}
-                        <div className="col-span-12 md:col-span-6 grid grid-rows-2 gap-3 h-[600px]">
+                        <div className="col-span-12 md:col-span-6 grid grid-rows-2 gap-3 h-[400px] lg:h-[600px]">
                             <motion.div 
                                 className="h-full"
                                 initial={{ opacity: 0, x: 100 }}

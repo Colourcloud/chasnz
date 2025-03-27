@@ -25,7 +25,7 @@ const Header = () => {
             <div className="section-block relative z-10 flex flex-col h-full items-center justify-center">
                 <div className="section-text max-w-6xl mx-auto flex flex-col gap-6 text-center px-4 lg:px-0">
                     <AnimatedText type="word">
-                    <h1 className='text-4xl md:text-4xl lg:text-7xl text-white font-semibold tracking-tight'>
+                    <h1 className='text-3xl md:text-4xl lg:text-7xl text-white font-semibold tracking-tight'>
                         Health and Safety Competency Framework Documents
                     </h1>
                     </AnimatedText>
@@ -51,50 +51,38 @@ const Header = () => {
 
             <div className="vehicle-marquee mt-16 lg:mt-24">
                 <Marquee gradient={false} speed={40} autoFill={true} delay={0}>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/asphalt.jpg" className='object-cover w-full h-full' alt="asphalt" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/bulldozer.jpg" className='object-cover w-full h-full' alt="bulldozer" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/carpenter.jpg" className='object-cover w-full h-full' alt="carpenter" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/dump-truck.jpg" className='object-cover w-full h-full' alt="dump truck" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/dumper.jpg" className='object-cover w-full h-full' alt="dumper" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/electrician.jpg" className='object-cover w-full h-full' alt="electrician" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/excavator.jpg" className='object-cover w-full h-full' alt="excavator" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/grader.jpg" className='object-cover w-full h-full' alt="grader" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/health-and-safety.jpg" className='object-cover w-full h-full' alt="health and safety" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/loader.jpg" className='object-cover w-full h-full' alt="loader" width={800} height={800} />
                     </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
+                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
                         <Image src="/health-and-safety-frameworks/roller.jpg" className='object-cover w-full h-full' alt="roller" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/rotary-broom.jpg" className='object-cover w-full h-full' alt="rotary broom" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/scaffolding.jpg" className='object-cover w-full h-full' alt="scaffolding" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/scraper.jpg" className='object-cover w-full h-full' alt="scraper" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/telehandler.jpg" className='object-cover w-full h-full' alt="telehandler" width={800} height={800} />
                     </div>
                 </Marquee>
             </div>

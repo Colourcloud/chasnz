@@ -1117,3 +1117,32 @@ video {
     color: #9ca3af;
   }
 }
+
+.framework-card {
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 250px;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 5;
+    pointer-events: none;
+  }
+}
+
+.frameworks-modal-cover {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    pointer-events: none;
+  }
+}

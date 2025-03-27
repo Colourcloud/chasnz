@@ -11,6 +11,30 @@ import FrameworkModal from './FrameworkModal';
 const Frameworks = () => {
   const [selectedFramework, setSelectedFramework] = useState<typeof frameworksData[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [preloadedImages, setPreloadedImages] = useState<string[]>([]);
+
+  // Preload all framework cover images when component mounts
+  useEffect(() => {
+    const preloadImages = () => {
+      // Create an array to track which images have been preloaded
+      const preloaded: string[] = [];
+      
+      frameworksData.forEach(framework => {
+        if (framework.coverimage) {
+          // Create an HTMLImageElement to preload the image
+          const img = document.createElement('img');
+          img.src = framework.coverimage;
+          img.onload = () => {
+            preloaded.push(framework.coverimage);
+            // Update state when an image is loaded
+            setPreloadedImages(prev => [...prev, framework.coverimage]);
+          };
+        }
+      });
+    };
+    
+    preloadImages();
+  }, []);
 
   // Handle opening a framework modal
   const handleOpenFramework = (framework: typeof frameworksData[0]) => {
@@ -34,6 +58,11 @@ const Frameworks = () => {
     };
   }, []);
 
+  // Function to check if a cover image is preloaded
+  const isImagePreloaded = (coverimage: string) => {
+    return preloadedImages.includes(coverimage);
+  };
+
   return (
    <section className='py-16 lg:py-32' id="frameworks">
     <div className="site-wrapper">
@@ -41,6 +70,23 @@ const Frameworks = () => {
             <h4 className='text-2xl md:text-4xl lg:text-5xl font-semibold max-w-2xl !leading-tight'>Download our <span className='text-[--primary-colour]'>competency framework documents</span></h4>
             <p className='text-black text-base font-light lg:text-lg'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus  aliquam ipsum ut egestas. Praesent non lobortis tellus. Donec mattis  lacinia orci, vitae cursus ex pulvinar vel. Vestibulum viverra ante eget sollicitudin lacinia. Vestibulum mollis</p>
         </div>
+        
+        {/* Hidden preload container for Next.js Image optimization */}
+        <div className="hidden">
+          {frameworksData.map((framework, index) => 
+            framework.coverimage && (
+              <Image 
+                key={`preload-${index}`}
+                src={framework.coverimage}
+                alt=""
+                width={1}
+                height={1}
+                priority={index < 4} // Prioritize loading the first few cover images
+              />
+            )
+          )}
+        </div>
+        
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 mt-16">
             {frameworksData.map((framework, index) => (
                 <div 
@@ -70,6 +116,7 @@ const Frameworks = () => {
       <FrameworkModal 
         framework={selectedFramework} 
         onClose={handleCloseModal} 
+        isPreloaded={selectedFramework.coverimage ? isImagePreloaded(selectedFramework.coverimage) : false}
       />
     )}
    </section>

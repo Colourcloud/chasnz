@@ -6,10 +6,12 @@ import { frameworksData } from './frameworkData';
 // Separate modal component for better organization
 const FrameworkModal = ({ 
   framework, 
-  onClose 
+  onClose,
+  isPreloaded = false
 }: { 
   framework: typeof frameworksData[0]; 
   onClose: () => void;
+  isPreloaded?: boolean;
 }) => {
   // Animation state
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +50,7 @@ const FrameworkModal = ({
               alt={framework.title}
               width={1920}
               height={1080}
-              priority
+              priority={!isPreloaded}
               className="object-cover w-full h-full"
               sizes="100vw"
               quality={80}

@@ -50,40 +50,15 @@ const Header = () => {
             </div>
 
             <div className="vehicle-marquee mt-16 lg:mt-24">
-                <Marquee gradient={false} speed={40} autoFill={true} delay={0}>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/asphalt.jpg" className='object-cover w-full h-full' alt="asphalt" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/bulldozer.jpg" className='object-cover w-full h-full' alt="bulldozer" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/carpenter.jpg" className='object-cover w-full h-full' alt="carpenter" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/dump-truck.jpg" className='object-cover w-full h-full' alt="dump truck" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/dumper.jpg" className='object-cover w-full h-full' alt="dumper" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/electrician.jpg" className='object-cover w-full h-full' alt="electrician" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/excavator.jpg" className='object-cover w-full h-full' alt="excavator" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/grader.jpg" className='object-cover w-full h-full' alt="grader" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/health-and-safety.jpg" className='object-cover w-full h-full' alt="health and safety" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/loader.jpg" className='object-cover w-full h-full' alt="loader" width={800} height={800} />
-                    </div>
-                    <div className="aspect-square overflow-hidden max-w-[250px] md:max-w-[400px] mx-3">
-                        <Image src="/health-and-safety-frameworks/roller.jpg" className='object-cover w-full h-full' alt="roller" width={800} height={800} />
-                    </div>
+                <Marquee gradient={false} className='max-w-max'>
+                    <Image src="/health-and-safety-frameworks/asphalt.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="asphalt" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/bulldozer.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="bulldozer" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/carpenter.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="carpenter" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/dump-truck.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="dump truck" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/electrician.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="electrician" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/excavator.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="excavator" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/grader.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="grader" width={600} height={600} />
+                    <Image src="/health-and-safety-frameworks/dumper.jpg" className='w-[200px] md:w-[400px] mx-2 lg:mx-4 h-full rounded-md' alt="dumper" width={600} height={600} />
                 </Marquee>
             </div>
 

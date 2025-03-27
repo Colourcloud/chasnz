@@ -91,7 +91,17 @@ const Frameworks = () => {
                 
                 <div className="flex flex-col gap-6 relative z-10">
                     <h6 className='text-white text-2xl md:text-4xl lg:text-6xl font-medium max-w-3xl text-center'>{selectedFramework?.title}</h6>
-                    <a href={selectedFramework?.download?.link} target="_blank" rel="noopener" className={`hs-inline-web-interactive-${selectedFramework?.download?.trackingId} px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center`} data-hubspot-cta-id={selectedFramework?.download?.trackingId}>Download Framework</a>
+                    <div className={`hs-web-interactive-inline px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center`} data-hubspot-wrapper-cta-id={selectedFramework?.download?.trackingId}>
+                        <a 
+                          href={selectedFramework?.download?.link} 
+                          className={`hs-inline-web-interactive-${selectedFramework?.download?.trackingId}`} 
+                          target="_blank" 
+                          rel="noopener" 
+                          data-hubspot-cta-id={selectedFramework?.download?.trackingId}
+                        >
+                          Download Framework
+                        </a>
+                    </div>
                 </div>
             </div>
           <div className="p-6 md:p-8 max-w-5xl mt-10 mx-auto">

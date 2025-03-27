@@ -41,7 +41,7 @@ const FrameworkModal = ({
         }`}
       >
         {/* Modal header with cover image */}
-        <div className="relative h-[600px] w-full flex flex-col justify-center items-center">
+        <div className="relative h-[350px] lg:h-[600px] w-full flex flex-col justify-center items-center">
           <div className="absolute inset-0">
             <Image 
               src={framework.coverimage || framework.image}

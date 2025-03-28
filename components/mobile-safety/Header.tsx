@@ -35,12 +35,12 @@ const Header = () => {
             >
               We have developed a detailed Mobile Plant Guidance for the construction plant and equipment sector. The use of Mobile Plant in construction is common and carries with it significant hazards that can affect both operators of Mobile Plant and those working around them.
             </motion.p>
-            <div className="flex flex-row flex-wrap gap-4 justify-center">
+            <div className="flex flex-row flex-wrap gap-4 justify-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.8 }}
-              className='mt-12'
+              className='mt-6'
               >
               <a href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLJgnaxYQob24lcacaB0iDmzgI%2BWwqayyf%2FShSYPMOBvE3aEDzSDcKWN4kwI1yfI%2BiXV%2B3mLL8nZQ3pSIwTl0FZ4bMNiMQ8hxq1bpGGOpuds3K%2FWDFkoG4x8lXkeyE%2BhhwejIu14qilLcXCHEQq4EQYem5SV08VxH%2BoOrVz9bHlzleUB3tjtdWFoIAa40iMfC2no%2BghuyuppfpHZ2en%2BwalvvGZjokFm1Ab3Bk38BRyeYayq1C3lRDYj0nOF&portalId=40083784" target="_blank" rel="noopener" className="hs-inline-web-interactive-185733104253 px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center" data-hubspot-cta-id="185733104253">Download the Mobile Plant Guidance</a>
             </motion.div>
@@ -49,9 +49,18 @@ const Header = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.8 }}
-              className='mt-12'
+              className='mt-6'
               >
               <Link href="/health-and-safety-competency-frameworks" className="px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center">Health and Safety Competency Frameworks</Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+              className='mt-6'
+              >
+              <Link href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLL4XDoiKAeiuSDi%2FMF1qW2iFN16qXC8hp3AmTN31ej5A0dM4AJyss7b%2F1D75Bmj3e%2BXJJKwxjnKb2QYslFkQ0qWNF7mRg6cG%2FJZ6urAAWj5iksfoCfh72TJbKaVV%2FD7s2Vl5zmoTcrCQ3waSj3ggJJjniKSpwDKIYRBm5tPtNVOZt7unCh5c1kK3q5CFTQuRllxNsCzu9Dl78Oo1i2Z7l5gZjjeG%2BD00CxMZKKAD2g9AwOsLXPTSnBDoCIhToZdhWX3PwfNHw%3D%3D&portalId=40083784" target="_blank" rel="noopener" className="hs-inline-web-interactive-188011515261 px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center" data-hubspot-cta-id="188011515261">Download the Low-Loader Guide</Link>
             </motion.div>
             </div>
             

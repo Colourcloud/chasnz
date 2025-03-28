@@ -14,19 +14,20 @@ const Videos = () => {
   
   const videos = [
     {
+      youtubeId: "hOtx4Ii6hUY",
+      thumbnail: "/programmes/leadon/video-thumbnail-2.jpg",
+      alt: "Leadon video 2",
+      title: "Guest-Speaker Dist.Prof Helen Lingard",
+      downloadTitle: "Download Presentation",
+      downloadLink: "http://cms.chasnz.org/wp-content/uploads/2025/03/Helen-Lingard-7-Mar-CHASNZ-Slides-PDF52.pdf"
+    },
+    {
       youtubeId: "YIXdhaMkBEw",
       thumbnail: "/programmes/leadon/video-thumbnail-1.jpg",
       alt: "Leadon video 1",
-      title: "Guest-speaker: Derek Toner"
+      title: "Guest-speaker: Derek Toner",
+      text: "There is no power-point presentation available from Derek's session as it was an interactive workshop."
     },
-    // {
-    //   youtubeId: "ZKon1XKvS3M",
-    //   thumbnail: "/programmes/leadon/video-thumbnail-2.jpg",
-    //   alt: "Leadon video 2",
-    //   title: "Guest-speaker: Helen Lingard",
-    //   downloadTitle: "Download Presentation",
-    //   downloadLink: "http://cms.chasnz.org/wp-content/uploads/2025/03/Helen-Lingard-7-Mar-CHASNZ-Slides-PDF52.pdf"
-    // },
     {
       youtubeId: "DSADU1kxI84",
       thumbnail: "/programmes/leadon/video-thumbnail-3.jpg",
@@ -86,6 +87,17 @@ const Videos = () => {
                                   </div>
                                 </div>
                             </motion.div>
+                            {/* Text information if available */}
+                            {video.text && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 + (index * 0.2) }}
+                                className="mt-3 text-sm font-light text-black"
+                              >
+                                {video.text}
+                              </motion.div>
+                            )}
                             {/* Download link section */}
                             {video.downloadLink && video.downloadTitle && (
                               <motion.div

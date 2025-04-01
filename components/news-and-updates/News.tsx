@@ -18,6 +18,7 @@ interface News {
         excerpt: string;
         content: string;
         featured_image: string;
+        is_alert?: boolean;
     };
     featured_media: number;
 }
@@ -76,7 +77,12 @@ const LatestNews = () => {
                 <div className="latest-news mb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {news.map((newsItem) => (
                         <div key={newsItem.id} className='news-card flex flex-col gap-4 border rounded-md overflow-hidden'>
-                            <div className="news-card-image max-h-[250px]">
+                            <div className="news-card-image max-h-[250px] relative">
+                                {newsItem.acf.is_alert && (
+                                    <div className="absolute top-2 right-2 bg-red-600 text-white px-3 py-1 rounded-md font-semibold shadow-md z-10">
+                                        Safety Alert
+                                    </div>
+                                )}
                                 <Image 
                                     src={newsItem.acf.featured_image || '/placeholder.jpg'} 
                                     alt={newsItem.title.rendered}
@@ -95,6 +101,11 @@ const LatestNews = () => {
                                         day: 'numeric',
                                     })}
                                 </span>
+                                {newsItem.acf.is_alert && (
+                                    <div className="bg-red-600 text-white px-2 py-1 text-xs font-semibold self-start">
+                                        Safety Alert
+                                    </div>
+                                )}
                                 <h6 className='text-lg md:text-xl font-semibold'>
                                     {newsItem.title.rendered}
                                 </h6>

@@ -54,14 +54,6 @@ const Header = () => {
               <Link href="/health-and-safety-competency-frameworks" className="px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center">Health and Safety Competency Frameworks</Link>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.8 }}
-              className='mt-6'
-              >
-              <Link href="https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/click?encryptedPayload=AVxigLL4XDoiKAeiuSDi%2FMF1qW2iFN16qXC8hp3AmTN31ej5A0dM4AJyss7b%2F1D75Bmj3e%2BXJJKwxjnKb2QYslFkQ0qWNF7mRg6cG%2FJZ6urAAWj5iksfoCfh72TJbKaVV%2FD7s2Vl5zmoTcrCQ3waSj3ggJJjniKSpwDKIYRBm5tPtNVOZt7unCh5c1kK3q5CFTQuRllxNsCzu9Dl78Oo1i2Z7l5gZjjeG%2BD00CxMZKKAD2g9AwOsLXPTSnBDoCIhToZdhWX3PwfNHw%3D%3D&portalId=40083784" target="_blank" rel="noopener" className="hs-inline-web-interactive-188011515261 px-6 text-white text-sm font-medium py-3 rounded-full bg-[--primary-colour] self-center" data-hubspot-cta-id="188011515261">Download the Low-Loader Guide</Link>
-            </motion.div>
             </div>
             
           </div>

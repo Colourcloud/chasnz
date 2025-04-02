@@ -201,7 +201,7 @@ const VehicleItem = ({
         <ImagePreloader images={imageUrls} />
         
         <div className="flex flex-col gap-4 lg:gap-6 max-w-6xl mx-auto text-left md:text-center px-4">
-          <AnimatedText type="letter">
+          <AnimatedText type="word">
             <h2 className='text-3xl md:text-4xl lg:text-6xl font-semibold'>
               Types of Mobile Plant in Construction
             </h2>

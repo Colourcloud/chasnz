@@ -9,10 +9,11 @@ const Introduction = () => {
                 <div className="programme-navigation w-full lg:w-[30%]">
                     <h4 className='text-black text-2xl font-semibold text-[--dark-blue]'>WSHN related content:</h4>
                     <ul className='flex flex-col gap-6 underline text-[--primary-colour] mt-6 text-lg'>
-                        <li><Link href="/work-should-not-hurt#trades">Trade Specific Information</Link></li>
-                        <li><Link href="/work-should-not-hurt/get-involved">Get Involved</Link></li>
                         <li><Link href="/work-should-not-hurt#resources">Resources</Link></li>
                         <li><Link href="/work-should-not-hurt/wsnh-injury-dashboard">CHASNZ Claims and Injuries dashboard</Link></li>
+                        <li><Link href="/work-should-not-hurt/foundation-assessment-toolkit-musculoskeletal-injuries">Foundation Assessment Toolkit: Musculoskeletal Injuries</Link></li>
+                        <li><Link href="/have-a-hmmm">Have a hmmm in the workplace</Link></li>
+                        <li><Link href="/work-should-not-hurt/get-involved">Get Involved</Link></li>
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">

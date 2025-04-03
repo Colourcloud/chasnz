@@ -35,6 +35,15 @@ const LatestNews = () => {
         return words.slice(0, wordCount).join(' ') + '...';
     };
 
+    // Helper function to check if a post is less than 1 day old
+    const isNewPost = (postDate: string) => {
+        const currentDate = new Date();
+        const publishDate = new Date(postDate);
+        const diffTime = Math.abs(currentDate.getTime() - publishDate.getTime());
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        return diffDays <= 1;
+    };
+
     useEffect(() => {
         const fetchNews = async () => {
             try {
@@ -83,6 +92,11 @@ const LatestNews = () => {
                                         Safety Alert
                                     </div>
                                 )}
+                                {isNewPost(newsItem.date) && (
+                                    <div className="absolute top-2 right-2 bg-green-600 text-white px-3 py-1 rounded-md font-semibold shadow-md z-10" style={{ top: newsItem.acf.is_alert ? '40px' : '8px' }}>
+                                        New Post
+                                    </div>
+                                )}
                                 <Image 
                                     src={newsItem.acf.featured_image || '/placeholder.jpg'} 
                                     alt={newsItem.title.rendered}
@@ -104,6 +118,11 @@ const LatestNews = () => {
                                 {newsItem.acf.is_alert && (
                                     <div className="bg-red-600 text-white px-2 py-1 text-xs font-semibold self-start">
                                         Safety Alert
+                                    </div>
+                                )}
+                                {isNewPost(newsItem.date) && (
+                                    <div className="bg-green-600 text-white px-2 py-1 text-xs font-semibold self-start">
+                                        New Post
                                     </div>
                                 )}
                                 <h6 className='text-lg md:text-xl font-semibold'>

@@ -30,7 +30,7 @@ const Header = () => {
 
         <div className="content-wrapper">
           <div className="banner-image w-full flex flex-col gap-4 items-center justify-center mt-12">
-            <Link href="/leadon"><Image src="/common/webinar.gif" className='' alt="energy based safety workshop banner" width={1921} height={150} /></Link>
+            <Link href="/work-should-not-hurt/foundation-assessment-toolkit-musculoskeletal-injuries"><Image src="/common/webinar.gif" className='' alt="foundation-assessment-toolkit-musculoskeletal-injuries" width={1921} height={150} /></Link>
           </div>
         </div>
         

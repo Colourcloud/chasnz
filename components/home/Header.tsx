@@ -16,8 +16,12 @@ const Header = () => {
                         <Link href="/mobile-safety"><p className='text-lg md:text-xl font-semibold flex flex-row gap-2 items-center'><FaCirclePlay className='text-[--primary-colour] text-3xl' /> Click here for more details</p></Link>
                     </div>
                     <div className="w-full lg:w-2/4 relative flex flex-row gap-5">
-                        <Image src="/home/mobile-plant-safety-cover.jpg" className='w-full' alt="mobile plant guidance" width={1921} height={150} />
-                        <Image src="/home/low-loader-cover.jpg" className='w-full' alt="low loader guidance" width={1921} height={150} />
+                      <div className="">
+                        <Image src="/home/mobile-plant-safety-cover.jpg" className='w-full' alt="mobile plant guidance" width={1080} height={1080} />
+                      </div>
+                      <div className="">
+                        <Image src="/home/low-loader-cover.jpg" className='w-full' alt="low loader guidance" width={1080} height={1080} />
+                      </div>
                     </div>
                 </div>
               </div>

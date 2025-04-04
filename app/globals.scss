@@ -218,9 +218,7 @@ p {
   overflow: hidden;
   color: #fff;
   // background-image: url('../public/home/header-bg.jpg');
-  background-image: url('../public/home/wsnh-assessment-tool-background.jpg');
-  background-size: cover;
-  background-position: center;
+  background: #1C242E;
   max-height: none;
   @media screen and (min-width: 1024px) {
     max-height: 800px;

@@ -45,7 +45,7 @@ const ConsentForm: React.FC = () => {
 
   return (
     <div className="consent-form-container justify-center items-center">
-      <div className="consent-form w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-auto md:h-[500px] rounded-lg flex flex-col md:flex-row">
+      <div className="consent-form w-full overflow-hidden md:w-3/5 lg:w-[800px] bg-white h-auto md:h-[550px] rounded-lg flex flex-col md:flex-row">
         <div className="form-image w-full md:w-2/5 object-cover h-full">
           <Image src="/common/form-image.jpg" alt="resource image" width={600} height={600} className="h-[160px] md:h-full w-full object-[50%,30%] object-cover" />
         </div>

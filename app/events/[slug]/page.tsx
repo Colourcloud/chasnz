@@ -27,6 +27,8 @@ interface Event {
         cover_image: string; // Assuming this might be an ID that needs resolving to a URL
         content: string;
         link: string;
+        webinar_link: string;
+        webinar_link_button_title: string;
     };
 }
 
@@ -137,7 +139,11 @@ const EventDetails: React.FC<{ params: { slug: string } }> = ({ params }) => {
                   <p className='text-base font-medium'>{event.acf.location}</p>
                 </div>
                 <div className="section-block flex flex-col">
-                  {event.acf.isactive === "Yes" ? (
+                  {event.acf.webinar_link && event.acf.webinar_link_button_title ? (
+                    <a href={event.acf.webinar_link} className='w-full text-center font-medium text-sm text-white py-3 px-6 rounded-full bg-[--primary-colour]' target='_blank'>
+                      {event.acf.webinar_link_button_title}
+                    </a>
+                  ) : event.acf.isactive === "Yes" ? (
                     <a href={event.acf.link} className='w-full text-center text-sm text-white py-3 px-6 rounded-full bg-[--primary-colour]'>Register for the event</a>
                   ) : (
                     <div className='w-full text-center text-sm text-white py-3 px-6 rounded-full bg-gray-400'>Event has Ended</div>

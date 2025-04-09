@@ -26,8 +26,16 @@ const page = () => {
                     </ul>
                 </div>
                 <div className="programme-text flex flex-col gap-6 w-full lg:w-[70%] ml-0 xl:ml-[8rem] z-[10] lg:mt-[-14rem] lg:bg-white lg:pt-12 lg:px-20">
-                    <h4 className='font-bold text-4xl lg:text-6xl'>Get Involved</h4>
-                    <p className='text-[--text-colour]'>We can&apos;t do this on our own. Work Should Not Hurt is a participatory ergonomics programme. Put simply, this means actively involving workers in developing and implementing changes to the way work is done to improve productivity and reduce the risks to safety and health. Let&apos;s join forces to support your industry. Together we can take steps to reduce preventable sprains and strains in the construction industry.</p>
+                    <h4 className='font-bold text-4xl lg:text-6xl'>Get Involved!</h4>
+                    <p className='text-[--text-colour] font-semibold'>Your ideas and input is vital to our success:</p>
+                    <ul className='flex flex-col gap-2 text-[--text-colour] list-disc list-inside'>
+                        <li>Use the WSNH Foundation Toolkit to start you off on your injury prevention journey</li>
+                        <li>Share your ideas for injury prevention with us</li>
+                        <li>Invite our Ergonomists to observe work on your site</li>
+                        <li>Become a Work Should Not Hurt Ambassador</li>
+                        <li>Participate in our research and trials</li>
+                        <li>Follow and like us on <a href="https://www.instagram.com/workshouldnothurt/" target="_blank" className="underline text-[--primary-colour]">Instagram</a> and <a href="https://www.youtube.com/@WorkShouldNotHurt" target="_blank" className="underline text-[--primary-colour]">YouTube</a></li>
+                    </ul>
                     <GetinvoledForm />
                 </div>
             </div>

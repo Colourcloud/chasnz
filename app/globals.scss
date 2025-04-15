@@ -588,6 +588,27 @@ video {
   }
 }
 
+#masterclass-on-contractor-health-and-safety-header {
+  background-size: cover;
+  background-image: url('../public/events/masterclass-on-contractor-health/header-image.jpg');
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  height: calc(100vh - 10rem);
+  @media screen and (min-width: 1024px) {
+      background-position: center;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,0,0, 0.55);
+    z-index: 2;
+  }
+}
+
 #events-header {
   background-size: cover;
   background-image: url('../public/events/events-header.jpg');

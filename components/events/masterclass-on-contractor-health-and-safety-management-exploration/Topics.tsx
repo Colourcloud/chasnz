@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { Info } from 'lucide-react'
 
 // Define interface for team member data
 interface TeamMember {
@@ -23,7 +24,7 @@ const Topics = () => {
       name: "Sue Bottrell",
       position: "Lawyer and Chartered Safety Professional, ContractorSAFE",
       bio: [
-        "Sue Bottrell has worked in health, safety and worker’s compensation rehabilitation for the past 20 years.",
+        "Sue Bottrell has worked in health, safety and worker's compensation rehabilitation for the past 20 years.",
         "Sue Bottrell is a practicing lawyer in safety and is a leading legal expert in the management of contractor safety. She was the first safety professional in Australia to become a Certified Chartered Generalist OHS Professional Member of the Australian Institute of Health and Safety."
       ],
       image: "/events/masterclass-on-contractor-health/sue.jpg"
@@ -43,7 +44,7 @@ const Topics = () => {
       id: "fiona",
       name: "Fiona Jones",
       position: "Director, Health and Safety",
-      bio: "Fiona is the Health, Safety and Wellbeing Manager for NZTA’s Transport Services team who design, plan and deliver new infrastructure projects and also maintain New Zealand’s transport network. With diverse experience in challenging risk environments in both New Zealand and the UK, Fiona has successfully supported organisations to build positive cultures by integrating safety into everyday practices. She has worked across a range of sectors including manufacturing, construction, transport, and health. She holds a Master of Health in Workplace Health and Safety from Victoria University of Wellington and is committed to uplifting capability and improving safety outcomes in the construction industry.",
+      bio: "Fiona is the Health, Safety and Wellbeing Manager for NZTA's Transport Services team who design, plan and deliver new infrastructure projects and also maintain New Zealand's transport network. With diverse experience in challenging risk environments in both New Zealand and the UK, Fiona has successfully supported organisations to build positive cultures by integrating safety into everyday practices. She has worked across a range of sectors including manufacturing, construction, transport, and health. She holds a Master of Health in Workplace Health and Safety from Victoria University of Wellington and is committed to uplifting capability and improving safety outcomes in the construction industry.",
       image: "/events/masterclass-on-contractor-health/fiona.jpg"
     },
     {
@@ -60,7 +61,7 @@ const Topics = () => {
       bio: [
         "Paaka is the South Island Health & Safety Manager at Fulton Hogan, responsible for overall health and safety from Bluff to Picton, covering nearly 2000 employees in the South Island.",
         "Paaka comes from an operational background, having experience in a combined operational and health & safety role in the Western Australia's mines, as well as in manufacturing and vertical construction in New Zealand before joining Fulton Hogan in 2017.",
-        "One of Paaka’s passions is ensuring no life-changing harm occurs through effective critical risk management. Sprains and strains don’t lead to fatal accidents; uncontrolled critical risks do. To achieve this, he advocates for simple and intuitive systems while prioritising staff engagement and positive H&S conversations. Paaka holds a Postgraduate Diploma in Occupational Health and Safety and is a current member of NZISM and HASANZ."
+        "One of Paaka's passions is ensuring no life-changing harm occurs through effective critical risk management. Sprains and strains don't lead to fatal accidents; uncontrolled critical risks do. To achieve this, he advocates for simple and intuitive systems while prioritising staff engagement and positive H&S conversations. Paaka holds a Postgraduate Diploma in Occupational Health and Safety and is a current member of NZISM and HASANZ."
       ],
       image: "/events/masterclass-on-contractor-health/paaka.jpg"
     }
@@ -96,19 +97,33 @@ const Topics = () => {
                     </ul>
                 </div>
                 <div 
-                  className='w-full lg:w-1/2 relative overflow-hidden rounded-lg cursor-pointer' 
+                  className='w-full lg:w-1/2 relative overflow-hidden rounded-lg cursor-pointer group' 
                   onClick={() => openModal(teamMembers[0])}
                 >
                     <Image src="/events/masterclass-on-contractor-health/sue.jpg" alt="Sue Bottrell" className='rounded-lg overflow-hidden' width={1000} height={1000} />
+                    {/* Clickable indicator - always visible in bottom right */}
+                    <div className="absolute bottom-3 right-3">
+                      <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
+                        <Info size={16} className="text-[--primary-colour]" />
+                        <span className="text-xs font-medium">Read Bio</span>
+                      </div>
+                    </div>
                 </div>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 justify-between items-center py-12 lg:py-32 border-t">
                 <div 
-                  className='w-full lg:w-1/2 relative overflow-hidden rounded-lg cursor-pointer'
+                  className='w-full lg:w-1/2 relative overflow-hidden rounded-lg cursor-pointer group'
                   onClick={() => openModal(teamMembers[1])}
                 >
                     <Image src="/events/masterclass-on-contractor-health/rian.jpg" alt="Rian Engelbrecht" className='rounded-lg overflow-hidden' width={1000} height={1000} />
+                    {/* Clickable indicator - always visible in bottom right */}
+                    <div className="absolute bottom-3 right-3">
+                      <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
+                        <Info size={16} className="text-[--primary-colour]" />
+                        <span className="text-xs font-medium">Read Bio</span>
+                      </div>
+                    </div>
                 </div>
                 <div className='flex flex-col gap-6  w-full lg:w-2/4'>
                     <div className="flex flex-col">
@@ -132,22 +147,43 @@ const Topics = () => {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-8 mt-12">
                     <div 
-                      className="w-full object-cover overflow-hidden rounded-lg cursor-pointer"
+                      className="w-full relative object-cover overflow-hidden rounded-lg cursor-pointer group"
                       onClick={() => openModal(teamMembers[2])}
                     >
                         <Image src="/events/masterclass-on-contractor-health/fiona.jpg" alt="Fiona Jones" className='h-full' width={1000} height={1000} />
+                        {/* Clickable indicator - always visible in bottom right */}
+                        <div className="absolute bottom-3 right-3">
+                          <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
+                            <Info size={16} className="text-[--primary-colour]" />
+                            <span className="text-xs font-medium">Read Bio</span>
+                          </div>
+                        </div>
                     </div>
                     <div 
-                      className="w-full object-cover overflow-hidden rounded-lg cursor-pointer"
+                      className="w-full relative object-cover overflow-hidden rounded-lg cursor-pointer group"
                       onClick={() => openModal(teamMembers[3])}
                     >
                         <Image src="/events/masterclass-on-contractor-health/jodie.jpg" alt="Jodie Ryland" className='h-full' width={1000} height={1000} />
+                        {/* Clickable indicator - always visible in bottom right */}
+                        <div className="absolute bottom-3 right-3">
+                          <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
+                            <Info size={16} className="text-[--primary-colour]" />
+                            <span className="text-xs font-medium">Read Bio</span>
+                          </div>
+                        </div>
                     </div>
                     <div 
-                      className="w-full object-cover overflow-hidden rounded-lg cursor-pointer"
+                      className="w-full relative object-cover overflow-hidden rounded-lg cursor-pointer group"
                       onClick={() => openModal(teamMembers[4])}
                     >
                         <Image src="/events/masterclass-on-contractor-health/paaka.jpg" alt="Paaka Westrupp" className='h-full' width={1000} height={1000} />
+                        {/* Clickable indicator - always visible in bottom right */}
+                        <div className="absolute bottom-3 right-3">
+                          <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
+                            <Info size={16} className="text-[--primary-colour]" />
+                            <span className="text-xs font-medium">Read Bio</span>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,7 +198,7 @@ const Topics = () => {
                 ></div>
                 
                 {/* Modal content */}
-                <div className="bg-white rounded-lg z-10 max-w-2xl w-full overflow-hidden shadow-xl transform transition-all max-h-[70dvh] overflow-y-auto">
+                <div className="bg-white rounded-lg z-10 max-w-2xl w-full overflow-hidden shadow-xl transform transition-all max-h-[70dvh] lg:max-h-[90dvh] overflow-y-auto">
                   <div className="flex flex-col">                    
                     {/* Content container with consistent padding */}
                     <div className="p-6">

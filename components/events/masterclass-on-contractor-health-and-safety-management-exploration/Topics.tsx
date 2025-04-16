@@ -87,13 +87,12 @@ const Topics = () => {
                         <h6 className='text-xl md:text-2xl lg:text-3xl font-semibold text-[--primary-colour]'>Sue Bottrell</h6>
                         <span className='text-sm font-light text-gray-500'>Lawyer and Chartered Safety Professional, ContractorSAFE.</span>
                     </div>
-                    <p className='text-base md:text-lg font-medium'>How to efficiently confirm the safety arrangements of contractors and meet your legal obligations. A show and tell on how to develop efficient and practical solutions to on boarding, inducting, credentialing and monitoring contractors in their management of safety.</p>
-                    <p className='text-base md:text-lg font-medium'>The Four Pillars of Modern Contractor Safety Management:</p>
+                    <p className='text-base md:text-lg font-medium'>How to efficiently confirm the safety arrangements of contractors and meet your legal obligations.</p>
                     <ul className='flex flex-col gap-2 list-disc list-inside'>
-                        <li>Effective and efficient prequalification</li>
-                        <li>Informed onboarding</li>
-                        <li>Meaningful assurance</li>
-                        <li>Diligent performance review</li>
+                        <li>What is the duty under the act relating to contractor H&S management and who does it apply to?</li>
+                        <li>Pre-qual - do we need it and could we be overcooking it?</li>
+                        <li>What is overreach and how can it be avoided?</li>
+                        <li>How can we reduce the burden on small businesses and sole traders?</li>
                     </ul>
                 </div>
                 <div 
@@ -137,12 +136,12 @@ const Topics = () => {
             <div className="flex flex-col gap-8 py-12 lg:py-32 border-t">
                 <div className="flex flex-col gap-6 max-w-6xl">
                     <h6 className='text-xl md:text-2xl lg:text-3xl font-semibold text-[--primary-colour]'>Fiona Jones, Jodie Ryland, Paaka Westrupp</h6>
-                    <p className='text-base md:text-lg font-medium'>The revision of Contractor Expectations, specifically the Minimum Health, Safety, and Wellbeing Standards, was driven by key change factors and informed by clearly defined objectives, with additions and exclusions made based on an extensive engagement process and lessons learnt from past experiences.</p>
                     <ul className='flex flex-col gap-2 list-disc list-inside'>
-                        <li>Effective and efficient prequalification</li>
-                        <li>Informed onboarding</li>
-                        <li>Meaningful assurance</li>
-                        <li>Diligent performance review</li>
+                        <li>Drivers for change</li>
+                        <li>Objectives to revised Contractor Expectations: Minimum health, safety, and wellbeing standards</li>
+                        <li>Additions and exclusions</li>
+                        <li>Engagement process</li>
+                        <li>Lessons learnt</li>
                     </ul>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-8 mt-12">

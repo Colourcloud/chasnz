@@ -17,10 +17,11 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-    <Navigation />
+    <div className='bg-black h-[95px] hidden lg:block'>
+      <Navigation />
+    </div>
     <Header />
     <Introduction />
-    <Video />
     <Topics />
     <Schedule />
     <BookingCta />

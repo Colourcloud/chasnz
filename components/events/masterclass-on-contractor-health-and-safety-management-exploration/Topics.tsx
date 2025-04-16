@@ -105,7 +105,7 @@ const Topics = () => {
                     <div className="absolute bottom-3 right-3">
                       <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
                         <Info size={16} className="text-[--primary-colour]" />
-                        <span className="text-xs font-medium">Read Bio</span>
+                        <span className="text-sm font-medium">Read Bio</span>
                       </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ const Topics = () => {
                     <div className="absolute bottom-3 right-3">
                       <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
                         <Info size={16} className="text-[--primary-colour]" />
-                        <span className="text-xs font-medium">Read Bio</span>
+                        <span className="text-sm font-medium">Read Bio</span>
                       </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@ const Topics = () => {
                         <div className="absolute bottom-3 right-3">
                           <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
                             <Info size={16} className="text-[--primary-colour]" />
-                            <span className="text-xs font-medium">Read Bio</span>
+                            <span className="text-sm font-medium">Read Bio</span>
                           </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@ const Topics = () => {
                         <div className="absolute bottom-3 right-3">
                           <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
                             <Info size={16} className="text-[--primary-colour]" />
-                            <span className="text-xs font-medium">Read Bio</span>
+                            <span className="text-sm font-medium">Read Bio</span>
                           </div>
                         </div>
                     </div>
@@ -181,7 +181,7 @@ const Topics = () => {
                         <div className="absolute bottom-3 right-3">
                           <div className="bg-white bg-opacity-90 shadow-md rounded-full p-2 flex items-center gap-1">
                             <Info size={16} className="text-[--primary-colour]" />
-                            <span className="text-xs font-medium">Read Bio</span>
+                            <span className="text-sm font-medium">Read Bio</span>
                           </div>
                         </div>
                     </div>

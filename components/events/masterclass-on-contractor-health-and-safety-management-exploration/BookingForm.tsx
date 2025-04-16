@@ -286,7 +286,7 @@ END:VCALENDAR`;
           <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[10000] p-4">
             <div className="bg-white rounded-lg p-6 max-w-md w-full">
               <h3 className="text-lg font-medium mb-4">Confirm Registration</h3>
-              <p className="mb-6 text-base font-light">Are you sure you want to register for the Masterclass on Contractor Health and Safety Management Exploration event on {eventDate}?</p>
+              <p className="mb-6 text-base font-light">Please only register to this event if you are committed to attending. Are you sure you want to register for this event on {eventDate}?</p>
               <div className="flex flex-row gap-3 justify-end">
                 <button 
                   onClick={handleCancelBooking}

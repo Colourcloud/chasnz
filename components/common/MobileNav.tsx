@@ -202,6 +202,7 @@ const MobileNav: React.FC = () => {
                         <li className='resource-section'>
                         <p className='text-lg font-medium'>Events</p>
                           <ul className='flex flex-col gap-4 mt-4'>
+                          <li><a href="/events/masterclass-on-contractor-health-and-safety-management-exploration" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Masterclass on Contractor Health and Safety Management Exploration</a></li>
                             <li><a href="/events/communication-and-culture-event" className='text-gray-700 font-light hover:text-[--primary-colour] py-1'>Communication and Culture</a></li>
                           </ul>
                         </li>

@@ -33,7 +33,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ onClose }) => {
   } | null>(null);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
-  const eventDate = '15th May, 2024';
+  const eventDate = '15th May, 2025';
 
   useEffect(() => {
     const cookies = document.cookie.split(';');

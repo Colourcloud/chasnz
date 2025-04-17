@@ -4,6 +4,7 @@ import Image from 'next/image'
 const Header = () => {
   return (
     <div>
+      <div className='w-full text-center text-sm text-white py-3 px-6 bg-red-600'>Registrations for this in-person event is now closed as we have reached our maximum numbers.</div>
         <div className="relative mt-32">
           <div className="content-wrapper relative h-full">
               <div className="header-container flex flex-col h-full items-center justify-center gap-6 relative z-10 text-center max-w-5xl mx-auto">
@@ -31,7 +32,6 @@ const Header = () => {
 
     </div>
         </div>
-        {/* <div className='w-full text-center text-sm text-white py-3 px-6 bg-red-600'>Registrations for this in-person event in March is now closed as we have reached our maximum numbers.</div> */}
     </div>
   )
 }

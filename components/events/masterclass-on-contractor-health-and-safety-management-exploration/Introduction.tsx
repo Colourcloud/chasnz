@@ -12,7 +12,6 @@ const Introduction = () => {
                 <div className='flex flex-col gap-6  w-full lg:w-2/5'>
                     <h2 className='text-xl md:text-2xl lg:text-5xl font-semibold'>You&apos;ll want to attend this <span className='text-[--primary-colour]'>FREE</span> in-person event!</h2>
                     <p className='text-base md:text-lg font-semibold'>We have limited numbers, so register quickly!</p>
-                    <button className='text-sm py-3 px-6 bg-[--primary-colour] text-white rounded-full self-start font-semibold'>Register Now</button>
                 </div>
                 <div className='w-full lg:w-1/2 relative overflow-hidden rounded-lg'>
                     <Image src="/events/masterclass-on-contractor-health/booking-card-image.jpg" alt="SOHO Hotel" className='rounded-lg overflow-hidden' width={1000} height={1000} />
@@ -23,16 +22,16 @@ const Introduction = () => {
                      </div>
                      <div className="flex flex-col gap-2">
                         <h6 className='text-white text-xl font-semibold'>9am, Thursday 15th May 2025</h6>
-                        <button className='text-base text-[--primary-colour] font-semibold self-start'>Register Now</button>
+                        {/* <button className='text-base text-[--primary-colour] font-semibold self-start'>Register Now</button> */}
                      </div>
                     </div>
-                    <div className="absolute top-0 right-0 bg-[--primary-colour] text-white py-3 px-6 rounded-bl-lg rounded-tr-lg">
+                    {/* <div className="absolute top-0 right-0 bg-[--primary-colour] text-white py-3 px-6 rounded-bl-lg rounded-tr-lg">
                       <span className='text-sm font-semibold'>Not many spots left!</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
-        <BookingForm onClose={() => {}} />
+        {/* <BookingForm onClose={() => {}} /> */}
     </section>
   )
 }

@@ -30,8 +30,7 @@ const Header = () => {
 
         <div className="content-wrapper">
           <div className="banner-image w-full flex flex-col gap-4 items-center justify-center mt-12">
-            <Link href="/events/masterclass-on-contractor-health-and-safety-management-exploration"><Image src="/common/webinar.jpg" className='hidden md:block' alt="masterclass-on-contractor-health-and-safety-management-exploration" width={1921} height={150} /></Link>
-            <Link href="/events/masterclass-on-contractor-health-and-safety-management-exploration"><Image src="/common/webinar-mobile.jpg" className='block md:hidden' alt="masterclass-on-contractor-health-and-safety-management-exploration" width={1921} height={150} /></Link>
+            <Link href="/work-should-not-hurt/foundation-assessment-toolkit-musculoskeletal-injuries"><Image src="/common/webinar.gif" className='' alt="foundation-assessment-toolkit-musculoskeletal-injuries" width={1921} height={150} /></Link>
           </div>
         </div>
         

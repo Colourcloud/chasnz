@@ -1197,3 +1197,23 @@ select {
   color: var(--primary-colour);
  }
 }
+
+.programmes-cards-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.home-page-news {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 500px;
+    background: var(--primary-colour);
+    z-index: -1;
+  }
+}

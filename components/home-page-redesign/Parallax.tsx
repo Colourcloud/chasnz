@@ -53,7 +53,7 @@ const ParallaxSection = () => {
         <div className="absolute inset-0 bg-black opacity-40"></div>
       </div>
       <div className="relative z-10 flex flex-col gap-6 items-center justify-center text-center h-full max-w-5xl mx-auto">
-        <h6 className='text-white text-4xl md:text-4xl lg:text-6xl font-bold'>Building a Safer Industry, <span className='text-[--primary-colour]'>Together</span></h6>
+        <h6 className='text-white text-4xl md:text-4xl lg:text-6xl font-semibold'>Building a Safer Industry, <span className='text-[--primary-colour]'>Together</span></h6>
         <p className='text-white text-base md:text-lg lg:text-xl font-light'>The construction industry has 250,000 workers who make up the sector. At CHASNZ we maintain a national reach, from high rise construction to laying the foundations of the milking shed. This is how we are achieving our goal to raise the standard of health and safety culture and performance across the construction industry in New Zealand.</p>
       </div>
     </section>

@@ -64,10 +64,10 @@ const News = () => {
                 <Link href="/newsroom" className="flex flex-row self-end items-center gap-1 bg-white text-black px-5 py-3 rounded-full text-sm font-medium">View all News <ArrowRight className="w-4 h-4" /></Link>
             </div>
 
-            <div className="flex flex-row gap-5 mt-16">
+            <div className="flex flex-col md:flex-row gap-5 mt-16">
                 {news.map((item, index) => (
-                    <Link href={`/news-and-updates/${item.slug}`} key={item.id} className={index === 0 ? 'w-1/2' : 'w-[25%]'}>
-                        <div className="bg-gray-200 h-[450px] relative overflow-hidden group">
+                    <Link href={`/news-and-updates/${item.slug}`} key={item.id} className={index === 0 ? 'w-full md:w-1/2' : 'w-full md:w-[25%]'}>
+                        <div className="bg-gray-200 h-[300px] md:h-[450px] relative overflow-hidden group">
                             {item.acf.featured_image && (
                                 <Image
                                     src={item.acf.featured_image}

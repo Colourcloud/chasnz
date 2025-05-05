@@ -6,6 +6,27 @@ import Link from 'next/link'
 
 const programmes = [
   {
+    id: 'work-should-not-hurt',
+    title: 'Work Should Not Hurt',
+    description: 'The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury.',
+    additionalDescription: 'Work Should Not Hurt is a participative ergonomics programme. Put simply, this means actively involving workers and industry in developing and implementing changes to the way work is done.',
+    image: '/home/programmes/slider/work-should-not-hurt.jpg',
+    logo: '/home/programmes/slider/work-should-not-hurt-logo.svg',
+    bgColor: 'bg-[--dark-blue]',
+    textColor: 'text-[--dark-blue]',
+    link: '/work-should-not-hurt'
+  },
+  {
+    id: 'totika',
+    title: 'Introduction to Tōtika',
+    description: 'Tōtika was developed to address inefficiencies in the procurement process caused by the lack of a common pre-qualification standard. Previously, suppliers had to repeatedly pre-qualify against different schemes and standards, resulting in many proprietary and internal pre-qualification schemes, this wasted the time and resources for all parties involved. Tōtika aims to provide a streamlined pre-qualification process, fulfilling the industry\'s desire for a common standard.',
+    image: '/home/programmes/slider/totika.jpg',
+    logo: '/home/programmes/slider/totika-logo.svg',
+    bgColor: 'bg-[--totika-blue]',
+    textColor: 'text-[--totika-blue]',
+    link: '/totika'
+  },
+  {
     id: 'constructsafe',
     title: 'Introduction to ConstructSafe',
     description: 'The Foundation Health & Safety Assessment is the minimum required knowledge of construction health & safety. It takes 30mins and consists of questions related to basic health and safety and is designed for EVERYONE working on a construction site. Questions are also in audio to help eliminate language barriers.',
@@ -25,27 +46,6 @@ const programmes = [
     bgColor: 'bg-[--leadon-orange]',
     textColor: 'text-[--leadon-orange]',
     link: '/leadon'
-  },
-  {
-    id: 'totika',
-    title: 'Introduction to Tōtika',
-    description: 'Tōtika was developed to address inefficiencies in the procurement process caused by the lack of a common pre-qualification standard. Previously, suppliers had to repeatedly pre-qualify against different schemes and standards, resulting in many proprietary and internal pre-qualification schemes, this wasted the time and resources for all parties involved. Tōtika aims to provide a streamlined pre-qualification process, fulfilling the industry\'s desire for a common standard.',
-    image: '/home/programmes/slider/totika.jpg',
-    logo: '/home/programmes/slider/totika-logo.svg',
-    bgColor: 'bg-[--totika-blue]',
-    textColor: 'text-[--totika-blue]',
-    link: '/totika'
-  },
-  {
-    id: 'work-should-not-hurt',
-    title: 'Work Should Not Hurt',
-    description: 'The Work Should Not Hurt programme aims to make sure tradespeople can enjoy long, pain free careers and retire when they want to and not when forced to due to pain and injury.',
-    additionalDescription: 'Work Should Not Hurt is a participative ergonomics programme. Put simply, this means actively involving workers and industry in developing and implementing changes to the way work is done.',
-    image: '/home/programmes/slider/work-should-not-hurt.jpg',
-    logo: '/home/programmes/slider/work-should-not-hurt-logo.svg',
-    bgColor: 'bg-[--dark-blue]',
-    textColor: 'text-[--dark-blue]',
-    link: '/work-should-not-hurt'
   }
 ]
 

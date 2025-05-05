@@ -5,8 +5,73 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { HiBellAlert } from "react-icons/hi2";
 
+interface NewsItem {
+  id: number;
+  date: string;
+  link: string;
+  acf: {
+    title: string;
+    description: string;
+    type: string;
+    image: number;
+    link: string;
+  };
+}
+
+interface MediaItem {
+  id: number;
+  source_url: string;
+}
+
 const NewsFeed = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+  const [mediaUrls, setMediaUrls] = useState<Record<number, string>>({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/newsfeed');
+        if (!response.ok) {
+          throw new Error('Failed to fetch news');
+        }
+        const data = await response.json();
+        setNewsItems(data);
+
+        // Fetch media URLs for items with images
+        const imageIds = data
+          .filter((item: NewsItem) => item.acf.image)
+          .map((item: NewsItem) => item.acf.image);
+
+        if (imageIds.length > 0) {
+          const mediaPromises = imageIds.map(async (id: number) => {
+            const mediaResponse = await fetch(`https://cms.chasnz.org/wp-json/wp/v2/media/${id}`);
+            if (!mediaResponse.ok) {
+              throw new Error(`Failed to fetch media ${id}`);
+            }
+            const mediaData: MediaItem = await mediaResponse.json();
+            return { id, url: mediaData.source_url };
+          });
+
+          const mediaResults = await Promise.all(mediaPromises);
+          const mediaMap = mediaResults.reduce((acc, { id, url }) => {
+            acc[id] = url;
+            return acc;
+          }, {} as Record<number, string>);
+
+          setMediaUrls(mediaMap);
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
 
   // Close modal when escape key is pressed
   useEffect(() => {
@@ -80,24 +145,47 @@ const NewsFeed = () => {
           </div>
           
           <div className="space-y-4">
-            {/* You can add your news and updates content here */}
-            <div className="border-b pb-4 news-feed-item">
-              <span className="text-xs text-gray-500 mb-2 block">April 1, 2024</span>
-              <h3 className="font-semibold mb-2 text-lg flex flex-col gap-1"><span className='text-xs py-1 px-2 bg-[--primary-colour] self-start text-white'>New Tool</span> WSNH Foundation Assessment Toolkit</h3>
-              <p className="text-gray-700 text-sm font-light">Assess your organisation's ability to recognise and address musculoskeletal injuries in your workplace and you'll get your very own detailed report.</p>
-              <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden mt-4">
-                
-              </div>
-            </div>
-            
-            <div className="border-b pb-4 news-feed-item">
-              <span className="text-xs text-gray-500 mb-2 block">April 1, 2024</span>
-              <h3 className="font-semibold mb-2 text-lg flex flex-col gap-1"><span className='text-xs py-1 px-2 bg-[--primary-colour] self-start text-white'>New Resource</span> Health and Safety Competency Framework Documents</h3>
-              <p className="text-gray-700 text-sm font-light">We have developed a range of Health and Safety Competency framework documents for the Trades Sector, allowing those who design and contribute to construction health and safety training content to align with ConstructSafe Trades Health and Safety Competency assessment for specific trades.</p>
-              <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden mt-4">
-                
-              </div>
-            </div>
+            {loading ? (
+              <div className="text-center py-8">Loading news...</div>
+            ) : error ? (
+              <div className="text-center py-8 text-red-500">Error: {error}</div>
+            ) : (
+              newsItems.map((item) => (
+                <Link 
+                  key={item.id} 
+                  href={item.acf.link || item.link}
+                  className="block hover:bg-gray-50 transition-colors"
+                >
+                  <div className="border-b pb-4 news-feed-item">
+                    <span className="text-xs text-gray-500 mb-2 block">
+                      {new Date(item.date).toLocaleDateString('en-NZ', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </span>
+                    <h3 className="font-semibold mb-2 text-lg flex flex-col gap-1">
+                      <span className='text-xs py-1 px-2 bg-[--primary-colour] self-start text-white'>
+                        {item.acf.type}
+                      </span>
+                      {item.acf.title}
+                    </h3>
+                    <p className="text-gray-700 text-sm font-light">{item.acf.description}</p>
+                    {item.acf.image && mediaUrls[item.acf.image] && (
+                      <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden mt-4">
+                        <Image
+                          src={mediaUrls[item.acf.image]}
+                          alt={item.acf.title}
+                          width={600}
+                          height={400}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </Link>
+              ))
+            )}
           </div>
         </div>
       </div>

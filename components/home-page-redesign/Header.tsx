@@ -20,8 +20,7 @@ const Header = () => {
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <iframe
           src="https://player.vimeo.com/video/1081371447?background=1&autoplay=1&loop=1&muted=1&controls=0"
-          className="absolute inset-0 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2"
-          style={{ left: '50%', top: '50%' }}
+          className="absolute left-1/2 top-1/2 min-h-full min-w-full w-[177.77777778vh] h-[56.25vw] -translate-x-1/2 -translate-y-1/2"
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen

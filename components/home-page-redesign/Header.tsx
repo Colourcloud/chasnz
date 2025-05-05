@@ -31,7 +31,7 @@ const Header = () => {
       </div>
       
       {/* Content overlay */}
-      <div className="relative z-10 w-full h-full flex flex-col gap-3 items-center justify-center text-white px-4">
+      {/* <div className="relative z-10 w-full h-full flex flex-col gap-3 items-center justify-center text-white px-4">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4 max-w-6xl mx-auto flex flex-col items-center">
             <div className="mb-2">
                 Safer workplaces and stronger standards in
@@ -58,7 +58,7 @@ const Header = () => {
         <p className="text-base md:text-lg text-center max-w-3xl">
             Our vision is to shift health and safety in the construction industry from inconsistent compliance to consistent competence to have health and safe workers as a natural outcome of good work.
         </p>
-      </div>
+      </div> */}
     </section>
   )
 }

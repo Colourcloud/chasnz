@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { HiBellAlert } from "react-icons/hi2";
 
 const NewsFeed = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   // Close modal when escape key is pressed
   useEffect(() => {

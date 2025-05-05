@@ -20,8 +20,8 @@ const page = () => {
     <NewsFeed />
     <Navigation />
     <Header />
-    <HeaderBanner />
-    <Introduction />
+    {/* <HeaderBanner /> */}
+    {/* <Introduction /> */}
     <Programmes />
     <ParallaxSection />
     <Gallery />

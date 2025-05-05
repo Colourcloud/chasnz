@@ -7,7 +7,7 @@ const Resources = () => {
     <div className="py-16 lg:py-32">
         <div className="site-wrapper">
             <div className="flex flex-col gap-6 text-center">
-                <h6 className='text-2xl md:text-4xl lg:text-5xl font-semibold max-w-5xl mx-auto'>Access popular resources, tools, and events to help make your worksite safer.</h6>
+                <h6 className='text-2xl md:text-4xl lg:text-5xl font-semibold max-w-5xl mx-auto !leading-none'>Access popular resources, tools, and events to help make your worksite safer.</h6>
                 <p className='text-base md:text-lg max-w-4xl mx-auto font-light'>Access popular resources, tools, and events to help make your worksite safer. From practical guides to training opportunities, everything here is designed to support you in protecting your crew and preventing harm.</p>
             </div>
         </div>

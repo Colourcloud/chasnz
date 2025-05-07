@@ -149,13 +149,7 @@ const Programmes = () => {
                   <Link href={programme.link} className={`text-sm font-semibold py-2 px-6 bg-white ${programme.textColor} rounded-full self-start hover:bg-black hover:text-white transition-all duration-200`}>
                     Learn More
                   </Link>
-                  <div className='flex flex-col gap-3'>
-                    <p className='text-sm font-semibold'>Useful Links:</p>
-                    <ul className='flex flex-row gap-3 underline'>
-                      <li>Book an Assessment</li>
-                      <li>Learning Resources</li>
-                    </ul>
-                  </div>
+                  
                 </div>
               </div>
             </div>

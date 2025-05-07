@@ -16,6 +16,20 @@ const Statistics = () => {
     rootMargin: '0px 0px -100px 0px'
   });
 
+  type Year = '2023' | '2024';
+  const [selectedYear, setSelectedYear] = useState<Year>('2023');
+
+  const statistics: Record<Year, { injuries: number; daysLost: number }> = {
+    '2023': {
+      injuries: 540,
+      daysLost: 665289
+    },
+    '2024': {
+      injuries: 512,
+      daysLost: 610000
+    }
+  };
+
   return (
     <div className="pb-16 lg:pb-32 statistics-section bg-gray-950">
         <div className="site-wrapper">
@@ -23,8 +37,18 @@ const Statistics = () => {
                 <h6 className='text-2xl md:text-3xl lg:text-5xl font-semibold text-white'>When Safety Fails, <span className='text-[--primary-colour]'>Lives Are Affected</span></h6>
                 <p className='text-base md:text-lg font-light text-white'>Every incident on site leaves a mark, on workers, on whānau, on communities. Behind every statistic is a person who didn&apos;t make it home, a team left reeling, a family forever changed. At CHASNZ, we&apos;re committed to reshaping the future of safety. Because one life lost is one too many, and every injury is a <span className='font-semibold text-[--primary-colour]'>call to do better.</span></p>
                 <div className="flex flex-row gap-4">
-                    <button className='bg-[--primary-colour] text-white text-base font-medium px-12 py-3'>2023</button>
-                    <button className='bg-white text-black text-base font-medium px-12 py-3'>2024</button>
+                    <button 
+                        onClick={() => setSelectedYear('2023')}
+                        className={`${selectedYear === '2023' ? 'bg-[--primary-colour] text-white' : 'bg-white text-black'} text-base font-medium px-12 py-3`}
+                    >
+                        2023
+                    </button>
+                    <button 
+                        onClick={() => setSelectedYear('2024')}
+                        className={`${selectedYear === '2024' ? 'bg-[--primary-colour] text-white' : 'bg-white text-black'} text-base font-medium px-12 py-3`}
+                    >
+                        2024
+                    </button>
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 relative mt-10">
@@ -33,7 +57,7 @@ const Statistics = () => {
                         <p className='text-3xl md:text-4xl font-semibold text-white'>
                             {inView && (
                                 <CountUp 
-                                    end={540} 
+                                    end={statistics[selectedYear].injuries} 
                                     duration={2.5}
                                     start={0}
                                     separator=","
@@ -46,7 +70,7 @@ const Statistics = () => {
                         <p className='text-3xl md:text-4xl font-semibold text-white'>
                             {inView && (
                                 <CountUp 
-                                    end={665289} 
+                                    end={statistics[selectedYear].daysLost} 
                                     duration={2.5}
                                     start={0}
                                     separator=","

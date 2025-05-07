@@ -3,19 +3,40 @@
 import React, { useState, useEffect } from 'react'
 
 const Header = () => {
-  const industries = ["Construction", "Health & Safety", "Manufacturing", "Transport", "Energy"];
-  const [currentIndustry, setCurrentIndustry] = useState(0);
+  const messages = [
+    "We're building the foundations for consistency and leadership in Health and Safety within New Zealand Construction.",
+    "We're building change to reduce workplace injuries and minimise claims.",
+    "We're building lives that thrive on and off the tools.",
+    "We're building careers that last, not ones cut short by injury.",
+    "We're building a future that's safer, smarter, stronger.",
+    "Tōtika – Simplifying pre-qual so good businesses don't get left behind.",
+    "Lead On – Backing our frontline leaders with real-world skills.",
+    "ConstructSafe – Proving competency, building confidence.",
+    "Work Should Not Hurt – Because pain should never be part of the job.",
+    "This isn't just about work.",
+    "It's about dignity, our mana. It's about families, our whanau. It's about our futures.",
+    "At CHASNZ, we're not just building better work - We're building work that's built for life."
+  ];
+  const [currentMessage, setCurrentMessage] = useState(0);
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndustry((prev) => (prev + 1) % industries.length);
-    }, 5000); // Change every 3 seconds
+      setCurrentMessage((prev) => {
+        // Stop at the last message
+        if (prev === messages.length - 1) {
+          clearInterval(interval);
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="header-section w-full h-[90dvh] relative overflow-hidden">
+    <section className="header-section w-full h-[90dvh] relative overflow-hidden" id="home-header">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <iframe
@@ -29,36 +50,57 @@ const Header = () => {
         {/* Optional overlay to darken the video and make text more readable */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
-      
+
       {/* Content overlay */}
-      {/* <div className="relative z-10 w-full h-full flex flex-col gap-3 items-center justify-center text-white px-4">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-4 max-w-6xl mx-auto flex flex-col items-center">
-            <div className="mb-2">
-                Safer workplaces and stronger standards in
+      <div className="relative z-10 w-full h-full flex flex-col gap-3 items-center justify-center text-white px-4">
+        <div className="relative w-full max-w-5xl mx-auto h-[200px] flex items-center justify-center">
+          <button
+            onClick={() => setShowVideo(true)}
+            className="absolute -bottom-16 left-1/2 -translate-x-1/2 bg-[--primary-colour] text-white text-sm text-semibold px-4 py-2 rounded-full backdrop-blur-sm transition-all duration-300"
+          >
+            Watch Full Video
+          </button>
+          {messages.map((message, index) => (
+            <h1 
+              key={index}
+              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center absolute w-full transition-all duration-500"
+              style={{ 
+                opacity: currentMessage === index ? 1 : 0,
+                transform: `translateY(${currentMessage === index ? '0' : '2rem'})`,
+                visibility: currentMessage === index ? 'visible' : 'hidden'
+              }}
+            >
+              {message}
+            </h1>
+          ))}
+        </div>
+      </div>
+
+      {/* Video Modal Overlay */}
+      {showVideo && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+          <div className="relative w-full max-w-4xl mx-4">
+            <button
+              onClick={() => setShowVideo(false)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative pt-[56.25%]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
-            <div className="flex items-center justify-center w-full h-[1em]">
-              <div className="relative w-full py-2 text-center text-[--primary-colour] overflow-hidden">
-                {industries.map((industry, index) => (
-                  <div 
-                    key={industry}
-                    className="absolute whitespace-nowrap transition-all duration-500" 
-                    style={{ 
-                      left: '50%', 
-                      transform: `translateX(-50%) translateY(${currentIndustry === index ? '0' : '2rem'})`,
-                      opacity: currentIndustry === index ? 1 : 0
-                    }}
-                  >
-                    {industry}
-                  </div>
-                ))}
-                <div className="opacity-0">{industries[industries.length - 1]}</div>
-              </div>
-            </div>
-        </h1>
-        <p className="text-base md:text-lg text-center max-w-3xl">
-            Our vision is to shift health and safety in the construction industry from inconsistent compliance to consistent competence to have health and safe workers as a natural outcome of good work.
-        </p>
-      </div> */}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

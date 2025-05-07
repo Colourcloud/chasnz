@@ -211,6 +211,13 @@ p {
   }
 }
 
+#home-header {
+  background-image: url('../public/home/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .home-header {
   width: 100%;
   height: 100vh;

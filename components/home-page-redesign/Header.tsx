@@ -91,7 +91,7 @@ const Header = () => {
             <div className="relative pt-[56.25%]">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
+                src="https://www.youtube.com/embed/HG_ySdXhg0s?si=T9CKad3FujzaLdoE"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

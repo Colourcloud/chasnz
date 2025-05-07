@@ -40,7 +40,7 @@ const Header = () => {
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <iframe
-          src="https://player.vimeo.com/video/1081657211?background=1&autoplay=1&loop=1&muted=1&controls=0"
+          src="https://player.vimeo.com/video/1082035512?background=1&autoplay=1&loop=1&muted=1&controls=0"
           className="absolute left-1/2 top-1/2 min-h-full min-w-full w-[177.77777778vh] h-[56.25vw] -translate-x-1/2 -translate-y-1/2"
           frameBorder="0"
           allow="autoplay; fullscreen"
@@ -53,10 +53,10 @@ const Header = () => {
 
       {/* Content overlay */}
       <div className="relative z-10 w-full h-full flex flex-col gap-3 items-center justify-center text-white px-4">
-        <div className="relative w-full max-w-5xl mx-auto h-[200px] flex items-center justify-center">
+        <div className="absolute bottom-[20%] w-full max-w-5xl mx-auto h-[200px] flex items-center justify-center">
           <button
             onClick={() => setShowVideo(true)}
-            className="absolute -bottom-16 left-1/2 -translate-x-1/2 bg-[--primary-colour] text-white text-sm text-semibold px-4 py-2 rounded-full backdrop-blur-sm transition-all duration-300"
+            className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[--primary-colour] text-white text-sm text-semibold px-4 py-2 rounded-full backdrop-blur-sm transition-all duration-300"
           >
             Watch Full Video
           </button>

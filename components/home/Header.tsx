@@ -40,11 +40,9 @@ const Header = () => {
 
   const [currentMessage, setCurrentMessage] = useState(0);
   const [showVideo, setShowVideo] = useState(false);
-  const [remainingTime, setRemainingTime] = useState(0);
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
-    let intervalId: NodeJS.Timeout;
 
     const showNextMessage = () => {
       setCurrentMessage((prev) => {
@@ -57,18 +55,6 @@ const Header = () => {
 
     const scheduleNextMessage = () => {
       if (currentMessage < messages.length - 1) {
-        // Reset and start countdown
-        setRemainingTime(durations[currentMessage] / 1000);
-        intervalId = setInterval(() => {
-          setRemainingTime(prev => {
-            if (prev <= 0.1) {
-              clearInterval(intervalId);
-              return 0;
-            }
-            return Number((prev - 0.1).toFixed(1));
-          });
-        }, 100);
-
         timeoutId = setTimeout(showNextMessage, durations[currentMessage]);
       }
     };
@@ -78,9 +64,6 @@ const Header = () => {
     return () => {
       if (timeoutId) {
         clearTimeout(timeoutId);
-      }
-      if (intervalId) {
-        clearInterval(intervalId);
       }
     };
   }, [currentMessage]);
@@ -104,10 +87,6 @@ const Header = () => {
       {/* Content overlay */}
       <div className="relative z-10 w-full h-full flex flex-col gap-3 items-center justify-center text-white px-4">
         <div className="absolute bottom-[20%] w-full max-w-5xl mx-auto h-[200px] flex items-center justify-center">
-          {/* Debug Timer */}
-          <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm text-white/70">
-            Time remaining: {remainingTime.toFixed(1)}s
-          </div>
           <button
             onClick={() => setShowVideo(true)}
             className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[--primary-colour] text-white text-sm text-semibold px-4 py-2 rounded-full backdrop-blur-sm transition-all duration-300"

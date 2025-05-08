@@ -1,36 +1,37 @@
-import Image from "next/image";
-import Link from "next/link";
-import Header from "@/components/home/Header";
-import Navigation from "@/components/common/Navigation";
-import { Metadata } from 'next'
-import Subscribe from "@/components/common/Subscribe";
-import Introduction from "@/components/home/Introduction";
-import Reach from "@/components/home/Reach";
-import Programmes from "@/components/home/Programmes";
-import Aboutus from "@/components/home/Aboutus";
-import Statistics from "@/components/home/Statistics";
-import Linkedin from "@/components/home/Linkedin";
-import Featuredresource from "@/components/home/Featuredresource";
-import Test from "@/components/common/Test";
+import React from 'react'
+import Navigation from '@/components/common/Navigation'
+import Header from '@/components/home/Header'
+import Introduction from '@/components/home/Introduction'
+import Programmes from '@/components/home/Programmes'
+import NewsFeed from '@/components/common/NewsFeed'
+import HeaderBanner from '@/components/home/HeaderBanner'
+import Subscribe from '@/components/common/Subscribe'
+import ParallaxSection from '@/components/home/Parallax'
+import Gallery from '@/components/home/Gallery'
+import Statistics from '@/components/home/Statistics'
+import Resources from '@/components/home/Resources'
+import News from '@/components/home/News'
+import Linkedin from '@/components/home/Linkedin'
 
-export const metadata: Metadata = {
-  title: 'CHASNZ – World Class Construction Health and Safety',
-}
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="">
-        <Navigation />
-        <Header />
-        <Introduction />
-        <Programmes />
-        <Featuredresource />
-        <Statistics />
-        <Reach />
-        <Aboutus />
-        <Linkedin />
-        <Subscribe />
-        {/* <Test /> */}
-    </main>
-  );
+    <>
+    <NewsFeed />
+    <Navigation />
+    <Header />
+    {/* <HeaderBanner /> */}
+    {/* <Introduction /> */}
+    <Programmes />
+    <ParallaxSection />
+    <Gallery />
+    <Statistics />
+    <Resources />
+    <News />
+    <Linkedin />
+    <Subscribe />
+    </>
+  )
 }
+
+export default page

@@ -94,7 +94,7 @@ const Header = () => {
           {messages.map((message, index) => (
             <h1 
               key={index}
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center absolute w-full transition-all duration-500"
+              className="px-2 text-3xl md:text-4xl lg:text-5xl font-semibold text-center absolute w-full transition-all duration-500"
               style={{ 
                 opacity: currentMessage === index ? 1 : 0,
                 transform: `translateY(${currentMessage === index ? '0' : '2rem'})`,

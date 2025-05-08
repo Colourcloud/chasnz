@@ -137,7 +137,7 @@ const Programmes = () => {
             <div key={programme.id} className={`programmes-card min-w-[280px] w-full md:min-w-[600px] lg:w-[1100px] h-auto md:h-[600px] ${programme.bgColor} rounded-lg overflow-hidden flex-shrink-0`}>
               <div className="flex flex-col md:flex-row gap-6 h-full">
                 <div className="w-full md:w-[40%] bg-black">
-                  <Image src={programme.image} alt={`${programme.id} Cover Image`} className='h-[250px] md:h-full w-full object-cover' width={700} height={700} />
+                  <Image src={programme.image} alt={`${programme.id} Cover Image`} className='h-[300px] md:h-full w-full object-cover' width={700} height={700} />
                 </div>
                 <div className="flex flex-col w-full md:w-[60%] gap-6 p-8 text-white justify-center">
                   <Image src={programme.logo} alt={`${programme.id} Logo`} width={200} height={200} />

@@ -23,7 +23,7 @@ const Header = () => {
   // Duration in milliseconds for each message
   const durations = [
     7000,   // 7 seconds
-    7000,   // 7 seconds
+    8500,   // 7 seconds
     5000,   // 5 seconds
     6000,   // 6 seconds
     5500,   // 5.5 seconds

@@ -24,13 +24,18 @@ interface MediaItem {
 }
 
 const NewsFeed = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
   const [mediaUrls, setMediaUrls] = useState<Record<number, string>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Check if device is mobile
+    const isMobile = window.innerWidth < 768;
+    // Only set isOpen to true if not on mobile
+    setIsOpen(!isMobile);
+
     const fetchNews = async () => {
       try {
         const response = await fetch('https://cms.chasnz.org/wp-json/wp/v2/newsfeed');

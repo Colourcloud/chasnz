@@ -9,31 +9,33 @@ const Header = () => {
     "We're building lives that thrive on and off the tools.",
     "We're building careers that last, not ones cut short by injury.",
     "We're building a future that's safer, smarter, stronger.",
+    "CHASNZ is leading the change, one program at a time.",
     "Tōtika – Simplifying pre-qual so good businesses don't get left behind.",
     "Lead On – Backing our frontline leaders with real-world skills.",
     "ConstructSafe – Proving competency, building confidence.",
     "Work Should Not Hurt – Because pain should never be part of the job.",
     "This isn't just about work.",
     "It's about dignity, our mana. It's about families, our whanau. It's about our futures.",
-    "At CHASNZ, we're not just building better work - We're building work that's built for life.",
+    "At CHASNZ, we're not just building better work - We're building productive, healthy, and thriving careers.",
     "Built for life. Better work, better lives, a better future."
   ];
 
   // Duration in milliseconds for each message
   const durations = [
-    7000,  // 4 seconds
-    7000,  // 7 seconds
-    5000,  // 5 seconds
-    6000,  // 6 seconds
-    5500,  // 5 seconds
-    5500,  // 6 seconds
-    7000,  // 5 seconds
-    5000,  // 5 seconds
-    5000,  // 6 seconds
-    5000,  // 4 seconds
-    2500,  // 6 seconds
-    9500,   // 7 seconds
-    10500   // 7 seconds
+    7000,   // 7 seconds
+    7000,   // 7 seconds
+    5000,   // 5 seconds
+    6000,   // 6 seconds
+    5500,   // 5.5 seconds
+    5500,   // 5.5 seconds
+    7000,   // 7 seconds
+    5000,   // 5 seconds
+    5000,   // 5 seconds
+    5000,   // 5 seconds
+    2500,   // 2.5 seconds
+    9500,   // 9.5 seconds
+    10500,  // 10.5 seconds
+    4500    // 4.5 seconds
   ];
 
   const [currentMessage, setCurrentMessage] = useState(0);

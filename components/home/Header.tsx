@@ -54,9 +54,7 @@ const Header = () => {
     };
 
     const scheduleNextMessage = () => {
-      if (currentMessage < messages.length - 1) {
-        timeoutId = setTimeout(showNextMessage, durations[currentMessage]);
-      }
+      timeoutId = setTimeout(showNextMessage, durations[currentMessage]);
     };
 
     scheduleNextMessage();
